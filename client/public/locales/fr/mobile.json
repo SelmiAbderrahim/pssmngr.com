@@ -1,0 +1,26 @@
+{
+  "bottom_nav": {
+    "label": "Navigation mobile principale",
+    "vault": "Coffre",
+    "generator": "Générateur",
+    "security": "Sécurité",
+    "settings": "Réglages",
+    "quick_add": "Ajout rapide",
+    "sharing": "Partage"
+  },
+  "header": {
+    "back": "Retour",
+    "menu": "Menu",
+    "close": "Fermer",
+    "lock": "Verrouiller le coffre",
+    "signout": "Se déconnecter"
+  },
+  "quick_add": {
+    "title": "Ajouter au coffre",
+    "login": "Ajouter un identifiant",
+    "secure_note": "Ajouter une note sécurisée",
+    "card": "Ajouter une carte",
+    "identity": "Ajouter une identité",
+    "generator": "Générer un mot de passe"
+  }
+}

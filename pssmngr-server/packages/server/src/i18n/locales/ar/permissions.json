@@ -1,0 +1,19 @@
+{
+	"generic": {
+		"accessDenied": "تم رفض الوصول",
+		"actionNotAllowed": "غير مسموح لك بـ{{action}}",
+		"resourceAccessDenied": "ليس لديك صلاحية للوصول إلى هذا المورد",
+		"operationNotPermitted": "هذه العملية غير مسموحة",
+		"insufficientPermissions": "صلاحيات غير كافية"
+	},
+	"user": {
+		"cannotDeleteOwner": "لا يمكن حذف مالك المنظمة",
+		"cannotDeleteSelf": "لا يمكنك حذف حسابك الخاص",
+		"cannotModifySelf": "لا يمكنك تعديل دورك الخاص",
+		"cannotModifyOwner": "لا يمكن تعديل إعدادات مالك المنظمة",
+		"onlyOwnerCanDeleteAdmins": "المالك فقط يمكنه حذف المسؤولين",
+		"adminsCannotDeleteSelf": "المسؤولون لا يمكنهم حذف أنفسهم. اطلب من المالك أو مسؤول آخر",
+		"cannotInvite": "لا يمكنك دعوة مستخدمين لهذه المنظمة",
+		"cannotRemove": "لا يمكنك إزالة مستخدمين من هذه المنظمة"
+	}
+}

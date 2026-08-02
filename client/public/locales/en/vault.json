@@ -1,0 +1,80 @@
+{
+  "itemTypes": {
+    "login": "Login",
+    "card": "Card",
+    "secureNote": "Secure Note",
+    "identity": "Identity",
+    "passkey": "Passkey",
+    "totp": "TOTP",
+    "file": "File"
+  },
+  "untitled": "Untitled",
+  "decryptionError": "[Decryption Error]",
+  "addItem": "Add Item",
+  "addItemDescription": "Create a new item. All data is encrypted on your device.",
+  "itemType": "Type",
+  "title": "Vault",
+  "itemTitle": "Title",
+  "titlePlaceholder": "e.g. GitHub, Bank, etc.",
+  "username": "Username",
+  "usernamePlaceholder": "user@example.com",
+  "password": "Password",
+  "sensitiveFieldUnchanged": "Leave blank to keep existing value",
+  "generate": "Generate",
+  "hidePassword": "Hide password",
+  "showPassword": "Show password",
+  "url": "URL",
+  "notes": "Notes",
+  "content": "Content",
+  "empty": "Your vault is empty — and only you can fill it.",
+  "emptyDescription": "Items are encrypted with keys that never leave your devices.",
+  "emptyImport": "Import from another password manager",
+  "addFirstItem": "Add your first item",
+  "created": "Created",
+  "modified": "Last modified",
+  "saved": "Item saved",
+  "saveFailed": "Failed to save changes",
+  "saving": "Saving...",
+  "save": "Save",
+  "encrypting": "Encrypting...",
+  "placeholderCode": "--- ---",
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{count}}d ago"
+  },
+  "shareStatus": {
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "revoked": "Revoked"
+  },
+  "totp": {
+    "secondsRemaining": "{{remaining}} seconds remaining",
+    "defaultIssuer": "TOTP"
+  },
+  "qrScanner": {
+    "invalidUri": "Invalid otpauth:// URI",
+    "noBarcodeDetector": "Camera scanning is not supported in this browser. Please enter the URI manually.",
+    "cameraPermissionDenied": "Camera permission denied. Please allow camera access or enter the URI manually.",
+    "cameraError": "Could not access camera. Please enter the URI manually.",
+    "noQRFound": "No valid otpauth:// QR code found in image.",
+    "imageReadError": "Could not read QR code from image."
+  },
+  "secretKeyPlaceholder": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-X",
+  "sharing": {
+    "loadReceivedError": "Failed to load shared items",
+    "loadSentError": "Failed to load sent shares"
+  },
+  "ephemeral": {
+    "createError": "Failed to create link"
+  },
+  "org": {
+    "setupTitle": "Share this organization's vault",
+    "setupDesc": "Create a shared vault so members see the same items. Your existing items in this organization will be imported, and members who have signed in get access automatically.",
+    "setupButton": "Set up shared vault",
+    "noneMember": "This organization doesn't have a shared vault yet.",
+    "pending": "You'll see the shared items once an organization admin grants you access. Make sure you've signed in on this device first."
+  },
+  "loadTrashError": "Failed to load trash"
+}

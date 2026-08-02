@@ -1,0 +1,64 @@
+{
+	"compilerOptions": {
+		"ignoreDeprecations": "5.0",
+		/* Base Options: */
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		/* Strictness */
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"checkJs": true,
+		/* Bundled projects */
+		"lib": ["dom", "dom.iterable", "ES2022"],
+		"noEmit": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"jsx": "react-jsx",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"incremental": true,
+		/* Path Aliases */
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"],
+			"@pssmngr/server": ["../../packages/server/src/index.ts"],
+			"@pssmngr/server/*": [
+				"../../packages/server/src/*",
+				"./node_modules/@pssmngr/server/dist/*"
+			]
+		}
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.cjs",
+		"**/*.js",
+		".next/types/**/*.ts",
+		"env.js",
+		"next.config.mjs",
+		"next-i18next.config.mjs",
+		".next/dev/types/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"pssmngr",
+		"config",
+		"dist",
+		"webpack.config.server.js",
+		"migration.ts",
+		"setup.ts",
+		"**/__test__/**",
+		"**/__tests__/**",
+		"**/*.test.ts",
+		"**/*.spec.ts"
+	]
+}

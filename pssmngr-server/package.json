@@ -1,0 +1,88 @@
+{
+	"name": "pssmngr",
+	"description": "Server workspace for the pssmngr zero-knowledge password manager",
+	"private": true,
+	"license": "AGPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SelmiAbderrahim/pssmngr.com",
+		"directory": "pssmngr-server"
+	},
+	"bugs": {
+		"url": "https://github.com/SelmiAbderrahim/pssmngr/issues"
+	},
+	"homepage": "https://github.com/SelmiAbderrahim/pssmngr/tree/main/pssmngr-server#readme",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"pssmngr:dev": "pnpm --filter=pssmngr-app run dev",
+		"pssmngr:build": "pnpm --filter=pssmngr-app run build",
+		"pssmngr:start": "pnpm --filter=pssmngr-app run start",
+		"test": "pnpm --filter=@pssmngr/server run test && pnpm --filter=pssmngr-app run test",
+		"server:dev": "pnpm --filter=@pssmngr/server run dev",
+		"server:build": "pnpm --filter=@pssmngr/server run build",
+		"typecheck": "pnpm -r run typecheck",
+		"build": "pnpm -r run build",
+		"format-and-lint": "biome check .",
+		"check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
+		"format-and-lint:fix": "biome check . --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.1",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@types/node": "^18.19.104",
+		"@vitest/coverage-v8": "3.2.6",
+		"dotenv": "16.4.5",
+		"esbuild": "0.28.1",
+		"lefthook": "1.8.4",
+		"lint-staged": "^15.5.2",
+		"tsx": "4.16.2",
+		"vitest": "3.2.6"
+	},
+	"packageManager": "pnpm@9.12.0",
+	"engines": {
+		"node": "^20.19.0",
+		"pnpm": ">=9.12.0"
+	},
+	"lint-staged": {
+		"*": [
+			"biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"resolutions": {
+		"@types/react": "18.3.5",
+		"@types/react-dom": "18.3.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"defu": "6.1.5",
+			"fast-uri": "3.1.4",
+			"fast-xml-builder": "1.1.7",
+			"glob": "10.5.0",
+			"h3": "1.15.6",
+			"@esbuild-kit/core-utils>esbuild": "0.28.1",
+			"js-cookie": "3.0.8",
+			"jws": "3.2.3",
+			"kysely": "0.28.17",
+			"minimatch": "9.0.7",
+			"picomatch": "2.3.2",
+			"postcss": "8.5.25",
+			"sharp": "0.35.3",
+			"shell-quote": "1.10.0",
+			"vite": "6.4.3",
+			"esbuild": "0.28.1",
+			"brace-expansion": "5.0.8",
+			"js-yaml": "4.3.0",
+			"yaml": "2.8.3",
+			"ajv": "8.18.0"
+		}
+	}
+}

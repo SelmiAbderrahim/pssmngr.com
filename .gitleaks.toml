@@ -1,0 +1,75 @@
+title = "pssmngr secret scanning configuration"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "pssmngr-env-secret-assignment"
+description = "Sensitive pssmngr environment variable with an inline value"
+regex = '''(?i)(POSTGRES_PASSWORD|REDIS_PASSWORD|BETTER_AUTH_SECRET|ENCRYPTION_KEY|SMTP_PASSWORD|RESEND_API_KEY|GOOGLE_CLIENT_SECRET|GITHUB_CLIENT_SECRET)\s*=\s*["']?([A-Za-z0-9_./+=:@%$!#-]{16,})["']?'''
+secretGroup = 2
+keywords = [
+  "POSTGRES_PASSWORD",
+  "REDIS_PASSWORD",
+  "BETTER_AUTH_SECRET",
+  "ENCRYPTION_KEY",
+  "SMTP_PASSWORD",
+  "RESEND_API_KEY",
+  "GOOGLE_CLIENT_SECRET",
+  "GITHUB_CLIENT_SECRET"
+]
+
+[[rules]]
+id = "pssmngr-database-url-with-credentials"
+description = "Database or Redis URL with embedded credentials"
+regex = '''(?i)(postgres|postgresql|redis)://[^/\s:@]+:[^@\s]+@[^/\s]+'''
+keywords = [
+  "postgres://",
+  "postgresql://",
+  "redis://"
+]
+
+[[rules]]
+id = "pssmngr-private-key-block"
+description = "Private key material"
+regex = '''-----BEGIN (RSA |DSA |EC |OPENSSH |PGP )?PRIVATE KEY-----'''
+keywords = [
+  "BEGIN PRIVATE KEY",
+  "BEGIN RSA PRIVATE KEY",
+  "BEGIN OPENSSH PRIVATE KEY",
+  "BEGIN PGP PRIVATE KEY"
+]
+
+[allowlist]
+description = "Allow generated output and explicit non-secret placeholders"
+paths = [
+  '''(^|/)\.env\.example$''',
+  '''(^|/)node_modules/''',
+  '''(^|/)dist/''',
+  '''(^|/)build/''',
+  '''(^|/)\.next/''',
+  '''(^|/)coverage/''',
+  '''(^|/)playwright-report/''',
+  '''(^|/)test-results/''',
+  # Static examples and detector fixtures intentionally contain secret-shaped text.
+  '''(^|/)client/public/locales/(ar|de|en|es|fr)/settings\.json$''',
+  '''(^|/)client/src/(lib/logger/__tests__/sanitizer|services/__tests__/totp-engine)\.test\.ts$''',
+  '''(^|/)crypto/src/escrow\.ts$''',
+  '''(^|/)docs/(contributing/tests\.md|self-hosting/(database|environment-variables)\.(ar|de|en|es|fr)\.md|self-hosting/feature-flags\.md)$''',
+  '''(^|/)pssmngr-server/apps/pssmngr/(.*/)?__tests?__/''',
+  '''(^|/)pssmngr-server/apps/pssmngr/content/docs/(api/(authentication|index)|self-hosting/(configuration|docker-setup))(\.(ar|de|es|fr))?\.mdx$''',
+  '''(^|/)pssmngr-server/apps/pssmngr/pages/invitation\.tsx$''',
+  '''(^|/)pssmngr-server/apps/pssmngr/server/db/validations/index\.ts$''',
+  '''(^|/)pssmngr-server/apps/pssmngr/vitest\.(family|integration)\.config\.ts$''',
+  '''(^|/)pssmngr-server/packages/server/src/(.*/)?__tests__/''',
+  '''(^|/)pssmngr-server/packages/server/src/db/validations/index\.ts$'''
+]
+regexes = [
+  '''(?i)(replace-with|change-me|build-only|test-only)[-_a-z0-9]*''',
+  '''(?i)(example|placeholder|dummy|fake)[-_]?(key|secret|token|password|credential)''',
+  '''(?i)(key|secret|token|password|credential)[-_]?(example|placeholder|dummy|fake)''',
+  '''postgres(?:ql)?://postgres:postgres@(?:127\.0\.0\.1|localhost)''',
+  '''postgres://pssmngr:pssmngr_dev@localhost''',
+  '''AKIAIOSFODNN7EXAMPLE''',
+  '''wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'''
+]

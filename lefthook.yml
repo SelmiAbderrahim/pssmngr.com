@@ -1,0 +1,19 @@
+pre-commit:
+  parallel: true
+  commands:
+    gitleaks:
+      glob: "*"
+      run: gitleaks protect --staged --no-banner --exit-code 1
+      fail_text: "Secrets detected in staged files. Remove them before committing."
+    lint-client:
+      glob: "client/src/**/*.{ts,tsx}"
+      run: docker exec pssmngr-client npx eslint {staged_files} --quiet 2>/dev/null || true
+    typecheck-staged:
+      glob: "**/*.{ts,tsx}"
+      run: echo "Type checking deferred to CI"
+
+pre-push:
+  commands:
+    gitleaks-full:
+      run: gitleaks detect --no-banner --exit-code 1
+      fail_text: "Secrets detected in repository history."

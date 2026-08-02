@@ -1,0 +1,147 @@
+{
+  "launcher": {
+    "ariaLabel": "Ouvrir le guide",
+    "tooltip": "Guidez-moi"
+  },
+  "nudge": {
+    "text": "Nouveau ici ? Une visite rapide peut aider.",
+    "cta": "Faites-moi visiter",
+    "dismiss": "Fermer"
+  },
+  "panel": {
+    "title": "Guidez-moi",
+    "progress": "{{done}} sur {{total}} visites terminées",
+    "youAreHere": "Vous êtes ici",
+    "completed": "Terminée",
+    "start": "Démarrer",
+    "replay": "Rejouer",
+    "resume": "Reprendre à l'étape {{step}}"
+  },
+  "toggle": {
+    "label": "Guidez-moi",
+    "description": "Afficher les visites courtes et le bouton d'aide flottant."
+  },
+  "overlay": {
+    "counter": "Étape {{current}} sur {{total}}",
+    "back": "Précédent",
+    "next": "Suivant",
+    "done": "Terminé",
+    "takeMeThere": "Emmenez-moi là-bas",
+    "skipStep": "Passer l'étape",
+    "skipTour": "Passer la visite",
+    "endTour": "Terminer la visite",
+    "close": "Fermer",
+    "searching": "Recherche du bon endroit…",
+    "missing": "La cible de cette étape n'est pas sur la page actuelle."
+  },
+  "tours": {
+    "firstRun": {
+      "title": "Premiers pas",
+      "description": "Cinq étapes pour maîtriser l'essentiel de votre coffre.",
+      "steps": {
+        "add": {
+          "title": "Ajoutez votre premier élément",
+          "body": "Utilisez ce bouton pour enregistrer un identifiant, une note ou une carte."
+        },
+        "search": {
+          "title": "Trouvez vite",
+          "body": "La recherche est floue — tapez un site, un e-mail ou une étiquette."
+        },
+        "generator": {
+          "title": "Générez des mots de passe forts",
+          "body": "Un clic pour un mot de passe fort et unique, prêt à coller."
+        },
+        "workspace": {
+          "title": "Changez d'espace",
+          "body": "Personnel, famille ou travail — chaque espace est isolé."
+        },
+        "settings": {
+          "title": "Réglez votre compte",
+          "body": "Sécurité, synchronisation et préférences se trouvent ici."
+        }
+      }
+    },
+    "vaultBasics": {
+      "title": "Bases du coffre",
+      "description": "Ajouter, chercher et partager des éléments.",
+      "steps": {
+        "add": {
+          "title": "Ajouter un élément",
+          "body": "Tout ce que vous enregistrez est chiffré sur votre appareil avant d'être envoyé."
+        },
+        "search": {
+          "title": "Chercher dans votre coffre",
+          "body": "La recherche se fait localement, sur des données déjà déchiffrées."
+        },
+        "share": {
+          "title": "Partager en sécurité",
+          "body": "Le partage est chiffré pour la clé du destinataire — le serveur ne voit rien."
+        }
+      }
+    },
+    "sharing": {
+      "title": "Partager un élément",
+      "description": "Envoyez un identifiant ou une note en zero-knowledge.",
+      "steps": {
+        "entry": {
+          "title": "Ouvrir Partager",
+          "body": "Chaque élément peut être partagé à une personne ou dans un coffre partagé."
+        },
+        "center": {
+          "title": "Centre de partage",
+          "body": "Voyez qui a quoi — révoquez l'accès en un clic."
+        }
+      }
+    },
+    "securityCheckup": {
+      "title": "Bilan de sécurité",
+      "description": "Vérifiez mots de passe compromis, 2FA et récupération.",
+      "steps": {
+        "nav": {
+          "title": "Ouvrir Sécurité",
+          "body": "Sécurité regroupe fuites, mots de passe faibles et réutilisations."
+        },
+        "card": {
+          "title": "Paramètres de sécurité",
+          "body": "2FA, récupération et appareils dans une seule carte."
+        },
+        "remember": {
+          "title": "Déverrouillage persistant",
+          "body": "Restez déverrouillé 30 jours sur cet appareil — les actions sensibles redemandent."
+        }
+      }
+    },
+    "workspaces": {
+      "title": "Espaces de travail",
+      "description": "Séparez personnel, famille et travail.",
+      "steps": {
+        "switcher": {
+          "title": "Changer d'espace",
+          "body": "Chaque espace a sa clé et ses propres éléments."
+        },
+        "people": {
+          "title": "Gérer les personnes",
+          "body": "Invitez famille ou collègues et fixez qui voit quoi."
+        }
+      }
+    },
+    "protectAccount": {
+      "title": "Protégez votre compte",
+      "description": "Récupération, export et déverrouillage.",
+      "steps": {
+        "data": {
+          "title": "Vos données",
+          "body": "Export, import et sauvegarde — tout côté client."
+        },
+        "remember": {
+          "title": "Déverrouillage persistant",
+          "body": "Choisissez le bon équilibre entre confort et sécurité."
+        },
+        "recovery": {
+          "title": "Kit de récupération",
+          "body": "Gardez votre Clé Secrète en lieu sûr — c'est votre porte de secours."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "itemTypes": {
+    "login": "Inicio de sesión",
+    "card": "Tarjeta",
+    "secureNote": "Nota segura",
+    "identity": "Identidad",
+    "passkey": "Clave de acceso",
+    "totp": "TOTP",
+    "file": "Archivo"
+  },
+  "untitled": "Sin título",
+  "decryptionError": "[Error de descifrado]",
+  "addItem": "Añadir elemento",
+  "addItemDescription": "Crea un nuevo elemento. Todos los datos se cifran en tu dispositivo.",
+  "itemType": "Tipo",
+  "title": "Bóveda",
+  "itemTitle": "Título",
+  "titlePlaceholder": "p. ej., GitHub, banco, etc.",
+  "username": "Nombre de usuario",
+  "usernamePlaceholder": "user@example.com",
+  "password": "Contraseña",
+  "sensitiveFieldUnchanged": "Déjalo vacío para conservar el valor actual",
+  "generate": "Generar",
+  "hidePassword": "Ocultar contraseña",
+  "showPassword": "Mostrar contraseña",
+  "url": "URL",
+  "notes": "Notas",
+  "content": "Contenido",
+  "empty": "Tu bóveda está vacía — y solo tú puedes llenarla.",
+  "emptyDescription": "Los elementos se cifran con claves que nunca salen de tus dispositivos.",
+  "addFirstItem": "Añadir primer elemento",
+  "created": "Creado",
+  "modified": "Última modificación",
+  "saved": "Elemento guardado",
+  "saveFailed": "No se pudieron guardar los cambios",
+  "saving": "Guardando...",
+  "save": "Guardar",
+  "encrypting": "Cifrando...",
+  "placeholderCode": "--- ---",
+  "time": {
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "daysAgo": "hace {{count}}d"
+  },
+  "shareStatus": {
+    "pending": "Pendiente",
+    "accepted": "Aceptado",
+    "declined": "Rechazado",
+    "revoked": "Revocado"
+  },
+  "totp": {
+    "secondsRemaining": "{{remaining}} segundos restantes",
+    "defaultIssuer": "TOTP"
+  },
+  "qrScanner": {
+    "invalidUri": "URI otpauth:// no válida",
+    "noBarcodeDetector": "El escaneo con cámara no es compatible con este navegador. Ingrese la URI manualmente.",
+    "cameraPermissionDenied": "Permiso de cámara denegado. Permita el acceso a la cámara o ingrese la URI manualmente.",
+    "cameraError": "No se pudo acceder a la cámara. Ingrese la URI manualmente.",
+    "noQRFound": "No se encontró un código QR otpauth:// válido en la imagen.",
+    "imageReadError": "No se pudo leer el código QR de la imagen."
+  },
+  "secretKeyPlaceholder": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-X",
+  "sharing": {
+    "loadReceivedError": "Error al cargar los elementos compartidos",
+    "loadSentError": "Error al cargar los envíos compartidos"
+  },
+  "ephemeral": {
+    "createError": "Error al crear el enlace"
+  },
+  "org": {
+    "setupTitle": "Compartir la bóveda de esta organización",
+    "setupDesc": "Crea una bóveda compartida para que los miembros vean los mismos elementos. Se importarán los elementos existentes de esta organización y los miembros que hayan iniciado sesión obtendrán acceso automáticamente.",
+    "setupButton": "Configurar bóveda compartida",
+    "noneMember": "Esta organización aún no tiene una bóveda compartida.",
+    "pending": "Verás los elementos compartidos cuando un administrador de la organización te conceda acceso. Asegúrate primero de haber iniciado sesión en este dispositivo."
+  },
+  "loadTrashError": "No se pudo cargar la papelera",
+  "emptyImport": "Importar desde otro gestor de contraseñas"
+}

@@ -1,0 +1,135 @@
+{
+	"type": {
+		"invalid": "Erwartet {{expected}}, erhalten {{received}}"
+	},
+	"string": {
+		"required": "Dieses Feld ist erforderlich",
+		"minLength": "Muss mindestens {{min}} Zeichen enthalten",
+		"maxLength": "Darf nicht mehr als {{max}} Zeichen enthalten",
+		"email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+		"url": "Bitte geben Sie eine gültige URL ein",
+		"uuid": "Ungültiges ID-Format",
+		"cuid": "Ungültiges CUID-Format",
+		"cuid2": "Ungültiges CUID2-Format",
+		"ulid": "Ungültiges ULID-Format",
+		"emoji": "Muss ein gültiges Emoji sein",
+		"ip": "Bitte geben Sie eine gültige IP-Adresse ein",
+		"base64": "Muss gültig base64-kodiert sein",
+		"pattern": "Ungültiges Format",
+		"alphanumeric": "Darf nur Buchstaben und Zahlen enthalten",
+		"slug": "Muss ein gültiger Slug sein (Kleinbuchstaben, Zahlen und Bindestriche)",
+		"noWhitespace": "Darf keine Leerzeichen enthalten",
+		"noLeadingTrailingSpaces": "Darf keine führenden oder abschließenden Leerzeichen haben",
+		"includes": "Muss \"{{value}}\" enthalten",
+		"startsWith": "Muss mit \"{{value}}\" beginnen",
+		"endsWith": "Muss mit \"{{value}}\" enden"
+	},
+	"number": {
+		"required": "Dieses Feld ist erforderlich",
+		"min": "Muss mindestens {{min}} sein",
+		"max": "Darf nicht mehr als {{max}} sein",
+		"minExclusive": "Muss größer als {{min}} sein",
+		"maxExclusive": "Muss kleiner als {{max}} sein",
+		"positive": "Muss eine positive Zahl sein",
+		"negative": "Muss eine negative Zahl sein",
+		"integer": "Muss eine ganze Zahl sein",
+		"finite": "Muss eine endliche Zahl sein",
+		"multipleOf": "Muss ein Vielfaches von {{multipleOf}} sein",
+		"port": "Muss eine gültige Portnummer sein (1-65535)"
+	},
+	"array": {
+		"required": "Mindestens ein Element ist erforderlich",
+		"minLength": "Muss mindestens {{min}} Elemente enthalten",
+		"maxLength": "Darf nicht mehr als {{max}} Elemente enthalten",
+		"unique": "Alle Elemente müssen eindeutig sein"
+	},
+	"set": {
+		"minSize": "Muss mindestens {{min}} Elemente enthalten",
+		"maxSize": "Darf nicht mehr als {{max}} Elemente enthalten"
+	},
+	"object": {
+		"required": "Dieses Feld ist erforderlich",
+		"unrecognizedKeys": "Nicht erkannte Schlüssel: {{keys}}"
+	},
+	"boolean": {
+		"required": "Dieses Feld ist erforderlich"
+	},
+	"date": {
+		"required": "Dieses Feld ist erforderlich",
+		"invalid": "Ungültiges Datum",
+		"future": "Datum muss in der Zukunft liegen",
+		"past": "Datum muss in der Vergangenheit liegen",
+		"min": "Datum muss nach {{min}} sein",
+		"max": "Datum muss vor {{max}} sein"
+	},
+	"literal": {
+		"invalid": "Muss genau {{expected}} sein"
+	},
+	"enum": {
+		"invalid": "Ungültige Option. Erwartet eine der folgenden: {{options}}"
+	},
+	"union": {
+		"invalid": "Ungültige Eingabe",
+		"invalidDiscriminator": "Ungültiger Diskriminatorwert. Erwartet eine der folgenden: {{options}}"
+	},
+	"intersection": {
+		"invalid": "Intersection-Typ-Validierung fehlgeschlagen"
+	},
+	"function": {
+		"invalidArguments": "Ungültige Funktionsargumente",
+		"invalidReturnType": "Ungültiger Funktions-Rückgabetyp"
+	},
+	"password": {
+		"tooShort": "Passwort muss mindestens {{min}} Zeichen enthalten",
+		"tooWeak": "Passwort ist zu schwach",
+		"noUppercase": "Passwort muss mindestens einen Großbuchstaben enthalten",
+		"noLowercase": "Passwort muss mindestens einen Kleinbuchstaben enthalten",
+		"noNumber": "Passwort muss mindestens eine Zahl enthalten",
+		"noSpecial": "Passwort muss mindestens ein Sonderzeichen enthalten"
+	},
+	"domain": {
+		"invalid": "Ungültiges Domain-Format",
+		"alreadyExists": "Domain wird bereits verwendet"
+	},
+	"docker": {
+		"invalidImage": "Ungültiges Docker-Image-Format",
+		"invalidContainerName": "Ungültiges Container-Namensformat"
+	},
+	"custom": {
+		"sshKey": {
+			"invalidPublicKey": "Ungültiges öffentliches Schlüsselformat. Unterstützte Formate: RSA, Ed25519, ECDSA",
+			"invalidPrivateKey": "Ungültiges privates Schlüsselformat"
+		},
+		"domain": {
+			"invalidFormat": "Ungültiges Domain-Format",
+			"noProtocol": "Domain sollte kein Protokoll enthalten (http/https)",
+			"noPath": "Domain sollte keinen Pfad enthalten",
+			"noPort": "Domain sollte keinen Port enthalten",
+			"noLeadingTrailingSpaces": "Domain darf keine führenden oder abschließenden Leerzeichen haben"
+		},
+		"port": {
+			"min": "Port muss mindestens 1 sein",
+			"max": "Port muss 65535 oder weniger sein",
+			"reserved": "Port {{port}} ist reserviert"
+		},
+		"password": {
+			"tooWeak": "Passwort ist zu schwach",
+			"minLength": "Passwort muss mindestens {{min}} Zeichen enthalten",
+			"requireUppercase": "Passwort muss mindestens einen Großbuchstaben enthalten",
+			"requireLowercase": "Passwort muss mindestens einen Kleinbuchstaben enthalten",
+			"requireNumber": "Passwort muss mindestens eine Zahl enthalten",
+			"requireSpecial": "Passwort muss mindestens ein Sonderzeichen enthalten"
+		},
+		"username": {
+			"invalid": "Benutzername darf nur Buchstaben, Zahlen und Unterstriche enthalten",
+			"reserved": "Dieser Benutzername ist reserviert"
+		},
+		"projectName": {
+			"invalid": "Projektname darf nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten"
+		},
+		"environmentVariable": {
+			"invalidKey": "Ungültiger Umgebungsvariablen-Schlüssel",
+			"reservedKey": "Umgebungsvariablen-Schlüssel {{key}} ist reserviert"
+		}
+	}
+}

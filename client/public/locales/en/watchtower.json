@@ -1,0 +1,126 @@
+{
+  "score": {
+    "critical": "Critical",
+    "poor": "Poor",
+    "fair": "Fair",
+    "good": "Good"
+  },
+  "lastScan": "Last scan:",
+  "rescan": "Rescan",
+  "retry": "Retry",
+  "unlock": "Unlock Vault",
+  "unlockRequired": "Unlock your vault to run a security audit",
+  "noVault": "No vault found. Create a vault first.",
+  "analysisError": "Failed to analyze vault",
+  "breachError": "Breach check failed",
+  "weak": "Weak",
+  "weakDesc": "Low entropy or patterns",
+  "weakPasswords": "Weak Passwords",
+  "weakInfo": "Passwords with low entropy, sequential patterns, or keyboard walks",
+  "weakDetail": "Password strength is below minimum threshold",
+  "noWeak": "No weak passwords found",
+  "reused": "Reused",
+  "reusedDesc": "Same password on multiple sites",
+  "reusedPasswords": "Reused Passwords",
+  "reusedInfo": "Groups of items sharing the same password",
+  "reusedDetail": "Password used elsewhere",
+  "noReused": "No reused passwords found",
+  "sharedBy": "Shared by {{count}} items",
+  "old": "Old",
+  "oldDesc": "Not changed in 90+ days",
+  "oldPasswords": "Old Passwords",
+  "oldInfo": "Passwords not updated in over 90 days",
+  "oldDetail": "Last changed {{days}} days ago",
+  "noOld": "No old passwords found",
+  "breached": "Breached",
+  "breachedDesc": "Found in data breaches",
+  "breachedPasswords": "Breached Passwords",
+  "breachedInfo": "Passwords found in known data breaches via Have I Been Pwned",
+  "breachNotChecked": "Breach check has not been run yet",
+  "noBreached": "No breached passwords found",
+  "breachCount": "Found in {{count}} data breaches",
+  "breachCheckTitle": "Check for breached passwords",
+  "breachCheckDesc": "Uses k-anonymity — only partial hashes are sent. No plaintext leaves your device.",
+  "checkBreaches": "Check Breaches",
+  "checking": "Checking...",
+  "critical": "Critical",
+  "warning": "Warning",
+  "info": "Info",
+  "fix": "Fix",
+  "allClear": "All {{total}} passwords look good",
+  "findingsSummary": "{{findings}} findings across {{total}} passwords",
+  "breakdown": {
+    "title": "How this score is calculated",
+    "description": "Each risk category contributes a deterministic penalty proportional to the share of items affected. Nothing is sent off your device.",
+    "category": "Category",
+    "count": "Affected",
+    "penalty": "Penalty",
+    "weight": "Max",
+    "noFindings": "No risks contribute to your score.",
+    "totalPenalty": "Total penalty: −{{penalty}} points"
+  },
+  "category": {
+    "weak": {
+      "label": "Weak passwords",
+      "whyMatters": "Weak passwords can be guessed or brute-forced quickly.",
+      "whatToDo": "Replace each weak password with a long, randomly generated one."
+    },
+    "reused": {
+      "label": "Reused passwords",
+      "whyMatters": "Reusing a password lets one breach unlock multiple accounts.",
+      "whatToDo": "Generate a unique password for every reused account."
+    },
+    "old": {
+      "label": "Old passwords",
+      "whyMatters": "Older passwords are more likely to have leaked since they were created.",
+      "whatToDo": "Rotate passwords that have not changed in 90+ days, especially for sensitive accounts."
+    },
+    "breached": {
+      "label": "Known breaches",
+      "whyMatters": "Breached passwords are already published in attacker wordlists.",
+      "whatToDo": "Change every breached password before doing anything else."
+    },
+    "missing2fa": {
+      "label": "Missing 2FA",
+      "whyMatters": "Two-factor authentication blocks most attacks that reuse leaked passwords.",
+      "whatToDo": "Enable TOTP on each login that supports it and store the secret here."
+    }
+  },
+  "missing2fa": "Missing 2FA",
+  "missing2faDesc": "Login items without a stored TOTP secret",
+  "missing2faPasswords": "Logins without 2FA",
+  "missing2faInfo": "Login items that could be protected with a TOTP authenticator",
+  "missing2faDetail": "Add a TOTP secret for this login",
+  "noMissing2fa": "Every login has 2FA configured",
+  "privacy": {
+    "title": "Privacy",
+    "kAnonymity": "Only the first 5 characters of the SHA-1 hash are sent. The full hash and plaintext password never leave your device.",
+    "source": "Source: Have I Been Pwned (k-anonymity range API)",
+    "checkedAt": "Last checked {{time}}"
+  },
+  "filters": {
+    "title": "Filter",
+    "all": "All severities",
+    "critical": "Critical only",
+    "warningPlus": "Warning and above",
+    "sort": "Sort",
+    "sortBySeverity": "Most critical first",
+    "sortByUpdated": "Recently updated",
+    "sortByName": "Name (A→Z)"
+  },
+  "breachCard": {
+    "severityHigh": "High severity",
+    "severityMedium": "Medium severity",
+    "severityLow": "Low severity",
+    "occurrences": "Seen in breaches {{count}} times",
+    "detectionSource": "Detected via {{source}}",
+    "markReviewed": "Mark reviewed",
+    "startChecklist": "Start password update checklist"
+  },
+  "emptyState": {
+    "noItems": "Your vault is empty",
+    "noItemsHint": "Add a login to start tracking password health.",
+    "noFindings": "Nothing to act on right now",
+    "noFindingsHint": "We'll keep watching. New findings will appear here as they're detected."
+  }
+}

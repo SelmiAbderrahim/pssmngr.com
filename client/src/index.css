@@ -1,0 +1,468 @@
+/*
+* TailwindCSS & ShadCN.
+* @see https://tailwindcss.com/docs/guides/vite
+* @see https://ui.shadcn.com
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 357 100% 45.3%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 9%;
+    --radius: 0.5rem;
+    /* Layout template density (default template; overridden by .tpl-* below) */
+    --tpl-gap: 0.75rem;
+    --tpl-modal-max: 32rem;
+    --muted-grid: rgba(0, 0, 0, 0.1);
+    --selection: 217 91% 60%;           /* Blue #3b82f6 - high visibility selection */
+    --selection-foreground: 0 0% 100%;  /* White text for contrast */
+
+    /* Landing Page Tokens — Light Mode */
+    --landing-glow: 217 91% 60%;
+    --landing-glow-intensity: 0.15;
+    --landing-glow-success: 142 71% 45%;
+    --landing-glow-danger: 0 84% 60%;
+    --landing-surface-elevated: 0 0% 99%;
+    --landing-surface-sunken: 220 14% 96%;
+    --landing-border-highlight: 217 91% 60%;
+    --landing-border-subtle: 220 13% 91%;
+    --landing-text-accent: 217 91% 50%;
+    --landing-section-alt: 220 14% 97%;
+    --landing-float-shadow: 220 20% 80%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 89.8%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 12%; /* Adjusted for better dark mode contrast based on card being #171717 (9%L) */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 63.1%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15.7%;
+    --input: 0 0% 15.7%;
+    --ring: 0 0% 89.8%;
+    --muted-grid: rgba(255, 255, 255, 0.1);
+    --selection: 217 91% 50%;           /* Slightly darker blue #2563eb for dark mode */
+    --selection-foreground: 0 0% 100%;  /* White text */
+
+    /* Landing Page Tokens — Dark Mode */
+    --landing-glow: 217 91% 60%;
+    --landing-glow-intensity: 0.25;
+    --landing-glow-success: 142 71% 45%;
+    --landing-glow-danger: 0 84% 60%;
+    --landing-surface-elevated: 0 0% 8%;
+    --landing-surface-sunken: 0 0% 3%;
+    --landing-border-highlight: 217 91% 60%;
+    --landing-border-subtle: 0 0% 18%;
+    --landing-text-accent: 217 91% 65%;
+    --landing-section-alt: 0 0% 6%;
+    --landing-float-shadow: 0 0% 2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  cursor: pointer;
+  @apply transition duration-200 active:opacity-60;
+}
+
+button {
+  cursor: pointer;
+  @apply transition duration-200 active:scale-[0.98];
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+::selection {
+  color: hsl(var(--selection-foreground));
+  background-color: hsl(var(--selection));
+}
+
+/*
+* Misc
+*/
+.base-grid {
+  @apply will-change-auto;
+
+  background-size: 30px 30px;
+  background-image: linear-gradient(90deg, var(--muted-grid) 1px, transparent 0),
+    linear-gradient(180deg, var(--muted-grid) 1px, transparent 0);
+}
+
+/*
+* Tiptap Rich Text Editor Styles
+* Uses Shadcn CSS custom properties for consistent theming
+*/
+.tiptap-editor {
+  @apply w-full;
+}
+
+/* ProseMirror core styles */
+.ProseMirror {
+  @apply outline-none min-h-[200px] px-4 py-3 text-sm text-foreground leading-relaxed;
+}
+
+.ProseMirror:focus {
+  @apply outline-none;
+}
+
+/* Placeholder styling */
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  @apply float-start text-muted-foreground pointer-events-none h-0;
+}
+
+/* Typography */
+.ProseMirror h1 {
+  @apply text-2xl font-bold mt-6 mb-4 text-foreground;
+}
+
+.ProseMirror h2 {
+  @apply text-xl font-semibold mt-5 mb-3 text-foreground;
+}
+
+.ProseMirror h3 {
+  @apply text-lg font-semibold mt-4 mb-2 text-foreground;
+}
+
+.ProseMirror h4 {
+  @apply text-base font-medium mt-3 mb-2 text-foreground/90;
+}
+
+.ProseMirror p {
+  @apply mb-3;
+}
+
+/* Lists */
+.ProseMirror ul {
+  @apply list-disc ps-6 mb-4 space-y-1;
+}
+
+.ProseMirror ol {
+  @apply list-decimal ps-6 mb-4 space-y-1;
+}
+
+.ProseMirror li {
+  @apply ps-1;
+}
+
+.ProseMirror li p {
+  @apply mb-1;
+}
+
+/* Blockquote */
+.ProseMirror blockquote {
+  @apply border-s-4 border-primary/50 ps-4 py-2 my-4 bg-muted/30 rounded-e-md italic;
+}
+
+/* Inline code */
+.ProseMirror code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground;
+}
+
+/* Code block */
+.ProseMirror pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto my-4 text-sm;
+}
+
+.ProseMirror pre code {
+  @apply bg-transparent p-0 text-foreground;
+}
+
+/* Code block syntax highlighting (lowlight) */
+.ProseMirror pre .hljs-comment,
+.ProseMirror pre .hljs-quote {
+  @apply text-muted-foreground italic;
+}
+
+.ProseMirror pre .hljs-keyword,
+.ProseMirror pre .hljs-selector-tag,
+.ProseMirror pre .hljs-built_in {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.ProseMirror pre .hljs-string,
+.ProseMirror pre .hljs-attribute,
+.ProseMirror pre .hljs-addition {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.ProseMirror pre .hljs-number,
+.ProseMirror pre .hljs-literal {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.ProseMirror pre .hljs-title,
+.ProseMirror pre .hljs-section {
+  @apply text-purple-600 dark:text-purple-400;
+}
+
+.ProseMirror pre .hljs-deletion {
+  @apply text-red-600 dark:text-red-400;
+}
+
+/* Syntax highlighting for docs code blocks */
+code.hljs .hljs-comment,
+code.hljs .hljs-quote {
+  @apply text-muted-foreground italic;
+}
+
+code.hljs .hljs-keyword,
+code.hljs .hljs-selector-tag,
+code.hljs .hljs-built_in,
+code.hljs .hljs-name {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+code.hljs .hljs-string,
+code.hljs .hljs-attribute,
+code.hljs .hljs-addition,
+code.hljs .hljs-selector-attr,
+code.hljs .hljs-selector-pseudo {
+  @apply text-green-600 dark:text-green-400;
+}
+
+code.hljs .hljs-number,
+code.hljs .hljs-literal,
+code.hljs .hljs-variable,
+code.hljs .hljs-template-variable,
+code.hljs .hljs-tag .hljs-attr {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+code.hljs .hljs-title,
+code.hljs .hljs-section,
+code.hljs .hljs-title.function_ {
+  @apply text-purple-600 dark:text-purple-400;
+}
+
+code.hljs .hljs-deletion {
+  @apply text-red-600 dark:text-red-400;
+}
+
+code.hljs .hljs-type,
+code.hljs .hljs-class .hljs-title {
+  @apply text-yellow-600 dark:text-yellow-400;
+}
+
+code.hljs .hljs-meta,
+code.hljs .hljs-doctag {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+code.hljs .hljs-symbol,
+code.hljs .hljs-bullet {
+  @apply text-cyan-600 dark:text-cyan-400;
+}
+
+/* Links */
+.ProseMirror a {
+  @apply text-primary underline underline-offset-2 hover:text-primary/80 transition-colors cursor-pointer;
+}
+
+/* Horizontal rule */
+.ProseMirror hr {
+  @apply my-6 border-border;
+}
+
+/* Images */
+.ProseMirror img {
+  @apply max-w-full h-auto rounded-lg my-4;
+}
+
+.ProseMirror img.ProseMirror-selectednode {
+  @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
+
+/* Tables */
+.ProseMirror table {
+  @apply w-full border-collapse my-4 text-sm;
+}
+
+.ProseMirror table th {
+  @apply bg-muted font-semibold text-start p-2 border border-border;
+}
+
+.ProseMirror table td {
+  @apply p-2 border border-border;
+}
+
+.ProseMirror table tr:hover td {
+  @apply bg-muted/50;
+}
+
+/* Table selection */
+.ProseMirror .selectedCell {
+  @apply bg-primary/10;
+}
+
+.ProseMirror .selectedCell::after {
+  content: "";
+  @apply absolute inset-0 bg-primary/10 pointer-events-none;
+}
+
+/* Table resize handle */
+.ProseMirror .column-resize-handle {
+  @apply absolute top-0 bottom-0 end-[-2px] w-1 bg-primary/50 cursor-col-resize z-10;
+}
+
+.ProseMirror .tableWrapper {
+  @apply overflow-x-auto my-4;
+}
+
+/* Selection styling - uses global selection colors for consistency */
+.ProseMirror ::selection {
+  color: hsl(var(--selection-foreground));
+  background-color: hsl(var(--selection));
+}
+
+/* Gapcursor (for navigation between nodes) */
+.ProseMirror .ProseMirror-gapcursor {
+  @apply relative;
+}
+
+.ProseMirror .ProseMirror-gapcursor::after {
+  content: "";
+  @apply absolute block w-[1px] h-5 bg-foreground;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Strong and emphasis */
+.ProseMirror strong {
+  @apply font-semibold;
+}
+
+.ProseMirror em {
+  @apply italic;
+}
+
+.ProseMirror s {
+  @apply line-through;
+}
+
+/* Task lists (if needed in future) */
+.ProseMirror ul[data-type="taskList"] {
+  @apply list-none ps-0;
+}
+
+.ProseMirror ul[data-type="taskList"] li {
+  @apply flex items-start gap-2;
+}
+
+.ProseMirror ul[data-type="taskList"] li input[type="checkbox"] {
+  @apply mt-1 h-4 w-4 rounded border-border;
+}
+
+/*
+* RTL (Right-to-Left) Support
+* For Arabic, Hebrew, Persian, Urdu and other RTL languages
+*/
+
+/* RTL text alignment for prose content */
+[dir="rtl"] .prose,
+[dir="rtl"] .prose *,
+[dir="rtl"] .ProseMirror {
+  text-align: right;
+}
+
+/* RTL list alignment */
+[dir="rtl"] .prose ul,
+[dir="rtl"] .prose ol,
+[dir="rtl"] .ProseMirror ul,
+[dir="rtl"] .ProseMirror ol {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 0;
+}
+
+/* RTL blockquote border */
+[dir="rtl"] .prose blockquote,
+[dir="rtl"] .ProseMirror blockquote {
+  border-inline-start-width: 4px;
+  border-inline-end-width: 0;
+  padding-inline-start: 1rem;
+  padding-inline-end: 0;
+  border-radius: 0;
+  border-start-end-radius: 0.375rem;
+  border-end-end-radius: 0.375rem;
+}
+
+/* RTL table headers */
+[dir="rtl"] .prose table th,
+[dir="rtl"] .ProseMirror table th {
+  text-align: right;
+}
+
+/* RTL placeholder float */
+[dir="rtl"] .ProseMirror p.is-editor-empty:first-child::before {
+  float: inline-end;
+}
+
+/* Layout template density — class applied to <html> by LayoutTemplateProvider */
+.tpl-compact {
+  --tpl-gap: 0.375rem;
+  --tpl-modal-max: 28rem;
+}
+.tpl-list {
+  --tpl-gap: 1rem;
+  --tpl-modal-max: 40rem;
+}

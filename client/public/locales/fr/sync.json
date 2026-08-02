@@ -1,0 +1,21 @@
+{
+  "offline_banner": {
+    "title": "Vous êtes hors ligne",
+    "syncing_title": "Synchronisation des modifications",
+    "description": "Les modifications seront enregistrées localement et synchronisées à la reconnexion.",
+    "queue_count_one": "1 modification en attente de synchronisation",
+    "queue_count_other": "{{count}} modifications en attente de synchronisation",
+    "queue_count": "{{count}} modifications en attente de synchronisation",
+    "dismiss": "Masquer la bannière hors ligne"
+  },
+  "last_synced": {
+    "fresh": "Dernière synchronisation le {{datetime}}",
+    "stale": "Données en cache datant du {{datetime}}"
+  },
+  "sync_complete": {
+    "toast": "{{count}} modifications synchronisées"
+  },
+  "sync_failed": {
+    "toast": "Impossible de synchroniser {{count}} modifications. Une nouvelle tentative aura lieu automatiquement."
+  }
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and Discussions
+    url: https://github.com/SelmiAbderrahim/pssmngr/discussions
+    about: Ask questions and discuss ideas in GitHub Discussions instead of opening an issue.
+  - name: Security Vulnerabilities
+    url: https://github.com/SelmiAbderrahim/pssmngr/security/advisories/new
+    about: Please report security vulnerabilities through our coordinated disclosure process. Do not file them as public issues.

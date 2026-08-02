@@ -1,0 +1,204 @@
+{
+	"auth": {
+		"unauthorized": "Vous devez être connecté pour effectuer cette action",
+		"forbidden": "Vous n'avez pas la permission d'accéder à cette ressource",
+		"adminRequired": "Accès administrateur requis",
+		"adminAlreadyExists": "Le compte administrateur existe déjà",
+		"userNotFound": "Utilisateur non trouvé",
+		"sessionExpired": "Votre session a expiré. Veuillez vous reconnecter",
+		"invalidCredentials": "Email ou mot de passe invalide",
+		"accountDisabled": "Votre compte a été désactivé",
+		"emailNotVerified": "Veuillez vérifier votre adresse email",
+		"twoFactorRequired": "L'authentification à deux facteurs est requise",
+		"twoFactorInvalid": "Code d'authentification à deux facteurs invalide",
+		"noOrganization": "Aucune organisation active sélectionnée",
+		"rateLimited": "Trop de requêtes. Réessayez dans {{seconds}} secondes.",
+		"vaultAlreadyExists": "Le coffre-fort existe déjà",
+		"twoFactorFailed": "Échec de l'activation de l'authentification à deux facteurs",
+		"invalidTotp": "Code TOTP invalide",
+		"disableTwoFactorFailed": "Échec de la désactivation de l'authentification à deux facteurs",
+		"useLogout": "Utilisez la déconnexion pour mettre fin à votre session en cours"
+	},
+	"app": {
+		"updateRequired": "Veuillez mettre à jour vers la version {{version}} ou une version ultérieure pour continuer."
+	},
+	"user": {
+		"currentPasswordIncorrect": "Le mot de passe actuel est incorrect",
+		"noPasswordSet": "Aucun mot de passe défini pour ce compte",
+		"passwordVerificationFailed": "La vérification du mot de passe a échoué",
+		"newPasswordRequired": "Un nouveau mot de passe est requis",
+		"updateFailed": "Échec de la mise à jour de l'utilisateur"
+	},
+	"email": {
+		"invitationNotFound": "Email d'invitation non trouvé",
+		"providerNotEmail": "Le fournisseur de notifications sélectionné n'est pas de type email",
+		"notConfigured": "Aucun fournisseur de messagerie sélectionné et la messagerie système n'est pas configurée",
+		"sendFailed": "Échec de l'envoi de l'email"
+	},
+	"notification": {
+		"createFailed": "Erreur lors de la création de la notification",
+		"updateFailed": "Erreur lors de la mise à jour de la notification",
+		"testFailed": "Erreur lors du test de la notification",
+		"sendFailed": "Erreur lors de l'envoi de la notification",
+		"tokenNotFound": "Jeton non trouvé",
+		"notFound": "Notification introuvable",
+		"unauthorized": "Vous n'avez pas la permission d'accéder à cette notification"
+	},
+	"organization": {
+		"notMember": "Vous n'êtes pas membre de cette organisation",
+		"userNotMember": "L'utilisateur n'est pas membre de votre organisation active",
+		"onlyOwnersAdmins": "Seuls les propriétaires et administrateurs peuvent effectuer cette action",
+		"notFound": "Organisation introuvable",
+		"notAdmin": "Vous n'avez pas les permissions d'administrateur",
+		"notOwner": "Seul le propriétaire de l'organisation peut effectuer cette action",
+		"cannotRemoveOwner": "Impossible de retirer le propriétaire de l'organisation",
+		"cannotChangeOwnerRole": "Impossible de modifier le rôle du propriétaire",
+		"alreadyMember": "L'utilisateur est déjà membre de cette organisation",
+		"inviteAlreadyExists": "Une invitation a déjà été envoyée à cet email",
+		"invitationExpired": "Cette invitation a expiré.",
+		"emailMismatch": "Cette invitation a été envoyée à une adresse email différente.",
+		"invitationNotFound": "Invitation introuvable.",
+		"invitationDeclined": "Invitation refusée.",
+		"noSettingsToUpdate": "Aucun paramètre à mettre à jour",
+		"cannotLeaveAsOwner": "Les propriétaires d'organisation ne peuvent pas quitter. Transférez la propriété d'abord.",
+		"transferTargetNotMember": "L'utilisateur sélectionné n'est pas membre de cette organisation.",
+		"ownershipTransferred": "Propriété transférée avec succès.",
+		"deleteConfirm": "Organisation supprimée avec succès.",
+		"notifications": {
+			"inviteTitle": "Invitation à l'organisation",
+			"inviteMessage": "Vous avez été invité à rejoindre {{orgName}}.",
+			"removedTitle": "Retiré de l'organisation",
+			"removedMessage": "Vous avez été retiré de {{orgName}}.",
+			"ownershipTransferredTitle": "Propriété transférée",
+			"ownershipTransferredMessage": "Vous êtes maintenant le propriétaire de {{orgName}}."
+		}
+	},
+	"resource": {
+		"notFound": "{{resource}} introuvable",
+		"notFoundById": "{{resource}} avec l'ID {{id}} introuvable",
+		"accessDenied": "Vous n'êtes pas autorisé à accéder à ce(tte) {{resource}}",
+		"createFailed": "Échec de la création de {{resource}}",
+		"updateFailed": "Échec de la mise à jour de {{resource}}",
+		"deleteFailed": "Échec de la suppression de {{resource}}",
+		"alreadyExists": "{{resource}} existe déjà",
+		"inUse": "{{resource}} est en cours d'utilisation et ne peut pas être supprimé(e)"
+	},
+	"operation": {
+		"timeout": "L'opération a expiré",
+		"internalError": "Une erreur interne s'est produite",
+		"databaseError": "Une erreur de base de données s'est produite",
+		"networkError": "Une erreur réseau s'est produite",
+		"rateLimited": "Trop de requêtes. Veuillez réessayer plus tard",
+		"maintenanceMode": "Le système est en maintenance. Veuillez réessayer plus tard"
+	},
+	"vault": {
+		"deleteNotConfirmed": "La suppression doit être explicitement confirmée"
+	},
+	"sharing": {
+		"revoked": "Le partage a été révoqué",
+		"expired": "Le partage a expiré",
+		"cannotShareWithSelf": "Vous ne pouvez pas partager un élément avec vous-même",
+		"notRecipient": "Vous n'êtes pas le destinataire",
+		"onlySenderCanRevoke": "Seul l'expéditeur peut révoquer",
+		"alreadyRevoked": "Le partage est déjà révoqué",
+		"onlyCreatorCanRevoke": "Seul le créateur peut révoquer",
+		"linkAlreadyRevoked": "Le lien est déjà révoqué",
+		"linkUnavailable": "Ce lien n'est plus disponible"
+	},
+	"sharedVault": {
+		"insufficientRole": "Seul l'organisateur ou l'administrateur peut créer des coffres partagés",
+		"notFamilyMember": "L'utilisateur n'est pas un membre de la famille",
+		"alreadyMember": "L'utilisateur est déjà membre de ce coffre",
+		"memberNotFound": "Membre introuvable dans ce coffre",
+		"requiresPermission": "Nécessite la permission {{permission}} sur ce coffre",
+		"cannotRewrapRemovedMember": "Le membre retiré ne doit pas recevoir la nouvelle clé du coffre",
+		"cannotRemoveCreator": "Le créateur du coffre ne peut pas être retiré par un autre membre",
+		"cannotDemoteCreator": "La permission du créateur du coffre ne peut pas être abaissée par un autre membre"
+	},
+	"family": {
+		"organizerOnly": "Seul l'organisateur de la famille peut effectuer cette action",
+		"alreadyInFamily": "Vous appartenez déjà à une famille",
+		"alreadyMember": "L'utilisateur est déjà membre de la famille",
+		"invitationPending": "Une invitation est déjà en attente pour cet email",
+		"cannotRemoveSelf": "Vous ne pouvez pas vous retirer. Utilisez quitter à la place.",
+		"cannotChangeSelfRole": "Vous ne pouvez pas changer votre propre rôle",
+		"cannotChangeOrganizerRole": "Vous ne pouvez pas changer le rôle d'un autre organisateur",
+		"organizerCannotLeave": "L'organisateur ne peut pas quitter. Transférez la propriété ou supprimez la famille.",
+		"organizerCannotRequestRecovery": "L'organisateur ne peut pas demander la récupération de lui-même",
+		"recoveryAlreadyActive": "Une demande de récupération est déjà active",
+		"recoveryNotFound": "Demande de récupération introuvable",
+		"cannotApproveStatus": "Impossible d'approuver une demande avec le statut \"{{status}}\"",
+		"recoveryExpired": "La demande de récupération a expiré",
+		"cannotRejectStatus": "Impossible de rejeter une demande avec le statut \"{{status}}\"",
+		"recoveryMustBeApproved": "La demande de récupération doit être approuvée avant de soumettre de nouvelles clés",
+		"recoveryMustBeCompleting": "La demande de récupération doit être en état de finalisation",
+		"recoveryNotFamilyMember": "L'utilisateur en récupération n'est plus membre de cette famille",
+		"recoveryDuplicateVault": "Les clés réencapsulées contiennent un coffre partagé en double",
+		"recoveryNoKeys": "Des clés réencapsulées sont requises pour terminer la récupération",
+		"recoveryVaultMismatch": "Les clés réencapsulées doivent correspondre exactement aux coffres partagés de la famille du membre",
+		"recoveryRewrapFailed": "Échec du réencapsulage d'une clé de coffre partagé pour le membre en récupération",
+		"noSettingsToUpdate": "Aucun paramètre à mettre à jour",
+		"notifications": {
+			"recoveryRequestTitle": "Demande de récupération",
+			"recoveryRequestMessage": "{{name}} a demandé la récupération de compte pour votre famille.",
+			"recoveryApprovedTitle": "Récupération approuvée",
+			"recoveryApprovedMessage": "Votre demande de récupération a été approuvée. Vous pouvez maintenant créer un nouveau mot de passe principal.",
+			"recoveryRejectedTitle": "Récupération rejetée",
+			"recoveryRejectedMessage": "Votre demande de récupération a été rejetée par l'organisateur de la famille.",
+			"keysSubmittedTitle": "Clés de récupération soumises",
+			"keysSubmittedMessage": "{{name}} a soumis de nouvelles clés. Veuillez compléter la récupération en ré-enveloppant l'accès au coffre partagé.",
+			"recoveryCompleteTitle": "Récupération terminée",
+			"recoveryCompleteMessage": "La récupération de votre compte est terminée. L'accès au coffre partagé a été restauré."
+		},
+		"invalidRecoveryProof": "Preuve de récupération invalide : la signature ne correspond pas à la clé de signature fournie"
+	},
+	"emergency": {
+		"userNotFound": "Aucun utilisateur trouvé avec cet email",
+		"cannotAddSelf": "Vous ne pouvez pas vous ajouter comme contact de confiance",
+		"alreadyTrusted": "L'utilisateur est déjà un contact de confiance",
+		"contactNotFound": "Contact de confiance introuvable",
+		"relationshipNotFound": "Relation de contact de confiance introuvable",
+		"requestPending": "Une demande d'accès est déjà en attente",
+		"requestNotFound": "Demande d'accès introuvable",
+		"cannotDenyStatus": "Impossible de refuser une demande avec le statut \"{{status}}\"",
+		"cannotGrantStatus": "Impossible d'accorder une demande avec le statut \"{{status}}\"",
+		"signatureVerificationFailed": "Échec de la vérification de la signature horodatée",
+		"waitingPeriodNotExpired": "La période d'attente n'a pas encore expiré",
+		"accessNotGranted": "L'accès n'a pas encore été accordé",
+		"escrowDataMissing": "Les données de séquestre sont manquantes",
+		"cooldownBlocked": "Impossible de réessayer dans les 24 heures suivant un refus. Réessayez après {{until}}",
+		"notifications": {
+			"trustAddedTitle": "Confiance d'accès d'urgence",
+			"trustAddedMessage": "{{name}} vous a ajouté comme contact d'urgence de confiance.",
+			"accessRequestedTitle": "Accès d'urgence demandé",
+			"accessRequestedMessage": "{{name}} a demandé un accès d'urgence à votre coffre. Vous avez {{days}} jour(s) pour refuser cette demande.",
+			"accessDeniedTitle": "Accès d'urgence refusé",
+			"accessDeniedMessage": "Votre demande d'accès d'urgence a été refusée par le propriétaire du coffre.",
+			"accessGrantedTitle": "Accès d'urgence accordé",
+			"accessGrantedMessage": "Votre demande d'accès d'urgence a été accordée. Vous pouvez maintenant accéder au coffre."
+		}
+	},
+	"passkey": {
+		"registrationOptionsFailed": "Échec de la génération des options d'enregistrement",
+		"verificationFailed": "Échec de la vérification de l'enregistrement du passkey",
+		"authOptionsFailed": "Échec de la génération des options d'authentification",
+		"authVerificationFailed": "Échec de la vérification de l'authentification du passkey",
+		"notFound": "Passkey introuvable"
+	},
+	"device": {
+		"notFound": "Appareil introuvable",
+		"noDeviceForUser": "Aucun appareil trouvé pour cet utilisateur",
+		"noTrustedDevice": "Cet utilisateur possède plusieurs appareils et aucun n'est approuvé ; demandez-lui d'approuver un appareil avant le partage"
+	},
+	"defaults": {
+		"personalVaultName": "Coffre personnel"
+	},
+	"dataExport": {
+		"inProgress": "Un export est déjà en cours",
+		"notFound": "Demande d'export introuvable",
+		"expired": "Ce lien de téléchargement a expiré",
+		"revoked": "Ce lien de téléchargement a été révoqué",
+		"rateLimited": "Vous ne pouvez demander que 2 exports par heure. Veuillez réessayer plus tard.",
+		"invalidRequest": "La demande d'export n'est pas valide pour cette action"
+	}
+}

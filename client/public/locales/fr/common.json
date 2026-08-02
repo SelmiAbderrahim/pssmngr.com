@@ -1,0 +1,941 @@
+{
+  "loading": "Chargement...",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "saveChanges": "Enregistrer les modifications",
+  "saving": "Enregistrement...",
+  "delete": "Supprimer",
+  "edit": "Modifier",
+  "create": "Creer",
+  "update": "Mettre a jour",
+  "submit": "Soumettre",
+  "search": "Rechercher",
+  "download": "Telecharger",
+  "copy": "Copier",
+  "close": "Fermer",
+  "back": "Retour",
+  "next": "Suivant",
+  "previous": "Precedent",
+  "confirm": "Confirmer",
+  "done": "Terminé",
+  "retry": "Reessayer",
+  "refresh": "Actualiser",
+  "app": {
+    "name": "Password Manager",
+    "description": "Un gestionnaire de mots de passe à connaissance nulle pour stocker et partager des éléments chiffrés en toute sécurité"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "vault": "Coffre-fort",
+    "workspace": "Espace de travail",
+    "settings": "Paramètres",
+    "profile": "Profil",
+    "logout": "Déconnexion",
+    "security": "Sécurité",
+    "people": "Personnes",
+    "generator": "Générateur",
+    "help": "Aide",
+    "toggleMenu": "Basculer le menu de navigation",
+    "docs": "Documentation"
+  },
+  "generator": {
+    "openButton": "Générateur"
+  },
+  "account": {
+    "menu": "Menu du compte"
+  },
+  "actions": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "submit": "Soumettre",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "upload": "Télécharger",
+    "download": "Télécharger",
+    "share": "Partager",
+    "copy": "Copier",
+    "copied": "Copié!",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "confirm": "Confirmer",
+    "retry": "Réessayer",
+    "refresh": "Actualiser",
+    "clear": "Effacer",
+    "export": "Exporter",
+    "import": "Importer",
+    "show": "Afficher",
+    "hide": "Masquer",
+    "moreOptions": "Plus d'options",
+    "saveChanges": "Enregistrer les modifications",
+    "createAccount": "Créer un compte",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "dontHaveAccount": "Vous n'avez pas de compte ?",
+    "enterYourName": "Entrez votre nom",
+    "enterYourEmail": "Entrez votre email",
+    "createPassword": "Créer un mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "showPassword": "Afficher le mot de passe",
+    "logo": "Logo",
+    "user": {
+      "fallbackName": "Utilisateur"
+    },
+    "sidebar": {
+      "collapse": "Réduire",
+      "expand": "Développer la barre latérale"
+    }
+  },
+  "status": {
+    "loading": "Chargement...",
+    "saving": "Enregistrement...",
+    "processing": "Traitement...",
+    "uploading": "Téléchargement...",
+    "downloading": "Téléchargement...",
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Information",
+    "completed": "Terminé",
+    "failed": "Échec",
+    "pending": "En attente",
+    "cancelled": "Annulé",
+    "unknownError": "Erreur inconnue",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "time": {
+    "now": "À l'instant",
+    "minuteAgo": "il y a 1 minute",
+    "minutesAgo": "il y a {{count}} minutes",
+    "hourAgo": "il y a 1 heure",
+    "hoursAgo": "il y a {{count}} heures",
+    "dayAgo": "il y a 1 jour",
+    "daysAgo": "il y a {{count}} jours",
+    "weekAgo": "il y a 1 semaine",
+    "weeksAgo": "il y a {{count}} semaines",
+    "monthAgo": "il y a 1 mois",
+    "monthsAgo": "il y a {{count}} mois",
+    "yearAgo": "il y a 1 an",
+    "yearsAgo": "il y a {{count}} ans",
+    "today": "aujourd'hui",
+    "never": "Jamais"
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "arabic": "Arabe",
+    "english": "Anglais",
+    "french": "Français",
+    "german": "Allemand",
+    "spanish": "Espagnol"
+  },
+  "theme": {
+    "title": "Thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+    "invalidPassword": "Le mot de passe doit contenir au moins 8 caractères",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "invalidUrl": "Veuillez entrer une URL valide",
+    "fileTooBig": "La taille du fichier dépasse la limite maximale",
+    "invalidFileType": "Ce type de fichier n'est pas pris en charge"
+  },
+  "a11y": {
+    "search": "Rechercher",
+    "close": "Fermer",
+    "menu": "Menu",
+    "settings": "Paramètres",
+    "play": "Lire",
+    "pause": "Pause",
+    "mute": "Couper le son",
+    "fullscreen": "Plein écran",
+    "skipToContent": "Aller au contenu principal",
+    "selectAll": "Tout sélectionner",
+    "showField": "Afficher {{field}}",
+    "hideField": "Masquer {{field}}",
+    "copyField": "Copier {{field}}",
+    "emailAddress": "Adresse e-mail",
+    "selectItem": "Sélectionner l'élément {{id}}",
+    "selectCard": "Sélectionner la carte {{id}}",
+    "twitter": "Twitter"
+  },
+  "views": {
+    "noItemsFound": "Aucun élément trouvé",
+    "grid": "Vue grille",
+    "table": "Vue tableau",
+    "list": "Vue liste",
+    "compactCards": "Cartes compactes"
+  },
+  "layouts": {
+    "appName": "Gestionnaire de mots de passe",
+    "notifications": "Notifications",
+    "profile": "Profil"
+  },
+  "countdown": {
+    "expired": "Expiré"
+  },
+  "privacy": {
+    "consent": {
+      "title": "Préférences de cookies",
+      "description": "Cette instance utilise des cookies d’analyse facultatifs uniquement avec votre autorisation.",
+      "functional": "Essentiels",
+      "functionalDesc": "Nécessaires au bon fonctionnement du site.",
+      "analytics": "Analytiques",
+      "analyticsDesc": "Nous aident à comprendre comment vous utilisez notre site pour l'améliorer.",
+      "acceptAll": "Tout accepter",
+      "rejectAll": "Tout refuser",
+      "customize": "Personnaliser les préférences",
+      "savePreferences": "Enregistrer les préférences"
+    },
+    "settings": {
+      "title": "Confidentialité",
+      "description": "Gérez les analyses facultatives pour ce navigateur.",
+      "analyticsTracking": "Analyses facultatives",
+      "analyticsTrackingDesc": "Autorisez des mesures de pages et de performances respectueuses de la vie privée. Les données du coffre et les identifiants de compte ne sont jamais envoyés."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Password Manager. Tous droits réservés.",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "common": {
+    "dismiss": "Ignorer",
+    "close": "Fermer",
+    "notNow": "Pas maintenant",
+    "optional": "(Facultatif)",
+    "default": "Par défaut"
+  },
+  "invitation": {
+    "accepting": "Acceptation de l’invitation...",
+    "accepted": "Invitation acceptée.",
+    "backToDashboard": "Retour au tableau de bord",
+    "createAccount": "Créer un compte",
+    "errorDescription": "L’invitation n’a pas pu être acceptée.",
+    "errorTitle": "Impossible d’accepter l’invitation",
+    "genericError": "Cette invitation est indisponible ou n’est plus valide.",
+    "invalidToken": "Ce lien d’invitation est invalide.",
+    "redirecting": "Redirection en cours.",
+    "signIn": "Se connecter",
+    "signInDescription": "Connectez-vous avec l’adresse e-mail invitée, ou créez d’abord ce compte.",
+    "signInTitle": "Connectez-vous pour accepter cette invitation"
+  },
+  "docsHelpLink": {
+    "tooltip": "Voir la documentation",
+    "help": "Aide",
+    "documentation": "Documentation"
+  },
+  "pagination": {
+    "page": "page",
+    "showing": "Page {{page}} sur {{totalPages}}",
+    "total": "{{total}} éléments",
+    "first": "Première page",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "last": "Dernière page",
+    "goToPage": "Aller à la page {{page}}",
+    "itemsPerPage": "Éléments par page",
+    "results": {
+      "showing": "Affichage de {{count}} sur {{total}} éléments",
+      "empty": "Aucun résultat trouvé",
+      "filtered": "{{count}} résultats correspondent à vos filtres"
+    }
+  },
+  "searchInput": {
+    "placeholder": "Rechercher...",
+    "noResults": "Aucun résultat trouvé",
+    "searching": "Recherche..."
+  },
+  "sort": {
+    "label": "Trier par",
+    "toggle": "Changer la direction du tri",
+    "ascending": "Croissant",
+    "descending": "Décroissant",
+    "createdAt": "Date de création",
+    "updatedAt": "Dernière mise à jour",
+    "name": "Nom",
+    "status": "Statut"
+  },
+  "filters": {
+    "clear": "Effacer les filtres",
+    "reset": "Réinitialiser",
+    "apply": "Appliquer les filtres",
+    "active": "{{count}} filtre(s) actif(s)"
+  },
+  "empty": {
+    "list": "Aucun élément pour le moment",
+    "search": "Aucun élément ne correspond à votre recherche",
+    "filtered": "Aucun élément ne correspond à vos filtres"
+  },
+  "loadingItems": {
+    "items": "Chargement des éléments...",
+    "more": "Chargement en cours..."
+  },
+  "dashboard": {
+    "welcome": "Bon retour, {{displayName}}",
+    "subtitle": "Aperçu de votre coffre et actions rapides",
+    "totalItems": "Total des éléments",
+    "vaultStatus": "Statut du coffre",
+    "noVault": "Aucun coffre créé",
+    "unlocked": "Déverrouillé",
+    "locked": "Verrouillé",
+    "security": "Sécurité",
+    "checkSecurity": "Lancer un contrôle de sécurité",
+    "breakdown": "Répartition des éléments",
+    "quickActions": "Actions rapides",
+    "addCredential": "Ajouter un élément",
+    "securityCheckup": "Contrôle de sécurité",
+    "generatePassword": "Générer un mot de passe",
+    "importData": "Importer des données",
+    "recentItems": "Éléments récents",
+    "viewAll": "Voir tout",
+    "addFirst": "Ajouter un premier élément",
+    "emptyVault": "Votre coffre est vide. Ajoutez votre premier élément pour commencer.",
+    "itemTypes": {
+      "login": "Identifiants",
+      "note": "Notes sécurisées",
+      "card": "Cartes",
+      "identity": "Identités",
+      "other": "Autres"
+    },
+    "score": {
+      "critical": "Critique",
+      "poor": "Faible",
+      "fair": "Passable",
+      "good": "Bon"
+    },
+    "favorited": "{{count}} favoris",
+    "inTrash": "{{count}} dans la corbeille",
+    "issuesFound_one": "{{count}} problème trouvé",
+    "issuesFound_other": "{{count}} problèmes trouvés"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Gérez votre compte et vos préférences",
+    "general": "Paramètres généraux",
+    "profile": "Profil",
+    "profileDescription": "Gérez votre nom d'affichage et vos informations personnelles",
+    "displayName": "Nom d'affichage",
+    "displayNamePlaceholder": "Votre nom",
+    "email": "E-mail",
+    "emailReadonly": "L'e-mail ne peut pas être modifié ici",
+    "saving": "Enregistrement...",
+    "saveProfile": "Enregistrer les modifications",
+    "preferences": "Préférences",
+    "preferencesDescription": "Personnalisez l'apparence et la sécurité",
+    "theme": "Thème",
+    "themeDescription": "Choisissez l'apparence de l'application",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système",
+    "autoLock": "Verrouillage automatique",
+    "autoLockDescription": "Verrouiller automatiquement le coffre après une période d'inactivité",
+    "selectDuration": "Sélectionner la durée",
+    "account": "Compte",
+    "accountDetailsDescription": "Détails de votre compte",
+    "memberSince": "Membre depuis",
+    "autoLockUpdated": "Minuterie de verrouillage automatique mise à jour",
+    "autoLockOptions": {
+      "1min": "1 minute",
+      "5min": "5 minutes",
+      "15min": "15 minutes",
+      "30min": "30 minutes",
+      "1hour": "1 heure",
+      "never": "Jamais"
+    },
+    "profileUpdated": "Profil mis à jour avec succès",
+    "profileUpdateError": "Échec de la mise à jour du profil",
+    "sections": {
+      "account": {
+        "title": "Compte",
+        "description": "Votre profil, langue et apparence."
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Double authentification, clés d'accès, sessions, appareils de confiance et accès d'urgence.",
+        "explainer": "2FA, clés d'accès, sessions actives et appareils de confiance.",
+        "cta": "Ouvrir les paramètres de sécurité",
+        "emergencyTitle": "Accès d'urgence",
+        "emergencyDescription": "Désignez des contacts de confiance qui peuvent demander l'accès à votre coffre en cas d'incapacité.",
+        "emergencyExplainer": "Récupération avec délai d'attente, sans renoncer au chiffrement zero-knowledge.",
+        "emergencyCta": "Gérer l'accès d'urgence"
+      },
+      "devices": {
+        "title": "Appareils et extensions",
+        "description": "Appareils et extensions",
+        "trustedTitle": "Appareils de confiance",
+        "trustedDescription": "Consultez et révoquez les appareils connectés à votre compte.",
+        "trustedExplainer": "Les appareils de confiance sont gérés depuis Sécurité.",
+        "trustedCta": "Gérer les appareils de confiance",
+        "enrollment": {
+          "retrySuccess": "Configuration de l'appareil terminée.",
+          "retryFailed": "La configuration de l'appareil échoue toujours. Réessayez sous peu.",
+          "title": "Terminer la configuration de l'appareil",
+          "description": "Cet appareil n'est pas encore entièrement enregistré. Réessayez maintenant pour qu'il puisse déchiffrer les éléments du coffre partagé.",
+          "retrying": "Nouvelle tentative…",
+          "retry": "Terminer la configuration de l'appareil"
+        }
+      },
+      "data": {
+        "title": "Données",
+        "description": "Importez depuis d'autres gestionnaires et exportez vos données.",
+        "explainer": "Un seul endroit pour les imports, les exports de coffre (clair ou chiffré) et votre archive RGPD.",
+        "subExplainer": "Toutes les voies d'export vivent ici — rien d'autre dans l'app n'écrit vos données à l'extérieur.",
+        "cta": "Ouvrir Données"
+      },
+      "preferences": {
+        "title": "Préférences",
+        "description": "Comment le coffre s'affiche et se comporte pour vous.",
+        "layoutTitle": "Disposition du coffre",
+        "layoutDescription": "Choisissez la vue et la densité qui vous conviennent.",
+        "remindersTitle": "Rappels",
+        "remindersDescription": "Rappels locaux pour les rotations, revues de fuites et vérifications de sauvegarde.",
+        "remindersExplainer": "S'exécutent sur votre appareil — jamais envoyés au serveur.",
+        "remindersCta": "Ouvrir les rappels",
+        "guideMeTitle": "Guidez-moi",
+        "guideMeDescription": "Courtes visites dans l'application qui vous accompagnent dans le coffre, le partage et les réglages."
+      }
+    },
+    "validation": {
+      "nameMin": "Le nom doit contenir au moins 2 caractères",
+      "nameMax": "Le nom doit contenir moins de 100 caractères"
+    },
+    "inactivityLock": "Demander le déverrouillage après inactivité",
+    "inactivityLockDescription": "Avec le déverrouillage persistant, la reprise après inactivité est silencieuse — sans invite.",
+    "persistentUnlock": "Rester déverrouillé sur cet appareil",
+    "persistentUnlockDescription": "Rester déverrouillé sur cet appareil — vous confirmerez votre mot de passe maître pour les actions sensibles.",
+    "persistentUnlockUpdated": "Déverrouillage persistant mis à jour. S'applique au prochain déverrouillage.",
+    "persistentUnlockOff": "Déverrouillage persistant désactivé. Vous saisirez votre mot de passe maître la prochaine fois.",
+    "persistentUnlockOptions": {
+      "off": "Désactivé",
+      "7days": "7 jours",
+      "30days": "30 jours"
+    },
+    "lockAndForget": "Verrouiller et oublier cet appareil"
+  },
+  "watchtower": {
+    "title": "Audit de sécurité",
+    "unlock": "Déverrouiller le coffre",
+    "retry": "Réessayer",
+    "rescan": "Rescanner",
+    "lastScan": "Dernier scan :",
+    "weak": "Faible",
+    "weakDesc": "Entropie faible ou motifs détectés",
+    "reused": "Réutilisé",
+    "reusedDesc": "Même mot de passe sur plusieurs sites",
+    "old": "Ancien",
+    "oldDesc": "Non modifié depuis plus de 90 jours",
+    "breached": "Compromis",
+    "breachedDesc": "Trouvé dans des fuites de données",
+    "checking": "Vérification...",
+    "checkBreaches": "Vérifier les fuites",
+    "weakPasswords": "Mots de passe faibles",
+    "reusedPasswords": "Mots de passe réutilisés",
+    "oldPasswords": "Anciens mots de passe",
+    "noOld": "Aucun ancien mot de passe trouvé",
+    "breachedPasswords": "Mots de passe compromis",
+    "critical": "Critique",
+    "warning": "Avertissement",
+    "info": "Info",
+    "fix": "Corriger",
+    "sharedBy": "Partagé par {{count}} éléments",
+    "reusedDetail": "Mot de passe utilisé ailleurs",
+    "noVault": "Aucun coffre trouvé. Créez d'abord un coffre.",
+    "analysisError": "Échec de l'analyse du coffre",
+    "breachError": "Échec de la vérification des fuites"
+  },
+  "vault": {
+    "title": "Coffre",
+    "subtitle": "Tout ce que vous enregistrez est chiffré sur cet appareil avant d'aller où que ce soit.",
+    "addItem": "Ajouter un élément",
+    "addItemDescription": "Créez un nouvel élément. Toutes les données sont chiffrées sur votre appareil.",
+    "duplicateCheckFailedTitle": "Impossible de vérifier tout le coffre",
+    "duplicateCheckFailedDescription": "La liste des éléments n’a pas pu être entièrement vérifiée. Vous pouvez revoir l’élément ou l’ajouter sans rechercher les doublons.",
+    "duplicateFoundTitle": "Élément en double détecté",
+    "duplicateFoundDescription": "Un élément identique existe déjà dans ce coffre. Vérifiez-le ou ajoutez-le quand même.",
+    "reviewItem": "Vérifier l’élément",
+    "addAnyway": "Ajouter quand même",
+    "itemType": "Type",
+    "titlePlaceholder": "p. ex. GitHub, banque, etc.",
+    "usernamePlaceholder": "user@example.com",
+    "generate": "Générer",
+    "content": "Contenu",
+    "emptyDescription": "Les éléments sont chiffrés avec des clés qui ne quittent jamais vos appareils.",
+    "encrypting": "Chiffrement...",
+    "noVault": "Aucun coffre trouvé",
+    "items": "Éléments",
+    "authenticators": "Authentificateurs",
+    "sharing": "Partage",
+    "trash": "Corbeille",
+    "search": "Rechercher dans le coffre...",
+    "filterAll": "Tous les types",
+    "filterLogin": "Identifiants",
+    "filterCard": "Cartes",
+    "filterNote": "Notes",
+    "filterIdentity": "Identités",
+    "filterPasskey": "Clés d'accès",
+    "filterTotp": "TOTP",
+    "filterFile": "Fichiers",
+    "sortModified": "Dernière modification",
+    "sortCreated": "Date de création",
+    "sortName": "Nom",
+    "empty": "Votre coffre est vide — vous seul pouvez le remplir.",
+    "addFirstItem": "Ajoutez votre premier élément",
+    "noResults": "Aucun élément ne correspond à votre recherche ou filtre.",
+    "loading": "Chargement...",
+    "loadMore": "Charger plus",
+    "locked": "Coffre verrouillé",
+    "lockedDescription": "Entrez votre mot de passe principal pour accéder à votre coffre.",
+    "unlockTitle": "Déverrouiller le coffre",
+    "unlockDescription": "Entrez votre mot de passe principal pour déchiffrer votre coffre.",
+    "recoveryDescription": "Les éléments de votre coffre n'ont pas pu être déchiffrés. Entrez votre ancien mot de passe principal et votre mot de passe actuel pour récupérer vos données.",
+    "oldMasterPassword": "Ancien mot de passe principal",
+    "oldPasswordPlaceholder": "Entrez votre ancien mot de passe principal",
+    "currentMasterPassword": "Mot de passe principal actuel",
+    "masterPassword": "Mot de passe principal",
+    "passwordPlaceholder": "Entrez votre mot de passe principal",
+    "hidePassword": "Masquer le mot de passe",
+    "showPassword": "Afficher le mot de passe",
+    "secretKey": "Clé de récupération",
+    "secretKeyHint": "Entrez la clé de récupération de votre kit de récupération.",
+    "recovering": "Récupération du coffre…",
+    "deriving": "Dérivation de la clé…",
+    "recover": "Récupérer le coffre",
+    "useRecoveryKey": "Utiliser la clé secrète",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "sensitiveFieldUnchanged": "Laissez vide pour conserver la valeur actuelle",
+    "url": "URL",
+    "notes": "Notes",
+    "created": "Créé",
+    "modified": "Modifié",
+    "copy": "Copier {{field}}",
+    "openUrl": "Ouvrir l'URL",
+    "favorite": "Ajouter aux favoris",
+    "unfavorite": "Retirer des favoris",
+    "back": "Retour au coffre",
+    "edit": "Modifier l'élément",
+    "delete": "Supprimer l'élément",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "unlock": "Déverrouiller",
+    "org": {
+      "setupTitle": "Partager le coffre de cette organisation",
+      "setupDesc": "Créez un coffre partagé afin que les membres voient les mêmes éléments. Les éléments existants de cette organisation seront importés, et les membres connectés recevront l’accès automatiquement.",
+      "setupButton": "Configurer le coffre partagé",
+      "noneMember": "Cette organisation n’a pas encore de coffre partagé.",
+      "pending": "Vous verrez les éléments partagés dès qu’un administrateur de l’organisation vous aura accordé l’accès. Assurez-vous d’être connecté sur cet appareil.",
+      "resolveError": "Impossible de vérifier votre accès au coffre partagé.",
+      "retry": "Réessayer"
+    },
+    "emptyImport": "Importer depuis un autre gestionnaire de mots de passe"
+  },
+  "share": {
+    "mode": {
+      "chooseTitle": "Partager \"{{title}}\"",
+      "chooseDescription": "Choisissez comment vous souhaitez partager cet élément.",
+      "person": {
+        "title": "Avec une personne",
+        "description": "Partagez durablement avec une personne qui possède un compte. Elle verra l'élément dans son coffre."
+      },
+      "link": {
+        "title": "Sous forme de lien",
+        "description": "Générez un lien à usage unique avec expiration. La clé de déchiffrement reste dans le fragment de l'URL."
+      }
+    }
+  },
+  "sharing": {
+    "received": "Reçus",
+    "sent": "Envoyés",
+    "noReceived": "Aucun partage en attente",
+    "noReceivedHint": "Les éléments partagés avec vous apparaîtront ici.",
+    "noSent": "Aucun élément partagé",
+    "noSentHint": "Les éléments que vous partagez apparaîtront ici.",
+    "dialogTitle": "Partager l'élément",
+    "dialogDescription": "Partagez \"{{title}}\" avec un autre utilisateur.",
+    "recipientEmail": "E-mail du destinataire",
+    "emailPlaceholder": "user@example.com",
+    "permission": "Autorisation",
+    "permissionView": "Lecture seule",
+    "permissionEdit": "Peut modifier",
+    "permissionShare": "Peut partager",
+    "viewOnly": "Voir",
+    "canEdit": "Modifier",
+    "viewHint": "Le destinataire peut voir cet élément sans le modifier.",
+    "editHint": "Le destinataire peut voir et modifier cet élément.",
+    "shareHint": "Le destinataire peut voir, modifier et repartager cet élément.",
+    "zeroKnowledgeHint": "Seule une clé d’élément chiffrée est enveloppée pour ce destinataire. Le serveur ne reçoit jamais de données de coffre en clair.",
+    "canShare": "Partager",
+    "pendingViewHint": "Vous pouvez voir cet élément après acceptation.",
+    "pendingEditHint": "Vous pouvez voir et modifier cet élément après acceptation.",
+    "pendingShareHint": "Vous pouvez voir, modifier et repartager cet élément après acceptation.",
+    "accessSummaryEntry": "{{name}} ({{permission}})",
+    "whoCanAccess": "Qui peut y accéder : {{summary}}",
+    "share": "Partager",
+    "sharing": "Partage...",
+    "errorNoEmail": "Veuillez saisir l'e-mail du destinataire.",
+    "errorInvalidEmail": "Veuillez saisir une adresse e-mail valide.",
+    "errorFailed": "Échec du partage de l'élément. Veuillez réessayer.",
+    "errorRecipientNoDevice": "Le destinataire doit se connecter sur un appareil de confiance avant que vous puissiez partager avec lui.",
+    "errorRecipientUntrustedDevice": "Demandez à cette personne d'approuver l'un de ses appareils (Paramètres → Sécurité → Appareils approuvés) avant de partager.",
+    "status": {
+      "pending": "En attente",
+      "accepted": "Accepté",
+      "declined": "Refusé",
+      "revoked": "Révoqué"
+    },
+    "errorItemNotFound": "Élément introuvable."
+  },
+  "totp": {
+    "scanQR": "Scanner le QR",
+    "scanQRCode": "Scanner le code QR",
+    "noAuthenticators": "Aucun authentificateur",
+    "noAuthenticatorsDescription": "Ajoutez un authentificateur TOTP en scannant un code QR ou en saisissant une clé secrète."
+  },
+  "ephemeral": {
+    "errorNoKey": "Lien invalide : clé de déchiffrement manquante.",
+    "errorAccess": "Ce lien n’est plus disponible.",
+    "errorDecrypt": "Échec du déchiffrement. Phrase secrète incorrecte ou lien endommagé.",
+    "errorNoPassphrase": "Saisissez la phrase secrète.",
+    "pageTitle": "Élément partagé",
+    "loading": "Chargement de l’élément partagé...",
+    "errorTitle": "Lien indisponible",
+    "errorGeneric": "Ce lien a peut-être expiré, été révoqué ou déjà utilisé.",
+    "passphraseRequired": "Phrase secrète requise",
+    "passphrase": "Phrase secrète",
+    "enterPassphrase": "Saisissez la phrase secrète...",
+    "decrypting": "Déchiffrement...",
+    "decrypt": "Déchiffrer",
+    "decryptedTitle": "Élément partagé",
+    "decryptedHint": "Ces données ont été déchiffrées localement dans votre navigateur."
+  },
+  "family": {
+    "title": "Famille",
+    "subtitle": "Gérez votre famille et vos coffres partagés.",
+    "create": {
+      "title": "Créer une famille",
+      "description": "Créez une famille pour partager des coffres et activer la récupération déléguée pour jusqu'à 6 membres.",
+      "namePlaceholder": "Nom de la famille",
+      "action": "Créer la famille",
+      "nameRequired": "Veuillez entrer un nom de famille.",
+      "error": "Échec de la création de la famille."
+    },
+    "dashboard": {
+      "subtitle": "{{count}} membres"
+    },
+    "tabs": {
+      "members": "Membres",
+      "vaults": "Coffres partagés",
+      "recovery": "Récupération",
+      "settings": "Paramètres"
+    },
+    "roles": {
+      "owner": "Organisateur",
+      "admin": "Administrateur",
+      "member": "Membre"
+    },
+    "members": {
+      "title": "Membres",
+      "invite": "Inviter un membre",
+      "you": "vous",
+      "accessSummary": "{{count}} coffres partagés",
+      "noSharedVaultAccess": "Aucun accès aux coffres partagés",
+      "accessManage": "{{count}} gérer",
+      "accessShare": "{{count}} partager",
+      "accessEdit": "{{count}} modifier",
+      "accessView": "{{count}} voir",
+      "lastActionJoined": "A rejoint le {{date}}",
+      "promoteAdmin": "Promouvoir administrateur",
+      "demoteToMember": "Rétrograder en membre",
+      "remove": "Supprimer le membre",
+      "removeTitle": "Supprimer le membre",
+      "removeDescription": "Êtes-vous sûr de vouloir supprimer {{name}} de la famille ? Il perdra l'accès à tous les coffres partagés.",
+      "confirmRemove": "Supprimer"
+    },
+    "invite": {
+      "adminHint": "Les administrateurs peuvent gérer les coffres partagés et les membres.",
+      "cancelError": "Impossible d’annuler l’invitation.",
+      "cancelled": "Invitation annulée.",
+      "copyError": "Impossible de copier le lien d’invitation.",
+      "description": "Envoyez une invitation à rejoindre votre famille.",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "member@example.com",
+      "error": "Impossible d’envoyer l’invitation.",
+      "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+      "linkCopied": "Lien d’invitation copié.",
+      "memberHint": "Les membres peuvent accéder aux coffres partagés et à leur coffre privé.",
+      "resendError": "Impossible de renvoyer l’invitation.",
+      "resent": "Invitation renvoyée et lien copié.",
+      "resentWithoutCopy": "Invitation renvoyée. Copiez le lien manuellement si nécessaire.",
+      "roleLabel": "Rôle",
+      "send": "Envoyer l’invitation",
+      "sent": "Invitation envoyée.",
+      "title": "Inviter un membre de la famille"
+    },
+    "invitations": {
+      "cancel": "Annuler",
+      "copyLink": "Copier le lien",
+      "expires": "Expire",
+      "pendingCount": "{{count}} en attente",
+      "resend": "Renvoyer",
+      "status": {
+        "accepted": "Acceptée",
+        "cancelled": "Annulée",
+        "declined": "Refusée",
+        "expired": "Expirée",
+        "pending": "En attente"
+      },
+      "title": "Invitations"
+    },
+    "sharedVaults": {
+      "created": "Coffre partagé créé.",
+      "missingUser": "Le contexte utilisateur est encore en cours de chargement.",
+      "loadError": "Échec du chargement du coffre partagé.",
+      "loadingDetail": "Chargement du coffre partagé…",
+      "permission": "Votre autorisation",
+      "members": "Membres",
+      "title": "Coffres partagés",
+      "create": "Créer un coffre",
+      "empty": "Aucun coffre partagé pour le moment.",
+      "emptyHint": "Créez un coffre, accordez l’accès uniquement aux membres concernés et faites tourner l’accès lorsqu’une personne part.",
+      "createdOn": "Créé le {{date}}",
+      "memberCount": "{{count}} membres",
+      "createFirst": "Créer votre premier coffre partagé",
+      "createTitle": "Créer un coffre partagé",
+      "createDescription": "Créez un coffre auquel les membres de la famille peuvent accéder ensemble.",
+      "nameRequired": "Veuillez saisir un nom de coffre.",
+      "nameTooLong": "Le nom du coffre doit contenir 64 caractères ou moins.",
+      "createError": "Échec de la création du coffre partagé.",
+      "nameLabel": "Nom du coffre",
+      "namePlaceholder": "p. ex. Services de streaming",
+      "createAction": "Créer le coffre",
+      "grantableMembers": "Membres sans accès",
+      "noGrantableMembers": "Tous les membres de la famille ont déjà accès.",
+      "grantAccess": "Accorder l’accès",
+      "granted": "Accès au coffre partagé accordé.",
+      "grantError": "Impossible d’accorder l’accès au coffre partagé.",
+      "removeAccess": "Retirer l’accès",
+      "removeAccessTitle": "Retirer l’accès au coffre partagé ?",
+      "removeAccessDescription": "{{name}} perdra l’accès à ce coffre partagé. Les membres restants recevront une clé enveloppée renouvelée.",
+      "confirmRemoveAccess": "Retirer l’accès",
+      "removed": "Accès au coffre partagé retiré et clé renouvelée.",
+      "removeError": "Impossible de retirer l’accès au coffre partagé.",
+      "permissionUpdated": "Autorisation du coffre partagé mise à jour.",
+      "permissionUpdateError": "Impossible de mettre à jour l’autorisation du coffre partagé.",
+      "permissions": {
+        "view": "Voir",
+        "edit": "Modifier",
+        "share": "Partager",
+        "manage": "Gérer"
+      }
+    },
+    "settings": {
+      "title": "Paramètres de la famille",
+      "description": "Gérez la configuration de votre famille.",
+      "nameRequired": "Le nom de la famille est obligatoire.",
+      "updateError": "Impossible de mettre à jour les paramètres.",
+      "saved": "Paramètres enregistrés.",
+      "nameLabel": "Nom de la famille",
+      "leaveTitle": "Quitter la famille",
+      "leaveDescription": "Quittez cette famille. Vous perdrez l’accès à tous les coffres partagés.",
+      "leaveAction": "Quitter la famille",
+      "leaveConfirmTitle": "Quitter la famille ?",
+      "leaveConfirmDescription": "Vous perdrez l’accès à tous les coffres partagés et à leur contenu. Cette action est irréversible.",
+      "confirmLeave": "Quitter la famille"
+    },
+    "recovery": {
+      "title": "Récupération de compte",
+      "memberDescription": "Demandez à l'organisateur de votre famille de vous aider à récupérer votre compte si vous perdez l'accès.",
+      "organizerDescription": "Examinez et gérez les demandes de récupération des membres de la famille.",
+      "yourRequest": "Votre demande de récupération",
+      "requested": "Demandé",
+      "expires": "Expire",
+      "approvedHint": "Votre récupération a été approuvée. Suivez les instructions pour configurer de nouvelles clés.",
+      "expiredHint": "Cette demande a expiré. Envoyez une nouvelle demande de récupération si vous avez encore besoin d’aide.",
+      "rejectedHint": "Cette demande a été refusée. Vous pouvez envoyer une nouvelle demande si votre situation a changé.",
+      "completedHint": "La récupération est terminée. Votre accès aux coffres partagés utilise les nouvelles clés enveloppées.",
+      "noActiveRequest": "Aucune demande de récupération active.",
+      "requestRecovery": "Demander une récupération",
+      "noRequests": "Aucune demande de récupération.",
+      "activeRequests": "Demandes actives",
+      "pastRequests": "Demandes passées",
+      "approve": "Approuver",
+      "reject": "Rejeter",
+      "approveTitle": "Approuver la récupération",
+      "rejectTitle": "Rejeter la récupération",
+      "approveDescription": "Cela permettra au membre de générer de nouvelles clés et de retrouver l'accès aux coffres partagés. Vous devrez réemballer les clés du coffre pour eux.",
+      "rejectDescription": "Cela refusera la demande de récupération. Le membre pourra soumettre une nouvelle demande plus tard.",
+      "confirmApprove": "Approuver",
+      "confirmReject": "Rejeter",
+      "timeline": {
+        "trustedContact": "Contact de confiance demandé",
+        "waitingPeriod": "Délai d’attente et examen par l’organisateur",
+        "approval": "Approbation accordée",
+        "denied": "Approbation refusée ou expirée",
+        "finalAccess": "Accès final après confirmation des nouvelles clés"
+      },
+      "status": {
+        "pending": "En attente",
+        "approved": "Approuvé",
+        "completing": "En cours",
+        "completed": "Terminé",
+        "rejected": "Rejeté",
+        "expired": "Expiré"
+      }
+    },
+    "unknownMember": "Membre inconnu",
+    "loadError": "Échec du chargement de la famille."
+  },
+  "emergency": {
+    "title": "Accès d'urgence",
+    "subtitle": "Gérez les contacts de confiance et les demandes d'accès d'urgence.",
+    "tabs": {
+      "contacts": "Contacts",
+      "incoming": "Entrantes",
+      "outgoing": "Sortantes"
+    }
+  },
+  "importExport": {
+    "title": "Importer / Exporter",
+    "subtitle": "Importez des éléments depuis d'autres gestionnaires de mots de passe ou exportez votre coffre.",
+    "noVault": "Aucun coffre trouvé.",
+    "tabs": {
+      "import": "Importer",
+      "export": "Exporter"
+    },
+    "formats": {
+      "genericCsv": "CSV générique"
+    },
+    "export": {
+      "encrypted": {
+        "title": "Export chiffré",
+        "description": "Exportez votre coffre sous forme de fichier .pssmngr chiffré. Ce fichier ne peut être ouvert qu'avec votre mot de passe principal.",
+        "recommended": "Recommandé",
+        "exporting": "Exportation en cours...",
+        "done": "Téléchargé",
+        "button": "Exporter .pssmngr"
+      },
+      "plaintext": {
+        "title": "Export en texte brut",
+        "description": "Exporter en CSV ou JSON non chiffré. Utilisez ces formats uniquement pour importer dans un autre gestionnaire de mots de passe.",
+        "warning": "Ces fichiers contiennent vos mots de passe en texte brut. Toute personne ayant accès au fichier peut les lire. Supprimez le fichier après utilisation.",
+        "csv": "Exporter CSV",
+        "json": "Exporter JSON"
+      },
+      "warning": {
+        "title": "Exporter en {{format}} ?",
+        "description": "Cela exportera tous les éléments de votre coffre dans un fichier {{format}} non chiffré. Vos mots de passe seront visibles en texte brut.",
+        "caution": "Toute personne ayant accès à ce fichier peut lire vos mots de passe. Supprimez le fichier après utilisation.",
+        "cancel": "Annuler",
+        "confirm": "Exporter {{format}}",
+        "exporting": "Exportation en cours..."
+      },
+      "error": {
+        "exportFailed": "Échec de l'exportation"
+      }
+    },
+    "import": {
+      "dropzone": {
+        "title": "Déposez votre fichier ici ou cliquez pour parcourir",
+        "subtitle": "Prend en charge les fichiers CSV et JSON",
+        "browse": "Choisir un fichier"
+      },
+      "supported": "Formats pris en charge",
+      "reading": "Lecture du fichier...",
+      "detecting": "Détection du format...",
+      "preview": {
+        "title": "Aperçu",
+        "detected": "Détecté : {{source}}",
+        "count": "{{count}} éléments trouvés",
+        "cancel": "Annuler",
+        "import": "Importer {{count}} éléments",
+        "parseErrors": "{{count}} lignes n'ont pas pu être analysées",
+        "duplicates": "{{count}} doublons potentiels détectés",
+        "col": {
+          "title": "Titre",
+          "type": "Type",
+          "username": "Nom d'utilisateur",
+          "url": "URL"
+        }
+      },
+      "progress": "Importation de {{current}} sur {{total}}...",
+      "summary": {
+        "title": "Importation terminée",
+        "duration": "Terminé en {{seconds}}s",
+        "imported": "Importés",
+        "skipped": "Ignorés",
+        "errors": "Erreurs",
+        "errorDetails": "Éléments échoués",
+        "moreErrors": "...et {{count}} de plus",
+        "importMore": "Importer plus"
+      },
+      "error": {
+        "title": "Échec de l'importation",
+        "retry": "Réessayer"
+      }
+    }
+  },
+  "hidePassword": "Masquer le mot de passe",
+  "showPassword": "Afficher le mot de passe",
+  "error": "Une erreur est survenue",
+  "sensitiveAction": {
+    "export": "Confirmez votre mot de passe maître pour exporter votre coffre",
+    "changeMasterPassword": "Confirmez votre mot de passe maître pour le modifier",
+    "emergencyAccess": "Confirmez votre mot de passe maître pour mettre à jour l'accès d'urgence",
+    "error": {
+      "loadVault": "Impossible de vérifier votre coffre pour le moment. Veuillez réessayer."
+    },
+    "revokedNotice": "L'accès à l'appareil de confiance a été révoqué. Veuillez vous reconnecter.",
+    "expiredNotice": "L'accès à l'appareil de confiance a expiré. Veuillez vous reconnecter."
+  },
+  "pages": {
+    "vault": {
+      "title": "Coffre",
+      "description": "Tout ce que vous enregistrez est chiffré sur cet appareil avant d'aller où que ce soit."
+    },
+    "security": {
+      "title": "Sécurité",
+      "description": "Mots de passe faibles, réutilisés et compromis — repérés et corrigés depuis un seul endroit.",
+      "checkWeak": "mots de passe devinables",
+      "checkReused": "une fuite ouvre plusieurs portes",
+      "checkBreached": "apparus dans des fuites connues — vérifié en privé"
+    },
+    "people": {
+      "title": "Personnes",
+      "description": "Partagez des éléments avec votre famille ou votre espace de travail sans jamais exposer votre coffre."
+    },
+    "settings": {
+      "title": "Paramètres",
+      "description": "Votre compte, vos appareils et vos données — au même endroit."
+    }
+  },
+  "explainer": {
+    "title": "Comment pssmngr vous protège",
+    "encryptedOnDevice": {
+      "title": "Chiffré sur votre appareil",
+      "body": "Les éléments sont scellés avec XChaCha20-Poly1305 avant de quitter l'appareil."
+    },
+    "twoSecretsNeverSent": {
+      "title": "Deux secrets, jamais envoyés",
+      "body": "Votre mot de passe maître et votre clé secrète restent avec vous ; nous ne stockons ni l'un ni l'autre, donc nous ne pouvons pas lire votre coffre — ni le réinitialiser."
+    },
+    "youControlThisDevice": {
+      "title": "Vous contrôlez cet appareil",
+      "body": "Restez déverrouillé jusqu'à 30 jours ici ; les actions sensibles redemandent toujours votre mot de passe maître.",
+      "link": "Modifier le réglage de déverrouillage"
+    }
+  },
+  "sharingCenter": {
+    "personDescription": "Partagez un élément avec quelqu'un — cette personne y accède, vous gardez le contrôle.",
+    "linkDescription": "Créez un lien qui expire — la clé voyage dans le lien, jamais par nos serveurs."
+  }
+}

@@ -1,0 +1,149 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  workspace:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Crypto SDK
+            directory: crypto
+            lockfile: crypto/pnpm-lock.yaml
+            verify: pnpm run typecheck && pnpm run test && pnpm run build
+          - name: Web client
+            directory: client
+            lockfile: client/pnpm-lock.yaml
+            verify: pnpm run lint:strict && pnpm run typecheck && pnpm run test && pnpm run build
+          - name: Backend
+            directory: pssmngr-server
+            lockfile: pssmngr-server/pnpm-lock.yaml
+            verify: pnpm run format-and-lint && pnpm run typecheck && pnpm run test && pnpm run build
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6
+        with:
+          version: 9.12.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 20.19.0
+          cache: pnpm
+          cache-dependency-path: ${{ matrix.lockfile }}
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.directory }}
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify ${{ matrix.name }}
+        working-directory: ${{ matrix.directory }}
+        run: ${{ matrix.verify }}
+
+  integration:
+    name: PostgreSQL integration tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: pssmngr_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d pssmngr_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/pssmngr_test # gitleaks:allow -- ephemeral CI service
+      TEST_DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/pssmngr_test # gitleaks:allow -- ephemeral CI service
+      BETTER_AUTH_SECRET: test-only-better-auth-secret-32-chars
+      ENCRYPTION_KEY: test-only-encryption-key-32-characters
+      NODE_ENV: test
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6
+        with:
+          version: 9.12.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 20.19.0
+          cache: pnpm
+          cache-dependency-path: pssmngr-server/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: pssmngr-server
+        run: pnpm install --frozen-lockfile
+
+      - name: Apply fresh database baseline
+        working-directory: pssmngr-server
+        run: pnpm --filter pssmngr-app run migration:run
+
+      - name: Run integration tests
+        working-directory: pssmngr-server
+        run: pnpm --filter pssmngr-app run test:integration
+
+  containers:
+    name: Container build (${{ matrix.name }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: client
+            dockerfile: docker/client/Dockerfile
+            build_args: VITE_SITE_URL=http://localhost:42789
+          - name: server
+            dockerfile: docker/pssmngr-server/Dockerfile
+            build_args: ""
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4
+
+      - name: Build image
+        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
+        with:
+          context: .
+          file: ${{ matrix.dockerfile }}
+          push: false
+          build-args: ${{ matrix.build_args }}
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.name }}

@@ -1,0 +1,19 @@
+{
+	"generic": {
+		"accessDenied": "Accès refusé",
+		"actionNotAllowed": "Vous n'êtes pas autorisé à {{action}}",
+		"resourceAccessDenied": "Vous n'avez pas la permission d'accéder à cette ressource",
+		"operationNotPermitted": "Cette opération n'est pas autorisée",
+		"insufficientPermissions": "Permissions insuffisantes"
+	},
+	"user": {
+		"cannotDeleteOwner": "Impossible de supprimer le propriétaire de l'organisation",
+		"cannotDeleteSelf": "Vous ne pouvez pas supprimer votre propre compte",
+		"cannotModifySelf": "Vous ne pouvez pas modifier votre propre rôle",
+		"cannotModifyOwner": "Impossible de modifier les paramètres du propriétaire de l'organisation",
+		"onlyOwnerCanDeleteAdmins": "Seul le propriétaire peut supprimer les administrateurs",
+		"adminsCannotDeleteSelf": "Les administrateurs ne peuvent pas se supprimer eux-mêmes. Demandez au propriétaire ou à un autre administrateur",
+		"cannotInvite": "Vous ne pouvez pas inviter d'utilisateurs dans cette organisation",
+		"cannotRemove": "Vous ne pouvez pas supprimer d'utilisateurs de cette organisation"
+	}
+}

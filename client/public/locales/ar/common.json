@@ -1,0 +1,941 @@
+{
+  "loading": "جاري التحميل...",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "saveChanges": "حفظ التغييرات",
+  "saving": "جارٍ الحفظ...",
+  "delete": "حذف",
+  "edit": "تحرير",
+  "create": "إنشاء",
+  "update": "تحديث",
+  "submit": "إرسال",
+  "search": "بحث",
+  "download": "تحميل",
+  "copy": "نسخ",
+  "close": "إغلاق",
+  "back": "رجوع",
+  "next": "التالي",
+  "previous": "السابق",
+  "confirm": "تأكيد",
+  "done": "تم",
+  "retry": "إعادة المحاولة",
+  "refresh": "تحديث",
+  "app": {
+    "name": "Password Manager",
+    "description": "مدير كلمات مرور عديم المعرفة لتخزين عناصر الخزنة المشفرة ومشاركتها بأمان"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "vault": "الخزنة",
+    "workspace": "مساحة العمل",
+    "settings": "الإعدادات",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "security": "الأمان",
+    "people": "الأشخاص",
+    "generator": "المولّد",
+    "help": "المساعدة",
+    "toggleMenu": "تبديل قائمة التنقل",
+    "docs": "المستندات"
+  },
+  "generator": {
+    "openButton": "المولّد"
+  },
+  "account": {
+    "menu": "قائمة الحساب"
+  },
+  "actions": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تحرير",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "submit": "إرسال",
+    "search": "بحث",
+    "filter": "تصفية",
+    "upload": "رفع",
+    "download": "تحميل",
+    "share": "مشاركة",
+    "copy": "نسخ",
+    "copied": "تم النسخ!",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "confirm": "تأكيد",
+    "retry": "إعادة المحاولة",
+    "refresh": "تحديث",
+    "clear": "مسح",
+    "export": "تصدير",
+    "import": "استيراد",
+    "show": "إظهار",
+    "hide": "إخفاء",
+    "moreOptions": "المزيد من الخيارات",
+    "saveChanges": "حفظ التغييرات",
+    "createAccount": "إنشاء حساب",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "enterYourName": "أدخل اسمك",
+    "enterYourEmail": "أدخل بريدك الإلكتروني",
+    "createPassword": "إنشاء كلمة مرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "hidePassword": "إخفاء كلمة المرور",
+    "showPassword": "إظهار كلمة المرور",
+    "logo": "شعار",
+    "user": {
+      "fallbackName": "مستخدم"
+    },
+    "sidebar": {
+      "collapse": "طي",
+      "expand": "توسيع الشريط الجانبي"
+    }
+  },
+  "status": {
+    "loading": "جاري التحميل...",
+    "saving": "جاري الحفظ...",
+    "processing": "جاري المعالجة...",
+    "uploading": "جاري الرفع...",
+    "downloading": "جاري التحميل...",
+    "success": "نجح",
+    "error": "خطأ",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "completed": "مكتمل",
+    "failed": "فشل",
+    "pending": "في الانتظار",
+    "cancelled": "ملغي",
+    "unknownError": "خطأ غير معروف",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "time": {
+    "now": "الآن",
+    "minuteAgo": "منذ دقيقة واحدة",
+    "minutesAgo": "منذ {{count}} دقائق",
+    "hourAgo": "منذ ساعة واحدة",
+    "hoursAgo": "منذ {{count}} ساعات",
+    "dayAgo": "منذ يوم واحد",
+    "daysAgo": "منذ {{count}} أيام",
+    "weekAgo": "منذ أسبوع واحد",
+    "weeksAgo": "منذ {{count}} أسابيع",
+    "monthAgo": "منذ شهر واحد",
+    "monthsAgo": "منذ {{count}} أشهر",
+    "yearAgo": "منذ عام واحد",
+    "yearsAgo": "منذ {{count}} أعوام",
+    "today": "اليوم",
+    "never": "أبدًا"
+  },
+  "language": {
+    "select": "اختيار اللغة",
+    "arabic": "العربية",
+    "english": "الإنجليزية",
+    "french": "الفرنسية",
+    "german": "الألمانية",
+    "spanish": "الإسبانية"
+  },
+  "theme": {
+    "title": "المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صحيح",
+    "invalidPassword": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "invalidUrl": "يرجى إدخال رابط صحيح",
+    "fileTooBig": "حجم الملف يتجاوز الحد الأقصى",
+    "invalidFileType": "نوع الملف غير مدعوم"
+  },
+  "a11y": {
+    "search": "بحث",
+    "close": "إغلاق",
+    "menu": "القائمة",
+    "settings": "الإعدادات",
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "mute": "كتم الصوت",
+    "fullscreen": "ملء الشاشة",
+    "skipToContent": "تخطي إلى المحتوى الرئيسي",
+    "selectAll": "تحديد الكل",
+    "showField": "إظهار {{field}}",
+    "hideField": "إخفاء {{field}}",
+    "copyField": "نسخ {{field}}",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "selectItem": "تحديد العنصر {{id}}",
+    "selectCard": "تحديد البطاقة {{id}}",
+    "twitter": "تويتر"
+  },
+  "views": {
+    "noItemsFound": "لم يتم العثور على عناصر",
+    "grid": "عرض شبكي",
+    "table": "عرض جدول",
+    "list": "عرض قائمة",
+    "compactCards": "بطاقات مدمجة"
+  },
+  "layouts": {
+    "appName": "مدير كلمات المرور",
+    "notifications": "الإشعارات",
+    "profile": "الملف الشخصي"
+  },
+  "countdown": {
+    "expired": "منتهي الصلاحية"
+  },
+  "privacy": {
+    "consent": {
+      "title": "تفضيلات ملفات تعريف الارتباط",
+      "description": "يستخدم هذا المثيل ملفات تعريف ارتباط اختيارية للتحليلات بعد موافقتك فقط.",
+      "functional": "أساسية",
+      "functionalDesc": "مطلوبة لتشغيل الموقع بشكل صحيح.",
+      "analytics": "تحليلية",
+      "analyticsDesc": "تساعدنا على فهم كيفية استخدامك لموقعنا لتحسينه.",
+      "acceptAll": "قبول الكل",
+      "rejectAll": "رفض الكل",
+      "customize": "تخصيص التفضيلات",
+      "savePreferences": "حفظ التفضيلات"
+    },
+    "settings": {
+      "title": "الخصوصية",
+      "description": "إدارة التحليلات الاختيارية لهذا المتصفح.",
+      "analyticsTracking": "تحليلات اختيارية",
+      "analyticsTrackingDesc": "السماح بمقاييس الصفحات والأداء المراعية للخصوصية. لا يتم إرسال بيانات الخزنة أو معرّفات الحساب مطلقًا."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Password Manager. جميع الحقوق محفوظة.",
+    "allRightsReserved": "جميع الحقوق محفوظة."
+  },
+  "common": {
+    "dismiss": "تجاهل",
+    "close": "إغلاق",
+    "notNow": "ليس الآن",
+    "optional": "(اختياري)",
+    "default": "افتراضي"
+  },
+  "invitation": {
+    "accepting": "جارٍ قبول الدعوة...",
+    "accepted": "تم قبول الدعوة.",
+    "backToDashboard": "العودة إلى لوحة التحكم",
+    "createAccount": "إنشاء حساب",
+    "errorDescription": "تعذر قبول الدعوة.",
+    "errorTitle": "تعذر قبول الدعوة",
+    "genericError": "هذه الدعوة غير متاحة أو لم تعد صالحة.",
+    "invalidToken": "رابط الدعوة غير صالح.",
+    "redirecting": "جارٍ تحويلك الآن.",
+    "signIn": "تسجيل الدخول",
+    "signInDescription": "سجّل الدخول بالبريد الإلكتروني المدعو، أو أنشئ هذا الحساب أولاً.",
+    "signInTitle": "سجّل الدخول لقبول هذه الدعوة"
+  },
+  "pagination": {
+    "page": "صفحة",
+    "showing": "صفحة {{page}} من {{totalPages}}",
+    "total": "{{total}} عنصر",
+    "first": "الصفحة الأولى",
+    "previous": "الصفحة السابقة",
+    "next": "الصفحة التالية",
+    "last": "الصفحة الأخيرة",
+    "goToPage": "انتقل إلى صفحة {{page}}",
+    "itemsPerPage": "العناصر لكل صفحة",
+    "results": {
+      "showing": "عرض {{count}} من {{total}} عنصر",
+      "empty": "لم يتم العثور على نتائج",
+      "filtered": "{{count}} نتيجة تطابق الفلاتر"
+    }
+  },
+  "searchInput": {
+    "placeholder": "بحث...",
+    "noResults": "لم يتم العثور على نتائج",
+    "searching": "جاري البحث..."
+  },
+  "sort": {
+    "label": "ترتيب حسب",
+    "toggle": "تبديل اتجاه الترتيب",
+    "ascending": "تصاعدي",
+    "descending": "تنازلي",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "آخر تحديث",
+    "name": "الاسم",
+    "status": "الحالة"
+  },
+  "filters": {
+    "clear": "مسح الفلاتر",
+    "reset": "إعادة تعيين",
+    "apply": "تطبيق الفلاتر",
+    "active": "{{count}} فلتر نشط"
+  },
+  "empty": {
+    "list": "لا توجد عناصر بعد",
+    "search": "لا توجد عناصر تطابق بحثك",
+    "filtered": "لا توجد عناصر تطابق الفلاتر"
+  },
+  "loadingItems": {
+    "items": "جاري تحميل العناصر...",
+    "more": "جاري تحميل المزيد..."
+  },
+  "docsHelpLink": {
+    "tooltip": "عرض الوثائق",
+    "help": "مساعدة",
+    "documentation": "الوثائق"
+  },
+  "dashboard": {
+    "welcome": "مرحبًا بعودتك، {{displayName}}",
+    "subtitle": "نظرة عامة على خزنتك والإجراءات السريعة",
+    "totalItems": "إجمالي العناصر",
+    "vaultStatus": "حالة الخزنة",
+    "noVault": "لم يتم إنشاء خزنة بعد",
+    "unlocked": "مفتوحة",
+    "locked": "مقفلة",
+    "security": "الأمان",
+    "checkSecurity": "تشغيل فحص الأمان",
+    "breakdown": "تفصيل العناصر",
+    "quickActions": "إجراءات سريعة",
+    "addCredential": "إضافة عنصر",
+    "securityCheckup": "فحص الأمان",
+    "generatePassword": "توليد كلمة مرور",
+    "importData": "استيراد البيانات",
+    "recentItems": "العناصر الأخيرة",
+    "viewAll": "عرض الكل",
+    "addFirst": "إضافة العنصر الأول",
+    "emptyVault": "خزنتك فارغة. أضف أول عنصر للبدء.",
+    "itemTypes": {
+      "login": "تسجيلات الدخول",
+      "note": "ملاحظات آمنة",
+      "card": "البطاقات",
+      "identity": "الهويات",
+      "other": "أخرى"
+    },
+    "score": {
+      "critical": "حرج",
+      "poor": "ضعيف",
+      "fair": "مقبول",
+      "good": "جيد"
+    },
+    "favorited": "{{count}} في المفضلة",
+    "inTrash": "{{count}} في سلة المهملات",
+    "issuesFound_one": "تم العثور على مشكلة {{count}}",
+    "issuesFound_other": "تم العثور على {{count}} مشاكل"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "إدارة حسابك وتفضيلاتك",
+    "general": "الإعدادات العامة",
+    "profile": "الملف الشخصي",
+    "profileDescription": "إدارة اسم العرض والمعلومات الشخصية",
+    "displayName": "اسم العرض",
+    "displayNamePlaceholder": "اسمك",
+    "email": "البريد الإلكتروني",
+    "emailReadonly": "لا يمكن تغيير البريد الإلكتروني من هنا",
+    "saving": "جارٍ الحفظ...",
+    "saveProfile": "حفظ التغييرات",
+    "preferences": "التفضيلات",
+    "preferencesDescription": "تخصيص المظهر والأمان",
+    "theme": "المظهر",
+    "themeDescription": "اختر مظهر التطبيق",
+    "themeLight": "فاتح",
+    "themeDark": "داكن",
+    "themeSystem": "النظام",
+    "autoLock": "مؤقت القفل التلقائي",
+    "autoLockDescription": "قفل الخزنة تلقائيًا بعد فترة عدم النشاط",
+    "selectDuration": "اختر المدة",
+    "account": "الحساب",
+    "accountDetailsDescription": "تفاصيل حسابك",
+    "memberSince": "عضو منذ",
+    "autoLockUpdated": "تم تحديث مؤقت القفل التلقائي",
+    "autoLockOptions": {
+      "1min": "دقيقة واحدة",
+      "5min": "5 دقائق",
+      "15min": "15 دقيقة",
+      "30min": "30 دقيقة",
+      "1hour": "ساعة واحدة",
+      "never": "أبداً"
+    },
+    "profileUpdated": "تم تحديث الملف الشخصي بنجاح",
+    "profileUpdateError": "فشل تحديث الملف الشخصي",
+    "sections": {
+      "account": {
+        "title": "الحساب",
+        "description": "ملفك الشخصي واللغة والمظهر."
+      },
+      "security": {
+        "title": "الأمان",
+        "description": "المصادقة الثنائية ومفاتيح المرور والجلسات والأجهزة الموثوقة والوصول الطارئ.",
+        "explainer": "2FA ومفاتيح المرور والجلسات النشطة والأجهزة التي تثق بها.",
+        "cta": "فتح إعدادات الأمان",
+        "emergencyTitle": "الوصول في حالات الطوارئ",
+        "emergencyDescription": "عيّن جهات اتصال موثوقة يمكنها طلب الوصول إلى خزنتك عند تعذر ذلك عليك.",
+        "emergencyExplainer": "استرداد بفترة انتظار دون التخلي عن مبدأ عدم المعرفة.",
+        "emergencyCta": "إدارة الوصول في حالات الطوارئ"
+      },
+      "devices": {
+        "title": "الأجهزة والإضافات",
+        "description": "الأجهزة والإضافات",
+        "trustedTitle": "الأجهزة الموثوقة",
+        "trustedDescription": "راجع وأبطل الأجهزة المسجّلة الدخول إلى حسابك.",
+        "trustedExplainer": "تُدار الأجهزة الموثوقة داخل قسم الأمان.",
+        "trustedCta": "إدارة الأجهزة الموثوقة",
+        "enrollment": {
+          "retrySuccess": "اكتمل إعداد الجهاز.",
+          "retryFailed": "ما زال إعداد الجهاز يفشل. حاول مرة أخرى بعد قليل.",
+          "title": "أنهِ إعداد الجهاز",
+          "description": "لم يُسجَّل هذا الجهاز بالكامل بعد. أعد المحاولة الآن ليتمكن من فك تشفير عناصر الخزنة المشتركة.",
+          "retrying": "إعادة المحاولة…",
+          "retry": "أنهِ إعداد الجهاز"
+        }
+      },
+      "data": {
+        "title": "البيانات",
+        "description": "استورد من مديري كلمات المرور الآخرين وصدّر بياناتك.",
+        "explainer": "مكان واحد للاستيراد ولتصدير الخزنة (نص عادي أو مشفَّر) وحزمة بياناتك وفق اللائحة العامة لحماية البيانات.",
+        "subExplainer": "كل مسارات التصدير هنا — لا شيء آخر في التطبيق يُخرج بياناتك.",
+        "cta": "فتح البيانات"
+      },
+      "preferences": {
+        "title": "التفضيلات",
+        "description": "شكل الخزنة وطريقة عملها لك.",
+        "layoutTitle": "تخطيط الخزنة",
+        "layoutDescription": "اختر عرض الخزنة والكثافة المناسبة لك.",
+        "remindersTitle": "التذكيرات",
+        "remindersDescription": "تذكيرات محلية للتناوب ومراجعات الاختراق وفحوصات النسخ الاحتياطي.",
+        "remindersExplainer": "تعمل على جهازك — لا تُرسل إلى الخادم.",
+        "remindersCta": "فتح التذكيرات",
+        "guideMeTitle": "دلّني",
+        "guideMeDescription": "جولات قصيرة داخل التطبيق ترشدك عبر الخزنة والمشاركة والإعدادات."
+      }
+    },
+    "validation": {
+      "nameMin": "يجب أن يتكون الاسم من حرفين على الأقل",
+      "nameMax": "يجب أن يكون الاسم أقل من 100 حرف"
+    },
+    "inactivityLock": "طلب فتح بعد الخمول",
+    "inactivityLockDescription": "مع تفعيل البقاء مفتوحًا، إعادة الفتح بعد الخمول تتم بصمت — دون مطالبة.",
+    "persistentUnlock": "ابقَ مفتوحًا على هذا الجهاز",
+    "persistentUnlockDescription": "ابقَ مفتوحًا على هذا الجهاز — ستؤكد كلمة مرورك الرئيسية للإجراءات الحساسة.",
+    "persistentUnlockUpdated": "تم تحديث البقاء مفتوحًا. يُطبَّق في المرة التالية.",
+    "persistentUnlockOff": "تم إيقاف البقاء مفتوحًا. ستُدخل كلمة المرور الرئيسية في المرة التالية.",
+    "persistentUnlockOptions": {
+      "off": "معطّل",
+      "7days": "7 أيام",
+      "30days": "30 يومًا"
+    },
+    "lockAndForget": "أقفل ونسيان هذا الجهاز"
+  },
+  "watchtower": {
+    "title": "تدقيق الأمان",
+    "unlock": "فتح الخزنة",
+    "retry": "إعادة المحاولة",
+    "rescan": "إعادة الفحص",
+    "lastScan": "آخر فحص:",
+    "weak": "ضعيفة",
+    "weakDesc": "إنتروبيا منخفضة أو أنماط متكررة",
+    "reused": "مُعاد استخدامها",
+    "reusedDesc": "نفس كلمة المرور على مواقع متعددة",
+    "old": "قديمة",
+    "oldDesc": "لم تُغيَّر منذ أكثر من 90 يومًا",
+    "breached": "مُخترقة",
+    "breachedDesc": "وُجدت في تسريبات بيانات",
+    "checking": "جارٍ الفحص...",
+    "checkBreaches": "فحص الاختراقات",
+    "weakPasswords": "كلمات المرور الضعيفة",
+    "reusedPasswords": "كلمات المرور المُعاد استخدامها",
+    "oldPasswords": "كلمات المرور القديمة",
+    "noOld": "لم يتم العثور على كلمات مرور قديمة",
+    "breachedPasswords": "كلمات المرور المُخترقة",
+    "critical": "حرج",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "fix": "إصلاح",
+    "sharedBy": "مشتركة بين {{count}} عناصر",
+    "reusedDetail": "كلمة المرور مستخدمة في مكان آخر",
+    "noVault": "لم يتم العثور على خزنة. أنشئ خزنة أولاً.",
+    "analysisError": "فشل تحليل الخزنة",
+    "breachError": "فشل فحص الاختراقات"
+  },
+  "vault": {
+    "title": "الخزنة",
+    "subtitle": "كل ما تحفظه يُشفَّر على هذا الجهاز قبل أن يغادره.",
+    "addItem": "إضافة عنصر",
+    "addItemDescription": "أنشئ عنصراً جديداً. تُشفّر جميع البيانات على جهازك.",
+    "duplicateCheckFailedTitle": "تعذّر فحص الخزنة بالكامل",
+    "duplicateCheckFailedDescription": "تعذّر فحص قائمة العناصر بالكامل. يمكنك مراجعة العنصر أو إضافته دون فحص التكرار.",
+    "duplicateFoundTitle": "عُثر على عنصر مكرر",
+    "duplicateFoundDescription": "يوجد عنصر مطابق بالفعل في هذه الخزنة. راجع العنصر أو أضفه على أي حال.",
+    "reviewItem": "مراجعة العنصر",
+    "addAnyway": "الإضافة على أي حال",
+    "itemType": "النوع",
+    "titlePlaceholder": "مثال: GitHub أو البنك",
+    "usernamePlaceholder": "user@example.com",
+    "generate": "توليد",
+    "content": "المحتوى",
+    "emptyDescription": "العناصر مُشفّرة بمفاتيح لا تغادر أجهزتك أبدًا.",
+    "encrypting": "جارٍ التشفير...",
+    "noVault": "لم يتم العثور على خزنة",
+    "items": "العناصر",
+    "authenticators": "المصادقات",
+    "sharing": "المشاركة",
+    "trash": "المحذوفات",
+    "search": "البحث في الخزنة...",
+    "filterAll": "جميع الأنواع",
+    "filterLogin": "تسجيلات الدخول",
+    "filterCard": "البطاقات",
+    "filterNote": "الملاحظات",
+    "filterIdentity": "الهويات",
+    "filterPasskey": "مفاتيح المرور",
+    "filterTotp": "TOTP",
+    "filterFile": "الملفات",
+    "sortModified": "آخر تعديل",
+    "sortCreated": "تاريخ الإنشاء",
+    "sortName": "الاسم",
+    "empty": "خزنتك فارغة — وأنت وحدك من يستطيع ملأها.",
+    "addFirstItem": "أضف عنصرك الأول",
+    "noResults": "لا توجد عناصر تطابق البحث أو الفلتر.",
+    "loading": "جارٍ التحميل...",
+    "loadMore": "تحميل المزيد",
+    "locked": "الخزنة مقفلة",
+    "lockedDescription": "أدخل كلمة المرور الرئيسية للوصول إلى خزنتك.",
+    "unlockTitle": "فتح الخزنة",
+    "unlockDescription": "أدخل كلمة المرور الرئيسية لفك تشفير خزنتك.",
+    "recoveryDescription": "تعذر فك تشفير عناصر خزنتك. أدخل كلمة المرور الرئيسية السابقة وكلمة المرور الحالية لاسترداد بياناتك.",
+    "oldMasterPassword": "كلمة المرور الرئيسية السابقة",
+    "oldPasswordPlaceholder": "أدخل كلمة المرور الرئيسية السابقة",
+    "currentMasterPassword": "كلمة المرور الرئيسية الحالية",
+    "masterPassword": "كلمة المرور الرئيسية",
+    "passwordPlaceholder": "أدخل كلمة المرور الرئيسية",
+    "hidePassword": "إخفاء كلمة المرور",
+    "showPassword": "إظهار كلمة المرور",
+    "secretKey": "مفتاح الاسترداد",
+    "secretKeyHint": "أدخل مفتاح الاسترداد من مجموعة الاسترداد الخاصة بك.",
+    "recovering": "جارٍ استرداد الخزنة…",
+    "deriving": "جارٍ اشتقاق المفتاح…",
+    "recover": "استرداد الخزنة",
+    "useRecoveryKey": "استخدم المفتاح السري",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "sensitiveFieldUnchanged": "اتركه فارغاً للاحتفاظ بالقيمة الحالية",
+    "url": "الرابط",
+    "notes": "الملاحظات",
+    "created": "تم الإنشاء",
+    "modified": "آخر تعديل",
+    "copy": "نسخ {{field}}",
+    "openUrl": "فتح الرابط",
+    "favorite": "إضافة إلى المفضلة",
+    "unfavorite": "إزالة من المفضلة",
+    "back": "العودة إلى الخزنة",
+    "edit": "تعديل العنصر",
+    "delete": "حذف العنصر",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ...",
+    "unlock": "فتح القفل",
+    "org": {
+      "setupTitle": "مشاركة خزنة المؤسسة",
+      "setupDesc": "أنشئ خزنة مشتركة ليتمكن الأعضاء من رؤية العناصر نفسها. سيتم استيراد عناصر هذه المؤسسة، وسيحصل الأعضاء الذين سجلوا الدخول على الوصول تلقائيًا.",
+      "setupButton": "إعداد الخزنة المشتركة",
+      "noneMember": "لا توجد خزنة مشتركة لهذه المؤسسة بعد.",
+      "pending": "سترى العناصر المشتركة بعد أن يمنحك مسؤول المؤسسة الوصول. تأكد من تسجيل الدخول على هذا الجهاز أولًا.",
+      "resolveError": "تعذّر التحقق من وصولك إلى الخزنة المشتركة.",
+      "retry": "إعادة المحاولة"
+    },
+    "emptyImport": "استيراد من مدير كلمات مرور آخر"
+  },
+  "share": {
+    "mode": {
+      "chooseTitle": "مشاركة \"{{title}}\"",
+      "chooseDescription": "اختر الطريقة التي تريد بها مشاركة هذا العنصر.",
+      "person": {
+        "title": "مع شخص",
+        "description": "شارك بشكل دائم مع شخص لديه حساب. سيظهر العنصر في خزينته."
+      },
+      "link": {
+        "title": "كرابط",
+        "description": "أنشئ رابطًا لمرة واحدة مع تاريخ انتهاء. يبقى مفتاح فك التشفير في جزء URL."
+      }
+    }
+  },
+  "sharing": {
+    "received": "المستلمة",
+    "sent": "المرسلة",
+    "noReceived": "لا توجد مشاركات معلقة",
+    "noReceivedHint": "ستظهر العناصر المشتركة معك هنا.",
+    "noSent": "لا توجد عناصر مشتركة",
+    "noSentHint": "ستظهر العناصر التي تشاركها هنا.",
+    "dialogTitle": "مشاركة العنصر",
+    "dialogDescription": "شارك \"{{title}}\" مع مستخدم آخر.",
+    "recipientEmail": "بريد المستلم الإلكتروني",
+    "emailPlaceholder": "user@example.com",
+    "permission": "الصلاحية",
+    "permissionView": "عرض فقط",
+    "permissionEdit": "يمكنه التعديل",
+    "permissionShare": "يمكنه المشاركة",
+    "viewOnly": "عرض",
+    "canEdit": "تعديل",
+    "viewHint": "يمكن للمستلم العرض دون تعديل هذا العنصر.",
+    "editHint": "يمكن للمستلم عرض هذا العنصر وتعديله.",
+    "shareHint": "يمكن للمستلم عرض هذا العنصر وتعديله وإعادة مشاركته.",
+    "zeroKnowledgeHint": "يتم تغليف مفتاح عنصر مشفر فقط لهذا المستلم. لا يتلقى الخادم بيانات الخزنة بنص عادي.",
+    "canShare": "مشاركة",
+    "pendingViewHint": "يمكنك عرض هذا العنصر بعد القبول.",
+    "pendingEditHint": "يمكنك عرض هذا العنصر وتعديله بعد القبول.",
+    "pendingShareHint": "يمكنك عرض هذا العنصر وتعديله وإعادة مشاركته بعد القبول.",
+    "accessSummaryEntry": "{{name}} ({{permission}})",
+    "whoCanAccess": "من يمكنه الوصول إلى هذا: {{summary}}",
+    "share": "مشاركة",
+    "sharing": "جارٍ المشاركة...",
+    "errorNoEmail": "يرجى إدخال بريد المستلم الإلكتروني.",
+    "errorInvalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
+    "errorFailed": "فشلت مشاركة العنصر. حاول مرة أخرى.",
+    "errorRecipientNoDevice": "يجب على المستلم تسجيل الدخول على جهاز موثوق قبل أن تتمكن من المشاركة معه.",
+    "errorRecipientUntrustedDevice": "اطلب من هذا الشخص توثيق أحد أجهزته (الإعدادات ← الأمان ← الأجهزة الموثوقة) قبل المشاركة.",
+    "status": {
+      "pending": "قيد الانتظار",
+      "accepted": "مقبول",
+      "declined": "مرفوض",
+      "revoked": "ملغى"
+    },
+    "errorItemNotFound": "العنصر غير موجود."
+  },
+  "totp": {
+    "scanQR": "مسح رمز QR",
+    "scanQRCode": "مسح رمز QR",
+    "noAuthenticators": "لا توجد مصادقات",
+    "noAuthenticatorsDescription": "أضف مصادقة TOTP عن طريق مسح رمز QR أو إدخال مفتاح سري."
+  },
+  "ephemeral": {
+    "errorNoKey": "الرابط غير صالح: مفتاح فك التشفير مفقود.",
+    "errorAccess": "لم يعد هذا الرابط متاحًا.",
+    "errorDecrypt": "فشل فك التشفير. عبارة المرور غير صحيحة أو الرابط تالف.",
+    "errorNoPassphrase": "أدخل عبارة المرور.",
+    "pageTitle": "عنصر مشترك",
+    "loading": "جارٍ تحميل العنصر المشترك...",
+    "errorTitle": "الرابط غير متاح",
+    "errorGeneric": "ربما انتهت صلاحية هذا الرابط أو تم إلغاؤه أو استخدامه بالفعل.",
+    "passphraseRequired": "عبارة المرور مطلوبة",
+    "passphrase": "عبارة المرور",
+    "enterPassphrase": "أدخل عبارة المرور...",
+    "decrypting": "جارٍ فك التشفير...",
+    "decrypt": "فك التشفير",
+    "decryptedTitle": "عنصر مشترك",
+    "decryptedHint": "تم فك تشفير هذه البيانات محليًا في متصفحك."
+  },
+  "family": {
+    "title": "العائلة",
+    "subtitle": "إدارة العائلة والخزنات المشتركة.",
+    "create": {
+      "title": "إنشاء عائلة",
+      "description": "ابدأ عائلة لمشاركة الخزنات وتمكين الاسترداد المفوض لما يصل إلى 6 أعضاء.",
+      "namePlaceholder": "اسم العائلة",
+      "action": "إنشاء عائلة",
+      "nameRequired": "يرجى إدخال اسم العائلة.",
+      "error": "فشل إنشاء العائلة."
+    },
+    "dashboard": {
+      "subtitle": "{{count}} أعضاء"
+    },
+    "tabs": {
+      "members": "الأعضاء",
+      "vaults": "الخزنات المشتركة",
+      "recovery": "الاسترداد",
+      "settings": "الإعدادات"
+    },
+    "roles": {
+      "owner": "المنظم",
+      "admin": "مشرف",
+      "member": "عضو"
+    },
+    "members": {
+      "title": "الأعضاء",
+      "invite": "دعوة عضو",
+      "you": "أنت",
+      "accessSummary": "{{count}} خزنات مشتركة",
+      "noSharedVaultAccess": "لا يوجد وصول إلى خزنة مشتركة",
+      "accessManage": "{{count}} إدارة",
+      "accessShare": "{{count}} مشاركة",
+      "accessEdit": "{{count}} تعديل",
+      "accessView": "{{count}} عرض",
+      "lastActionJoined": "انضم في {{date}}",
+      "promoteAdmin": "ترقية إلى مشرف",
+      "demoteToMember": "تخفيض إلى عضو",
+      "remove": "إزالة العضو",
+      "removeTitle": "إزالة العضو",
+      "removeDescription": "هل أنت متأكد من إزالة {{name}} من العائلة؟ سيفقد الوصول إلى جميع الخزنات المشتركة.",
+      "confirmRemove": "إزالة"
+    },
+    "invite": {
+      "adminHint": "يمكن للمشرفين إدارة الخزنات المشتركة والأعضاء.",
+      "cancelError": "فشل إلغاء الدعوة.",
+      "cancelled": "تم إلغاء الدعوة.",
+      "copyError": "فشل نسخ رابط الدعوة.",
+      "description": "أرسل دعوة للانضمام إلى عائلتك.",
+      "emailLabel": "عنوان البريد الإلكتروني",
+      "emailPlaceholder": "member@example.com",
+      "error": "فشل إرسال الدعوة.",
+      "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+      "linkCopied": "تم نسخ رابط الدعوة.",
+      "memberHint": "يمكن للأعضاء الوصول إلى الخزنات المشتركة وخزنتهم الخاصة.",
+      "resendError": "فشل إعادة إرسال الدعوة.",
+      "resent": "تمت إعادة إرسال الدعوة ونسخ الرابط.",
+      "resentWithoutCopy": "تمت إعادة إرسال الدعوة. انسخ الرابط يدويًا إذا لزم الأمر.",
+      "roleLabel": "الدور",
+      "send": "إرسال الدعوة",
+      "sent": "تم إرسال الدعوة.",
+      "title": "دعوة عضو في العائلة"
+    },
+    "invitations": {
+      "cancel": "إلغاء",
+      "copyLink": "نسخ الرابط",
+      "expires": "تنتهي",
+      "pendingCount": "{{count}} قيد الانتظار",
+      "resend": "إعادة إرسال",
+      "status": {
+        "accepted": "مقبولة",
+        "cancelled": "ملغاة",
+        "declined": "مرفوضة",
+        "expired": "منتهية",
+        "pending": "قيد الانتظار"
+      },
+      "title": "الدعوات"
+    },
+    "sharedVaults": {
+      "created": "تم إنشاء الخزنة المشتركة.",
+      "missingUser": "لا يزال سياق المستخدم قيد التحميل.",
+      "loadError": "فشل تحميل الخزنة المشتركة.",
+      "loadingDetail": "جاري تحميل الخزنة المشتركة…",
+      "permission": "صلاحيتك",
+      "members": "الأعضاء",
+      "title": "الخزنات المشتركة",
+      "create": "إنشاء خزنة",
+      "empty": "لا توجد خزنات مشتركة بعد.",
+      "emptyHint": "أنشئ خزنة، وامنح الوصول فقط للأعضاء الذين يحتاجونه، ودوّر الوصول عند مغادرة أحدهم.",
+      "createdOn": "تم الإنشاء في {{date}}",
+      "memberCount": "{{count}} أعضاء",
+      "createFirst": "إنشاء أول خزنة مشتركة",
+      "createTitle": "إنشاء خزنة مشتركة",
+      "createDescription": "أنشئ خزنة يمكن لأفراد العائلة الوصول إليها معاً.",
+      "nameRequired": "يرجى إدخال اسم الخزنة.",
+      "nameTooLong": "يجب ألا يتجاوز اسم الخزنة 64 حرفاً.",
+      "createError": "فشل إنشاء الخزنة المشتركة.",
+      "nameLabel": "اسم الخزنة",
+      "namePlaceholder": "مثال: خدمات البث",
+      "createAction": "إنشاء الخزنة",
+      "grantableMembers": "أعضاء بلا وصول",
+      "noGrantableMembers": "لدى جميع أفراد العائلة حق الوصول بالفعل.",
+      "grantAccess": "منح الوصول",
+      "granted": "تم منح الوصول إلى الخزنة المشتركة.",
+      "grantError": "فشل منح الوصول إلى الخزنة المشتركة.",
+      "removeAccess": "إزالة الوصول",
+      "removeAccessTitle": "إزالة الوصول إلى الخزنة المشتركة؟",
+      "removeAccessDescription": "سيفقد {{name}} الوصول إلى هذه الخزنة المشتركة. يحصل الأعضاء الباقون على مفتاح مغلف ومدوّر.",
+      "confirmRemoveAccess": "إزالة الوصول",
+      "removed": "تمت إزالة الوصول إلى الخزنة المشتركة وتدوير المفتاح.",
+      "removeError": "فشل إزالة الوصول إلى الخزنة المشتركة.",
+      "permissionUpdated": "تم تحديث صلاحية الخزنة المشتركة.",
+      "permissionUpdateError": "فشل تحديث صلاحية الخزنة المشتركة.",
+      "permissions": {
+        "view": "عرض",
+        "edit": "تعديل",
+        "share": "مشاركة",
+        "manage": "إدارة"
+      }
+    },
+    "settings": {
+      "title": "إعدادات العائلة",
+      "description": "إدارة إعدادات عائلتك.",
+      "nameRequired": "اسم العائلة مطلوب.",
+      "updateError": "فشل تحديث الإعدادات.",
+      "saved": "تم حفظ الإعدادات.",
+      "nameLabel": "اسم العائلة",
+      "leaveTitle": "مغادرة العائلة",
+      "leaveDescription": "غادر هذه العائلة. ستفقد الوصول إلى جميع الخزنات المشتركة.",
+      "leaveAction": "مغادرة العائلة",
+      "leaveConfirmTitle": "مغادرة العائلة؟",
+      "leaveConfirmDescription": "ستفقد الوصول إلى جميع الخزنات المشتركة ومحتوياتها. لا يمكن التراجع عن هذا الإجراء.",
+      "confirmLeave": "مغادرة العائلة"
+    },
+    "recovery": {
+      "title": "استرداد الحساب",
+      "memberDescription": "اطلب من منظم العائلة المساعدة في استرداد حسابك إذا فقدت الوصول.",
+      "organizerDescription": "مراجعة وإدارة طلبات الاسترداد من أعضاء العائلة.",
+      "yourRequest": "طلب الاسترداد الخاص بك",
+      "requested": "تم الطلب",
+      "expires": "ينتهي",
+      "approvedHint": "تمت الموافقة على استردادك. اتبع التعليمات لإعداد مفاتيح جديدة.",
+      "expiredHint": "انتهت صلاحية هذا الطلب. أرسل طلب استرداد جديداً إذا كنت لا تزال تحتاج إلى المساعدة.",
+      "rejectedHint": "تم رفض هذا الطلب. يمكنك إرسال طلب جديد إذا تغير وضعك.",
+      "completedHint": "اكتمل الاسترداد. يستخدم وصولك إلى الخزنات المشتركة المفاتيح المغلفة الجديدة.",
+      "noActiveRequest": "لا يوجد طلب استرداد نشط.",
+      "requestRecovery": "طلب استرداد",
+      "noRequests": "لا توجد طلبات استرداد.",
+      "activeRequests": "الطلبات النشطة",
+      "pastRequests": "الطلبات السابقة",
+      "approve": "موافقة",
+      "reject": "رفض",
+      "approveTitle": "الموافقة على الاسترداد",
+      "rejectTitle": "رفض الاسترداد",
+      "approveDescription": "سيسمح هذا للعضو بإنشاء مفاتيح جديدة واستعادة الوصول إلى الخزنات المشتركة. ستحتاج إلى إعادة تغليف مفاتيح الخزنة لهم.",
+      "rejectDescription": "سيرفض هذا طلب الاسترداد. يمكن للعضو تقديم طلب جديد لاحقاً.",
+      "confirmApprove": "موافقة",
+      "confirmReject": "رفض",
+      "timeline": {
+        "trustedContact": "تم طلب جهة الاتصال الموثوقة",
+        "waitingPeriod": "فترة انتظار ومراجعة المنظم",
+        "approval": "تم منح الموافقة",
+        "denied": "تم رفض الموافقة أو انتهت",
+        "finalAccess": "الوصول النهائي بعد تأكيد المفاتيح الجديدة"
+      },
+      "status": {
+        "pending": "قيد الانتظار",
+        "approved": "موافق عليه",
+        "completing": "قيد الإكمال",
+        "completed": "مكتمل",
+        "rejected": "مرفوض",
+        "expired": "منتهي الصلاحية"
+      }
+    },
+    "unknownMember": "عضو غير معروف",
+    "loadError": "فشل تحميل العائلة."
+  },
+  "emergency": {
+    "title": "الوصول الطارئ",
+    "subtitle": "إدارة جهات الاتصال الموثوقة وطلبات الوصول الطارئ.",
+    "tabs": {
+      "contacts": "جهات الاتصال",
+      "incoming": "الواردة",
+      "outgoing": "الصادرة"
+    }
+  },
+  "importExport": {
+    "title": "استيراد / تصدير",
+    "subtitle": "استيراد العناصر من مديري كلمات المرور الأخرى أو تصدير خزنتك.",
+    "noVault": "لم يتم العثور على خزنة.",
+    "tabs": {
+      "import": "استيراد",
+      "export": "تصدير"
+    },
+    "formats": {
+      "genericCsv": "ملف CSV عام"
+    },
+    "export": {
+      "encrypted": {
+        "title": "تصدير مشفر",
+        "description": "صدّر خزنتك كملف .pssmngr مشفر. لا يمكن فتح هذا الملف إلا بكلمة المرور الرئيسية.",
+        "recommended": "موصى به",
+        "exporting": "جاري التصدير...",
+        "done": "تم التحميل",
+        "button": "تصدير .pssmngr"
+      },
+      "plaintext": {
+        "title": "تصدير نص عادي",
+        "description": "تصدير كملف CSV أو JSON غير مشفر. استخدم هذه الصيغ فقط للاستيراد إلى مدير كلمات مرور آخر.",
+        "warning": "تحتوي هذه الملفات على كلمات المرور بنص عادي. أي شخص لديه وصول إلى الملف يمكنه قراءتها. احذف الملف بعد الاستخدام.",
+        "csv": "تصدير CSV",
+        "json": "تصدير JSON"
+      },
+      "warning": {
+        "title": "تصدير كـ {{format}}؟",
+        "description": "سيتم تصدير جميع عناصر خزنتك كملف {{format}} غير مشفر. ستكون كلمات المرور مرئية بنص عادي.",
+        "caution": "أي شخص لديه وصول إلى هذا الملف يمكنه قراءة كلمات المرور. احذف الملف بعد الاستخدام.",
+        "cancel": "إلغاء",
+        "confirm": "تصدير {{format}}",
+        "exporting": "جاري التصدير..."
+      },
+      "error": {
+        "exportFailed": "فشل التصدير"
+      }
+    },
+    "import": {
+      "dropzone": {
+        "title": "أسقط ملفك هنا أو انقر للتصفح",
+        "subtitle": "يدعم ملفات CSV وJSON",
+        "browse": "اختر ملفاً"
+      },
+      "supported": "الصيغ المدعومة",
+      "reading": "جاري قراءة الملف...",
+      "detecting": "جاري اكتشاف الصيغة...",
+      "preview": {
+        "title": "معاينة",
+        "detected": "تم اكتشاف: {{source}}",
+        "count": "تم العثور على {{count}} عنصر",
+        "cancel": "إلغاء",
+        "import": "استيراد {{count}} عنصر",
+        "parseErrors": "تعذر تحليل {{count}} صف",
+        "duplicates": "تم اكتشاف {{count}} تكرار محتمل",
+        "col": {
+          "title": "العنوان",
+          "type": "النوع",
+          "username": "اسم المستخدم",
+          "url": "الرابط"
+        }
+      },
+      "progress": "جاري استيراد {{current}} من {{total}}...",
+      "summary": {
+        "title": "اكتمل الاستيراد",
+        "duration": "اكتمل في {{seconds}} ثانية",
+        "imported": "تم الاستيراد",
+        "skipped": "تم التخطي",
+        "errors": "أخطاء",
+        "errorDetails": "العناصر الفاشلة",
+        "moreErrors": "...و {{count}} أخرى",
+        "importMore": "استيراد المزيد"
+      },
+      "error": {
+        "title": "فشل الاستيراد",
+        "retry": "حاول مرة أخرى"
+      }
+    }
+  },
+  "hidePassword": "إخفاء كلمة المرور",
+  "showPassword": "إظهار كلمة المرور",
+  "error": "حدث خطأ",
+  "sensitiveAction": {
+    "export": "أكّد كلمة المرور الرئيسية لتصدير خزنتك",
+    "changeMasterPassword": "أكّد كلمة المرور الرئيسية لتغييرها",
+    "emergencyAccess": "أكّد كلمة المرور الرئيسية لتحديث الوصول الطارئ",
+    "error": {
+      "loadVault": "تعذّر التحقق من خزنتك الآن. حاول مرة أخرى."
+    },
+    "revokedNotice": "تم إبطال وصول الجهاز الموثوق. يُرجى تسجيل الدخول مجددًا.",
+    "expiredNotice": "انتهت صلاحية وصول الجهاز الموثوق. يُرجى تسجيل الدخول مجددًا."
+  },
+  "pages": {
+    "vault": {
+      "title": "الخزنة",
+      "description": "كل ما تحفظه يُشفَّر على هذا الجهاز قبل أن يغادره."
+    },
+    "security": {
+      "title": "الأمان",
+      "description": "كلمات المرور الضعيفة والمُعاد استخدامها والمُخترقة — تُكتَشف وتُصلَح من مكان واحد.",
+      "checkWeak": "كلمات مرور يمكن تخمينها",
+      "checkReused": "اختراق واحد يفتح أبوابًا كثيرة",
+      "checkBreached": "ظهرت في تسريبات معروفة — يُفحص بخصوصية"
+    },
+    "people": {
+      "title": "الأشخاص",
+      "description": "شارك العناصر مع عائلتك أو مساحة عملك دون كشف خزنتك."
+    },
+    "settings": {
+      "title": "الإعدادات",
+      "description": "حسابك وأجهزتك وبياناتك — في مكان واحد."
+    }
+  },
+  "explainer": {
+    "title": "كيف يحميك pssmngr",
+    "encryptedOnDevice": {
+      "title": "مُشفَّر على جهازك",
+      "body": "تُغلَّف العناصر بـ XChaCha20-Poly1305 قبل مغادرتها."
+    },
+    "twoSecretsNeverSent": {
+      "title": "سرّان، لا يُرسَلان أبدًا",
+      "body": "كلمة المرور الرئيسية والمفتاح السري يبقيان معك؛ لا نخزّن أيًّا منهما، لذا لا يمكننا قراءة خزنتك — ولا يمكننا إعادة تعيينها."
+    },
+    "youControlThisDevice": {
+      "title": "أنت تتحكم بهذا الجهاز",
+      "body": "ابقَ مفتوحًا حتى 30 يومًا هنا؛ الإجراءات الحساسة تطلب كلمة المرور الرئيسية دائمًا.",
+      "link": "تغيير إعداد الفتح"
+    }
+  },
+  "sharingCenter": {
+    "personDescription": "شارك عنصرًا مع شخص — يحصل على الوصول، وتحتفظ أنت بالتحكم.",
+    "linkDescription": "أنشئ رابطًا ينتهي — المفتاح يسافر داخل الرابط، وليس عبر خوادمنا."
+  }
+}

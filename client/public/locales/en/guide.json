@@ -1,0 +1,147 @@
+{
+  "launcher": {
+    "ariaLabel": "Open guide",
+    "tooltip": "Guide me"
+  },
+  "nudge": {
+    "text": "New here? A short tour can help.",
+    "cta": "Show me around",
+    "dismiss": "Dismiss"
+  },
+  "panel": {
+    "title": "Guide me",
+    "progress": "{{done}} of {{total}} tours completed",
+    "youAreHere": "You are here",
+    "completed": "Completed",
+    "start": "Start tour",
+    "replay": "Replay",
+    "resume": "Resume from step {{step}}"
+  },
+  "toggle": {
+    "label": "Guide me",
+    "description": "Show short in-app tours and the floating help button."
+  },
+  "overlay": {
+    "counter": "Step {{current}} of {{total}}",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "takeMeThere": "Take me there",
+    "skipStep": "Skip step",
+    "skipTour": "Skip tour",
+    "endTour": "End tour",
+    "close": "Close",
+    "searching": "Looking for the right spot…",
+    "missing": "This step's target isn't on the page right now."
+  },
+  "tours": {
+    "firstRun": {
+      "title": "Get started",
+      "description": "A five-step walk through the essentials of your vault.",
+      "steps": {
+        "add": {
+          "title": "Add your first item",
+          "body": "Use this button any time you want to save a login, note, or card."
+        },
+        "search": {
+          "title": "Find things fast",
+          "body": "Search is fuzzy — type a website, an email, or a tag."
+        },
+        "generator": {
+          "title": "Generate strong passwords",
+          "body": "One click gives you a strong, unique password ready to paste."
+        },
+        "workspace": {
+          "title": "Switch workspace",
+          "body": "Personal, family, or work — everything you own lives in a separate workspace."
+        },
+        "settings": {
+          "title": "Tune your account",
+          "body": "Security, sync, and preferences live here."
+        }
+      }
+    },
+    "vaultBasics": {
+      "title": "Vault basics",
+      "description": "Add, find, and share items in your vault.",
+      "steps": {
+        "add": {
+          "title": "Add an item",
+          "body": "Everything you save is encrypted on your device before it leaves."
+        },
+        "search": {
+          "title": "Search your vault",
+          "body": "Search runs locally on already-decrypted data — no server can see it."
+        },
+        "share": {
+          "title": "Share safely",
+          "body": "Share flows encrypt to the recipient's key — the server never sees plaintext."
+        }
+      }
+    },
+    "sharing": {
+      "title": "Share an item",
+      "description": "Send a login or note to someone with zero-knowledge encryption.",
+      "steps": {
+        "entry": {
+          "title": "Open Share",
+          "body": "Every item can be shared to a person or into a shared vault."
+        },
+        "center": {
+          "title": "Sharing center",
+          "body": "See who has what — revoke access with one click."
+        }
+      }
+    },
+    "securityCheckup": {
+      "title": "Security check-up",
+      "description": "Review breached passwords, 2FA, and recovery.",
+      "steps": {
+        "nav": {
+          "title": "Open Security",
+          "body": "Security bundles breach checks, weak passwords, and reuse warnings."
+        },
+        "card": {
+          "title": "Security settings",
+          "body": "Two-factor, recovery, and device management all live in one card."
+        },
+        "remember": {
+          "title": "Persistent unlock",
+          "body": "Stay unlocked for 30 days on this device — sensitive actions still ask again."
+        }
+      }
+    },
+    "workspaces": {
+      "title": "Workspaces",
+      "description": "Keep personal, family, and work items separate.",
+      "steps": {
+        "switcher": {
+          "title": "Switch workspaces",
+          "body": "Each workspace has its own key and its own items."
+        },
+        "people": {
+          "title": "Manage people",
+          "body": "Invite family or coworkers and set who can see what."
+        }
+      }
+    },
+    "protectAccount": {
+      "title": "Protect your account",
+      "description": "Recovery, export, and unlock settings.",
+      "steps": {
+        "data": {
+          "title": "Your data",
+          "body": "Export, import, and backup live here — all client-side."
+        },
+        "remember": {
+          "title": "Persistent unlock",
+          "body": "Balance convenience and safety by choosing how long we remember."
+        },
+        "recovery": {
+          "title": "Recovery kit",
+          "body": "Save your Secret Key somewhere safe — it's how you get back in if you forget."
+        }
+      }
+    }
+  }
+}

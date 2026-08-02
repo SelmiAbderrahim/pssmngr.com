@@ -1,0 +1,147 @@
+{
+  "launcher": {
+    "ariaLabel": "Abrir guía",
+    "tooltip": "Guíame"
+  },
+  "nudge": {
+    "text": "¿Nuevo aquí? Un recorrido corto puede ayudarte.",
+    "cta": "Muéstrame",
+    "dismiss": "Cerrar"
+  },
+  "panel": {
+    "title": "Guíame",
+    "progress": "{{done}} de {{total}} recorridos completados",
+    "youAreHere": "Estás aquí",
+    "completed": "Completado",
+    "start": "Iniciar",
+    "replay": "Repetir",
+    "resume": "Continuar desde el paso {{step}}"
+  },
+  "toggle": {
+    "label": "Guíame",
+    "description": "Muestra recorridos cortos dentro de la app y el botón flotante de ayuda."
+  },
+  "overlay": {
+    "counter": "Paso {{current}} de {{total}}",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "done": "Listo",
+    "takeMeThere": "Llévame allí",
+    "skipStep": "Omitir paso",
+    "skipTour": "Omitir recorrido",
+    "endTour": "Terminar recorrido",
+    "close": "Cerrar",
+    "searching": "Buscando el sitio correcto…",
+    "missing": "El objetivo de este paso no está en la página actual."
+  },
+  "tours": {
+    "firstRun": {
+      "title": "Empieza aquí",
+      "description": "Cinco pasos por lo esencial de tu bóveda.",
+      "steps": {
+        "add": {
+          "title": "Añade tu primer elemento",
+          "body": "Usa este botón para guardar un inicio de sesión, una nota o una tarjeta."
+        },
+        "search": {
+          "title": "Encuentra rápido",
+          "body": "La búsqueda es difusa — escribe un sitio, un correo o una etiqueta."
+        },
+        "generator": {
+          "title": "Genera contraseñas fuertes",
+          "body": "Un clic te da una contraseña fuerte y única lista para pegar."
+        },
+        "workspace": {
+          "title": "Cambia de espacio",
+          "body": "Personal, familia o trabajo — cada espacio está aislado."
+        },
+        "settings": {
+          "title": "Ajusta tu cuenta",
+          "body": "Seguridad, sincronización y preferencias, todo aquí."
+        }
+      }
+    },
+    "vaultBasics": {
+      "title": "Bases de la bóveda",
+      "description": "Añadir, buscar y compartir elementos.",
+      "steps": {
+        "add": {
+          "title": "Añadir un elemento",
+          "body": "Todo lo que guardas se cifra en tu dispositivo antes de salir."
+        },
+        "search": {
+          "title": "Busca en tu bóveda",
+          "body": "La búsqueda corre localmente sobre datos ya descifrados."
+        },
+        "share": {
+          "title": "Comparte con seguridad",
+          "body": "Compartir se cifra para la clave del receptor — el servidor no ve nada."
+        }
+      }
+    },
+    "sharing": {
+      "title": "Compartir un elemento",
+      "description": "Envía un inicio de sesión o nota con cero conocimiento.",
+      "steps": {
+        "entry": {
+          "title": "Abrir compartir",
+          "body": "Cada elemento se puede compartir con una persona o a una bóveda compartida."
+        },
+        "center": {
+          "title": "Centro de compartición",
+          "body": "Mira quién tiene qué — revoca acceso con un clic."
+        }
+      }
+    },
+    "securityCheckup": {
+      "title": "Chequeo de seguridad",
+      "description": "Revisa contraseñas filtradas, 2FA y recuperación.",
+      "steps": {
+        "nav": {
+          "title": "Abrir seguridad",
+          "body": "Seguridad reúne filtraciones, contraseñas débiles y reutilización."
+        },
+        "card": {
+          "title": "Ajustes de seguridad",
+          "body": "2FA, recuperación y dispositivos en una tarjeta."
+        },
+        "remember": {
+          "title": "Desbloqueo persistente",
+          "body": "Mantente desbloqueado 30 días en este dispositivo — acciones sensibles preguntan de nuevo."
+        }
+      }
+    },
+    "workspaces": {
+      "title": "Espacios de trabajo",
+      "description": "Separa lo personal, familiar y laboral.",
+      "steps": {
+        "switcher": {
+          "title": "Cambia de espacio",
+          "body": "Cada espacio tiene su propia clave y sus elementos."
+        },
+        "people": {
+          "title": "Gestiona personas",
+          "body": "Invita a familia o compañeros y define quién ve qué."
+        }
+      }
+    },
+    "protectAccount": {
+      "title": "Protege tu cuenta",
+      "description": "Recuperación, exportación y desbloqueo.",
+      "steps": {
+        "data": {
+          "title": "Tus datos",
+          "body": "Exportar, importar y respaldar — todo del lado del cliente."
+        },
+        "remember": {
+          "title": "Desbloqueo persistente",
+          "body": "Elige el equilibrio entre comodidad y seguridad."
+        },
+        "recovery": {
+          "title": "Kit de recuperación",
+          "body": "Guarda tu Clave Secreta en un lugar seguro — es tu vía de regreso."
+        }
+      }
+    }
+  }
+}

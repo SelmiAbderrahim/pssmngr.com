@@ -1,0 +1,147 @@
+{
+  "launcher": {
+    "ariaLabel": "Anleitung öffnen",
+    "tooltip": "Führe mich"
+  },
+  "nudge": {
+    "text": "Neu hier? Eine kurze Tour hilft.",
+    "cta": "Zeig mir das",
+    "dismiss": "Schließen"
+  },
+  "panel": {
+    "title": "Führe mich",
+    "progress": "{{done}} von {{total}} Touren abgeschlossen",
+    "youAreHere": "Du bist hier",
+    "completed": "Abgeschlossen",
+    "start": "Tour starten",
+    "replay": "Wiederholen",
+    "resume": "Fortsetzen ab Schritt {{step}}"
+  },
+  "toggle": {
+    "label": "Führe mich",
+    "description": "Kurze In-App-Touren und den schwebenden Hilfe-Button anzeigen."
+  },
+  "overlay": {
+    "counter": "Schritt {{current}} von {{total}}",
+    "back": "Zurück",
+    "next": "Weiter",
+    "done": "Fertig",
+    "takeMeThere": "Bring mich dorthin",
+    "skipStep": "Schritt überspringen",
+    "skipTour": "Tour überspringen",
+    "endTour": "Tour beenden",
+    "close": "Schließen",
+    "searching": "Suche die richtige Stelle…",
+    "missing": "Das Ziel dieses Schritts ist gerade nicht auf der Seite."
+  },
+  "tours": {
+    "firstRun": {
+      "title": "Erste Schritte",
+      "description": "Fünf Schritte durch die Grundlagen deines Tresors.",
+      "steps": {
+        "add": {
+          "title": "Ersten Eintrag anlegen",
+          "body": "Mit diesem Button speicherst du Logins, Notizen oder Karten."
+        },
+        "search": {
+          "title": "Schnell finden",
+          "body": "Die Suche ist unscharf — tippe eine Website, E-Mail oder ein Tag."
+        },
+        "generator": {
+          "title": "Starke Passwörter erzeugen",
+          "body": "Ein Klick liefert dir ein starkes, einzigartiges Passwort."
+        },
+        "workspace": {
+          "title": "Arbeitsbereich wechseln",
+          "body": "Privat, Familie oder Beruf — jeder Bereich ist getrennt."
+        },
+        "settings": {
+          "title": "Konto einstellen",
+          "body": "Sicherheit, Synchronisierung und Einstellungen finden Sie hier."
+        }
+      }
+    },
+    "vaultBasics": {
+      "title": "Tresor-Grundlagen",
+      "description": "Einträge anlegen, finden und teilen.",
+      "steps": {
+        "add": {
+          "title": "Eintrag anlegen",
+          "body": "Alles wird auf deinem Gerät verschlüsselt, bevor es das Gerät verlässt."
+        },
+        "search": {
+          "title": "Im Tresor suchen",
+          "body": "Die Suche läuft lokal auf entschlüsselten Daten — nichts verlässt dein Gerät."
+        },
+        "share": {
+          "title": "Sicher teilen",
+          "body": "Teilen wird für den Schlüssel des Empfängers verschlüsselt — der Server sieht nichts."
+        }
+      }
+    },
+    "sharing": {
+      "title": "Einen Eintrag teilen",
+      "description": "Login oder Notiz mit Zero-Knowledge senden.",
+      "steps": {
+        "entry": {
+          "title": "Teilen öffnen",
+          "body": "Jeder Eintrag lässt sich an eine Person oder in einen geteilten Tresor senden."
+        },
+        "center": {
+          "title": "Freigabezentrum",
+          "body": "Wer hat was — Zugriff mit einem Klick entziehen."
+        }
+      }
+    },
+    "securityCheckup": {
+      "title": "Sicherheitscheck",
+      "description": "Kompromittierte Passwörter, 2FA und Wiederherstellung prüfen.",
+      "steps": {
+        "nav": {
+          "title": "Sicherheit öffnen",
+          "body": "Sicherheit bündelt Leaks, schwache Passwörter und Wiederverwendung."
+        },
+        "card": {
+          "title": "Sicherheitseinstellungen",
+          "body": "2FA, Wiederherstellung und Geräte in einer Karte."
+        },
+        "remember": {
+          "title": "Dauerhaftes Entsperren",
+          "body": "30 Tage auf diesem Gerät entsperrt bleiben — sensible Aktionen fragen erneut."
+        }
+      }
+    },
+    "workspaces": {
+      "title": "Arbeitsbereiche",
+      "description": "Privat, Familie und Arbeit sauber trennen.",
+      "steps": {
+        "switcher": {
+          "title": "Bereich wechseln",
+          "body": "Jeder Bereich hat seinen eigenen Schlüssel und Einträge."
+        },
+        "people": {
+          "title": "Personen verwalten",
+          "body": "Familie oder Kollegen einladen und Rechte festlegen."
+        }
+      }
+    },
+    "protectAccount": {
+      "title": "Konto schützen",
+      "description": "Wiederherstellung, Export und Entsperrung.",
+      "steps": {
+        "data": {
+          "title": "Deine Daten",
+          "body": "Export, Import und Backup — alles clientseitig."
+        },
+        "remember": {
+          "title": "Dauerhaftes Entsperren",
+          "body": "Balance zwischen Komfort und Sicherheit selbst wählen."
+        },
+        "recovery": {
+          "title": "Wiederherstellungs-Kit",
+          "body": "Bewahre deinen Secret Key sicher auf — er ist dein Notausgang."
+        }
+      }
+    }
+  }
+}

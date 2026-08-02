@@ -1,0 +1,941 @@
+{
+  "loading": "Cargando...",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "saveChanges": "Guardar cambios",
+  "saving": "Guardando...",
+  "delete": "Eliminar",
+  "edit": "Editar",
+  "create": "Crear",
+  "update": "Actualizar",
+  "submit": "Enviar",
+  "search": "Buscar",
+  "download": "Descargar",
+  "copy": "Copiar",
+  "close": "Cerrar",
+  "back": "Atras",
+  "next": "Siguiente",
+  "previous": "Anterior",
+  "confirm": "Confirmar",
+  "done": "Listo",
+  "retry": "Reintentar",
+  "refresh": "Actualizar",
+  "app": {
+    "name": "Password Manager",
+    "description": "Un gestor de contraseñas de conocimiento cero para almacenar y compartir elementos cifrados de forma segura"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "vault": "Bóveda",
+    "workspace": "Espacio de trabajo",
+    "settings": "Configuración",
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
+    "security": "Seguridad",
+    "people": "Personas",
+    "generator": "Generador",
+    "help": "Ayuda",
+    "toggleMenu": "Alternar menú de navegación",
+    "docs": "Documentación"
+  },
+  "generator": {
+    "openButton": "Generador"
+  },
+  "account": {
+    "menu": "Menú de cuenta"
+  },
+  "actions": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "upload": "Subir",
+    "download": "Descargar",
+    "share": "Compartir",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "confirm": "Confirmar",
+    "retry": "Reintentar",
+    "refresh": "Actualizar",
+    "clear": "Limpiar",
+    "export": "Exportar",
+    "import": "Importar",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "moreOptions": "Más opciones",
+    "saveChanges": "Guardar cambios",
+    "createAccount": "Crear cuenta",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "enterYourName": "Ingresa tu nombre",
+    "enterYourEmail": "Ingresa tu correo",
+    "createPassword": "Crear contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "showPassword": "Mostrar contraseña",
+    "logo": "Logo",
+    "user": {
+      "fallbackName": "Usuario"
+    },
+    "sidebar": {
+      "collapse": "Contraer",
+      "expand": "Expandir barra lateral"
+    }
+  },
+  "status": {
+    "loading": "Cargando...",
+    "saving": "Guardando...",
+    "processing": "Procesando...",
+    "uploading": "Subiendo...",
+    "downloading": "Descargando...",
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "pending": "Pendiente",
+    "cancelled": "Cancelado",
+    "unknownError": "Error desconocido",
+    "active": "Activo",
+    "inactive": "Inactivo"
+  },
+  "time": {
+    "now": "Ahora mismo",
+    "minuteAgo": "hace 1 minuto",
+    "minutesAgo": "hace {{count}} minutos",
+    "hourAgo": "hace 1 hora",
+    "hoursAgo": "hace {{count}} horas",
+    "dayAgo": "hace 1 día",
+    "daysAgo": "hace {{count}} días",
+    "weekAgo": "hace 1 semana",
+    "weeksAgo": "hace {{count}} semanas",
+    "monthAgo": "hace 1 mes",
+    "monthsAgo": "hace {{count}} meses",
+    "yearAgo": "hace 1 año",
+    "yearsAgo": "hace {{count}} años",
+    "today": "hoy",
+    "never": "Nunca"
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "arabic": "Árabe",
+    "english": "Inglés",
+    "french": "Francés",
+    "german": "Alemán",
+    "spanish": "Español"
+  },
+  "theme": {
+    "title": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Por favor ingrese una dirección de correo válida",
+    "invalidPassword": "La contraseña debe tener al menos 8 caracteres",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "invalidUrl": "Por favor ingrese una URL válida",
+    "fileTooBig": "El tamaño del archivo excede el límite máximo",
+    "invalidFileType": "Este tipo de archivo no es compatible"
+  },
+  "a11y": {
+    "search": "Buscar",
+    "close": "Cerrar",
+    "menu": "Menú",
+    "settings": "Configuración",
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "mute": "Silenciar",
+    "fullscreen": "Pantalla completa",
+    "skipToContent": "Saltar al contenido principal",
+    "selectAll": "Seleccionar todo",
+    "showField": "Mostrar {{field}}",
+    "hideField": "Ocultar {{field}}",
+    "copyField": "Copiar {{field}}",
+    "emailAddress": "Dirección de correo electrónico",
+    "selectItem": "Seleccionar elemento {{id}}",
+    "selectCard": "Seleccionar tarjeta {{id}}",
+    "twitter": "Twitter"
+  },
+  "views": {
+    "noItemsFound": "No se encontraron elementos",
+    "grid": "Vista de cuadrícula",
+    "table": "Vista de tabla",
+    "list": "Vista de lista",
+    "compactCards": "Tarjetas compactas"
+  },
+  "layouts": {
+    "appName": "Administrador de contraseñas",
+    "notifications": "Notificaciones",
+    "profile": "Perfil"
+  },
+  "countdown": {
+    "expired": "Expirado"
+  },
+  "privacy": {
+    "consent": {
+      "title": "Preferencias de cookies",
+      "description": "Esta instancia usa cookies de análisis opcionales solo con tu permiso.",
+      "functional": "Esenciales",
+      "functionalDesc": "Necesarias para que el sitio funcione correctamente.",
+      "analytics": "Analíticas",
+      "analyticsDesc": "Nos ayudan a entender cómo usas nuestro sitio para mejorarlo.",
+      "acceptAll": "Aceptar todo",
+      "rejectAll": "Rechazar todo",
+      "customize": "Personalizar preferencias",
+      "savePreferences": "Guardar preferencias"
+    },
+    "settings": {
+      "title": "Privacidad",
+      "description": "Gestiona los análisis opcionales de este navegador.",
+      "analyticsTracking": "Análisis opcionales",
+      "analyticsTrackingDesc": "Permite métricas de páginas y rendimiento respetuosas con la privacidad. Nunca se envían datos de la bóveda ni identificadores de cuenta."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Password Manager. Todos los derechos reservados.",
+    "allRightsReserved": "Todos los derechos reservados."
+  },
+  "common": {
+    "dismiss": "Descartar",
+    "close": "Cerrar",
+    "notNow": "Ahora no",
+    "optional": "(Opcional)",
+    "default": "Predeterminado"
+  },
+  "invitation": {
+    "accepting": "Aceptando invitación...",
+    "accepted": "Invitación aceptada.",
+    "backToDashboard": "Volver al panel",
+    "createAccount": "Crear cuenta",
+    "errorDescription": "No se pudo aceptar la invitación.",
+    "errorTitle": "No se pudo aceptar la invitación",
+    "genericError": "Esta invitación no está disponible o ya no es válida.",
+    "invalidToken": "Este enlace de invitación no es válido.",
+    "redirecting": "Redirigiéndote ahora.",
+    "signIn": "Iniciar sesión",
+    "signInDescription": "Inicia sesión con el correo invitado o crea esa cuenta primero.",
+    "signInTitle": "Inicia sesión para aceptar esta invitación"
+  },
+  "docsHelpLink": {
+    "tooltip": "Ver documentación",
+    "help": "Ayuda",
+    "documentation": "Documentación"
+  },
+  "pagination": {
+    "page": "página",
+    "showing": "Página {{page}} de {{totalPages}}",
+    "total": "{{total}} elementos",
+    "first": "Primera página",
+    "previous": "Página anterior",
+    "next": "Página siguiente",
+    "last": "Última página",
+    "goToPage": "Ir a la página {{page}}",
+    "itemsPerPage": "Elementos por página",
+    "results": {
+      "showing": "Mostrando {{count}} de {{total}} elementos",
+      "empty": "No se encontraron resultados",
+      "filtered": "{{count}} resultados coinciden con sus filtros"
+    }
+  },
+  "searchInput": {
+    "placeholder": "Buscar...",
+    "noResults": "No se encontraron resultados",
+    "searching": "Buscando..."
+  },
+  "sort": {
+    "label": "Ordenar por",
+    "toggle": "Cambiar dirección de orden",
+    "ascending": "Ascendente",
+    "descending": "Descendente",
+    "createdAt": "Fecha de creación",
+    "updatedAt": "Última actualización",
+    "name": "Nombre",
+    "status": "Estado"
+  },
+  "filters": {
+    "clear": "Limpiar filtros",
+    "reset": "Restablecer",
+    "apply": "Aplicar filtros",
+    "active": "{{count}} filtro(s) activo(s)"
+  },
+  "empty": {
+    "list": "Aún no hay elementos",
+    "search": "Ningún elemento coincide con su búsqueda",
+    "filtered": "Ningún elemento coincide con sus filtros"
+  },
+  "loadingItems": {
+    "items": "Cargando elementos...",
+    "more": "Cargando más..."
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo, {{displayName}}",
+    "subtitle": "Resumen de su bóveda y acciones rápidas",
+    "totalItems": "Total de elementos",
+    "vaultStatus": "Estado de la bóveda",
+    "noVault": "Aún no se ha creado una bóveda",
+    "unlocked": "Desbloqueada",
+    "locked": "Bloqueada",
+    "security": "Seguridad",
+    "checkSecurity": "Ejecutar revisión de seguridad",
+    "breakdown": "Desglose de elementos",
+    "quickActions": "Acciones rápidas",
+    "addCredential": "Añadir elemento",
+    "securityCheckup": "Revisión de seguridad",
+    "generatePassword": "Generar contraseña",
+    "importData": "Importar datos",
+    "recentItems": "Elementos recientes",
+    "viewAll": "Ver todo",
+    "addFirst": "Agregar primer elemento",
+    "emptyVault": "Tu bóveda está vacía. Añade tu primer elemento para empezar.",
+    "itemTypes": {
+      "login": "Inicios de sesión",
+      "note": "Notas seguras",
+      "card": "Tarjetas",
+      "identity": "Identidades",
+      "other": "Otros"
+    },
+    "score": {
+      "critical": "Crítico",
+      "poor": "Deficiente",
+      "fair": "Aceptable",
+      "good": "Bueno"
+    },
+    "favorited": "{{count}} favoritos",
+    "inTrash": "{{count}} en papelera",
+    "issuesFound_one": "{{count}} problema encontrado",
+    "issuesFound_other": "{{count}} problemas encontrados"
+  },
+  "settings": {
+    "title": "Configuración",
+    "subtitle": "Administre su cuenta y preferencias",
+    "general": "Configuración general",
+    "profile": "Perfil",
+    "profileDescription": "Administre su nombre y su información personal",
+    "displayName": "Nombre para mostrar",
+    "displayNamePlaceholder": "Su nombre",
+    "email": "Correo electrónico",
+    "emailReadonly": "El correo electrónico no se puede cambiar desde aquí",
+    "saving": "Guardando...",
+    "saveProfile": "Guardar cambios",
+    "preferences": "Preferencias",
+    "preferencesDescription": "Personalice la apariencia y la seguridad",
+    "theme": "Tema",
+    "themeDescription": "Elija la apariencia de la aplicación",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "themeSystem": "Sistema",
+    "autoLock": "Bloqueo automático",
+    "autoLockDescription": "Bloquear automáticamente la bóveda después de un período de inactividad",
+    "selectDuration": "Seleccionar duración",
+    "account": "Cuenta",
+    "accountDetailsDescription": "Detalles de su cuenta",
+    "memberSince": "Miembro desde",
+    "autoLockUpdated": "Temporizador de bloqueo automático actualizado",
+    "autoLockOptions": {
+      "1min": "1 minuto",
+      "5min": "5 minutos",
+      "15min": "15 minutos",
+      "30min": "30 minutos",
+      "1hour": "1 hora",
+      "never": "Nunca"
+    },
+    "profileUpdated": "Perfil actualizado correctamente",
+    "profileUpdateError": "Error al actualizar el perfil",
+    "sections": {
+      "account": {
+        "title": "Cuenta",
+        "description": "Tu perfil, idioma y apariencia."
+      },
+      "security": {
+        "title": "Seguridad",
+        "description": "Doble factor, claves de acceso, sesiones, dispositivos de confianza y acceso de emergencia.",
+        "explainer": "2FA, claves de acceso, sesiones activas y dispositivos de confianza.",
+        "cta": "Abrir ajustes de seguridad",
+        "emergencyTitle": "Acceso de emergencia",
+        "emergencyDescription": "Designa contactos de confianza que puedan solicitar acceso a tu bóveda si quedas incapacitado.",
+        "emergencyExplainer": "Recuperación con periodo de espera, sin renunciar al conocimiento cero.",
+        "emergencyCta": "Gestionar acceso de emergencia"
+      },
+      "devices": {
+        "title": "Dispositivos y extensiones",
+        "description": "Dispositivos y extensiones",
+        "trustedTitle": "Dispositivos de confianza",
+        "trustedDescription": "Revisa y revoca los dispositivos con sesión iniciada en tu cuenta.",
+        "trustedExplainer": "Los dispositivos de confianza se gestionan dentro de Seguridad.",
+        "trustedCta": "Gestionar dispositivos de confianza",
+        "enrollment": {
+          "retrySuccess": "Configuración del dispositivo completada.",
+          "retryFailed": "La configuración del dispositivo sigue fallando. Inténtalo de nuevo en un momento.",
+          "title": "Termina la configuración del dispositivo",
+          "description": "Este dispositivo aún no está totalmente registrado. Reintenta ahora para que pueda descifrar los elementos de la bóveda compartida.",
+          "retrying": "Reintentando…",
+          "retry": "Termina la configuración del dispositivo"
+        }
+      },
+      "data": {
+        "title": "Datos",
+        "description": "Importa desde otros gestores de contraseñas y exporta tus datos.",
+        "explainer": "Un solo lugar para importaciones, exportaciones de bóveda en claro y cifradas, y tu paquete GDPR.",
+        "subExplainer": "Todas las rutas de exportación viven aquí — nada más en la app escribe tus datos fuera.",
+        "cta": "Abrir Datos"
+      },
+      "preferences": {
+        "title": "Preferencias",
+        "description": "Cómo se ve y se comporta la bóveda para ti.",
+        "layoutTitle": "Disposición de la bóveda",
+        "layoutDescription": "Elige la vista y la densidad que te convengan.",
+        "remindersTitle": "Recordatorios",
+        "remindersDescription": "Recordatorios locales para rotaciones, revisiones de brechas y comprobaciones de copia de seguridad.",
+        "remindersExplainer": "Se ejecutan en tu dispositivo — nunca se envían al servidor.",
+        "remindersCta": "Abrir recordatorios",
+        "guideMeTitle": "Guíame",
+        "guideMeDescription": "Recorridos cortos dentro de la app por bóveda, compartir y ajustes."
+      }
+    },
+    "validation": {
+      "nameMin": "El nombre debe tener al menos 2 caracteres",
+      "nameMax": "El nombre debe tener menos de 100 caracteres"
+    },
+    "inactivityLock": "Requerir desbloqueo tras inactividad",
+    "inactivityLockDescription": "Con el desbloqueo persistente activado, volver a desbloquear tras inactividad ocurre en silencio — sin aviso.",
+    "persistentUnlock": "Mantener desbloqueado en este dispositivo",
+    "persistentUnlockDescription": "Mantener desbloqueado en este dispositivo — confirmarás tu contraseña maestra para acciones sensibles.",
+    "persistentUnlockUpdated": "Desbloqueo persistente actualizado. Se aplica la próxima vez que desbloquees.",
+    "persistentUnlockOff": "Desbloqueo persistente desactivado. Introducirás tu contraseña maestra la próxima vez.",
+    "persistentUnlockOptions": {
+      "off": "Desactivado",
+      "7days": "7 días",
+      "30days": "30 días"
+    },
+    "lockAndForget": "Bloquear y olvidar este dispositivo"
+  },
+  "watchtower": {
+    "title": "Auditoría de seguridad",
+    "unlock": "Desbloquear bóveda",
+    "retry": "Reintentar",
+    "rescan": "Volver a escanear",
+    "lastScan": "Último escaneo:",
+    "weak": "Débil",
+    "weakDesc": "Baja entropía o patrones detectados",
+    "reused": "Reutilizada",
+    "reusedDesc": "Misma contraseña en múltiples sitios",
+    "old": "Antigua",
+    "oldDesc": "Sin cambios en más de 90 días",
+    "breached": "Comprometida",
+    "breachedDesc": "Encontrada en filtraciones de datos",
+    "checking": "Verificando...",
+    "checkBreaches": "Verificar filtraciones",
+    "weakPasswords": "Contraseñas débiles",
+    "reusedPasswords": "Contraseñas reutilizadas",
+    "oldPasswords": "Contraseñas antiguas",
+    "noOld": "No se encontraron contraseñas antiguas",
+    "breachedPasswords": "Contraseñas comprometidas",
+    "critical": "Crítico",
+    "warning": "Advertencia",
+    "info": "Información",
+    "fix": "Corregir",
+    "sharedBy": "Compartida por {{count}} elementos",
+    "reusedDetail": "Contraseña utilizada en otro lugar",
+    "noVault": "No se encontró una bóveda. Cree una bóveda primero.",
+    "analysisError": "Error al analizar la bóveda",
+    "breachError": "Error en la verificación de filtraciones"
+  },
+  "vault": {
+    "title": "Bóveda",
+    "subtitle": "Todo lo que guardes se cifra en este dispositivo antes de salir de él.",
+    "addItem": "Añadir elemento",
+    "addItemDescription": "Crea un nuevo elemento. Todos los datos se cifran en tu dispositivo.",
+    "duplicateCheckFailedTitle": "No se pudo comprobar toda la bóveda",
+    "duplicateCheckFailedDescription": "No se pudo comprobar por completo la lista de elementos. Puedes revisar el elemento o añadirlo sin comprobar duplicados.",
+    "duplicateFoundTitle": "Se encontró un elemento duplicado",
+    "duplicateFoundDescription": "Ya existe un elemento idéntico en esta bóveda. Revísalo o añádelo de todos modos.",
+    "reviewItem": "Revisar elemento",
+    "addAnyway": "Añadir de todos modos",
+    "itemType": "Tipo",
+    "titlePlaceholder": "p. ej., GitHub, banco, etc.",
+    "usernamePlaceholder": "user@example.com",
+    "generate": "Generar",
+    "content": "Contenido",
+    "emptyDescription": "Los elementos se cifran con claves que nunca salen de tus dispositivos.",
+    "encrypting": "Cifrando...",
+    "noVault": "No se encontró bóveda",
+    "items": "Elementos",
+    "authenticators": "Autenticadores",
+    "sharing": "Compartir",
+    "trash": "Papelera",
+    "search": "Buscar en la bóveda...",
+    "filterAll": "Todos los tipos",
+    "filterLogin": "Inicios de sesión",
+    "filterCard": "Tarjetas",
+    "filterNote": "Notas",
+    "filterIdentity": "Identidades",
+    "filterPasskey": "Claves de acceso",
+    "filterTotp": "TOTP",
+    "filterFile": "Archivos",
+    "sortModified": "Última modificación",
+    "sortCreated": "Fecha de creación",
+    "sortName": "Nombre",
+    "empty": "Tu bóveda está vacía — y solo tú puedes llenarla.",
+    "addFirstItem": "Agregue su primer elemento",
+    "noResults": "Ningún elemento coincide con su búsqueda o filtro.",
+    "loading": "Cargando...",
+    "loadMore": "Cargar más",
+    "locked": "Bóveda bloqueada",
+    "lockedDescription": "Ingrese su contraseña maestra para acceder a su bóveda.",
+    "unlockTitle": "Desbloquear bóveda",
+    "unlockDescription": "Ingrese su contraseña maestra para descifrar su bóveda.",
+    "recoveryDescription": "No se pudieron descifrar los elementos de su bóveda. Ingrese su contraseña maestra anterior y su contraseña actual para recuperar sus datos.",
+    "oldMasterPassword": "Contraseña maestra anterior",
+    "oldPasswordPlaceholder": "Ingrese su contraseña maestra anterior",
+    "currentMasterPassword": "Contraseña maestra actual",
+    "masterPassword": "Contraseña maestra",
+    "passwordPlaceholder": "Ingrese su contraseña maestra",
+    "hidePassword": "Ocultar contraseña",
+    "showPassword": "Mostrar contraseña",
+    "secretKey": "Clave de recuperación",
+    "secretKeyHint": "Ingrese la clave de recuperación de su kit de recuperación.",
+    "recovering": "Recuperando bóveda…",
+    "deriving": "Derivando clave…",
+    "recover": "Recuperar bóveda",
+    "useRecoveryKey": "Usar clave secreta",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "sensitiveFieldUnchanged": "Déjalo vacío para conservar el valor actual",
+    "url": "URL",
+    "notes": "Notas",
+    "created": "Creado",
+    "modified": "Modificado",
+    "copy": "Copiar {{field}}",
+    "openUrl": "Abrir URL",
+    "favorite": "Agregar a favoritos",
+    "unfavorite": "Quitar de favoritos",
+    "back": "Volver a la bóveda",
+    "edit": "Editar elemento",
+    "delete": "Eliminar elemento",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "unlock": "Desbloquear",
+    "org": {
+      "setupTitle": "Compartir la bóveda de esta organización",
+      "setupDesc": "Crea una bóveda compartida para que los miembros vean los mismos elementos. Se importarán los elementos existentes de esta organización y los miembros que hayan iniciado sesión recibirán acceso automáticamente.",
+      "setupButton": "Configurar bóveda compartida",
+      "noneMember": "Esta organización todavía no tiene una bóveda compartida.",
+      "pending": "Verás los elementos compartidos cuando un administrador de la organización te conceda acceso. Asegúrate de haber iniciado sesión en este dispositivo.",
+      "resolveError": "No se pudo comprobar tu acceso a la bóveda compartida.",
+      "retry": "Reintentar"
+    },
+    "emptyImport": "Importar desde otro gestor de contraseñas"
+  },
+  "share": {
+    "mode": {
+      "chooseTitle": "Compartir \"{{title}}\"",
+      "chooseDescription": "Elige cómo quieres compartir este elemento.",
+      "person": {
+        "title": "Con una persona",
+        "description": "Comparte de forma persistente con alguien que tenga cuenta. Verá el elemento en su bóveda."
+      },
+      "link": {
+        "title": "Como un enlace",
+        "description": "Genera un enlace de un solo uso con caducidad. La clave de descifrado queda en el fragmento de la URL."
+      }
+    }
+  },
+  "sharing": {
+    "received": "Recibidos",
+    "sent": "Enviados",
+    "noReceived": "No hay elementos pendientes compartidos",
+    "noReceivedHint": "Los elementos compartidos con usted aparecerán aquí.",
+    "noSent": "No hay elementos compartidos",
+    "noSentHint": "Los elementos que comparta aparecerán aquí.",
+    "dialogTitle": "Compartir elemento",
+    "dialogDescription": "Comparta \"{{title}}\" con otro usuario.",
+    "recipientEmail": "Correo del destinatario",
+    "emailPlaceholder": "user@example.com",
+    "permission": "Permiso",
+    "permissionView": "Solo ver",
+    "permissionEdit": "Puede editar",
+    "permissionShare": "Puede compartir",
+    "viewOnly": "Ver",
+    "canEdit": "Editar",
+    "viewHint": "El destinatario puede ver este elemento, pero no modificarlo.",
+    "editHint": "El destinatario puede ver y modificar este elemento.",
+    "shareHint": "El destinatario puede ver, editar y volver a compartir este elemento.",
+    "zeroKnowledgeHint": "Solo se envuelve una clave de elemento cifrada para este destinatario. El servidor nunca recibe datos de bóveda en texto plano.",
+    "canShare": "Compartir",
+    "pendingViewHint": "Puedes ver este elemento después de aceptar.",
+    "pendingEditHint": "Puedes ver y editar este elemento después de aceptar.",
+    "pendingShareHint": "Puedes ver, editar y volver a compartir este elemento después de aceptar.",
+    "accessSummaryEntry": "{{name}} ({{permission}})",
+    "whoCanAccess": "Quién puede acceder: {{summary}}",
+    "share": "Compartir",
+    "sharing": "Compartiendo...",
+    "errorNoEmail": "Ingrese el correo del destinatario.",
+    "errorInvalidEmail": "Ingrese una dirección de correo válida.",
+    "errorFailed": "No se pudo compartir el elemento. Inténtelo de nuevo.",
+    "errorRecipientNoDevice": "El destinatario debe iniciar sesión en un dispositivo de confianza antes de que pueda compartir con él.",
+    "errorRecipientUntrustedDevice": "Pide a esta persona que confíe en uno de sus dispositivos (Configuración → Seguridad → Dispositivos de confianza) antes de compartir.",
+    "status": {
+      "pending": "Pendiente",
+      "accepted": "Aceptado",
+      "declined": "Rechazado",
+      "revoked": "Revocado"
+    },
+    "errorItemNotFound": "Elemento no encontrado."
+  },
+  "totp": {
+    "scanQR": "Escanear QR",
+    "scanQRCode": "Escanear código QR",
+    "noAuthenticators": "No hay autenticadores",
+    "noAuthenticatorsDescription": "Agregue un autenticador TOTP escaneando un código QR o ingresando una clave secreta."
+  },
+  "ephemeral": {
+    "errorNoKey": "Enlace no válido: falta la clave de descifrado.",
+    "errorAccess": "Este enlace ya no está disponible.",
+    "errorDecrypt": "No se pudo descifrar. La frase de acceso es incorrecta o el enlace está dañado.",
+    "errorNoPassphrase": "Introduce la frase de acceso.",
+    "pageTitle": "Elemento compartido",
+    "loading": "Cargando elemento compartido...",
+    "errorTitle": "Enlace no disponible",
+    "errorGeneric": "Es posible que este enlace haya caducado, se haya revocado o ya se haya utilizado.",
+    "passphraseRequired": "Frase de acceso requerida",
+    "passphrase": "Frase de acceso",
+    "enterPassphrase": "Introduce la frase de acceso...",
+    "decrypting": "Descifrando...",
+    "decrypt": "Descifrar",
+    "decryptedTitle": "Elemento compartido",
+    "decryptedHint": "Estos datos se descifraron localmente en tu navegador."
+  },
+  "family": {
+    "title": "Familia",
+    "subtitle": "Administre su familia y bóvedas compartidas.",
+    "create": {
+      "title": "Crear una familia",
+      "description": "Cree una familia para compartir bóvedas y habilitar la recuperación delegada para hasta 6 miembros.",
+      "namePlaceholder": "Nombre de la familia",
+      "action": "Crear familia",
+      "nameRequired": "Por favor, ingrese un nombre de familia.",
+      "error": "No se pudo crear la familia."
+    },
+    "dashboard": {
+      "subtitle": "{{count}} miembros"
+    },
+    "tabs": {
+      "members": "Miembros",
+      "vaults": "Bóvedas compartidas",
+      "recovery": "Recuperación",
+      "settings": "Configuración"
+    },
+    "roles": {
+      "owner": "Organizador",
+      "admin": "Administrador",
+      "member": "Miembro"
+    },
+    "members": {
+      "title": "Miembros",
+      "invite": "Invitar miembro",
+      "you": "tú",
+      "accessSummary": "{{count}} bóvedas compartidas",
+      "noSharedVaultAccess": "Sin acceso a bóvedas compartidas",
+      "accessManage": "{{count}} administrar",
+      "accessShare": "{{count}} compartir",
+      "accessEdit": "{{count}} editar",
+      "accessView": "{{count}} ver",
+      "lastActionJoined": "Se unió el {{date}}",
+      "promoteAdmin": "Promover a administrador",
+      "demoteToMember": "Degradar a miembro",
+      "remove": "Eliminar miembro",
+      "removeTitle": "Eliminar miembro",
+      "removeDescription": "¿Está seguro de que desea eliminar a {{name}} de la familia? Perderá el acceso a todas las bóvedas compartidas.",
+      "confirmRemove": "Eliminar"
+    },
+    "invite": {
+      "adminHint": "Los administradores pueden gestionar bóvedas compartidas y miembros.",
+      "cancelError": "No se pudo cancelar la invitación.",
+      "cancelled": "Invitación cancelada.",
+      "copyError": "No se pudo copiar el enlace de invitación.",
+      "description": "Envía una invitación para unirse a tu familia.",
+      "emailLabel": "Dirección de correo electrónico",
+      "emailPlaceholder": "member@example.com",
+      "error": "No se pudo enviar la invitación.",
+      "invalidEmail": "Ingresa una dirección de correo electrónico válida.",
+      "linkCopied": "Enlace de invitación copiado.",
+      "memberHint": "Los miembros pueden acceder a bóvedas compartidas y a su bóveda privada.",
+      "resendError": "No se pudo reenviar la invitación.",
+      "resent": "Invitación reenviada y enlace copiado.",
+      "resentWithoutCopy": "Invitación reenviada. Copia el enlace manualmente si es necesario.",
+      "roleLabel": "Rol",
+      "send": "Enviar invitación",
+      "sent": "Invitación enviada.",
+      "title": "Invitar a un miembro de la familia"
+    },
+    "invitations": {
+      "cancel": "Cancelar",
+      "copyLink": "Copiar enlace",
+      "expires": "Expira",
+      "pendingCount": "{{count}} pendientes",
+      "resend": "Reenviar",
+      "status": {
+        "accepted": "Aceptada",
+        "cancelled": "Cancelada",
+        "declined": "Rechazada",
+        "expired": "Expirada",
+        "pending": "Pendiente"
+      },
+      "title": "Invitaciones"
+    },
+    "sharedVaults": {
+      "created": "Bóveda compartida creada.",
+      "missingUser": "El contexto de usuario aún se está cargando.",
+      "loadError": "No se pudo cargar la bóveda compartida.",
+      "loadingDetail": "Cargando bóveda compartida…",
+      "permission": "Tu permiso",
+      "members": "Miembros",
+      "title": "Bóvedas compartidas",
+      "create": "Crear bóveda",
+      "empty": "Aún no hay bóvedas compartidas.",
+      "emptyHint": "Crea una bóveda, concede acceso solo a quienes lo necesiten y rota el acceso cuando alguien salga.",
+      "createdOn": "Creada el {{date}}",
+      "memberCount": "{{count}} miembros",
+      "createFirst": "Crear tu primera bóveda compartida",
+      "createTitle": "Crear bóveda compartida",
+      "createDescription": "Crea una bóveda a la que los miembros de la familia puedan acceder juntos.",
+      "nameRequired": "Ingresa un nombre para la bóveda.",
+      "nameTooLong": "El nombre de la bóveda debe tener 64 caracteres o menos.",
+      "createError": "No se pudo crear la bóveda compartida.",
+      "nameLabel": "Nombre de la bóveda",
+      "namePlaceholder": "p. ej. Servicios de streaming",
+      "createAction": "Crear bóveda",
+      "grantableMembers": "Miembros sin acceso",
+      "noGrantableMembers": "Todos los miembros de la familia ya tienen acceso.",
+      "grantAccess": "Conceder acceso",
+      "granted": "Acceso a la bóveda compartida concedido.",
+      "grantError": "No se pudo conceder acceso a la bóveda compartida.",
+      "removeAccess": "Quitar acceso",
+      "removeAccessTitle": "¿Quitar acceso a la bóveda compartida?",
+      "removeAccessDescription": "{{name}} perderá acceso a esta bóveda compartida. Los miembros restantes reciben una clave envuelta rotada.",
+      "confirmRemoveAccess": "Quitar acceso",
+      "removed": "Acceso a la bóveda compartida eliminado y clave rotada.",
+      "removeError": "No se pudo quitar el acceso a la bóveda compartida.",
+      "permissionUpdated": "Permiso de bóveda compartida actualizado.",
+      "permissionUpdateError": "No se pudo actualizar el permiso de la bóveda compartida.",
+      "permissions": {
+        "view": "Ver",
+        "edit": "Editar",
+        "share": "Compartir",
+        "manage": "Administrar"
+      }
+    },
+    "settings": {
+      "title": "Configuración familiar",
+      "description": "Administra la configuración de tu familia.",
+      "nameRequired": "El nombre de la familia es obligatorio.",
+      "updateError": "No se pudo actualizar la configuración.",
+      "saved": "Configuración guardada.",
+      "nameLabel": "Nombre de la familia",
+      "leaveTitle": "Salir de la familia",
+      "leaveDescription": "Sal de esta familia. Perderás acceso a todas las bóvedas compartidas.",
+      "leaveAction": "Salir de la familia",
+      "leaveConfirmTitle": "¿Salir de la familia?",
+      "leaveConfirmDescription": "Perderás acceso a todas las bóvedas compartidas y su contenido. Esta acción no se puede deshacer.",
+      "confirmLeave": "Salir de la familia"
+    },
+    "recovery": {
+      "title": "Recuperación de cuenta",
+      "memberDescription": "Solicite al organizador de su familia que le ayude a recuperar su cuenta si pierde el acceso.",
+      "organizerDescription": "Revise y gestione las solicitudes de recuperación de los miembros de la familia.",
+      "yourRequest": "Su solicitud de recuperación",
+      "requested": "Solicitado",
+      "expires": "Expira",
+      "approvedHint": "Su recuperación ha sido aprobada. Siga las instrucciones para configurar nuevas claves.",
+      "expiredHint": "Esta solicitud expiró. Envía una nueva solicitud de recuperación si aún necesitas ayuda.",
+      "rejectedHint": "Esta solicitud fue denegada. Puedes enviar una nueva solicitud si tu situación cambió.",
+      "completedHint": "La recuperación está completa. Tu acceso a bóvedas compartidas usa las nuevas claves envueltas.",
+      "noActiveRequest": "No hay solicitud de recuperación activa.",
+      "requestRecovery": "Solicitar recuperación",
+      "noRequests": "No hay solicitudes de recuperación.",
+      "activeRequests": "Solicitudes activas",
+      "pastRequests": "Solicitudes anteriores",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "approveTitle": "Aprobar recuperación",
+      "rejectTitle": "Rechazar recuperación",
+      "approveDescription": "Esto permitirá al miembro generar nuevas claves y recuperar el acceso a las bóvedas compartidas. Necesitará volver a envolver las claves de la bóveda para ellos.",
+      "rejectDescription": "Esto denegará la solicitud de recuperación. El miembro puede enviar una nueva solicitud más tarde.",
+      "confirmApprove": "Aprobar",
+      "confirmReject": "Rechazar",
+      "timeline": {
+        "trustedContact": "Contacto de confianza solicitado",
+        "waitingPeriod": "Periodo de espera y revisión del organizador",
+        "approval": "Aprobación concedida",
+        "denied": "Aprobación denegada o expirada",
+        "finalAccess": "Acceso final después de confirmar nuevas claves"
+      },
+      "status": {
+        "pending": "Pendiente",
+        "approved": "Aprobado",
+        "completing": "Completando",
+        "completed": "Completado",
+        "rejected": "Rechazado",
+        "expired": "Expirado"
+      }
+    },
+    "unknownMember": "Miembro desconocido",
+    "loadError": "No se pudo cargar la familia."
+  },
+  "emergency": {
+    "title": "Acceso de emergencia",
+    "subtitle": "Administre contactos de confianza y solicitudes de acceso de emergencia.",
+    "tabs": {
+      "contacts": "Contactos",
+      "incoming": "Entrantes",
+      "outgoing": "Salientes"
+    }
+  },
+  "importExport": {
+    "title": "Importar / Exportar",
+    "subtitle": "Importa elementos desde otros gestores de contraseñas o exporta tu bóveda.",
+    "noVault": "No se encontró ninguna bóveda.",
+    "tabs": {
+      "import": "Importar",
+      "export": "Exportar"
+    },
+    "formats": {
+      "genericCsv": "CSV genérico"
+    },
+    "export": {
+      "encrypted": {
+        "title": "Exportación cifrada",
+        "description": "Exporta tu bóveda como un archivo .pssmngr cifrado. Este archivo solo puede abrirse con tu contraseña maestra.",
+        "recommended": "Recomendado",
+        "exporting": "Exportando...",
+        "done": "Descargado",
+        "button": "Exportar .pssmngr"
+      },
+      "plaintext": {
+        "title": "Exportación en texto plano",
+        "description": "Exportar como CSV o JSON sin cifrar. Usa estos formatos solo para importar en otro gestor de contraseñas.",
+        "warning": "Estos archivos contienen tus contraseñas en texto plano. Cualquier persona con acceso al archivo puede leerlas. Elimina el archivo después de usarlo.",
+        "csv": "Exportar CSV",
+        "json": "Exportar JSON"
+      },
+      "warning": {
+        "title": "¿Exportar como {{format}}?",
+        "description": "Esto exportará todos los elementos de tu bóveda como un archivo {{format}} sin cifrar. Tus contraseñas serán visibles en texto plano.",
+        "caution": "Cualquier persona con acceso a este archivo puede leer tus contraseñas. Elimina el archivo después de usarlo.",
+        "cancel": "Cancelar",
+        "confirm": "Exportar {{format}}",
+        "exporting": "Exportando..."
+      },
+      "error": {
+        "exportFailed": "Error en la exportación"
+      }
+    },
+    "import": {
+      "dropzone": {
+        "title": "Arrastra tu archivo aquí o haz clic para explorar",
+        "subtitle": "Compatible con archivos CSV y JSON",
+        "browse": "Elegir archivo"
+      },
+      "supported": "Formatos compatibles",
+      "reading": "Leyendo archivo...",
+      "detecting": "Detectando formato...",
+      "preview": {
+        "title": "Vista previa",
+        "detected": "Detectado: {{source}}",
+        "count": "{{count}} elementos encontrados",
+        "cancel": "Cancelar",
+        "import": "Importar {{count}} elementos",
+        "parseErrors": "No se pudieron analizar {{count}} filas",
+        "duplicates": "Se detectaron {{count}} posibles duplicados",
+        "col": {
+          "title": "Título",
+          "type": "Tipo",
+          "username": "Usuario",
+          "url": "URL"
+        }
+      },
+      "progress": "Importando {{current}} de {{total}}...",
+      "summary": {
+        "title": "Importación completada",
+        "duration": "Completado en {{seconds}}s",
+        "imported": "Importados",
+        "skipped": "Omitidos",
+        "errors": "Errores",
+        "errorDetails": "Elementos fallidos",
+        "moreErrors": "...y {{count}} más",
+        "importMore": "Importar más"
+      },
+      "error": {
+        "title": "Error en la importación",
+        "retry": "Reintentar"
+      }
+    }
+  },
+  "hidePassword": "Ocultar contraseña",
+  "showPassword": "Mostrar contraseña",
+  "error": "Ocurrió un error",
+  "sensitiveAction": {
+    "export": "Confirma tu contraseña maestra para exportar tu bóveda",
+    "changeMasterPassword": "Confirma tu contraseña maestra para cambiarla",
+    "emergencyAccess": "Confirma tu contraseña maestra para actualizar el acceso de emergencia",
+    "error": {
+      "loadVault": "No se ha podido verificar tu bóveda ahora mismo. Inténtalo de nuevo."
+    },
+    "revokedNotice": "Se ha revocado el acceso del dispositivo de confianza. Vuelve a iniciar sesión.",
+    "expiredNotice": "El acceso del dispositivo de confianza ha expirado. Vuelve a iniciar sesión."
+  },
+  "pages": {
+    "vault": {
+      "title": "Bóveda",
+      "description": "Todo lo que guardes se cifra en este dispositivo antes de salir de él."
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Contraseñas débiles, reutilizadas y filtradas — detectadas y corregidas desde un solo sitio.",
+      "checkWeak": "contraseñas adivinables",
+      "checkReused": "una filtración abre muchas puertas",
+      "checkBreached": "aparecidas en filtraciones conocidas — comprobado en privado"
+    },
+    "people": {
+      "title": "Personas",
+      "description": "Comparte elementos con tu familia o tu espacio de trabajo sin exponer nunca tu bóveda."
+    },
+    "settings": {
+      "title": "Ajustes",
+      "description": "Tu cuenta, tus dispositivos y tus datos — en un solo sitio."
+    }
+  },
+  "explainer": {
+    "title": "Cómo te protege pssmngr",
+    "encryptedOnDevice": {
+      "title": "Cifrado en tu dispositivo",
+      "body": "Los elementos se sellan con XChaCha20-Poly1305 antes de salir del dispositivo."
+    },
+    "twoSecretsNeverSent": {
+      "title": "Dos secretos, nunca enviados",
+      "body": "Tu contraseña maestra y tu clave secreta se quedan contigo; no guardamos ninguna de las dos, así que no podemos leer tu bóveda — ni restablecerla."
+    },
+    "youControlThisDevice": {
+      "title": "Tú controlas este dispositivo",
+      "body": "Puedes permanecer desbloqueado hasta 30 días aquí; las acciones sensibles siempre vuelven a pedir tu contraseña maestra.",
+      "link": "Cambiar ajuste de desbloqueo"
+    }
+  },
+  "sharingCenter": {
+    "personDescription": "Comparte un elemento con alguien — obtiene acceso, tú conservas el control.",
+    "linkDescription": "Crea un enlace con caducidad — la clave viaja en el enlace, nunca por nuestros servidores."
+  }
+}

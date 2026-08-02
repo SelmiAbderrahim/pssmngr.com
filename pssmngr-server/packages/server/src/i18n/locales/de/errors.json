@@ -1,0 +1,204 @@
+{
+	"auth": {
+		"unauthorized": "Sie müssen angemeldet sein, um diese Aktion durchzuführen",
+		"forbidden": "Sie haben keine Berechtigung, auf diese Ressource zuzugreifen",
+		"adminRequired": "Administratorzugang erforderlich",
+		"adminAlreadyExists": "Administratorkonto existiert bereits",
+		"userNotFound": "Benutzer nicht gefunden",
+		"sessionExpired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an",
+		"invalidCredentials": "Ungültige E-Mail oder Passwort",
+		"accountDisabled": "Ihr Konto wurde deaktiviert",
+		"emailNotVerified": "Bitte bestätigen Sie Ihre E-Mail-Adresse",
+		"twoFactorRequired": "Zwei-Faktor-Authentifizierung erforderlich",
+		"twoFactorInvalid": "Ungültiger Zwei-Faktor-Authentifizierungscode",
+		"noOrganization": "Keine aktive Organisation ausgewählt",
+		"rateLimited": "Zu viele Anfragen. Versuchen Sie es in {{seconds}} Sekunden erneut.",
+		"vaultAlreadyExists": "Tresor existiert bereits",
+		"twoFactorFailed": "Aktivierung der Zwei-Faktor-Authentifizierung fehlgeschlagen",
+		"invalidTotp": "Ungültiger TOTP-Code",
+		"disableTwoFactorFailed": "Deaktivierung der Zwei-Faktor-Authentifizierung fehlgeschlagen",
+		"useLogout": "Verwenden Sie die Abmeldung, um Ihre aktuelle Sitzung zu beenden"
+	},
+	"app": {
+		"updateRequired": "Bitte aktualisieren Sie auf Version {{version}} oder höher, um fortzufahren."
+	},
+	"user": {
+		"currentPasswordIncorrect": "Aktuelles Passwort ist falsch",
+		"noPasswordSet": "Für dieses Konto ist kein Passwort festgelegt",
+		"passwordVerificationFailed": "Passwortüberprüfung fehlgeschlagen",
+		"newPasswordRequired": "Neues Passwort ist erforderlich",
+		"updateFailed": "Benutzer konnte nicht aktualisiert werden"
+	},
+	"email": {
+		"invitationNotFound": "Einladungs-E-Mail nicht gefunden",
+		"providerNotEmail": "Der ausgewählte Benachrichtigungsanbieter ist kein E-Mail-Typ",
+		"notConfigured": "Kein E-Mail-Anbieter ausgewählt und System-E-Mail nicht konfiguriert",
+		"sendFailed": "E-Mail konnte nicht gesendet werden"
+	},
+	"notification": {
+		"createFailed": "Fehler beim Erstellen der Benachrichtigung",
+		"updateFailed": "Fehler beim Aktualisieren der Benachrichtigung",
+		"testFailed": "Fehler beim Testen der Benachrichtigung",
+		"sendFailed": "Fehler beim Senden der Benachrichtigung",
+		"tokenNotFound": "Token nicht gefunden",
+		"notFound": "Benachrichtigung nicht gefunden",
+		"unauthorized": "Sie haben keine Berechtigung, auf diese Benachrichtigung zuzugreifen"
+	},
+	"organization": {
+		"notMember": "Sie sind kein Mitglied dieser Organisation",
+		"userNotMember": "Benutzer ist kein Mitglied Ihrer aktiven Organisation",
+		"onlyOwnersAdmins": "Nur Eigentümer und Administratoren können diese Aktion ausführen",
+		"notFound": "Organisation nicht gefunden",
+		"notAdmin": "Sie haben keine Administratorberechtigungen",
+		"notOwner": "Nur der Eigentümer der Organisation kann diese Aktion ausführen",
+		"cannotRemoveOwner": "Der Eigentümer der Organisation kann nicht entfernt werden",
+		"cannotChangeOwnerRole": "Die Rolle des Eigentümers kann nicht geändert werden",
+		"alreadyMember": "Der Benutzer ist bereits Mitglied dieser Organisation",
+		"inviteAlreadyExists": "Eine Einladung wurde bereits an diese E-Mail gesendet",
+		"invitationExpired": "Diese Einladung ist abgelaufen.",
+		"emailMismatch": "Diese Einladung wurde an eine andere E-Mail-Adresse gesendet.",
+		"invitationNotFound": "Einladung nicht gefunden.",
+		"invitationDeclined": "Einladung abgelehnt.",
+		"noSettingsToUpdate": "Keine Einstellungen zum Aktualisieren",
+		"cannotLeaveAsOwner": "Organisationseigentümer können nicht verlassen. Übertragen Sie zuerst die Eigentümerschaft.",
+		"transferTargetNotMember": "Der ausgewählte Benutzer ist kein Mitglied dieser Organisation.",
+		"ownershipTransferred": "Eigentümerschaft erfolgreich übertragen.",
+		"deleteConfirm": "Organisation erfolgreich gelöscht.",
+		"notifications": {
+			"inviteTitle": "Einladung zur Organisation",
+			"inviteMessage": "Sie wurden eingeladen, {{orgName}} beizutreten.",
+			"removedTitle": "Aus der Organisation entfernt",
+			"removedMessage": "Sie wurden aus {{orgName}} entfernt.",
+			"ownershipTransferredTitle": "Eigentümerschaft übertragen",
+			"ownershipTransferredMessage": "Sie sind jetzt der Eigentümer von {{orgName}}."
+		}
+	},
+	"resource": {
+		"notFound": "{{resource}} nicht gefunden",
+		"notFoundById": "{{resource}} mit ID {{id}} nicht gefunden",
+		"accessDenied": "Sie sind nicht berechtigt, auf diese(s) {{resource}} zuzugreifen",
+		"createFailed": "Fehler beim Erstellen von {{resource}}",
+		"updateFailed": "Fehler beim Aktualisieren von {{resource}}",
+		"deleteFailed": "Fehler beim Löschen von {{resource}}",
+		"alreadyExists": "{{resource}} existiert bereits",
+		"inUse": "{{resource}} wird verwendet und kann nicht gelöscht werden"
+	},
+	"operation": {
+		"timeout": "Operation ist abgelaufen",
+		"internalError": "Ein interner Fehler ist aufgetreten",
+		"databaseError": "Ein Datenbankfehler ist aufgetreten",
+		"networkError": "Ein Netzwerkfehler ist aufgetreten",
+		"rateLimited": "Zu viele Anfragen. Bitte versuchen Sie es später erneut",
+		"maintenanceMode": "Das System befindet sich in Wartung. Bitte versuchen Sie es später erneut"
+	},
+	"vault": {
+		"deleteNotConfirmed": "Die Löschung muss ausdrücklich bestätigt werden"
+	},
+	"sharing": {
+		"revoked": "Die Freigabe wurde widerrufen",
+		"expired": "Die Freigabe ist abgelaufen",
+		"cannotShareWithSelf": "Sie können ein Element nicht mit sich selbst teilen",
+		"notRecipient": "Nicht der Empfänger",
+		"onlySenderCanRevoke": "Nur der Absender kann widerrufen",
+		"alreadyRevoked": "Freigabe bereits widerrufen",
+		"onlyCreatorCanRevoke": "Nur der Ersteller kann widerrufen",
+		"linkAlreadyRevoked": "Link bereits widerrufen",
+		"linkUnavailable": "Dieser Link ist nicht mehr verfügbar"
+	},
+	"sharedVault": {
+		"insufficientRole": "Nur der Organisator oder Administrator kann gemeinsame Tresore erstellen",
+		"notFamilyMember": "Benutzer ist kein Familienmitglied",
+		"alreadyMember": "Benutzer ist bereits Mitglied dieses Tresors",
+		"memberNotFound": "Mitglied in diesem Tresor nicht gefunden",
+		"requiresPermission": "Erfordert die Berechtigung {{permission}} für diesen Tresor",
+		"cannotRewrapRemovedMember": "Das entfernte Mitglied darf den neuen Tresorschlüssel nicht erhalten",
+		"cannotRemoveCreator": "Der Ersteller des Tresors kann nicht von einem anderen Mitglied entfernt werden",
+		"cannotDemoteCreator": "Die Berechtigung des Tresor-Erstellers kann nicht von einem anderen Mitglied herabgestuft werden"
+	},
+	"family": {
+		"organizerOnly": "Nur der Familienorganisator kann diese Aktion durchführen",
+		"alreadyInFamily": "Sie gehören bereits einer Familie an",
+		"alreadyMember": "Benutzer ist bereits Familienmitglied",
+		"invitationPending": "Für diese E-Mail-Adresse liegt bereits eine Einladung vor",
+		"cannotRemoveSelf": "Sie können sich nicht selbst entfernen. Verwenden Sie stattdessen Verlassen.",
+		"cannotChangeSelfRole": "Sie können Ihre eigene Rolle nicht ändern",
+		"cannotChangeOrganizerRole": "Sie können die Rolle eines anderen Organisators nicht ändern",
+		"organizerCannotLeave": "Der Organisator kann nicht verlassen. Übertragen Sie die Eigentümerschaft oder löschen Sie die Familie.",
+		"organizerCannotRequestRecovery": "Der Organisator kann keine Wiederherstellung von sich selbst anfordern",
+		"recoveryAlreadyActive": "Eine Wiederherstellungsanfrage ist bereits aktiv",
+		"recoveryNotFound": "Wiederherstellungsanfrage nicht gefunden",
+		"cannotApproveStatus": "Eine Anfrage mit dem Status \"{{status}}\" kann nicht genehmigt werden",
+		"recoveryExpired": "Die Wiederherstellungsanfrage ist abgelaufen",
+		"cannotRejectStatus": "Eine Anfrage mit dem Status \"{{status}}\" kann nicht abgelehnt werden",
+		"recoveryMustBeApproved": "Die Wiederherstellungsanfrage muss vor dem Einreichen neuer Schlüssel genehmigt werden",
+		"recoveryMustBeCompleting": "Die Wiederherstellungsanfrage muss sich im Abschlussstatus befinden",
+		"recoveryNotFamilyMember": "Der wiederherzustellende Benutzer ist kein Mitglied dieser Familie mehr",
+		"recoveryDuplicateVault": "Die neu verpackten Schlüssel enthalten einen doppelten geteilten Tresor",
+		"recoveryNoKeys": "Zum Abschließen der Wiederherstellung sind neu verpackte Schlüssel erforderlich",
+		"recoveryVaultMismatch": "Die neu verpackten Schlüssel müssen exakt den geteilten Familientresoren des Mitglieds entsprechen",
+		"recoveryRewrapFailed": "Das erneute Verpacken eines geteilten Tresorschlüssels für das wiederherzustellende Mitglied ist fehlgeschlagen",
+		"noSettingsToUpdate": "Keine Einstellungen zum Aktualisieren",
+		"notifications": {
+			"recoveryRequestTitle": "Wiederherstellungsanfrage",
+			"recoveryRequestMessage": "{{name}} hat eine Kontowiederherstellung für Ihre Familie angefordert.",
+			"recoveryApprovedTitle": "Wiederherstellung genehmigt",
+			"recoveryApprovedMessage": "Ihre Wiederherstellungsanfrage wurde genehmigt. Sie können jetzt ein neues Master-Passwort erstellen.",
+			"recoveryRejectedTitle": "Wiederherstellung abgelehnt",
+			"recoveryRejectedMessage": "Ihre Wiederherstellungsanfrage wurde vom Familienorganisator abgelehnt.",
+			"keysSubmittedTitle": "Wiederherstellungsschlüssel eingereicht",
+			"keysSubmittedMessage": "{{name}} hat neue Schlüssel eingereicht. Bitte schließen Sie die Wiederherstellung ab, indem Sie den Zugriff auf den gemeinsamen Tresor neu verpacken.",
+			"recoveryCompleteTitle": "Wiederherstellung abgeschlossen",
+			"recoveryCompleteMessage": "Ihre Kontowiederherstellung ist abgeschlossen. Der Zugriff auf den gemeinsamen Tresor wurde wiederhergestellt."
+		},
+		"invalidRecoveryProof": "Ungültiger Wiederherstellungsnachweis: Die Signatur stimmt nicht mit dem übermittelten Signierschlüssel überein"
+	},
+	"emergency": {
+		"userNotFound": "Kein Benutzer mit dieser E-Mail-Adresse gefunden",
+		"cannotAddSelf": "Sie können sich nicht selbst als Vertrauenskontakt hinzufügen",
+		"alreadyTrusted": "Benutzer ist bereits ein Vertrauenskontakt",
+		"contactNotFound": "Vertrauenskontakt nicht gefunden",
+		"relationshipNotFound": "Vertrauenskontakt-Beziehung nicht gefunden",
+		"requestPending": "Eine Zugriffsanfrage ist bereits ausstehend",
+		"requestNotFound": "Zugriffsanfrage nicht gefunden",
+		"cannotDenyStatus": "Eine Anfrage mit dem Status \"{{status}}\" kann nicht abgelehnt werden",
+		"cannotGrantStatus": "Eine Anfrage mit dem Status \"{{status}}\" kann nicht gewährt werden",
+		"signatureVerificationFailed": "Überprüfung der Zeitstempelsignatur fehlgeschlagen",
+		"waitingPeriodNotExpired": "Die Wartezeit ist noch nicht abgelaufen",
+		"accessNotGranted": "Der Zugriff wurde noch nicht gewährt",
+		"escrowDataMissing": "Treuhanddaten fehlen",
+		"cooldownBlocked": "Innerhalb von 24 Stunden nach Ablehnung kann nicht erneut versucht werden. Versuchen Sie es nach {{until}} erneut",
+		"notifications": {
+			"trustAddedTitle": "Notfallzugriff-Vertrauen",
+			"trustAddedMessage": "{{name}} hat Sie als vertrauenswürdigen Notfallkontakt hinzugefügt.",
+			"accessRequestedTitle": "Notfallzugriff angefordert",
+			"accessRequestedMessage": "{{name}} hat Notfallzugriff auf Ihren Tresor angefordert. Sie haben {{days}} Tag(e), um diese Anfrage abzulehnen.",
+			"accessDeniedTitle": "Notfallzugriff verweigert",
+			"accessDeniedMessage": "Ihre Notfallzugriffsanfrage wurde vom Tresorbesitzer abgelehnt.",
+			"accessGrantedTitle": "Notfallzugriff gewährt",
+			"accessGrantedMessage": "Ihre Notfallzugriffsanfrage wurde gewährt. Sie können jetzt auf den Tresor zugreifen."
+		}
+	},
+	"passkey": {
+		"registrationOptionsFailed": "Fehler beim Generieren der Registrierungsoptionen",
+		"verificationFailed": "Fehler bei der Überprüfung der Passkey-Registrierung",
+		"authOptionsFailed": "Fehler beim Generieren der Authentifizierungsoptionen",
+		"authVerificationFailed": "Fehler bei der Überprüfung der Passkey-Authentifizierung",
+		"notFound": "Passkey nicht gefunden"
+	},
+	"device": {
+		"notFound": "Gerät nicht gefunden",
+		"noDeviceForUser": "Kein Gerät für diesen Benutzer gefunden",
+		"noTrustedDevice": "Dieser Benutzer hat mehrere Geräte und keines ist vertrauenswürdig; bitten Sie ihn, vor dem Teilen ein Gerät als vertrauenswürdig zu markieren"
+	},
+	"defaults": {
+		"personalVaultName": "Persönlicher Tresor"
+	},
+	"dataExport": {
+		"inProgress": "Es läuft bereits ein Export",
+		"notFound": "Exportanfrage nicht gefunden",
+		"expired": "Dieser Download-Link ist abgelaufen",
+		"revoked": "Dieser Download-Link wurde widerrufen",
+		"rateLimited": "Sie können nur 2 Exporte pro Stunde anfordern. Bitte versuchen Sie es später erneut.",
+		"invalidRequest": "Die Exportanfrage ist für diese Aktion nicht gültig"
+	}
+}

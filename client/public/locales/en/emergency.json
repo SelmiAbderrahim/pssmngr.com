@@ -1,0 +1,67 @@
+{
+  "timeline": {
+    "title": "My Access Requests",
+    "description": "Emergency access requests you have made.",
+    "empty": "You haven't made any emergency access requests.",
+    "requestedOn": "Requested {{date}}",
+    "waitingHint": "The owner can deny this request during the waiting period.",
+    "deniedHint": "Your request was denied. You can try again after the cooldown period.",
+    "grantedHint": "Access was approved and the encrypted recovery envelope is ready.",
+    "waitingPeriod": "{{count}} day waiting period",
+    "requestAccess": "Request Access",
+    "requestAgain": "Request Again",
+    "status": {
+      "pending": "Waiting",
+      "denied": "Denied",
+      "approved": "Granted",
+      "expired": "Expired"
+    }
+  },
+  "addContact": {
+    "title": "Add Trusted Contact",
+    "description": "This person will be able to request emergency access to your vault. You can deny any request within the waiting period.",
+    "invalidEmail": "Please enter a valid email address.",
+    "error": "Failed to add contact.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "contact@example.com",
+    "waitingLabel": "Waiting period",
+    "waitingHint": "How long you have to deny a request before access is automatically granted.",
+    "submit": "Add Contact",
+    "period": {
+      "1": "1 day",
+      "3": "3 days",
+      "7": "7 days",
+      "14": "14 days",
+      "30": "30 days"
+    }
+  },
+  "requests": {
+    "title": "Access Requests",
+    "description": "People requesting emergency access to your vault.",
+    "empty": "No access requests.",
+    "requestedOn": "Requested {{date}}",
+    "autoGrantWarning": "Access will be granted automatically when the timer expires.",
+    "deny": "Deny",
+    "past": "Past Requests",
+    "denyTitle": "Deny Access Request",
+    "denyDescription": "Deny {{name}}'s request? They will not be able to request again for 24 hours.",
+    "confirmDeny": "Deny Access",
+    "status": {
+      "pending": "Pending",
+      "denied": "Denied",
+      "approved": "Approved",
+      "expired": "Expired"
+    }
+  },
+  "contacts": {
+    "title": "Trusted Contacts",
+    "description": "People who can request emergency access to your vault.",
+    "add": "Add Contact",
+    "empty": "No trusted contacts yet.",
+    "emptyHint": "Add someone you trust to enable emergency access to your vault.",
+    "waitDays": "{{count}}d wait",
+    "removeTitle": "Remove Trusted Contact",
+    "removeDescription": "Remove {{name}} as a trusted contact? Any pending emergency access requests from them will be cancelled.",
+    "confirmRemove": "Remove"
+  }
+}
