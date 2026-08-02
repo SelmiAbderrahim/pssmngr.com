@@ -70,7 +70,7 @@
   "devDependencies": {
     "@types/adm-zip": "^0.5.7",
     "@types/bcrypt": "5.0.2",
-    "@types/node": "^20.19.0",
+    "@types/node": "^26.1.2",
     "@types/node-schedule": "2.1.6",
     "@types/nodemailer": "^8.0.1",
     "tsc-alias": "1.8.10",
