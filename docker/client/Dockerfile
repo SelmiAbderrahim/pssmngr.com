@@ -34,7 +34,7 @@ ENV VITE_SITE_URL=$VITE_SITE_URL
 ENV VITE_GA_MEASUREMENT_ID=$VITE_GA_MEASUREMENT_ID
 RUN pnpm run build
 
-FROM nginx:1.27-alpine AS runner
+FROM nginx:1.31-alpine AS runner
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY docker/nginx/client.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
