@@ -40,7 +40,7 @@
 		"bcrypt": "6.0.0",
 		"better-auth": "~1.6.25",
 		"better-auth-localization": "^3.0.0",
-		"dotenv": "16.4.5",
+		"dotenv": "17.4.2",
 		"drizzle-orm": "^0.45.2",
 		"i18next": "^23.16.8",
 		"i18next-fs-backend": "^2.6.6",
