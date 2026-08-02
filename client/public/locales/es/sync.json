@@ -1,0 +1,21 @@
+{
+  "offline_banner": {
+    "title": "Está sin conexión",
+    "syncing_title": "Sincronizando cambios",
+    "description": "Los cambios se guardarán localmente y se sincronizarán al reconectarse.",
+    "queue_count_one": "1 cambio en espera de sincronización",
+    "queue_count_other": "{{count}} cambios en espera de sincronización",
+    "queue_count": "{{count}} cambios en espera de sincronización",
+    "dismiss": "Ocultar el banner sin conexión"
+  },
+  "last_synced": {
+    "fresh": "Última sincronización el {{datetime}}",
+    "stale": "Mostrando datos en caché del {{datetime}}"
+  },
+  "sync_complete": {
+    "toast": "{{count}} cambios sincronizados"
+  },
+  "sync_failed": {
+    "toast": "No se pudieron sincronizar {{count}} cambios. Se reintentará automáticamente."
+  }
+}

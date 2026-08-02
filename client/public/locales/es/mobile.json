@@ -1,0 +1,26 @@
+{
+  "bottom_nav": {
+    "label": "Navegación móvil principal",
+    "vault": "Bóveda",
+    "generator": "Generador",
+    "security": "Seguridad",
+    "settings": "Ajustes",
+    "quick_add": "Añadir rápido",
+    "sharing": "Compartir"
+  },
+  "header": {
+    "back": "Atrás",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "lock": "Bloquear bóveda",
+    "signout": "Cerrar sesión"
+  },
+  "quick_add": {
+    "title": "Añadir a la bóveda",
+    "login": "Añadir inicio de sesión",
+    "secure_note": "Añadir nota segura",
+    "card": "Añadir tarjeta",
+    "identity": "Añadir identidad",
+    "generator": "Generar contraseña"
+  }
+}

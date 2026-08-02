@@ -1,0 +1,65 @@
+{
+  "timeline": {
+    "title": "Mes demandes d'accès",
+    "description": "Demandes d'accès d'urgence que vous avez faites.",
+    "empty": "Vous n'avez fait aucune demande d'accès d'urgence.",
+    "requestedOn": "Demandé le {{date}}",
+    "waitingHint": "Le propriétaire peut refuser cette demande pendant la période d'attente.",
+    "deniedHint": "Votre demande a été refusée. Vous pouvez réessayer après la période de refroidissement.",
+    "grantedHint": "L’accès a été approuvé et l’enveloppe de récupération chiffrée est prête.",
+    "requestAgain": "Demander à nouveau",
+    "status": {
+      "pending": "En attente",
+      "denied": "Refusé",
+      "approved": "Accordé",
+      "expired": "Expiré"
+    }
+  },
+  "addContact": {
+    "title": "Ajouter un contact de confiance",
+    "description": "Cette personne pourra demander un accès d'urgence à votre coffre. Vous pouvez refuser toute demande pendant la période d'attente.",
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide.",
+    "error": "Échec de l'ajout du contact.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "contact@example.com",
+    "waitingLabel": "Période d'attente",
+    "waitingHint": "Combien de temps vous avez pour refuser une demande avant que l'accès soit accordé automatiquement.",
+    "submit": "Ajouter le contact",
+    "period": {
+      "1": "1 jour",
+      "3": "3 jours",
+      "7": "7 jours",
+      "14": "14 jours",
+      "30": "30 jours"
+    }
+  },
+  "requests": {
+    "title": "Demandes d'accès",
+    "description": "Personnes demandant un accès d'urgence à votre coffre.",
+    "empty": "Aucune demande d'accès.",
+    "requestedOn": "Demandé le {{date}}",
+    "autoGrantWarning": "L'accès sera accordé automatiquement à l'expiration du minuteur.",
+    "deny": "Refuser",
+    "past": "Demandes passées",
+    "denyTitle": "Refuser la demande d'accès",
+    "denyDescription": "Refuser la demande de {{name}} ? Il ne pourra pas faire de nouvelle demande pendant 24 heures.",
+    "confirmDeny": "Refuser l'accès",
+    "status": {
+      "pending": "En attente",
+      "denied": "Refusé",
+      "approved": "Approuvé",
+      "expired": "Expiré"
+    }
+  },
+  "contacts": {
+    "title": "Contacts de confiance",
+    "description": "Personnes pouvant demander un accès d'urgence à votre coffre.",
+    "add": "Ajouter un contact",
+    "empty": "Aucun contact de confiance pour le moment.",
+    "emptyHint": "Ajoutez une personne de confiance pour activer l'accès d'urgence à votre coffre.",
+    "waitDays": "{{count}}j d'attente",
+    "removeTitle": "Supprimer le contact de confiance",
+    "removeDescription": "Supprimer {{name}} en tant que contact de confiance ? Toute demande d'accès d'urgence en attente sera annulée.",
+    "confirmRemove": "Supprimer"
+  }
+}

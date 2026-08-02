@@ -1,0 +1,4 @@
+folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
+Social,0,login,Twitter,,,,https://twitter.com,user@twitter.com,tw-secret-pass,
+Work,0,login,Jira,,,,https://jira.atlassian.net,dev@company.com,jira-pass-123,
+,0,login,Personal Email,,,,https://mail.google.com,personal@gmail.com,gmail-pass-456,

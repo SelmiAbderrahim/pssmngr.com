@@ -1,0 +1,21 @@
+{
+  "offline_banner": {
+    "title": "Sie sind offline",
+    "syncing_title": "Änderungen werden synchronisiert",
+    "description": "Änderungen werden lokal gespeichert und beim erneuten Verbinden synchronisiert.",
+    "queue_count_one": "1 Änderung wartet auf Synchronisierung",
+    "queue_count_other": "{{count}} Änderungen warten auf Synchronisierung",
+    "queue_count": "{{count}} Änderungen warten auf Synchronisierung",
+    "dismiss": "Offline-Banner ausblenden"
+  },
+  "last_synced": {
+    "fresh": "Zuletzt synchronisiert am {{datetime}}",
+    "stale": "Zwischengespeicherte Daten vom {{datetime}}"
+  },
+  "sync_complete": {
+    "toast": "{{count}} Änderungen synchronisiert"
+  },
+  "sync_failed": {
+    "toast": "{{count}} Änderungen konnten nicht synchronisiert werden. Es wird automatisch erneut versucht."
+  }
+}

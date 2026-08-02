@@ -1,0 +1,474 @@
+{
+  "title": "Configuracion",
+  "subtitle": "Administra la configuracion de tu cuenta y preferencias",
+  "profile": {
+    "title": "Configuracion de Perfil",
+    "subtitle": "Actualiza tu informacion personal y foto de perfil",
+    "description": "Administra la informacion de tu perfil",
+    "firstName": "Nombre",
+    "firstNamePlaceholder": "Juan",
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Garcia",
+    "email": "Correo electronico",
+    "emailReadonly": "El correo electronico no se puede cambiar",
+    "profilePicture": "Foto de perfil",
+    "changePhoto": "Cambiar foto",
+    "uploadPhoto": "Subir foto",
+    "name": "Nombre Completo",
+    "namePlaceholder": "Ingresa tu nombre completo",
+    "username": "Nombre de Usuario",
+    "usernamePlaceholder": "Ingresa tu nombre de usuario",
+    "bio": "Biografia",
+    "bioPlaceholder": "Cuentanos sobre ti",
+    "photo": "Foto de Perfil",
+    "photoChange": "Cambiar Foto",
+    "photoRemove": "Eliminar Foto",
+    "photoUpload": "Subir Foto",
+    "photoUploadError": "Por favor selecciona un archivo de imagen",
+    "photoSizeError": "La imagen debe ser menor a 5MB",
+    "photoUploadSuccess": "Foto subida exitosamente",
+    "photoUploadFailed": "Error al subir la foto",
+    "save": "Guardar Cambios",
+    "cancel": "Cancelar",
+    "success": "Perfil actualizado exitosamente",
+    "error": "Error al actualizar el perfil",
+    "validation": {
+      "nameRequired": "El nombre es requerido",
+      "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+      "nameMaxLength": "El nombre es demasiado largo",
+      "usernameMinLength": "El nombre de usuario debe tener al menos 3 caracteres",
+      "usernameMaxLength": "El nombre de usuario es demasiado largo",
+      "usernamePattern": "El nombre de usuario solo puede contener letras, numeros, guiones bajos y guiones",
+      "bioMaxLength": "La biografia es demasiado larga"
+    },
+    "emailVerified": "Verificado",
+    "emailUnverified": "No verificado",
+    "sendVerification": "Enviar correo de verificacion",
+    "sendingVerification": "Enviando...",
+    "verificationSent": "Correo de verificacion enviado",
+    "verificationFailed": "Error al enviar correo de verificacion",
+    "completion": {
+      "title": "Completar perfil",
+      "complete": "Tu perfil esta completo",
+      "incomplete": "Completa tu perfil",
+      "percentage": "{{percent}}% completo",
+      "addName": "Agrega tu nombre",
+      "addAvatar": "Agrega una foto de perfil",
+      "verifyEmail": "Verifica tu correo electronico"
+    }
+  },
+  "account": {
+    "title": "Configuracion de Cuenta",
+    "subtitle": "Administra la seguridad de tu cuenta y preferencias",
+    "email": "Direccion de Correo",
+    "emailPlaceholder": "Ingresa tu correo",
+    "password": "Contrasena",
+    "passwordPlaceholder": "Ingresa tu contrasena",
+    "currentPasswordPlaceholder": "Ingresa tu contrasena actual",
+    "newPasswordPlaceholder": "Ingresa tu nueva contrasena",
+    "confirmPasswordPlaceholder": "Confirma tu nueva contrasena",
+    "currentLabel": "Contrasena Actual",
+    "currentPlaceholder": "Ingresa tu contrasena actual",
+    "newLabel": "Nueva Contrasena",
+    "newPlaceholder": "Crea una nueva contrasena",
+    "confirmNewLabel": "Confirmar Nueva Contrasena",
+    "confirmNewPlaceholder": "Confirma tu nueva contrasena",
+    "hidePassword": "Ocultar contrasena",
+    "showPassword": "Mostrar contrasena",
+    "changeTitle": "Cambiar Contrasena",
+    "changeButton": "Cambiar Contrasena",
+    "changingPassword": "Cambiando Contrasena...",
+    "successMessage": "Contrasena cambiada exitosamente!",
+    "changePassword": "Cambiar Contrasena",
+    "cardDescription": "Actualiza tu contrasena para mantener tu cuenta segura.",
+    "deleteAccount": "Eliminar Cuenta",
+    "deleteAccountWarning": "Esta accion no se puede deshacer. Todos tus datos seran eliminados permanentemente.",
+    "confirmDelete": "Escribe DELETE para confirmar",
+    "success": "Configuracion actualizada exitosamente",
+    "error": "Error al actualizar la configuracion"
+  },
+  "password": {
+    "changeTitle": "Cambiar Contrasena",
+    "cardDescription": "Actualiza tu contrasena para mantener tu cuenta segura.",
+    "currentLabel": "Contrasena Actual",
+    "currentPlaceholder": "Ingresa tu contrasena actual",
+    "newLabel": "Nueva Contrasena",
+    "newPlaceholder": "Ingresa tu nueva contrasena",
+    "confirmNewLabel": "Confirmar Nueva Contrasena",
+    "confirmNewPlaceholder": "Confirma tu nueva contrasena",
+    "changeButton": "Cambiar Contrasena",
+    "changingPassword": "Cambiando Contrasena...",
+    "successMessage": "Contrasena cambiada exitosamente",
+    "showPassword": "Mostrar contrasena",
+    "hidePassword": "Ocultar contrasena",
+    "currentRequired": "La contrasena actual es requerida",
+    "minLength": "La contrasena debe tener al menos 8 caracteres",
+    "maxLength": "La contrasena debe tener menos de 128 caracteres",
+    "requireUppercase": "La contrasena debe contener una letra mayuscula",
+    "requireLowercase": "La contrasena debe contener una letra minuscula",
+    "requireNumber": "La contrasena debe contener un numero",
+    "requireSpecial": "La contrasena debe contener un caracter especial",
+    "confirmRequired": "Por favor confirma tu contrasena",
+    "mismatch": "Las contrasenas no coinciden",
+    "sameAsCurrent": "La nueva contrasena debe ser diferente de la actual"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "bell": {
+      "withUnread": "{{count}} notificaciones sin leer",
+      "noUnread": "Notificaciones"
+    },
+    "empty": {
+      "title": "Sin notificaciones aun",
+      "description": "Te notificaremos cuando ocurra algo importante"
+    },
+    "markAsRead": "Marcar como leido",
+    "markAllAsRead": "Marcar todo como leido",
+    "delete": "Eliminar notificacion"
+  },
+  "privacy": {
+    "title": "Configuracion de Privacidad",
+    "subtitle": "Controla tu privacidad y preferencias de compartir datos",
+    "profileVisibility": "Visibilidad del Perfil",
+    "publicProfile": "Perfil Publico",
+    "privateProfile": "Perfil Privado",
+    "dataSharing": "Compartir Datos",
+    "analytics": "Analitica",
+    "personalization": "Personalizacion",
+    "save": "Guardar Configuracion de Privacidad",
+    "success": "Configuracion de privacidad actualizada",
+    "error": "Error al actualizar la configuracion de privacidad"
+  },
+  "language": {
+    "title": "Configuracion de Idioma",
+    "subtitle": "Elige tu idioma preferido",
+    "select": "Seleccionar Idioma",
+    "save": "Guardar Idioma",
+    "success": "Idioma actualizado exitosamente",
+    "error": "Error al actualizar el idioma"
+  },
+  "theme": {
+    "title": "Configuracion de Tema",
+    "subtitle": "Personaliza la apariencia de la aplicacion",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "save": "Guardar Tema",
+    "success": "Tema actualizado exitosamente",
+    "error": "Error al actualizar el tema"
+  },
+  "connectedAccounts": {
+    "title": "Cuentas Conectadas",
+    "subtitle": "Administra tus cuentas de redes sociales conectadas",
+    "description": "Vincula tus cuentas sociales para un inicio de sesion mas facil y funciones adicionales.",
+    "providers": {
+      "github": "GitHub",
+      "google": "Google"
+    },
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "connected": "Conectado",
+    "disconnected": "Desconectado",
+    "notConnected": "No conectado",
+    "connecting": "Conectando...",
+    "disconnecting": "Desconectando...",
+    "primary": "Principal",
+    "warning": "Debes tener al menos una cuenta conectada para iniciar sesion. Conecta otra cuenta antes de desconectar esta.",
+    "connectSuccess": "Conectado exitosamente a {{provider}}",
+    "connectError": "Error al conectar con {{provider}}",
+    "disconnectSuccess": "Desconectado exitosamente de {{provider}}",
+    "disconnectError": "Error al desconectar de {{provider}}",
+    "disconnectTitle": "Desconectar {{provider}}?",
+    "disconnectDescription": "Ya no podras iniciar sesion con {{provider}}. Asegurate de tener otra forma de acceder a tu cuenta.",
+    "cancel": "Cancelar",
+    "confirmDisconnect": "Estas seguro de que deseas desconectar de {{provider}}?",
+    "success": "Cuenta desconectada exitosamente",
+    "error": "Error al desconectar la cuenta",
+    "noConnectedAccounts": "Sin cuentas conectadas",
+    "connectMore": "Conectar mas cuentas"
+  },
+  "avatar": {
+    "title": "Foto de perfil",
+    "description": "Subir o cambiar su foto de perfil",
+    "instructions": "Haga clic en la foto para subir una nueva imagen (JPEG, PNG, max. 5MB)",
+    "reset": "Eliminar foto"
+  },
+  "username": {
+    "title": "Nombre de usuario",
+    "description": "Tu nombre de usuario unico en la plataforma",
+    "placeholder": "Ingresa tu nombre de usuario",
+    "maxLength": "Maximo 30 caracteres"
+  },
+  "actions": {
+    "save": "Guardar cambios"
+  },
+  "deleteAccount": {
+    "title": "Eliminar cuenta",
+    "description": "Eliminar permanentemente su cuenta y todos los datos asociados",
+    "warning": "Esta accion no se puede deshacer. Su cuenta, los registros cifrados de la boveda y los metadatos asociados se eliminaran permanentemente.",
+    "deleteButton": "Eliminar cuenta",
+    "confirmButton": "Confirmar eliminacion",
+    "modal": {
+      "title": "Estas absolutamente seguro?",
+      "description": "Esta accion no se puede deshacer. Elimina permanentemente su cuenta, los registros cifrados de la boveda y los metadatos asociados de esta instancia.",
+      "confirmLabel": "Escribe DELETE para confirmar",
+      "confirmHint": "Esta verificacion ayuda a prevenir eliminaciones accidentales.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Eliminar mi cuenta"
+    }
+  },
+  "security": {
+    "title": "Configuracion de Seguridad",
+    "subtitle": "Administra la seguridad de tu cuenta y autenticacion",
+    "tabs": {
+      "password": "Contrasena",
+      "twoFactor": "Auth de Dos Factores",
+      "sessions": "Sesiones",
+      "connections": "Cuentas Conectadas"
+    },
+    "twoFactor": {
+      "title": "Autenticacion de Dos Factores",
+      "description": "Agrega una capa extra de seguridad a tu cuenta",
+      "status": {
+        "enabled": "Activado",
+        "disabled": "Desactivado"
+      },
+      "enabled": "Autenticacion de Dos Factores Activada",
+      "disabled": "Autenticacion de Dos Factores Desactivada",
+      "enabledDescription": "Tu cuenta esta protegida con 2FA",
+      "disabledDescription": "Tu cuenta no esta protegida con 2FA",
+      "enable": "Activar 2FA",
+      "disable": "Desactivar 2FA",
+      "setupTitle": "Configurar Autenticacion de Dos Factores",
+      "setupDescription": "Escanea el codigo QR con tu aplicacion de autenticacion",
+      "verifyTitle": "Verifica Tu Codigo",
+      "verifyDescription": "Ingresa el codigo de 6 digitos de tu aplicacion de autenticacion",
+      "backupTitle": "Guarda los Codigos de Respaldo",
+      "backupDescription": "Guarda estos codigos en un lugar seguro. Usalos si pierdes acceso a tu aplicacion de autenticacion",
+      "manualEntry": "No puedes escanear? Ingresa este codigo manualmente:",
+      "enterCode": "Ingresa el codigo de 6 digitos",
+      "keyCopied": "Clave secreta copiada",
+      "copySecretAriaLabel": "Copiar clave secreta",
+      "codesCopied": "Codigos de respaldo copiados",
+      "continue": "Continuar",
+      "verify": "Verificar",
+      "done": "Listo",
+      "viewBackupCodes": "Ver Codigos de Respaldo",
+      "copyAllCodes": "Copiar Todos los Codigos",
+      "invalidCode": "Por favor ingresa un codigo valido de 6 digitos",
+      "setupError": "Error al configurar 2FA",
+      "enabledSuccess": "2FA activado exitosamente",
+      "verificationFailed": "Verificacion fallida. Por favor intenta de nuevo",
+      "disabledSuccess": "2FA desactivado exitosamente",
+      "disableFailed": "Error al desactivar 2FA",
+      "disableTitle": "Desactivar Autenticacion de Dos Factores?",
+      "disableDescription": "Necesitaras ingresar un codigo de verificacion para desactivar 2FA",
+      "backupCodesTitle": "Codigos de Respaldo",
+      "backupCodesDescription": "Usa estos codigos si pierdes acceso a tu aplicacion de autenticacion. Cada codigo solo puede usarse una vez.",
+      "noBackupCodes": "No hay codigos de respaldo disponibles",
+      "info": "La autenticacion de dos factores agrega una capa extra de seguridad a tu cuenta al requerir un codigo de tu aplicacion de autenticacion ademas de tu contrasena",
+      "setup": {
+        "step1": {
+          "title": "Paso 1: Instalar aplicacion de autenticacion",
+          "description": "Descarga e instala una aplicacion de autenticacion como Google Authenticator, Authy o 1Password"
+        },
+        "step2": {
+          "title": "Paso 2: Escanear codigo QR",
+          "description": "Abre tu aplicacion de autenticacion y escanea este codigo QR",
+          "manualEntry": "¿No puedes escanear? Ingresa este código manualmente:"
+        },
+        "step3": {
+          "title": "Paso 3: Verificar codigo",
+          "description": "Ingresa el codigo de 6 digitos de tu aplicacion de autenticacion",
+          "codeLabel": "Código de verificación",
+          "codePlaceholder": "000000"
+        },
+        "verify": "Verificar y activar",
+        "verifying": "Verificando...",
+        "success": "Autenticación de dos factores activada exitosamente",
+        "error": "Error al activar la autenticación de dos factores",
+        "invalidCode": "Código de verificación no válido"
+      },
+      "backupCodes": {
+        "title": "Codigos de respaldo",
+        "description": "Guarda estos codigos en un lugar seguro. Cada codigo solo puede usarse una vez.",
+        "warning": "Si pierdes acceso a tu aplicacion de autenticacion, puedes usar estos codigos para iniciar sesion.",
+        "copy": "Copiar todos los codigos",
+        "copied": "Codigos copiados al portapapeles",
+        "download": "Descargar codigos",
+        "downloaded": "Codigos de respaldo descargados",
+        "regenerate": "Regenerar codigos",
+        "regenerated": "Codigos de respaldo regenerados",
+        "regenerateFailed": "Error al regenerar los codigos de respaldo",
+        "hidden": "Los codigos estan ocultos. Haz clic en Mostrar para revelarlos.",
+        "remaining": "{{remaining}} de {{total}} codigos restantes",
+        "regenerate.warning": "Tus codigos de respaldo antiguos dejaran de funcionar. Esta accion no se puede deshacer.",
+        "regenerate.confirm": "Si, regenerar codigos"
+      },
+      "infoDetail": "La autenticacion de dos factores agrega seguridad adicional al requerir un codigo de tu aplicacion de autenticacion.",
+      "confirmPassword": "Confirma tu contraseña",
+      "confirmPasswordDescription": "Por seguridad, ingresa tu contraseña para continuar con la configuración de 2FA.",
+      "enterPassword": "Ingresa tu contraseña",
+      "passwordRequired": "La contraseña es obligatoria"
+    },
+    "sessions": {
+      "title": "Sesiones Activas",
+      "description": "Administra tus sesiones activas en todos los dispositivos",
+      "current": "Sesion Actual",
+      "other": "Otras Sesiones",
+      "noOther": "No hay otras sesiones activas",
+      "device": "Dispositivo",
+      "location": "Ubicación",
+      "lastActive": "Ultima actividad",
+      "signedIn": "Inicio de sesion el",
+      "revoke": "Cerrar Sesion",
+      "revokeAll": "Cerrar Todas las Otras Sesiones",
+      "revoke.confirm": {
+        "title": "Revocar sesión",
+        "description": "¿Estás seguro de que quieres revocar esta sesión? El dispositivo será desconectado.",
+        "button": "Sí, revocar sesión"
+      },
+      "revoke.success": "Sesión revocada exitosamente",
+      "revoke.error": "Error al revocar la sesión",
+      "revokeAll.confirm": {
+        "title": "Revocar todas las sesiones",
+        "description": "¿Estás seguro de que quieres cerrar sesión en todos los demás dispositivos?"
+      },
+      "revokeAll.success": "Todas las demás sesiones revocadas",
+      "unknownBrowser": "Navegador desconocido",
+      "unknown": "Desconocido",
+      "onOs": "en {{os}}"
+    },
+    "passkeys": {
+      "title": "Claves de acceso",
+      "description": "Las claves de acceso te permiten iniciar sesión con biometría, una llave de seguridad o el PIN del dispositivo en lugar de una contraseña.",
+      "add": "Añadir clave de acceso",
+      "none": "Aún no hay claves de acceso registradas.",
+      "unnamed": "Clave de acceso sin nombre",
+      "backedUp": "Respaldada",
+      "created": "Creada",
+      "delete": "Eliminar clave de acceso",
+      "registerTitle": "Añadir una clave de acceso",
+      "registerDescription": "Dale a esta clave un nombre reconocible.",
+      "namePlaceholder": "p. ej., Touch ID del portátil",
+      "registering": "Registrando...",
+      "register": "Registrar clave de acceso",
+      "registerSuccess": "Clave de acceso registrada",
+      "registerError": "No se pudo registrar la clave de acceso",
+      "deleteSuccess": "Clave de acceso eliminada",
+      "deleteError": "No se pudo eliminar la clave de acceso",
+      "deleteConfirm": {
+        "title": "¿Eliminar clave de acceso?",
+        "description": "Esta clave ya no podrá usarse para iniciar sesión."
+      },
+      "deviceType": {
+        "singleDevice": "Dispositivo único",
+        "multiDevice": "Sincronizado entre dispositivos"
+      },
+      "dateUnknown": "Desconocido"
+    },
+    "devices": {
+      "title": "Dispositivos de confianza",
+      "description": "Administra los dispositivos que pueden desbloquear y acceder a tu bóveda.",
+      "none": "No se encontraron dispositivos de confianza.",
+      "current": "Este dispositivo",
+      "trustedBadge": "De confianza",
+      "untrustedBadge": "No confiable",
+      "lastSeen": "Visto por última vez",
+      "revokeTrust": "Revocar confianza",
+      "trust": "Confiar",
+      "remove": "Eliminar",
+      "trusted": "Dispositivo de confianza",
+      "untrusted": "Dispositivo no confiable",
+      "trustError": "No se pudo actualizar la confianza del dispositivo",
+      "removeSuccess": "Dispositivo eliminado",
+      "removeError": "No se pudo eliminar el dispositivo",
+      "removeConfirm": {
+        "title": "¿Eliminar dispositivo?",
+        "description": "Este dispositivo deberá registrarse de nuevo antes de poder acceder a la bóveda."
+      },
+      "revokeAllUnlocks": {
+        "button": "Revocar desbloqueos recordados en todos los dispositivos",
+        "confirmTitle": "¿Revocar los desbloqueos recordados?",
+        "confirmDescription": "Cada dispositivo volverá a pedir tu contraseña maestra. Los dispositivos sin conexión la pedirán la próxima vez que se conecten.",
+        "confirm": "Revocar",
+        "success": "Desbloqueos recordados revocados en todos los dispositivos",
+        "error": "No se pudieron revocar los desbloqueos recordados"
+      }
+    }
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "back": "Atras",
+    "close": "Cerrar",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "loading": "Cargando..."
+  },
+  "preferences": {
+    "language": {
+      "title": "Idioma",
+      "description": "Selecciona tu idioma preferido para el panel de control",
+      "syncNote": "Tu preferencia de idioma se guardará y sincronizará en todos tus dispositivos."
+    }
+  },
+  "layoutTemplate": {
+    "title": "Plantilla de diseño",
+    "description": "Elige cómo se organizan tu bóveda y tu contenido. Se sincroniza entre tus dispositivos.",
+    "saveFailed": "No se pudo guardar la plantilla de diseño. Inténtalo de nuevo.",
+    "options": {
+      "default": {
+        "name": "Predeterminada",
+        "desc": "Cuadrícula de tarjetas espaciosa: el diseño clásico"
+      },
+      "compact": {
+        "name": "Compacta",
+        "desc": "Filas de tabla densas, ideal para bóvedas grandes"
+      },
+      "list": {
+        "name": "Lista",
+        "desc": "Filas de ancho completo con más detalle"
+      }
+    }
+  },
+  "dataExport": {
+    "title": "Exportación de datos",
+    "subtitle": "Descarga una copia de todos tus datos — cifrados tal como los almacenamos.",
+    "sectionTitle": "Privacidad y datos",
+    "explainer": "Tu exportación solo contiene bloques cifrados. Password Manager es de conocimiento cero — necesitarás tu contraseña maestra para abrirlo.",
+    "requestNew": "Solicitar nueva exportación",
+    "format": {
+      "label": "Formato",
+      "json": "JSON (desarrolladores)",
+      "csv": "CSV (hojas de cálculo)",
+      "both": "JSON + CSV"
+    },
+    "table": {
+      "requested": "Solicitada",
+      "status": "Estado",
+      "size": "Tamaño",
+      "expires": "Expira",
+      "actions": "Acciones",
+      "download": "Descargar",
+      "revoke": "Revocar"
+    },
+    "status": {
+      "PENDING": "Pendiente",
+      "RUNNING": "Creando…",
+      "SUCCEEDED": "Lista",
+      "FAILED": "Falló",
+      "EXPIRED": "Expirada",
+      "REVOKED": "Revocada"
+    },
+    "empty": "No hay exportaciones aún. Solicita una para descargar una copia de tus datos.",
+    "inFlight": "Ya hay una exportación en progreso. Te enviaremos un correo cuando esté lista.",
+    "toast": {
+      "created": "Solicitud de exportación creada — te enviaremos un correo cuando esté lista.",
+      "revoked": "Exportación revocada.",
+      "createError": "No se pudo iniciar una nueva exportación.",
+      "revokeError": "No se pudo revocar esta exportación.",
+      "rateLimited": "Solo puedes solicitar 2 exportaciones por hora."
+    },
+    "neverExpires": "—"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Passwort-Generator",
+  "description": "Erstellen Sie starke, einzigartige Passwörter und Passphrasen",
+  "tabs": {
+    "password": "Passwort",
+    "passphrase": "Passphrase"
+  },
+  "copy": {
+    "success": "In die Zwischenablage kopiert",
+    "failed": "Kopieren fehlgeschlagen"
+  },
+  "error": "Generierung fehlgeschlagen",
+  "aria": {
+    "generatedPassword": "Generiertes Passwort",
+    "copyPassword": "Passwort kopieren",
+    "usePassword": "Passwort verwenden",
+    "regenerate": "Passwort neu generieren",
+    "generatedPassphrase": "Generierte Passphrase",
+    "copyPassphrase": "Passphrase kopieren",
+    "usePassphrase": "Passphrase verwenden",
+    "regeneratePassphrase": "Passphrase neu generieren"
+  },
+  "preset": {
+    "label": "Website-Richtlinienvorlage",
+    "placeholder": "Keine Vorlage",
+    "custom": "Keine Vorlage (benutzerdefiniert)"
+  },
+  "length": "Länge",
+  "characterSets": {
+    "title": "Zeichensätze",
+    "uppercase": "Großbuchstaben (A-Z)",
+    "lowercase": "Kleinbuchstaben (a-z)",
+    "digits": "Ziffern (0-9)",
+    "symbols": "Symbole (!@#$%...)"
+  },
+  "options": {
+    "title": "Optionen",
+    "excludeAmbiguous": "Mehrdeutige Zeichen ausschließen (0O1lI)"
+  },
+  "strength": {
+    "weak": "Schwach",
+    "fair": "Mäßig",
+    "good": "Gut",
+    "strong": "Stark",
+    "veryStrong": "Sehr stark"
+  },
+  "passphrase": {
+    "wordCount": "Wortanzahl",
+    "separator": "Trennzeichen",
+    "hyphen": "Bindestrich (-)",
+    "space": "Leerzeichen ( )",
+    "period": "Punkt (.)",
+    "underscore": "Unterstrich (_)",
+    "capitalize": "Wörter großschreiben",
+    "includeNumber": "Zahl einschließen"
+  },
+  "entropy": {
+    "label": "Bits Entropie"
+  }
+}

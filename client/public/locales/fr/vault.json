@@ -1,0 +1,79 @@
+{
+  "itemTypes": {
+    "login": "Identifiant",
+    "card": "Carte",
+    "secureNote": "Note sécurisée",
+    "identity": "Identité",
+    "passkey": "Clé d'accès",
+    "totp": "TOTP",
+    "file": "Fichier"
+  },
+  "untitled": "Sans titre",
+  "decryptionError": "[Erreur de déchiffrement]",
+  "addItem": "Ajouter un élément",
+  "addItemDescription": "Créez un nouvel élément. Toutes les données sont chiffrées sur votre appareil.",
+  "itemType": "Type",
+  "title": "Coffre",
+  "titlePlaceholder": "p. ex. GitHub, banque, etc.",
+  "username": "Nom d’utilisateur",
+  "usernamePlaceholder": "user@example.com",
+  "password": "Mot de passe",
+  "sensitiveFieldUnchanged": "Laissez vide pour conserver la valeur actuelle",
+  "generate": "Générer",
+  "hidePassword": "Masquer le mot de passe",
+  "showPassword": "Afficher le mot de passe",
+  "url": "URL",
+  "notes": "Notes",
+  "content": "Contenu",
+  "empty": "Votre coffre est vide — vous seul pouvez le remplir.",
+  "emptyDescription": "Les éléments sont chiffrés avec des clés qui ne quittent jamais vos appareils.",
+  "addFirstItem": "Ajouter le premier élément",
+  "created": "Créé",
+  "modified": "Dernière modification",
+  "saved": "Élément enregistré",
+  "saveFailed": "Impossible d’enregistrer les modifications",
+  "saving": "Enregistrement...",
+  "save": "Enregistrer",
+  "encrypting": "Chiffrement...",
+  "placeholderCode": "--- ---",
+  "time": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "il y a {{count}}j"
+  },
+  "shareStatus": {
+    "pending": "En attente",
+    "accepted": "Accepté",
+    "declined": "Refusé",
+    "revoked": "Révoqué"
+  },
+  "totp": {
+    "secondsRemaining": "{{remaining}} secondes restantes",
+    "defaultIssuer": "TOTP"
+  },
+  "qrScanner": {
+    "invalidUri": "URI otpauth:// invalide",
+    "noBarcodeDetector": "Le scan par caméra n'est pas pris en charge dans ce navigateur. Veuillez saisir l'URI manuellement.",
+    "cameraPermissionDenied": "Autorisation de la caméra refusée. Veuillez autoriser l'accès à la caméra ou saisir l'URI manuellement.",
+    "cameraError": "Impossible d'accéder à la caméra. Veuillez saisir l'URI manuellement.",
+    "noQRFound": "Aucun code QR otpauth:// valide trouvé dans l'image.",
+    "imageReadError": "Impossible de lire le code QR depuis l'image."
+  },
+  "secretKeyPlaceholder": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-X",
+  "sharing": {
+    "loadReceivedError": "Échec du chargement des éléments partagés",
+    "loadSentError": "Échec du chargement des partages envoyés"
+  },
+  "ephemeral": {
+    "createError": "Échec de la création du lien"
+  },
+  "org": {
+    "setupTitle": "Partager le coffre de cette organisation",
+    "setupDesc": "Créez un coffre partagé pour que les membres voient les mêmes éléments. Les éléments existants dans cette organisation seront importés, et les membres déjà connectés recevront l'accès automatiquement.",
+    "setupButton": "Configurer le coffre partagé",
+    "noneMember": "Cette organisation n'a pas encore de coffre partagé.",
+    "pending": "Vous verrez les éléments partagés dès qu'un administrateur de l'organisation vous donnera accès. Vérifiez d'abord que vous êtes connecté sur cet appareil."
+  },
+  "loadTrashError": "Échec du chargement de la corbeille",
+  "emptyImport": "Importer depuis un autre gestionnaire de mots de passe"
+}

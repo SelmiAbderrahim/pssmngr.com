@@ -1,0 +1,19 @@
+{
+	"generic": {
+		"accessDenied": "Zugriff verweigert",
+		"actionNotAllowed": "Sie dürfen {{action}} nicht ausführen",
+		"resourceAccessDenied": "Sie haben keine Berechtigung, auf diese Ressource zuzugreifen",
+		"operationNotPermitted": "Diese Operation ist nicht erlaubt",
+		"insufficientPermissions": "Unzureichende Berechtigungen"
+	},
+	"user": {
+		"cannotDeleteOwner": "Der Organisationseigentümer kann nicht gelöscht werden",
+		"cannotDeleteSelf": "Sie können Ihr eigenes Konto nicht löschen",
+		"cannotModifySelf": "Sie können Ihre eigene Rolle nicht ändern",
+		"cannotModifyOwner": "Die Einstellungen des Organisationseigentümers können nicht geändert werden",
+		"onlyOwnerCanDeleteAdmins": "Nur der Eigentümer kann Administratoren löschen",
+		"adminsCannotDeleteSelf": "Administratoren können sich nicht selbst löschen. Bitten Sie den Eigentümer oder einen anderen Administrator",
+		"cannotInvite": "Sie können keine Benutzer zu dieser Organisation einladen",
+		"cannotRemove": "Sie können keine Benutzer aus dieser Organisation entfernen"
+	}
+}

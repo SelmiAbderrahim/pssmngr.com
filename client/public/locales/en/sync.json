@@ -1,0 +1,21 @@
+{
+  "offline_banner": {
+    "title": "You are offline",
+    "syncing_title": "Syncing changes",
+    "description": "Changes will be saved locally and synced when you reconnect.",
+    "queue_count_one": "1 change waiting to sync",
+    "queue_count_other": "{{count}} changes waiting to sync",
+    "queue_count": "{{count}} changes waiting to sync",
+    "dismiss": "Dismiss offline banner"
+  },
+  "last_synced": {
+    "fresh": "Last synced {{datetime}}",
+    "stale": "Showing cached data from {{datetime}}"
+  },
+  "sync_complete": {
+    "toast": "{{count}} changes synced"
+  },
+  "sync_failed": {
+    "toast": "Could not sync {{count}} changes. They will retry automatically."
+  }
+}

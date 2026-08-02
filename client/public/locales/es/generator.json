@@ -1,0 +1,60 @@
+{
+  "title": "Generador de contraseñas",
+  "description": "Genera contraseñas y frases de contraseña fuertes y únicas",
+  "tabs": {
+    "password": "Contraseña",
+    "passphrase": "Frase de contraseña"
+  },
+  "copy": {
+    "success": "Copiado al portapapeles",
+    "failed": "Error al copiar"
+  },
+  "error": "Error en la generación",
+  "aria": {
+    "generatedPassword": "Contraseña generada",
+    "copyPassword": "Copiar contraseña",
+    "usePassword": "Usar contraseña",
+    "regenerate": "Regenerar contraseña",
+    "generatedPassphrase": "Frase de contraseña generada",
+    "copyPassphrase": "Copiar frase de contraseña",
+    "usePassphrase": "Usar frase de contraseña",
+    "regeneratePassphrase": "Regenerar frase de contraseña"
+  },
+  "preset": {
+    "label": "Plantilla de política del sitio",
+    "placeholder": "Sin plantilla",
+    "custom": "Sin plantilla (personalizado)"
+  },
+  "length": "Longitud",
+  "characterSets": {
+    "title": "Conjuntos de caracteres",
+    "uppercase": "Mayúsculas (A-Z)",
+    "lowercase": "Minúsculas (a-z)",
+    "digits": "Dígitos (0-9)",
+    "symbols": "Símbolos (!@#$%...)"
+  },
+  "options": {
+    "title": "Opciones",
+    "excludeAmbiguous": "Excluir caracteres ambiguos (0O1lI)"
+  },
+  "strength": {
+    "weak": "Débil",
+    "fair": "Aceptable",
+    "good": "Buena",
+    "strong": "Fuerte",
+    "veryStrong": "Muy fuerte"
+  },
+  "passphrase": {
+    "wordCount": "Número de palabras",
+    "separator": "Separador",
+    "hyphen": "Guión (-)",
+    "space": "Espacio ( )",
+    "period": "Punto (.)",
+    "underscore": "Guión bajo (_)",
+    "capitalize": "Capitalizar palabras",
+    "includeNumber": "Incluir número"
+  },
+  "entropy": {
+    "label": "bits de entropía"
+  }
+}

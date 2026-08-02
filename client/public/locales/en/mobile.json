@@ -1,0 +1,26 @@
+{
+  "bottom_nav": {
+    "label": "Primary mobile navigation",
+    "vault": "Vault",
+    "generator": "Generator",
+    "security": "Security",
+    "settings": "Settings",
+    "quick_add": "Quick add",
+    "sharing": "Sharing"
+  },
+  "header": {
+    "back": "Back",
+    "menu": "Menu",
+    "close": "Close",
+    "lock": "Lock vault",
+    "signout": "Sign out"
+  },
+  "quick_add": {
+    "title": "Add to vault",
+    "login": "Add login",
+    "secure_note": "Add secure note",
+    "card": "Add card",
+    "identity": "Add identity",
+    "generator": "Generate password"
+  }
+}

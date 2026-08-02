@@ -1,0 +1,60 @@
+{
+	"common": {
+		"greeting": "Bonjour",
+		"greetingWithName": "Bonjour {{name}}",
+		"regards": "Cordialement",
+		"team": "L'équipe Password Manager",
+		"footer": "Cet e-mail a été envoyé par Password Manager. Si vous n'avez pas demandé cet e-mail, vous pouvez l'ignorer en toute sécurité.",
+		"supportEmail": "Si vous avez des questions, contactez-nous à {{email}}",
+		"unsubscribe": "Pour vous désabonner de ces e-mails, cliquez ici",
+		"companyName": "Password Manager"
+	},
+	"invitation": {
+		"subject": "Vous avez été invité à rejoindre {{organization}}",
+		"preheader": "{{inviter}} vous a invité à rejoindre {{organization}}",
+		"title": "Invitation d'équipe",
+		"body": "Vous avez été invité à rejoindre {{organization}} sur Password Manager.",
+		"bodyWithRole": "Vous avez été invité à rejoindre {{organization}} en tant que {{role}}.",
+		"invitedBy": "Invité par : {{name}}",
+		"action": "Accepter l'invitation",
+		"expires": "Cette invitation expire le {{date}}.",
+		"expiresInDays": "Cette invitation expire dans {{days}} jours.",
+		"ignoreNote": "Si vous n'attendiez pas cette invitation, vous pouvez ignorer cet e-mail."
+	},
+	"emailVerification": {
+		"subject": "Vérifiez votre adresse e-mail",
+		"preheader": "Veuillez vérifier votre e-mail pour terminer l'inscription",
+		"title": "Vérification de l'e-mail",
+		"body": "Merci de vous être inscrit ! Veuillez vérifier votre adresse e-mail en cliquant sur le bouton ci-dessous.",
+		"action": "Vérifier l'e-mail",
+		"expires": "Ce lien expirera dans {{time}}.",
+		"expiresInHours": "Ce lien expire dans {{hours}} heures."
+	},
+	"dataExport": {
+		"readySubject": "Votre export de données est prêt",
+		"readyTitle": "Votre export de données est prêt",
+		"readyBody": "Votre export de données Password Manager est terminé et prêt à être téléchargé.",
+		"failedSubject": "Votre export de données a échoué",
+		"failedTitle": "Votre export de données a échoué",
+		"failedBody": "Nous n'avons pas pu créer votre export de données. Vous pouvez réessayer depuis les paramètres de votre compte.",
+		"expiresOn": "Ce lien expire le {{expiresAt}}.",
+		"downloadAction": "Télécharger vos données",
+		"retryAction": "Réessayer",
+		"revokeAction": "Si vous n'êtes pas à l'origine de cette demande, révoquez immédiatement",
+		"revokeNotice": "Si vous n'avez pas demandé cet export, révoquez-le immédiatement depuis les paramètres de votre compte.",
+		"zeroKnowledgeNotice": "Cette archive contient vos données telles que nous les stockons : uniquement des blocs chiffrés. Password Manager fonctionne en zero-knowledge — nous ne pouvons pas déchiffrer votre coffre. Pour le lire, ouvrez-le dans un client Password Manager avec votre mot de passe maître.",
+		"zeroKnowledgeNoticeShort": "Cette archive contient uniquement des données chiffrées ; vous aurez besoin de votre mot de passe maître pour l'ouvrir.",
+		"readme": {
+			"heading": "Export de données Password Manager",
+			"intro": "Cette archive est la copie complète des données que nous conservons pour vous. Elle est fournie pour satisfaire les droits de portabilité des données du RGPD (et équivalents).",
+			"formatHeading": "Format",
+			"formatBody": "Les fichiers .json sont lisibles par machine ; les fichiers .csv s'ouvrent dans n'importe quel tableur.",
+			"zeroKnowledgeHeading": "Avis zero-knowledge",
+			"zeroKnowledgeBody": "Password Manager ne voit jamais votre mot de passe maître et ne peut pas déchiffrer votre coffre. Les entrées de coffre ci-dessous sont stockées en tant que texte chiffré (texte chiffré, nonce, étiquette d'authentification, clé de données encapsulée). Pour les lire, ouvrez cette archive dans un client Password Manager avec votre mot de passe maître.",
+			"rightsHeading": "Vos droits",
+			"rightsBody": "Vous pouvez demander un export à tout moment, révoquer un lien de téléchargement actif depuis vos paramètres, et supprimer entièrement votre compte depuis la page des paramètres de sécurité.",
+			"contactHeading": "Contact",
+			"contactBody": "Pour toute question relative à la vie privée, contactez l’administrateur de votre instance."
+		}
+	}
+}

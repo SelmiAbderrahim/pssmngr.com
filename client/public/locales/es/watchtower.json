@@ -1,0 +1,126 @@
+{
+  "score": {
+    "critical": "Crítico",
+    "poor": "Deficiente",
+    "fair": "Aceptable",
+    "good": "Bueno"
+  },
+  "lastScan": "Último análisis:",
+  "rescan": "Reanalizar",
+  "retry": "Reintentar",
+  "unlock": "Desbloquear bóveda",
+  "unlockRequired": "Desbloquea tu bóveda para ejecutar una auditoría de seguridad",
+  "noVault": "No se encontró ninguna bóveda. Crea una bóveda primero.",
+  "analysisError": "Error al analizar la bóveda",
+  "breachError": "Error en la verificación de filtraciones",
+  "weak": "Débiles",
+  "weakDesc": "Baja entropía o patrones",
+  "weakPasswords": "Contraseñas débiles",
+  "weakInfo": "Contraseñas con baja entropía, patrones secuenciales o secuencias de teclado",
+  "weakDetail": "La fortaleza de la contraseña está por debajo del umbral mínimo",
+  "noWeak": "No se encontraron contraseñas débiles",
+  "reused": "Reutilizadas",
+  "reusedDesc": "Misma contraseña en múltiples sitios",
+  "reusedPasswords": "Contraseñas reutilizadas",
+  "reusedInfo": "Grupos de elementos que comparten la misma contraseña",
+  "reusedDetail": "Contraseña usada en otro lugar",
+  "noReused": "No se encontraron contraseñas reutilizadas",
+  "sharedBy": "Compartida por {{count}} elementos",
+  "old": "Antiguas",
+  "oldDesc": "Sin cambios en más de 90 días",
+  "oldPasswords": "Contraseñas antiguas",
+  "oldInfo": "Contraseñas no actualizadas en más de 90 días",
+  "oldDetail": "Último cambio hace {{days}} días",
+  "noOld": "No se encontraron contraseñas antiguas",
+  "breached": "Filtradas",
+  "breachedDesc": "Encontradas en filtraciones de datos",
+  "breachedPasswords": "Contraseñas filtradas",
+  "breachedInfo": "Contraseñas encontradas en filtraciones de datos conocidas a través de Have I Been Pwned",
+  "breachNotChecked": "La verificación de filtraciones aún no se ha ejecutado",
+  "noBreached": "No se encontraron contraseñas filtradas",
+  "breachCount": "Encontrada en {{count}} filtraciones de datos",
+  "breachCheckTitle": "Verificar contraseñas filtradas",
+  "breachCheckDesc": "Usa k-anonimato — solo se envían hashes parciales. Ningún texto en claro sale de tu dispositivo.",
+  "checkBreaches": "Verificar filtraciones",
+  "checking": "Verificando...",
+  "critical": "Crítico",
+  "warning": "Advertencia",
+  "info": "Info",
+  "fix": "Corregir",
+  "allClear": "Las {{total}} contraseñas se ven bien",
+  "findingsSummary": "{{findings}} hallazgos en {{total}} contraseñas",
+  "breakdown": {
+    "title": "Cómo se calcula esta puntuación",
+    "description": "Cada categoría de riesgo aporta una penalización determinista proporcional al porcentaje de elementos afectados. Nada sale de tu dispositivo.",
+    "category": "Categoría",
+    "count": "Afectados",
+    "penalty": "Penalización",
+    "weight": "Máx",
+    "noFindings": "Ningún riesgo afecta tu puntuación.",
+    "totalPenalty": "Penalización total: −{{penalty}} puntos"
+  },
+  "category": {
+    "weak": {
+      "label": "Contraseñas débiles",
+      "whyMatters": "Las contraseñas débiles pueden adivinarse o romperse rápidamente.",
+      "whatToDo": "Reemplaza cada contraseña débil por una larga generada aleatoriamente."
+    },
+    "reused": {
+      "label": "Contraseñas reutilizadas",
+      "whyMatters": "Reutilizar una contraseña permite que una sola filtración abra varias cuentas.",
+      "whatToDo": "Genera una contraseña única para cada cuenta reutilizada."
+    },
+    "old": {
+      "label": "Contraseñas antiguas",
+      "whyMatters": "Las contraseñas más antiguas tienen más probabilidades de haber sido filtradas desde su creación.",
+      "whatToDo": "Rota las contraseñas que no se han cambiado en más de 90 días, sobre todo en cuentas sensibles."
+    },
+    "breached": {
+      "label": "Filtraciones conocidas",
+      "whyMatters": "Las contraseñas filtradas ya están en las listas de los atacantes.",
+      "whatToDo": "Cambia cada contraseña filtrada antes que cualquier otra cosa."
+    },
+    "missing2fa": {
+      "label": "Sin 2FA",
+      "whyMatters": "La autenticación de dos factores bloquea la mayoría de ataques que reutilizan contraseñas filtradas.",
+      "whatToDo": "Activa TOTP en cada login que lo admita y guarda el secreto aquí."
+    }
+  },
+  "missing2fa": "Sin 2FA",
+  "missing2faDesc": "Inicios de sesión sin secreto TOTP guardado",
+  "missing2faPasswords": "Inicios de sesión sin 2FA",
+  "missing2faInfo": "Inicios de sesión que podrían protegerse con un autenticador TOTP",
+  "missing2faDetail": "Añade un secreto TOTP para este inicio de sesión",
+  "noMissing2fa": "Todos los inicios de sesión tienen 2FA configurado",
+  "privacy": {
+    "title": "Privacidad",
+    "kAnonymity": "Solo se envían los primeros 5 caracteres del hash SHA-1. El hash completo y la contraseña en claro nunca salen de tu dispositivo.",
+    "source": "Fuente: Have I Been Pwned (API de rangos con k-anonimato)",
+    "checkedAt": "Última comprobación {{time}}"
+  },
+  "filters": {
+    "title": "Filtrar",
+    "all": "Todas las severidades",
+    "critical": "Solo crítico",
+    "warningPlus": "Advertencia y superior",
+    "sort": "Ordenar",
+    "sortBySeverity": "Más crítico primero",
+    "sortByUpdated": "Actualizado recientemente",
+    "sortByName": "Nombre (A→Z)"
+  },
+  "breachCard": {
+    "severityHigh": "Severidad alta",
+    "severityMedium": "Severidad media",
+    "severityLow": "Severidad baja",
+    "occurrences": "Visto en filtraciones {{count}} veces",
+    "detectionSource": "Detectado mediante {{source}}",
+    "markReviewed": "Marcar como revisado",
+    "startChecklist": "Iniciar lista de actualización"
+  },
+  "emptyState": {
+    "noItems": "Tu bóveda está vacía",
+    "noItemsHint": "Añade un inicio de sesión para empezar a hacer seguimiento de la salud de contraseñas.",
+    "noFindings": "Nada que hacer ahora mismo",
+    "noFindingsHint": "Seguimos vigilando. Los nuevos hallazgos aparecerán aquí en cuanto se detecten."
+  }
+}

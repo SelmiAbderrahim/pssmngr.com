@@ -1,0 +1,60 @@
+{
+  "title": "مولّد كلمات المرور",
+  "description": "أنشئ كلمات مرور وعبارات مرور قوية وفريدة",
+  "tabs": {
+    "password": "كلمة مرور",
+    "passphrase": "عبارة مرور"
+  },
+  "copy": {
+    "success": "تم النسخ إلى الحافظة",
+    "failed": "فشل النسخ"
+  },
+  "error": "فشل التوليد",
+  "aria": {
+    "generatedPassword": "كلمة المرور المولّدة",
+    "copyPassword": "نسخ كلمة المرور",
+    "usePassword": "استخدام كلمة المرور",
+    "regenerate": "إعادة توليد كلمة المرور",
+    "generatedPassphrase": "عبارة المرور المولّدة",
+    "copyPassphrase": "نسخ عبارة المرور",
+    "usePassphrase": "استخدام عبارة المرور",
+    "regeneratePassphrase": "إعادة توليد عبارة المرور"
+  },
+  "preset": {
+    "label": "قالب سياسة الموقع",
+    "placeholder": "بدون قالب",
+    "custom": "بدون قالب (مخصص)"
+  },
+  "length": "الطول",
+  "characterSets": {
+    "title": "مجموعات الأحرف",
+    "uppercase": "أحرف كبيرة (A-Z)",
+    "lowercase": "أحرف صغيرة (a-z)",
+    "digits": "أرقام (0-9)",
+    "symbols": "رموز (!@#$%...)"
+  },
+  "options": {
+    "title": "خيارات",
+    "excludeAmbiguous": "استبعاد الأحرف المتشابهة (0O1lI)"
+  },
+  "strength": {
+    "weak": "ضعيفة",
+    "fair": "مقبولة",
+    "good": "جيدة",
+    "strong": "قوية",
+    "veryStrong": "قوية جداً"
+  },
+  "passphrase": {
+    "wordCount": "عدد الكلمات",
+    "separator": "الفاصل",
+    "hyphen": "شرطة (-)",
+    "space": "مسافة ( )",
+    "period": "نقطة (.)",
+    "underscore": "شرطة سفلية (_)",
+    "capitalize": "كتابة الأحرف الأولى بالحرف الكبير",
+    "includeNumber": "تضمين رقم"
+  },
+  "entropy": {
+    "label": "بت من الإنتروبيا"
+  }
+}

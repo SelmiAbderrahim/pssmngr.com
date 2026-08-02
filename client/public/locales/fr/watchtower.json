@@ -1,0 +1,126 @@
+{
+  "score": {
+    "critical": "Critique",
+    "poor": "Mauvais",
+    "fair": "Passable",
+    "good": "Bon"
+  },
+  "lastScan": "Dernière analyse :",
+  "rescan": "Réanalyser",
+  "retry": "Réessayer",
+  "unlock": "Déverrouiller le coffre",
+  "unlockRequired": "Déverrouillez votre coffre pour lancer un audit de sécurité",
+  "noVault": "Aucun coffre trouvé. Créez d'abord un coffre.",
+  "analysisError": "Échec de l'analyse du coffre",
+  "breachError": "Échec de la vérification des fuites",
+  "weak": "Faibles",
+  "weakDesc": "Faible entropie ou motifs répétitifs",
+  "weakPasswords": "Mots de passe faibles",
+  "weakInfo": "Mots de passe avec faible entropie, motifs séquentiels ou séquences clavier",
+  "weakDetail": "La force du mot de passe est en dessous du seuil minimum",
+  "noWeak": "Aucun mot de passe faible trouvé",
+  "reused": "Réutilisés",
+  "reusedDesc": "Même mot de passe sur plusieurs sites",
+  "reusedPasswords": "Mots de passe réutilisés",
+  "reusedInfo": "Groupes d'éléments partageant le même mot de passe",
+  "reusedDetail": "Mot de passe utilisé ailleurs",
+  "noReused": "Aucun mot de passe réutilisé trouvé",
+  "sharedBy": "Partagé par {{count}} éléments",
+  "old": "Anciens",
+  "oldDesc": "Non modifiés depuis plus de 90 jours",
+  "oldPasswords": "Mots de passe anciens",
+  "oldInfo": "Mots de passe non mis à jour depuis plus de 90 jours",
+  "oldDetail": "Dernière modification il y a {{days}} jours",
+  "noOld": "Aucun mot de passe ancien trouvé",
+  "breached": "Compromis",
+  "breachedDesc": "Trouvés dans des fuites de données",
+  "breachedPasswords": "Mots de passe compromis",
+  "breachedInfo": "Mots de passe trouvés dans des fuites de données connues via Have I Been Pwned",
+  "breachNotChecked": "La vérification des fuites n'a pas encore été effectuée",
+  "noBreached": "Aucun mot de passe compromis trouvé",
+  "breachCount": "Trouvé dans {{count}} fuites de données",
+  "breachCheckTitle": "Vérifier les mots de passe compromis",
+  "breachCheckDesc": "Utilise la k-anonymité — seuls des hachages partiels sont envoyés. Aucun texte en clair ne quitte votre appareil.",
+  "checkBreaches": "Vérifier les fuites",
+  "checking": "Vérification...",
+  "critical": "Critique",
+  "warning": "Avertissement",
+  "info": "Info",
+  "fix": "Corriger",
+  "allClear": "Les {{total}} mots de passe sont en bon état",
+  "findingsSummary": "{{findings}} problèmes sur {{total}} mots de passe",
+  "breakdown": {
+    "title": "Comment ce score est calculé",
+    "description": "Chaque catégorie de risque contribue à une pénalité déterministe proportionnelle à la part d'éléments concernés. Rien ne quitte votre appareil.",
+    "category": "Catégorie",
+    "count": "Concernés",
+    "penalty": "Pénalité",
+    "weight": "Max",
+    "noFindings": "Aucun risque n'impacte votre score.",
+    "totalPenalty": "Pénalité totale : −{{penalty}} points"
+  },
+  "category": {
+    "weak": {
+      "label": "Mots de passe faibles",
+      "whyMatters": "Les mots de passe faibles peuvent être devinés ou cassés rapidement.",
+      "whatToDo": "Remplacez chaque mot de passe faible par un mot de passe long généré aléatoirement."
+    },
+    "reused": {
+      "label": "Mots de passe réutilisés",
+      "whyMatters": "Réutiliser un mot de passe permet à une seule fuite de débloquer plusieurs comptes.",
+      "whatToDo": "Générez un mot de passe unique pour chaque compte réutilisé."
+    },
+    "old": {
+      "label": "Mots de passe anciens",
+      "whyMatters": "Les mots de passe plus anciens sont plus susceptibles d'avoir fuité depuis leur création.",
+      "whatToDo": "Faites tourner les mots de passe inchangés depuis 90+ jours, surtout pour les comptes sensibles."
+    },
+    "breached": {
+      "label": "Fuites connues",
+      "whyMatters": "Les mots de passe compromis sont déjà dans les listes des attaquants.",
+      "whatToDo": "Changez chaque mot de passe compromis avant toute autre action."
+    },
+    "missing2fa": {
+      "label": "Sans 2FA",
+      "whyMatters": "L'authentification à deux facteurs bloque la plupart des attaques qui réutilisent des mots de passe fuités.",
+      "whatToDo": "Activez TOTP sur chaque connexion qui le supporte et stockez le secret ici."
+    }
+  },
+  "missing2fa": "Sans 2FA",
+  "missing2faDesc": "Identifiants sans secret TOTP enregistré",
+  "missing2faPasswords": "Identifiants sans 2FA",
+  "missing2faInfo": "Identifiants qui pourraient être protégés par un authentificateur TOTP",
+  "missing2faDetail": "Ajoutez un secret TOTP pour cet identifiant",
+  "noMissing2fa": "Tous les identifiants ont la 2FA configurée",
+  "privacy": {
+    "title": "Confidentialité",
+    "kAnonymity": "Seuls les 5 premiers caractères du hachage SHA-1 sont envoyés. Le hachage complet et le mot de passe en clair ne quittent jamais votre appareil.",
+    "source": "Source : Have I Been Pwned (API range k-anonymity)",
+    "checkedAt": "Dernière vérification {{time}}"
+  },
+  "filters": {
+    "title": "Filtrer",
+    "all": "Toutes les sévérités",
+    "critical": "Critique uniquement",
+    "warningPlus": "Avertissement et plus",
+    "sort": "Trier",
+    "sortBySeverity": "Plus critique en premier",
+    "sortByUpdated": "Récemment modifiés",
+    "sortByName": "Nom (A→Z)"
+  },
+  "breachCard": {
+    "severityHigh": "Sévérité élevée",
+    "severityMedium": "Sévérité moyenne",
+    "severityLow": "Sévérité faible",
+    "occurrences": "Vu dans des fuites {{count}} fois",
+    "detectionSource": "Détecté via {{source}}",
+    "markReviewed": "Marquer comme examiné",
+    "startChecklist": "Démarrer la check-list de mise à jour"
+  },
+  "emptyState": {
+    "noItems": "Votre coffre est vide",
+    "noItemsHint": "Ajoutez un identifiant pour commencer à suivre la santé des mots de passe.",
+    "noFindings": "Rien à corriger pour le moment",
+    "noFindingsHint": "Nous continuons à surveiller. Les nouveaux problèmes apparaîtront ici dès leur détection."
+  }
+}

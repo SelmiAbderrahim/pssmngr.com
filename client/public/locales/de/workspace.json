@@ -1,0 +1,41 @@
+{
+  "loading": "Wird geladen...",
+  "switcher": {
+    "label": "Arbeitsbereich wechseln",
+    "selectWorkspace": "Arbeitsbereich auswählen",
+    "workspaces": "Arbeitsbereiche",
+    "noWorkspaces": "Noch keine Arbeitsbereiche",
+    "memberCount": "{{count}} Mitglieder",
+    "memberCount_one": "{{count}} Mitglied",
+    "setDefault": "Als Standard festlegen",
+    "default": "Standard"
+  },
+  "create": {
+    "trigger": "Arbeitsbereich erstellen",
+    "title": "Organisation erstellen",
+    "description": "Erstelle eine neue Organisation und lade Mitglieder ein.",
+    "nameLabel": "Organisationsname",
+    "namePlaceholder": "Meine Organisation",
+    "nameRequired": "Organisationsname ist erforderlich",
+    "slugLabel": "URL-Kennung",
+    "slugPlaceholder": "meine-organisation",
+    "slugHint": "Wird automatisch aus dem Namen generiert. Bearbeiten zum Anpassen.",
+    "submit": "Erstellen",
+    "cancel": "Abbrechen",
+    "success": "Organisation erfolgreich erstellt",
+    "error": "Organisation konnte nicht erstellt werden"
+  },
+  "switch": {
+    "title": "Organisation wechseln"
+  },
+  "setDefault": {
+    "success": "Standardorganisation aktualisiert"
+  },
+  "errors": {
+    "loadFailed": {
+      "title": "Arbeitsbereiche konnten nicht geladen werden",
+      "description": "Ihre Arbeitsbereichsdaten konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+      "retry": "Erneut versuchen"
+    }
+  }
+}

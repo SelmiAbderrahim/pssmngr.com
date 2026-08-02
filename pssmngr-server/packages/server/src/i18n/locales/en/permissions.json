@@ -1,0 +1,19 @@
+{
+	"generic": {
+		"accessDenied": "Access denied",
+		"actionNotAllowed": "You are not allowed to {{action}}",
+		"resourceAccessDenied": "You don't have permission to access this resource",
+		"operationNotPermitted": "This operation is not permitted",
+		"insufficientPermissions": "Insufficient permissions"
+	},
+	"user": {
+		"cannotDeleteOwner": "Cannot delete the organization owner",
+		"cannotDeleteSelf": "You cannot delete your own account",
+		"cannotModifySelf": "You cannot modify your own role",
+		"cannotModifyOwner": "Cannot modify the organization owner's settings",
+		"onlyOwnerCanDeleteAdmins": "Only the owner can delete administrators",
+		"adminsCannotDeleteSelf": "Admins cannot delete themselves. Ask the owner or another admin",
+		"cannotInvite": "You cannot invite users to this organization",
+		"cannotRemove": "You cannot remove users from this organization"
+	}
+}

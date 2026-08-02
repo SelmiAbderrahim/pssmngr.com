@@ -1,0 +1,79 @@
+{
+  "itemTypes": {
+    "login": "تسجيل دخول",
+    "card": "بطاقة",
+    "secureNote": "ملاحظة آمنة",
+    "identity": "هوية",
+    "passkey": "مفتاح مرور",
+    "totp": "TOTP",
+    "file": "ملف"
+  },
+  "untitled": "بدون عنوان",
+  "decryptionError": "[خطأ في فك التشفير]",
+  "addItem": "إضافة عنصر",
+  "addItemDescription": "أنشئ عنصراً جديداً. تُشفّر جميع البيانات على جهازك.",
+  "itemType": "النوع",
+  "title": "الخزنة",
+  "titlePlaceholder": "مثال: GitHub أو البنك",
+  "username": "اسم المستخدم",
+  "usernamePlaceholder": "user@example.com",
+  "password": "كلمة المرور",
+  "sensitiveFieldUnchanged": "اتركه فارغاً للاحتفاظ بالقيمة الحالية",
+  "generate": "توليد",
+  "hidePassword": "إخفاء كلمة المرور",
+  "showPassword": "إظهار كلمة المرور",
+  "url": "الرابط",
+  "notes": "الملاحظات",
+  "content": "المحتوى",
+  "empty": "خزنتك فارغة — وأنت وحدك من يستطيع ملأها.",
+  "emptyDescription": "العناصر مُشفّرة بمفاتيح لا تغادر أجهزتك أبدًا.",
+  "addFirstItem": "أضف عنصرك الأول",
+  "created": "تم الإنشاء",
+  "modified": "آخر تعديل",
+  "saved": "تم حفظ العنصر",
+  "saveFailed": "فشل حفظ التغييرات",
+  "saving": "جارٍ الحفظ...",
+  "save": "حفظ",
+  "encrypting": "جارٍ التشفير...",
+  "placeholderCode": "--- ---",
+  "time": {
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "daysAgo": "منذ {{count}} يوم"
+  },
+  "shareStatus": {
+    "pending": "قيد الانتظار",
+    "accepted": "مقبول",
+    "declined": "مرفوض",
+    "revoked": "ملغى"
+  },
+  "totp": {
+    "secondsRemaining": "{{remaining}} ثانية متبقية",
+    "defaultIssuer": "TOTP"
+  },
+  "qrScanner": {
+    "invalidUri": "رابط otpauth:// غير صالح",
+    "noBarcodeDetector": "مسح الكاميرا غير مدعوم في هذا المتصفح. يرجى إدخال الرابط يدوياً.",
+    "cameraPermissionDenied": "تم رفض إذن الكاميرا. يرجى السماح بالوصول إلى الكاميرا أو إدخال الرابط يدوياً.",
+    "cameraError": "تعذر الوصول إلى الكاميرا. يرجى إدخال الرابط يدوياً.",
+    "noQRFound": "لم يتم العثور على رمز QR صالح لـ otpauth:// في الصورة.",
+    "imageReadError": "تعذرت قراءة رمز QR من الصورة."
+  },
+  "secretKeyPlaceholder": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-X",
+  "sharing": {
+    "loadReceivedError": "فشل تحميل العناصر المشتركة",
+    "loadSentError": "فشل تحميل المشاركات المرسلة"
+  },
+  "ephemeral": {
+    "createError": "فشل إنشاء الرابط"
+  },
+  "org": {
+    "setupTitle": "مشاركة خزنة المؤسسة",
+    "setupDesc": "أنشئ خزنة مشتركة ليتمكن الأعضاء من رؤية العناصر نفسها. سيتم استيراد العناصر الموجودة في هذه المؤسسة، وسيحصل الأعضاء الذين سجّلوا الدخول على الوصول تلقائياً.",
+    "setupButton": "إعداد الخزنة المشتركة",
+    "noneMember": "لا تملك هذه المؤسسة خزنة مشتركة بعد.",
+    "pending": "سترى العناصر المشتركة بعد أن يمنحك مسؤول المؤسسة حق الوصول. تأكد من تسجيل الدخول على هذا الجهاز أولاً."
+  },
+  "loadTrashError": "فشل تحميل سلة المهملات",
+  "emptyImport": "استيراد من مدير كلمات مرور آخر"
+}

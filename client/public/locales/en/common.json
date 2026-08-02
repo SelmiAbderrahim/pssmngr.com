@@ -1,0 +1,938 @@
+{
+  "loading": "Loading...",
+  "save": "Save",
+  "cancel": "Cancel",
+  "saveChanges": "Save Changes",
+  "saving": "Saving...",
+  "delete": "Delete",
+  "edit": "Edit",
+  "create": "Create",
+  "update": "Update",
+  "submit": "Submit",
+  "search": "Search",
+  "download": "Download",
+  "copy": "Copy",
+  "close": "Close",
+  "back": "Back",
+  "next": "Next",
+  "previous": "Previous",
+  "confirm": "Confirm",
+  "done": "Done",
+  "retry": "Retry",
+  "refresh": "Refresh",
+  "app": {
+    "name": "Password Manager",
+    "description": "A zero-knowledge password manager for secure vault storage and sharing"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "vault": "Vault",
+    "workspace": "Workspace",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Log out",
+    "security": "Security",
+    "people": "People",
+    "generator": "Generator",
+    "help": "Help",
+    "toggleMenu": "Toggle navigation menu",
+    "docs": "Docs"
+  },
+  "generator": {
+    "openButton": "Generator"
+  },
+  "account": {
+    "menu": "Account menu"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "upload": "Upload",
+    "download": "Download",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "refresh": "Refresh",
+    "clear": "Clear",
+    "export": "Export",
+    "import": "Import",
+    "show": "Show",
+    "hide": "Hide",
+    "moreOptions": "More options",
+    "saveChanges": "Save changes",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "enterYourName": "Enter your name",
+    "enterYourEmail": "Enter your email",
+    "createPassword": "Create a password",
+    "confirmPassword": "Confirm your password",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "logo": "Logo",
+    "user": {
+      "fallbackName": "User"
+    },
+    "sidebar": {
+      "collapse": "Collapse",
+      "expand": "Expand sidebar"
+    }
+  },
+  "status": {
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "processing": "Processing...",
+    "uploading": "Uploading...",
+    "downloading": "Downloading...",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information",
+    "completed": "Completed",
+    "failed": "Failed",
+    "pending": "Pending",
+    "cancelled": "Cancelled",
+    "unknownError": "Unknown error",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "time": {
+    "now": "Just now",
+    "minuteAgo": "1 minute ago",
+    "minutesAgo": "{{count}} minutes ago",
+    "hourAgo": "1 hour ago",
+    "hoursAgo": "{{count}} hours ago",
+    "dayAgo": "1 day ago",
+    "daysAgo": "{{count}} days ago",
+    "weekAgo": "1 week ago",
+    "weeksAgo": "{{count}} weeks ago",
+    "monthAgo": "1 month ago",
+    "monthsAgo": "{{count}} months ago",
+    "yearAgo": "1 year ago",
+    "yearsAgo": "{{count}} years ago",
+    "today": "today",
+    "never": "Never"
+  },
+  "language": {
+    "select": "Select Language",
+    "arabic": "Arabic",
+    "english": "English",
+    "french": "French",
+    "german": "German",
+    "spanish": "Spanish"
+  },
+  "theme": {
+    "title": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "invalidPassword": "Password must be at least 8 characters",
+    "passwordMismatch": "Passwords do not match",
+    "invalidUrl": "Please enter a valid URL",
+    "fileTooBig": "File size exceeds the maximum limit",
+    "invalidFileType": "This file type is not supported"
+  },
+  "a11y": {
+    "search": "Search",
+    "close": "Close",
+    "menu": "Menu",
+    "settings": "Settings",
+    "play": "Play",
+    "pause": "Pause",
+    "mute": "Mute",
+    "fullscreen": "Fullscreen",
+    "skipToContent": "Skip to main content",
+    "selectAll": "Select all",
+    "emailAddress": "Email address",
+    "selectItem": "Select item {{id}}",
+    "selectCard": "Select card {{id}}",
+    "twitter": "Twitter"
+  },
+  "views": {
+    "noItemsFound": "No items found",
+    "grid": "Grid View",
+    "table": "Table View",
+    "list": "List View",
+    "compactCards": "Compact Cards"
+  },
+  "layouts": {
+    "appName": "Password Manager",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "countdown": {
+    "expired": "Expired"
+  },
+  "privacy": {
+    "consent": {
+      "title": "Cookie Preferences",
+      "description": "This instance uses optional analytics cookies only with your permission.",
+      "functional": "Essential",
+      "functionalDesc": "Required for the site to function properly.",
+      "analytics": "Analytics",
+      "analyticsDesc": "Help us understand how you use our site to improve it.",
+      "acceptAll": "Accept All",
+      "rejectAll": "Reject All",
+      "customize": "Customize Preferences",
+      "savePreferences": "Save Preferences"
+    },
+    "settings": {
+      "title": "Privacy",
+      "description": "Manage optional analytics for this browser.",
+      "analyticsTracking": "Optional analytics",
+      "analyticsTrackingDesc": "Allow privacy-conscious page and performance metrics. Vault data and account identifiers are never sent."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Password Manager. All rights reserved.",
+    "allRightsReserved": "All rights reserved."
+  },
+  "common": {
+    "dismiss": "Dismiss",
+    "close": "Close",
+    "notNow": "Not now",
+    "optional": "(Optional)",
+    "default": "Default"
+  },
+  "invitation": {
+    "accepting": "Accepting invitation...",
+    "accepted": "Invitation accepted.",
+    "backToDashboard": "Back to dashboard",
+    "createAccount": "Create account",
+    "errorDescription": "The invitation could not be accepted.",
+    "errorTitle": "Could not accept invitation",
+    "genericError": "This invitation is unavailable or no longer valid.",
+    "invalidToken": "This invitation link is invalid.",
+    "redirecting": "Redirecting you now.",
+    "signIn": "Sign in",
+    "signInDescription": "Sign in with the invited email address, or create that account first.",
+    "signInTitle": "Sign in to accept this invitation"
+  },
+  "pagination": {
+    "page": "page",
+    "showing": "Page {{page}} of {{totalPages}}",
+    "total": "{{total}} items",
+    "first": "First page",
+    "previous": "Previous page",
+    "next": "Next page",
+    "last": "Last page",
+    "goToPage": "Go to page {{page}}",
+    "itemsPerPage": "Items per page",
+    "results": {
+      "showing": "Showing {{count}} of {{total}} items",
+      "empty": "No results found",
+      "filtered": "{{count}} results match your filters"
+    }
+  },
+  "searchInput": {
+    "placeholder": "Search...",
+    "noResults": "No results found",
+    "searching": "Searching..."
+  },
+  "sort": {
+    "label": "Sort by",
+    "toggle": "Toggle sort direction",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "createdAt": "Date created",
+    "updatedAt": "Last updated",
+    "name": "Name",
+    "status": "Status"
+  },
+  "filters": {
+    "clear": "Clear filters",
+    "reset": "Reset",
+    "apply": "Apply filters",
+    "active": "{{count}} filter(s) active"
+  },
+  "empty": {
+    "list": "No items yet",
+    "search": "No items match your search",
+    "filtered": "No items match your filters"
+  },
+  "loadingItems": {
+    "items": "Loading items...",
+    "more": "Loading more..."
+  },
+  "docsHelpLink": {
+    "tooltip": "View documentation",
+    "help": "Help",
+    "documentation": "Documentation"
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {{displayName}}",
+    "subtitle": "Your vault overview and quick actions",
+    "totalItems": "Total Items",
+    "vaultStatus": "Vault Status",
+    "noVault": "No vault created yet",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "security": "Security",
+    "checkSecurity": "Run security checkup",
+    "breakdown": "Item Breakdown",
+    "quickActions": "Quick Actions",
+    "addCredential": "Add item",
+    "securityCheckup": "Security Checkup",
+    "generatePassword": "Generate Password",
+    "importData": "Import Data",
+    "recentItems": "Recent Items",
+    "viewAll": "View all",
+    "addFirst": "Add first item",
+    "emptyVault": "Your vault is empty. Add your first item to get started.",
+    "favorited": "{{count}} favorited",
+    "inTrash": "{{count}} in trash",
+    "issuesFound_one": "{{count}} issue found",
+    "issuesFound_other": "{{count}} issues found",
+    "itemTypes": {
+      "card": "Cards",
+      "identity": "Identities",
+      "login": "Logins",
+      "note": "Secure Notes",
+      "other": "Other"
+    },
+    "score": {
+      "critical": "Critical",
+      "fair": "Fair",
+      "good": "Good",
+      "poor": "Poor"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account and preferences",
+    "general": "General Settings",
+    "profile": "Profile",
+    "profileDescription": "Manage your display name and personal information",
+    "displayName": "Display name",
+    "displayNamePlaceholder": "Your name",
+    "email": "Email",
+    "emailReadonly": "Email cannot be changed from here",
+    "saving": "Saving...",
+    "saveProfile": "Save changes",
+    "preferences": "Preferences",
+    "preferencesDescription": "Customize your appearance and security",
+    "theme": "Theme",
+    "themeDescription": "Choose how the application looks",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "autoLock": "Auto-lock timer",
+    "autoLockDescription": "Automatically lock the vault after inactivity",
+    "selectDuration": "Select duration",
+    "account": "Account",
+    "accountDetailsDescription": "Your account details",
+    "memberSince": "Member since",
+    "autoLockUpdated": "Auto-lock timer updated",
+    "autoLockOptions": {
+      "1min": "1 minute",
+      "5min": "5 minutes",
+      "15min": "15 minutes",
+      "30min": "30 minutes",
+      "1hour": "1 hour",
+      "never": "Never"
+    },
+    "inactivityLock": "Require unlock after inactivity",
+    "inactivityLockDescription": "With persistent unlock on, re-unlock after inactivity is silent — no prompt.",
+    "persistentUnlock": "Stay unlocked on this device",
+    "persistentUnlockDescription": "Stay unlocked on this device — you'll confirm your master password for sensitive actions.",
+    "persistentUnlockUpdated": "Persistent unlock updated. Applies next time you unlock.",
+    "persistentUnlockOff": "Persistent unlock turned off. You'll enter your master password next time.",
+    "persistentUnlockOptions": {
+      "off": "Off",
+      "7days": "7 days",
+      "30days": "30 days"
+    },
+    "lockAndForget": "Lock & forget this device",
+    "profileUpdated": "Profile updated successfully",
+    "profileUpdateError": "Failed to update profile",
+    "sections": {
+      "account": {
+        "title": "Account",
+        "description": "Your profile, language and appearance."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Two-factor, passkeys, sessions, trusted devices and emergency access.",
+        "explainer": "2FA, passkeys, active sessions and the devices you trust.",
+        "cta": "Open security settings",
+        "emergencyTitle": "Emergency access",
+        "emergencyDescription": "Nominate trusted contacts who can request access to your vault if you're incapacitated.",
+        "emergencyExplainer": "Waiting-period recovery, without giving up zero-knowledge.",
+        "emergencyCta": "Manage emergency access"
+      },
+      "devices": {
+        "title": "Devices & Extensions",
+        "description": "Devices & Extensions",
+        "trustedTitle": "Trusted devices",
+        "trustedDescription": "Review and revoke devices signed into your account.",
+        "trustedExplainer": "Trusted devices are managed inside Security.",
+        "trustedCta": "Manage trusted devices",
+        "enrollment": {
+          "retrySuccess": "Device setup complete.",
+          "retryFailed": "Device setup still failing. Please try again shortly.",
+          "title": "Finish device setup",
+          "description": "This device isn't fully registered yet. Retry now so it can decrypt shared vault items.",
+          "retrying": "Retrying…",
+          "retry": "Finish device setup"
+        }
+      },
+      "data": {
+        "title": "Data",
+        "description": "Import from other password managers and export your data.",
+        "explainer": "One place for imports, plain and encrypted vault exports, and your GDPR account-data bundle.",
+        "subExplainer": "Every export path lives here — nothing else in the app writes your data out.",
+        "cta": "Open Data"
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "How the vault looks and behaves for you.",
+        "layoutTitle": "Vault layout",
+        "layoutDescription": "Choose the vault view and density that suit you.",
+        "remindersTitle": "Reminders",
+        "remindersDescription": "Local reminders for rotations, breach reviews and backup checks.",
+        "remindersExplainer": "Runs on your device — never sent to the server.",
+        "remindersCta": "Open reminders",
+        "guideMeTitle": "Guide me",
+        "guideMeDescription": "Short in-app tours that walk you through the vault, sharing, and settings."
+      }
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name must be less than 100 characters"
+    }
+  },
+  "watchtower": {
+    "title": "Security Audit",
+    "unlock": "Unlock Vault",
+    "retry": "Retry",
+    "rescan": "Rescan",
+    "lastScan": "Last scan:",
+    "weak": "Weak",
+    "weakDesc": "Low entropy or patterns",
+    "reused": "Reused",
+    "reusedDesc": "Same password on multiple sites",
+    "old": "Old",
+    "oldDesc": "Not changed in 90+ days",
+    "breached": "Breached",
+    "breachedDesc": "Found in data breaches",
+    "checking": "Checking...",
+    "checkBreaches": "Check Breaches",
+    "weakPasswords": "Weak Passwords",
+    "reusedPasswords": "Reused Passwords",
+    "oldPasswords": "Old Passwords",
+    "noOld": "No old passwords found",
+    "breachedPasswords": "Breached Passwords",
+    "critical": "Critical",
+    "warning": "Warning",
+    "info": "Info",
+    "fix": "Fix",
+    "sharedBy": "Shared by {{count}} items",
+    "reusedDetail": "Password used elsewhere",
+    "noVault": "No vault found. Create a vault first.",
+    "analysisError": "Failed to analyze vault",
+    "breachError": "Breach check failed"
+  },
+  "sensitiveAction": {
+    "export": "Confirm your master password to export your vault",
+    "changeMasterPassword": "Confirm your master password to change it",
+    "emergencyAccess": "Confirm your master password to update emergency access",
+    "error": {
+      "loadVault": "Couldn't verify your vault right now. Please try again."
+    },
+    "revokedNotice": "Trusted-device access was revoked. Please sign in again.",
+    "expiredNotice": "Trusted-device access has expired. Please sign in again."
+  },
+  "vault": {
+    "title": "Vault",
+    "subtitle": "Everything you save is encrypted on this device before it goes anywhere.",
+    "addItem": "Add item",
+    "addItemDescription": "Create a new item. All data is encrypted on your device.",
+    "duplicateCheckFailedTitle": "Couldn’t check the whole vault",
+    "duplicateCheckFailedDescription": "The item list could not be checked completely. You can review the item or add it without a duplicate check.",
+    "duplicateFoundTitle": "Duplicate item found",
+    "duplicateFoundDescription": "An identical item already exists in this vault. Review this item or add it anyway.",
+    "reviewItem": "Review item",
+    "addAnyway": "Add anyway",
+    "itemType": "Type",
+    "titlePlaceholder": "e.g. GitHub, Bank, etc.",
+    "usernamePlaceholder": "user@example.com",
+    "generate": "Generate",
+    "content": "Content",
+    "emptyDescription": "Items are encrypted with keys that never leave your devices.",
+    "emptyImport": "Import from another password manager",
+    "encrypting": "Encrypting...",
+    "noVault": "No vault found",
+    "items": "Items",
+    "authenticators": "Authenticators",
+    "sharing": "Sharing",
+    "trash": "Trash",
+    "search": "Search vault...",
+    "filterAll": "All types",
+    "filterLogin": "Logins",
+    "filterCard": "Cards",
+    "filterNote": "Notes",
+    "filterIdentity": "Identities",
+    "filterPasskey": "Passkeys",
+    "filterTotp": "TOTP",
+    "filterFile": "Files",
+    "sortModified": "Last modified",
+    "sortCreated": "Date created",
+    "sortName": "Name",
+    "empty": "Your vault is empty — and only you can fill it.",
+    "addFirstItem": "Add your first item",
+    "noResults": "No items match your search or filter.",
+    "loading": "Loading...",
+    "loadMore": "Load more",
+    "locked": "Vault Locked",
+    "lockedDescription": "Enter your master password to access your vault.",
+    "unlockTitle": "Unlock Vault",
+    "unlockDescription": "Enter your master password to decrypt your vault.",
+    "recoveryDescription": "Your vault items could not be decrypted. Enter your previous master password and your current password to recover your data.",
+    "oldMasterPassword": "Previous Master Password",
+    "oldPasswordPlaceholder": "Enter your previous master password",
+    "currentMasterPassword": "Current Master Password",
+    "masterPassword": "Master Password",
+    "passwordPlaceholder": "Enter your master password",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "secretKey": "Secret Key",
+    "secretKeyHint": "Enter the secret key from your recovery kit.",
+    "recovering": "Recovering vault…",
+    "deriving": "Deriving key…",
+    "recover": "Recover Vault",
+    "useRecoveryKey": "Use Secret Key",
+    "username": "Username",
+    "password": "Password",
+    "sensitiveFieldUnchanged": "Leave blank to keep existing value",
+    "url": "URL",
+    "notes": "Notes",
+    "created": "Created",
+    "modified": "Modified",
+    "copy": "Copy {{field}}",
+    "openUrl": "Open URL",
+    "favorite": "Add to favorites",
+    "unfavorite": "Remove from favorites",
+    "back": "Back to vault",
+    "edit": "Edit item",
+    "delete": "Delete item",
+    "save": "Save",
+    "saving": "Saving...",
+    "unlock": "Unlock",
+    "org": {
+      "setupTitle": "Share this organization's vault",
+      "setupDesc": "Create a shared vault so members see the same items. Your existing items in this organization will be imported, and members who have signed in get access automatically.",
+      "setupButton": "Set up shared vault",
+      "noneMember": "This organization doesn't have a shared vault yet.",
+      "pending": "You'll see the shared items once an organization admin grants you access. Make sure you've signed in on this device first.",
+      "resolveError": "Couldn't check your shared vault access.",
+      "retry": "Retry"
+    }
+  },
+  "share": {
+    "mode": {
+      "chooseTitle": "Share \"{{title}}\"",
+      "chooseDescription": "Pick how you'd like to share this item.",
+      "person": {
+        "title": "To a person",
+        "description": "Share persistently with someone who has an account. They'll see the item in their vault."
+      },
+      "link": {
+        "title": "As a link",
+        "description": "Generate a one-time link with an expiry. The decryption key stays in the URL fragment."
+      }
+    }
+  },
+  "sharing": {
+    "received": "Received",
+    "sent": "Sent",
+    "noReceived": "No pending shares",
+    "noReceivedHint": "Items shared with you will appear here.",
+    "noSent": "No shared items",
+    "noSentHint": "Items you share will appear here.",
+    "dialogTitle": "Share Item",
+    "dialogDescription": "Share \"{{title}}\" with another user.",
+    "recipientEmail": "Recipient email",
+    "emailPlaceholder": "user@example.com",
+    "permission": "Permission",
+    "permissionView": "View only",
+    "permissionEdit": "Can edit",
+    "permissionShare": "Can share",
+    "viewOnly": "View",
+    "canEdit": "Edit",
+    "viewHint": "Recipient can view but not modify this item.",
+    "editHint": "Recipient can view and modify this item.",
+    "shareHint": "Recipient can view, edit, and re-share this item.",
+    "zeroKnowledgeHint": "Only an encrypted item key is wrapped for this recipient. The server never receives plaintext vault data.",
+    "canShare": "Share",
+    "pendingViewHint": "You can view this item after accepting.",
+    "pendingEditHint": "You can view and edit this item after accepting.",
+    "pendingShareHint": "You can view, edit, and re-share this item after accepting.",
+    "accessSummaryEntry": "{{name}} ({{permission}})",
+    "whoCanAccess": "Who can access this: {{summary}}",
+    "share": "Share",
+    "sharing": "Sharing...",
+    "errorNoEmail": "Please enter a recipient email.",
+    "errorInvalidEmail": "Please enter a valid email address.",
+    "errorFailed": "Failed to share item. Please try again.",
+    "errorRecipientNoDevice": "Recipient must sign in on a trusted device before you can share with them.",
+    "errorRecipientUntrustedDevice": "Ask this person to trust one of their devices (Settings → Security → Trusted Devices) before sharing.",
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "declined": "Declined",
+      "revoked": "Revoked"
+    },
+    "errorItemNotFound": "Item not found."
+  },
+  "totp": {
+    "scanQR": "Scan QR",
+    "scanQRCode": "Scan QR Code",
+    "noAuthenticators": "No Authenticators",
+    "noAuthenticatorsDescription": "Add a TOTP authenticator by scanning a QR code or entering a secret key."
+  },
+  "ephemeral": {
+    "errorNoKey": "Invalid link: missing decryption key.",
+    "errorAccess": "This link is no longer available.",
+    "errorDecrypt": "Decryption failed. Wrong passphrase or corrupted link.",
+    "errorNoPassphrase": "Please enter the passphrase.",
+    "pageTitle": "Shared Item",
+    "loading": "Loading shared item...",
+    "errorTitle": "Link Unavailable",
+    "errorGeneric": "This link may have expired, been revoked, or already been used.",
+    "passphraseRequired": "Passphrase Required",
+    "passphrase": "Passphrase",
+    "enterPassphrase": "Enter passphrase...",
+    "decrypting": "Decrypting...",
+    "decrypt": "Decrypt",
+    "decryptedTitle": "Shared Item",
+    "decryptedHint": "This data was decrypted locally in your browser."
+  },
+  "family": {
+    "title": "Family",
+    "subtitle": "Manage your family and shared vaults.",
+    "create": {
+      "title": "Create a Family",
+      "description": "Start a family to share vaults and enable delegated recovery for up to 6 members.",
+      "namePlaceholder": "Family name",
+      "action": "Create Family",
+      "nameRequired": "Please enter a family name.",
+      "error": "Failed to create family."
+    },
+    "dashboard": {
+      "subtitle": "{{count}} members"
+    },
+    "tabs": {
+      "members": "Members",
+      "vaults": "Shared Vaults",
+      "recovery": "Recovery",
+      "settings": "Settings"
+    },
+    "roles": {
+      "owner": "Organizer",
+      "admin": "Admin",
+      "member": "Member"
+    },
+    "members": {
+      "title": "Members",
+      "invite": "Invite Member",
+      "you": "you",
+      "accessSummary": "{{count}} shared vaults",
+      "noSharedVaultAccess": "No shared vault access",
+      "accessManage": "{{count}} manage",
+      "accessShare": "{{count}} share",
+      "accessEdit": "{{count}} edit",
+      "accessView": "{{count}} view",
+      "lastActionJoined": "Joined {{date}}",
+      "promoteAdmin": "Promote to Admin",
+      "demoteToMember": "Demote to Member",
+      "remove": "Remove Member",
+      "removeTitle": "Remove Member",
+      "removeDescription": "Are you sure you want to remove {{name}} from the family? They will lose access to all shared vaults.",
+      "confirmRemove": "Remove"
+    },
+    "invite": {
+      "adminHint": "Admins can manage shared vaults and members.",
+      "cancelError": "Failed to cancel invitation.",
+      "cancelled": "Invitation cancelled.",
+      "copyError": "Failed to copy invitation link.",
+      "description": "Send an invitation to join your family.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "member@example.com",
+      "error": "Failed to send invitation.",
+      "invalidEmail": "Please enter a valid email address.",
+      "linkCopied": "Invitation link copied.",
+      "memberHint": "Members can access shared vaults and their own private vault.",
+      "resendError": "Failed to resend invitation.",
+      "resent": "Invitation resent and link copied.",
+      "resentWithoutCopy": "Invitation resent. Copy the link manually if needed.",
+      "roleLabel": "Role",
+      "send": "Send Invitation",
+      "sent": "Invitation sent.",
+      "title": "Invite Family Member"
+    },
+    "invitations": {
+      "cancel": "Cancel",
+      "copyLink": "Copy link",
+      "expires": "Expires",
+      "pendingCount": "{{count}} pending",
+      "resend": "Resend",
+      "status": {
+        "accepted": "Accepted",
+        "cancelled": "Cancelled",
+        "declined": "Declined",
+        "expired": "Expired",
+        "pending": "Pending"
+      },
+      "title": "Invitations"
+    },
+    "sharedVaults": {
+      "created": "Shared vault created.",
+      "missingUser": "User context is still loading.",
+      "loadError": "Failed to load shared vault.",
+      "loadingDetail": "Loading shared vault…",
+      "permission": "Your permission",
+      "members": "Members",
+      "title": "Shared Vaults",
+      "create": "Create Vault",
+      "empty": "No shared vaults yet.",
+      "emptyHint": "Create a vault, grant only the members who need it, and rotate access when someone leaves.",
+      "createdOn": "Created {{date}}",
+      "memberCount": "{{count}} members",
+      "createFirst": "Create your first shared vault",
+      "createTitle": "Create Shared Vault",
+      "createDescription": "Create a vault that family members can access together.",
+      "nameRequired": "Please enter a vault name.",
+      "nameTooLong": "Vault name must be 64 characters or fewer.",
+      "createError": "Failed to create shared vault.",
+      "nameLabel": "Vault name",
+      "namePlaceholder": "e.g. Streaming Services",
+      "createAction": "Create Vault",
+      "grantableMembers": "Members without access",
+      "noGrantableMembers": "All family members already have access.",
+      "grantAccess": "Grant access",
+      "granted": "Shared vault access granted.",
+      "grantError": "Failed to grant shared vault access.",
+      "removeAccess": "Remove access",
+      "removeAccessTitle": "Remove shared vault access?",
+      "removeAccessDescription": "{{name}} will lose access to this shared vault. Remaining members receive a rotated wrapped key.",
+      "confirmRemoveAccess": "Remove access",
+      "removed": "Shared vault access removed and key rotated.",
+      "removeError": "Failed to remove shared vault access.",
+      "permissionUpdated": "Shared vault permission updated.",
+      "permissionUpdateError": "Failed to update shared vault permission.",
+      "permissions": {
+        "view": "View",
+        "edit": "Edit",
+        "share": "Share",
+        "manage": "Manage"
+      }
+    },
+    "settings": {
+      "title": "Family Settings",
+      "description": "Manage your family configuration.",
+      "nameRequired": "Family name is required.",
+      "updateError": "Failed to update settings.",
+      "saved": "Settings saved.",
+      "nameLabel": "Family name",
+      "leaveTitle": "Leave Family",
+      "leaveDescription": "Leave this family. You will lose access to all shared vaults.",
+      "leaveAction": "Leave Family",
+      "leaveConfirmTitle": "Leave Family?",
+      "leaveConfirmDescription": "You will lose access to all shared vaults and their contents. This action cannot be undone.",
+      "confirmLeave": "Leave Family"
+    },
+    "recovery": {
+      "title": "Account Recovery",
+      "memberDescription": "Request your family organizer to help recover your account if you lose access.",
+      "organizerDescription": "Review and manage recovery requests from family members.",
+      "yourRequest": "Your recovery request",
+      "requested": "Requested",
+      "expires": "Expires",
+      "approvedHint": "Your recovery has been approved. Follow the prompts to set up new keys.",
+      "expiredHint": "This request expired. Submit a new recovery request if you still need help.",
+      "rejectedHint": "This request was denied. You can submit a new request if your situation changed.",
+      "completedHint": "Recovery is complete. Your shared-vault access uses the new wrapped keys.",
+      "noActiveRequest": "No active recovery request.",
+      "requestRecovery": "Request Recovery",
+      "noRequests": "No recovery requests.",
+      "activeRequests": "Active Requests",
+      "pastRequests": "Past Requests",
+      "approve": "Approve",
+      "reject": "Reject",
+      "approveTitle": "Approve Recovery",
+      "rejectTitle": "Reject Recovery",
+      "approveDescription": "This will allow the member to generate new keys and regain access to shared vaults. You will need to re-wrap vault keys for them.",
+      "rejectDescription": "This will deny the recovery request. The member can submit a new request later.",
+      "confirmApprove": "Approve",
+      "confirmReject": "Reject",
+      "timeline": {
+        "trustedContact": "Trusted contact requested",
+        "waitingPeriod": "Waiting period and organizer review",
+        "approval": "Approval granted",
+        "denied": "Approval denied or expired",
+        "finalAccess": "Final access after new keys are confirmed"
+      },
+      "status": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "completing": "Completing",
+        "completed": "Completed",
+        "rejected": "Rejected",
+        "expired": "Expired"
+      }
+    },
+    "unknownMember": "Unknown member",
+    "loadError": "Failed to load family."
+  },
+  "emergency": {
+    "title": "Emergency Access",
+    "subtitle": "Manage trusted contacts and emergency access requests.",
+    "tabs": {
+      "contacts": "Contacts",
+      "incoming": "Incoming",
+      "outgoing": "Outgoing"
+    }
+  },
+  "importExport": {
+    "title": "Import / Export",
+    "subtitle": "Import items from other password managers or export your vault.",
+    "noVault": "No vault found.",
+    "tabs": {
+      "import": "Import",
+      "export": "Export"
+    },
+    "formats": {
+      "genericCsv": "Generic CSV"
+    },
+    "export": {
+      "encrypted": {
+        "title": "Encrypted Export",
+        "description": "Export your vault as an encrypted .pssmngr file. This file can only be opened with your master password.",
+        "recommended": "Recommended",
+        "exporting": "Exporting...",
+        "done": "Downloaded",
+        "button": "Export .pssmngr"
+      },
+      "plaintext": {
+        "title": "Plaintext Export",
+        "description": "Export as unencrypted CSV or JSON. Use these formats only for importing into another password manager.",
+        "warning": "These files contain your passwords in plaintext. Anyone with access to the file can read them. Delete after use.",
+        "csv": "Export CSV",
+        "json": "Export JSON"
+      },
+      "warning": {
+        "title": "Export as {{format}}?",
+        "description": "This will export all your vault items as an unencrypted {{format}} file. Your passwords will be visible in plaintext.",
+        "caution": "Anyone with access to this file can read your passwords. Delete the file after use.",
+        "cancel": "Cancel",
+        "confirm": "Export {{format}}",
+        "exporting": "Exporting..."
+      },
+      "error": {
+        "exportFailed": "Export failed"
+      }
+    },
+    "import": {
+      "dropzone": {
+        "title": "Drop your file here or click to browse",
+        "subtitle": "Supports CSV and JSON files",
+        "browse": "Choose File"
+      },
+      "supported": "Supported formats",
+      "reading": "Reading file...",
+      "detecting": "Detecting format...",
+      "preview": {
+        "title": "Preview",
+        "detected": "Detected: {{source}}",
+        "count": "{{count}} items found",
+        "cancel": "Cancel",
+        "import": "Import {{count}} items",
+        "parseErrors": "{{count}} rows could not be parsed",
+        "duplicates": "{{count}} potential duplicates detected",
+        "col": {
+          "title": "Title",
+          "type": "Type",
+          "username": "Username",
+          "url": "URL"
+        }
+      },
+      "progress": "Importing {{current}} of {{total}}...",
+      "summary": {
+        "title": "Import Complete",
+        "duration": "Completed in {{seconds}}s",
+        "imported": "Imported",
+        "skipped": "Skipped",
+        "errors": "Errors",
+        "errorDetails": "Failed items",
+        "moreErrors": "...and {{count}} more",
+        "importMore": "Import More"
+      },
+      "error": {
+        "title": "Import Failed",
+        "retry": "Try Again"
+      }
+    }
+  },
+  "hidePassword": "Hide password",
+  "showPassword": "Show password",
+  "error": "An error occurred",
+  "pages": {
+    "vault": {
+      "title": "Vault",
+      "description": "Everything you save is encrypted on this device before it goes anywhere."
+    },
+    "security": {
+      "title": "Security",
+      "description": "Weak, reused, and breached passwords — found and fixed from one place.",
+      "checkWeak": "guessable passwords",
+      "checkReused": "one breach opens many doors",
+      "checkBreached": "appeared in known data leaks — checked privately"
+    },
+    "people": {
+      "title": "People",
+      "description": "Share items with your family or workspace without ever exposing your vault."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Your account, devices, and data — in one place."
+    }
+  },
+  "explainer": {
+    "title": "How pssmngr protects you",
+    "encryptedOnDevice": {
+      "title": "Encrypted on your device",
+      "body": "Items are sealed with XChaCha20-Poly1305 before they leave."
+    },
+    "twoSecretsNeverSent": {
+      "title": "Two secrets, never sent",
+      "body": "Your master password and Secret Key stay with you; we store neither, so we can't read your vault — and can't reset it either."
+    },
+    "youControlThisDevice": {
+      "title": "You control this device",
+      "body": "Stay unlocked for up to 30 days here; sensitive actions always re-ask for your master password.",
+      "link": "Change unlock setting"
+    }
+  },
+  "sharingCenter": {
+    "personDescription": "Share an item with someone — they get access, you keep control.",
+    "linkDescription": "Create an expiring link — the key travels in the link, never through our servers."
+  }
+}

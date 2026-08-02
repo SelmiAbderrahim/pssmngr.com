@@ -1,0 +1,938 @@
+{
+  "loading": "Laden...",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "saveChanges": "Änderungen speichern",
+  "saving": "Speichern...",
+  "delete": "Loschen",
+  "edit": "Bearbeiten",
+  "create": "Erstellen",
+  "update": "Aktualisieren",
+  "submit": "Absenden",
+  "search": "Suchen",
+  "download": "Herunterladen",
+  "copy": "Kopieren",
+  "close": "Schliessen",
+  "back": "Zuruck",
+  "next": "Weiter",
+  "previous": "Vorherige",
+  "confirm": "Bestatigen",
+  "done": "Fertig",
+  "retry": "Wiederholen",
+  "refresh": "Aktualisieren",
+  "app": {
+    "name": "Password Manager",
+    "description": "Ein Zero-Knowledge-Passwortmanager zum sicheren Speichern und Teilen verschlüsselter Tresoreinträge"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "dashboard": "Dashboard",
+    "vault": "Tresor",
+    "workspace": "Arbeitsbereich",
+    "settings": "Einstellungen",
+    "profile": "Profil",
+    "logout": "Abmelden",
+    "security": "Sicherheit",
+    "people": "Personen",
+    "generator": "Passwort-Generator",
+    "help": "Hilfe",
+    "toggleMenu": "Navigationsmenü umschalten",
+    "docs": "Dokumentation"
+  },
+  "generator": {
+    "openButton": "Passwort-Generator"
+  },
+  "account": {
+    "menu": "Kontomenü"
+  },
+  "actions": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "update": "Aktualisieren",
+    "submit": "Absenden",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "upload": "Hochladen",
+    "download": "Herunterladen",
+    "share": "Teilen",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "confirm": "Bestätigen",
+    "retry": "Wiederholen",
+    "refresh": "Aktualisieren",
+    "clear": "Löschen",
+    "export": "Exportieren",
+    "import": "Importieren",
+    "show": "Zeigen",
+    "hide": "Verbergen",
+    "moreOptions": "Weitere Optionen",
+    "saveChanges": "Änderungen speichern",
+    "createAccount": "Konto erstellen",
+    "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+    "dontHaveAccount": "Haben Sie kein Konto?",
+    "enterYourName": "Geben Sie Ihren Namen ein",
+    "enterYourEmail": "Geben Sie Ihre E-Mail ein",
+    "createPassword": "Passwort erstellen",
+    "confirmPassword": "Passwort bestätigen",
+    "hidePassword": "Passwort verbergen",
+    "showPassword": "Passwort anzeigen",
+    "logo": "Logo",
+    "user": {
+      "fallbackName": "Benutzer"
+    },
+    "sidebar": {
+      "collapse": "Einklappen",
+      "expand": "Seitenleiste erweitern"
+    }
+  },
+  "status": {
+    "loading": "Laden...",
+    "saving": "Speichern...",
+    "processing": "Verarbeiten...",
+    "uploading": "Hochladen...",
+    "downloading": "Herunterladen...",
+    "success": "Erfolg",
+    "error": "Fehler",
+    "warning": "Warnung",
+    "info": "Information",
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen",
+    "pending": "Ausstehend",
+    "cancelled": "Abgebrochen",
+    "unknownError": "Unbekannter Fehler",
+    "active": "Aktiv",
+    "inactive": "Inaktiv"
+  },
+  "time": {
+    "now": "Gerade eben",
+    "minuteAgo": "vor 1 Minute",
+    "minutesAgo": "vor {{count}} Minuten",
+    "hourAgo": "vor 1 Stunde",
+    "hoursAgo": "vor {{count}} Stunden",
+    "dayAgo": "vor 1 Tag",
+    "daysAgo": "vor {{count}} Tagen",
+    "weekAgo": "vor 1 Woche",
+    "weeksAgo": "vor {{count}} Wochen",
+    "monthAgo": "vor 1 Monat",
+    "monthsAgo": "vor {{count}} Monaten",
+    "yearAgo": "vor 1 Jahr",
+    "yearsAgo": "vor {{count}} Jahren",
+    "today": "heute",
+    "never": "Nie"
+  },
+  "language": {
+    "select": "Sprache auswählen",
+    "arabic": "Arabisch",
+    "english": "Englisch",
+    "french": "Französisch",
+    "german": "Deutsch",
+    "spanish": "Spanisch"
+  },
+  "theme": {
+    "title": "Thema",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "invalidPassword": "Passwort muss mindestens 8 Zeichen lang sein",
+    "passwordMismatch": "Passwörter stimmen nicht überein",
+    "invalidUrl": "Bitte geben Sie eine gültige URL ein",
+    "fileTooBig": "Dateigröße überschreitet das maximale Limit",
+    "invalidFileType": "Dieser Dateityp wird nicht unterstützt"
+  },
+  "a11y": {
+    "search": "Suchen",
+    "close": "Schließen",
+    "menu": "Menü",
+    "settings": "Einstellungen",
+    "play": "Abspielen",
+    "pause": "Pausieren",
+    "mute": "Stumm schalten",
+    "fullscreen": "Vollbild",
+    "skipToContent": "Zum Hauptinhalt springen",
+    "selectAll": "Alle auswählen",
+    "emailAddress": "E-Mail-Adresse",
+    "selectItem": "Element {{id}} auswählen",
+    "selectCard": "Karte {{id}} auswählen",
+    "twitter": "Twitter"
+  },
+  "views": {
+    "noItemsFound": "Keine Elemente gefunden",
+    "grid": "Rasteransicht",
+    "table": "Tabellenansicht",
+    "list": "Listenansicht",
+    "compactCards": "Kompakte Karten"
+  },
+  "layouts": {
+    "appName": "Passwort-Manager",
+    "notifications": "Benachrichtigungen",
+    "profile": "Profil"
+  },
+  "countdown": {
+    "expired": "Abgelaufen"
+  },
+  "privacy": {
+    "consent": {
+      "title": "Cookie-Einstellungen",
+      "description": "Diese Instanz verwendet optionale Analyse-Cookies nur mit Ihrer Zustimmung.",
+      "functional": "Erforderlich",
+      "functionalDesc": "Erforderlich für die ordnungsgemäße Funktion der Website.",
+      "analytics": "Analytik",
+      "analyticsDesc": "Helfen uns zu verstehen, wie Sie unsere Website nutzen, um sie zu verbessern.",
+      "acceptAll": "Alle akzeptieren",
+      "rejectAll": "Alle ablehnen",
+      "customize": "Einstellungen anpassen",
+      "savePreferences": "Einstellungen speichern"
+    },
+    "settings": {
+      "title": "Datenschutz",
+      "description": "Optionale Analysen für diesen Browser verwalten.",
+      "analyticsTracking": "Optionale Analysen",
+      "analyticsTrackingDesc": "Datenschutzbewusste Seiten- und Leistungsmetriken zulassen. Tresordaten und Kontokennungen werden niemals gesendet."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Password Manager. Alle Rechte vorbehalten.",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "common": {
+    "dismiss": "Schließen",
+    "close": "Schließen",
+    "notNow": "Nicht jetzt",
+    "optional": "(Optional)",
+    "default": "Standard"
+  },
+  "invitation": {
+    "accepting": "Einladung wird angenommen...",
+    "accepted": "Einladung angenommen.",
+    "backToDashboard": "Zurück zum Dashboard",
+    "createAccount": "Konto erstellen",
+    "errorDescription": "Die Einladung konnte nicht angenommen werden.",
+    "errorTitle": "Einladung konnte nicht angenommen werden",
+    "genericError": "Diese Einladung ist nicht verfügbar oder nicht mehr gültig.",
+    "invalidToken": "Dieser Einladungslink ist ungültig.",
+    "redirecting": "Sie werden jetzt weitergeleitet.",
+    "signIn": "Anmelden",
+    "signInDescription": "Melden Sie sich mit der eingeladenen E-Mail-Adresse an oder erstellen Sie zuerst dieses Konto.",
+    "signInTitle": "Anmelden, um diese Einladung anzunehmen"
+  },
+  "docsHelpLink": {
+    "tooltip": "Dokumentation anzeigen",
+    "help": "Hilfe",
+    "documentation": "Dokumentation"
+  },
+  "pagination": {
+    "page": "Seite",
+    "showing": "Seite {{page}} von {{totalPages}}",
+    "total": "{{total}} Einträge",
+    "first": "Erste Seite",
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "last": "Letzte Seite",
+    "goToPage": "Gehe zu Seite {{page}}",
+    "itemsPerPage": "Einträge pro Seite",
+    "results": {
+      "showing": "{{count}} von {{total}} Einträgen angezeigt",
+      "empty": "Keine Ergebnisse gefunden",
+      "filtered": "{{count}} Ergebnisse entsprechen Ihren Filtern"
+    }
+  },
+  "searchInput": {
+    "placeholder": "Suchen...",
+    "noResults": "Keine Ergebnisse gefunden",
+    "searching": "Suche..."
+  },
+  "sort": {
+    "label": "Sortieren nach",
+    "toggle": "Sortierrichtung umschalten",
+    "ascending": "Aufsteigend",
+    "descending": "Absteigend",
+    "createdAt": "Erstellungsdatum",
+    "updatedAt": "Zuletzt aktualisiert",
+    "name": "Name",
+    "status": "Status"
+  },
+  "filters": {
+    "clear": "Filter löschen",
+    "reset": "Zurücksetzen",
+    "apply": "Filter anwenden",
+    "active": "{{count}} Filter aktiv"
+  },
+  "empty": {
+    "list": "Noch keine Einträge",
+    "search": "Keine Einträge stimmen mit Ihrer Suche überein",
+    "filtered": "Keine Einträge stimmen mit Ihren Filtern überein"
+  },
+  "loadingItems": {
+    "items": "Einträge laden...",
+    "more": "Mehr laden..."
+  },
+  "dashboard": {
+    "welcome": "Willkommen zurück, {{displayName}}",
+    "subtitle": "Übersicht über Ihren Tresor und Schnellaktionen",
+    "totalItems": "Gesamtelemente",
+    "vaultStatus": "Tresor-Status",
+    "noVault": "Noch kein Tresor erstellt",
+    "unlocked": "Entsperrt",
+    "locked": "Gesperrt",
+    "security": "Sicherheit",
+    "checkSecurity": "Sicherheitsprüfung starten",
+    "breakdown": "Elementaufschlüsselung",
+    "quickActions": "Schnellaktionen",
+    "addCredential": "Element hinzufügen",
+    "securityCheckup": "Sicherheitsprüfung",
+    "generatePassword": "Passwort generieren",
+    "importData": "Daten importieren",
+    "recentItems": "Letzte Elemente",
+    "viewAll": "Alle anzeigen",
+    "addFirst": "Erstes Element hinzufügen",
+    "emptyVault": "Ihr Tresor ist leer. Fügen Sie Ihr erstes Element hinzu, um zu beginnen.",
+    "itemTypes": {
+      "login": "Anmeldungen",
+      "note": "Sichere Notizen",
+      "card": "Karten",
+      "identity": "Identitäten",
+      "other": "Sonstige"
+    },
+    "score": {
+      "critical": "Kritisch",
+      "poor": "Schwach",
+      "fair": "Mäßig",
+      "good": "Gut"
+    },
+    "favorited": "{{count}} favorisiert",
+    "inTrash": "{{count}} im Papierkorb",
+    "issuesFound_one": "{{count}} Problem gefunden",
+    "issuesFound_other": "{{count}} Probleme gefunden"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Verwalten Sie Ihr Konto und Ihre Einstellungen",
+    "general": "Allgemeine Einstellungen",
+    "profile": "Profil",
+    "profileDescription": "Verwalten Sie Ihren Anzeigenamen und persönliche Informationen",
+    "displayName": "Anzeigename",
+    "displayNamePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailReadonly": "Die E-Mail-Adresse kann hier nicht geändert werden",
+    "saving": "Wird gespeichert...",
+    "saveProfile": "Änderungen speichern",
+    "preferences": "Einstellungen",
+    "preferencesDescription": "Erscheinungsbild und Sicherheit anpassen",
+    "theme": "Design",
+    "themeDescription": "Wählen Sie das Erscheinungsbild der Anwendung",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "themeSystem": "System",
+    "autoLock": "Automatische Sperre",
+    "autoLockDescription": "Tresor nach Inaktivität automatisch sperren",
+    "selectDuration": "Dauer wählen",
+    "account": "Konto",
+    "accountDetailsDescription": "Ihre Kontodetails",
+    "memberSince": "Mitglied seit",
+    "autoLockUpdated": "Automatische Sperre aktualisiert",
+    "autoLockOptions": {
+      "1min": "1 Minute",
+      "5min": "5 Minuten",
+      "15min": "15 Minuten",
+      "30min": "30 Minuten",
+      "1hour": "1 Stunde",
+      "never": "Nie"
+    },
+    "profileUpdated": "Profil erfolgreich aktualisiert",
+    "profileUpdateError": "Profil konnte nicht aktualisiert werden",
+    "sections": {
+      "account": {
+        "title": "Konto",
+        "description": "Dein Profil, Sprache und Erscheinungsbild."
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Zwei-Faktor, Passkeys, Sitzungen, vertrauenswürdige Geräte und Notfallzugriff.",
+        "explainer": "2FA, Passkeys, aktive Sitzungen und vertrauenswürdige Geräte.",
+        "cta": "Sicherheitseinstellungen öffnen",
+        "emergencyTitle": "Notfallzugriff",
+        "emergencyDescription": "Bestimme vertrauenswürdige Kontakte, die im Notfall Zugriff auf deinen Tresor anfordern können.",
+        "emergencyExplainer": "Wiederherstellung mit Wartezeit — ohne das Zero-Knowledge-Prinzip aufzugeben.",
+        "emergencyCta": "Notfallzugriff verwalten"
+      },
+      "devices": {
+        "title": "Geräte & Erweiterungen",
+        "description": "Geräte & Erweiterungen",
+        "trustedTitle": "Vertrauenswürdige Geräte",
+        "trustedDescription": "Überprüfe und widerrufe an deinem Konto angemeldete Geräte.",
+        "trustedExplainer": "Vertrauenswürdige Geräte werden im Bereich Sicherheit verwaltet.",
+        "trustedCta": "Vertrauenswürdige Geräte verwalten",
+        "enrollment": {
+          "retrySuccess": "Geräteeinrichtung abgeschlossen.",
+          "retryFailed": "Geräteeinrichtung schlägt weiterhin fehl. Bitte gleich noch einmal versuchen.",
+          "title": "Geräteeinrichtung abschließen",
+          "description": "Dieses Gerät ist noch nicht vollständig registriert. Bitte jetzt erneut versuchen, damit es geteilte Tresor-Elemente entschlüsseln kann.",
+          "retrying": "Wird wiederholt…",
+          "retry": "Geräteeinrichtung abschließen"
+        }
+      },
+      "data": {
+        "title": "Daten",
+        "description": "Aus anderen Passwortmanagern importieren und Daten exportieren.",
+        "explainer": "Ein Ort für Importe, Klartext- und verschlüsselte Tresor-Exporte sowie dein DSGVO-Datenpaket.",
+        "subExplainer": "Alle Exportwege leben hier — nichts sonst in der App schreibt deine Daten nach außen.",
+        "cta": "Daten öffnen"
+      },
+      "preferences": {
+        "title": "Einstellungen",
+        "description": "Wie sich der Tresor für dich darstellt und verhält.",
+        "layoutTitle": "Tresor-Layout",
+        "layoutDescription": "Wähle Tresoransicht und Dichte, die zu dir passen.",
+        "remindersTitle": "Erinnerungen",
+        "remindersDescription": "Lokale Erinnerungen für Rotationen, Leak-Prüfungen und Backup-Kontrollen.",
+        "remindersExplainer": "Läuft auf deinem Gerät — wird nie an den Server gesendet.",
+        "remindersCta": "Erinnerungen öffnen",
+        "guideMeTitle": "Führe mich",
+        "guideMeDescription": "Kurze In-App-Touren durch Tresor, Teilen und Einstellungen."
+      }
+    },
+    "validation": {
+      "nameMin": "Der Name muss mindestens 2 Zeichen lang sein",
+      "nameMax": "Der Name darf maximal 100 Zeichen lang sein"
+    },
+    "inactivityLock": "Entsperren nach Inaktivität verlangen",
+    "inactivityLockDescription": "Bei aktivem dauerhaftem Entsperren erfolgt das erneute Entsperren nach Inaktivität still — ohne Abfrage.",
+    "persistentUnlock": "Auf diesem Gerät entsperrt bleiben",
+    "persistentUnlockDescription": "Auf diesem Gerät entsperrt bleiben — Sie bestätigen Ihr Master-Passwort für sensible Aktionen.",
+    "persistentUnlockUpdated": "Dauerhaftes Entsperren aktualisiert. Wird beim nächsten Entsperren wirksam.",
+    "persistentUnlockOff": "Dauerhaftes Entsperren deaktiviert. Beim nächsten Mal geben Sie Ihr Master-Passwort ein.",
+    "persistentUnlockOptions": {
+      "off": "Aus",
+      "7days": "7 Tage",
+      "30days": "30 Tage"
+    },
+    "lockAndForget": "Sperren & dieses Gerät vergessen"
+  },
+  "watchtower": {
+    "title": "Sicherheitsaudit",
+    "unlock": "Tresor entsperren",
+    "retry": "Erneut versuchen",
+    "rescan": "Erneut scannen",
+    "lastScan": "Letzter Scan:",
+    "weak": "Schwach",
+    "weakDesc": "Niedrige Entropie oder Muster erkannt",
+    "reused": "Wiederverwendet",
+    "reusedDesc": "Gleiches Passwort auf mehreren Seiten",
+    "old": "Alt",
+    "oldDesc": "Seit über 90 Tagen nicht geändert",
+    "breached": "Kompromittiert",
+    "breachedDesc": "In Datenlecks gefunden",
+    "checking": "Wird geprüft...",
+    "checkBreaches": "Datenlecks prüfen",
+    "weakPasswords": "Schwache Passwörter",
+    "reusedPasswords": "Wiederverwendete Passwörter",
+    "oldPasswords": "Alte Passwörter",
+    "noOld": "Keine alten Passwörter gefunden",
+    "breachedPasswords": "Kompromittierte Passwörter",
+    "critical": "Kritisch",
+    "warning": "Warnung",
+    "info": "Info",
+    "fix": "Beheben",
+    "sharedBy": "Geteilt von {{count}} Elementen",
+    "reusedDetail": "Passwort wird anderswo verwendet",
+    "noVault": "Kein Tresor gefunden. Erstellen Sie zuerst einen Tresor.",
+    "analysisError": "Tresor-Analyse fehlgeschlagen",
+    "breachError": "Datenleck-Prüfung fehlgeschlagen"
+  },
+  "vault": {
+    "title": "Tresor",
+    "subtitle": "Alles, was Sie speichern, wird auf diesem Gerät verschlüsselt, bevor es das Gerät verlässt.",
+    "addItem": "Element hinzufügen",
+    "addItemDescription": "Erstelle ein neues Element. Alle Daten werden auf deinem Gerät verschlüsselt.",
+    "duplicateCheckFailedTitle": "Der gesamte Tresor konnte nicht geprüft werden",
+    "duplicateCheckFailedDescription": "Die Elementliste konnte nicht vollständig geprüft werden. Du kannst das Element überprüfen oder ohne Duplikatprüfung hinzufügen.",
+    "duplicateFoundTitle": "Doppeltes Element gefunden",
+    "duplicateFoundDescription": "In diesem Tresor ist bereits ein identisches Element vorhanden. Überprüfe es oder füge es trotzdem hinzu.",
+    "reviewItem": "Element überprüfen",
+    "addAnyway": "Trotzdem hinzufügen",
+    "itemType": "Typ",
+    "titlePlaceholder": "z. B. GitHub, Bank usw.",
+    "usernamePlaceholder": "user@example.com",
+    "generate": "Generieren",
+    "content": "Inhalt",
+    "emptyDescription": "Elemente werden mit Schlüsseln verschlüsselt, die Ihre Geräte nie verlassen.",
+    "encrypting": "Verschlüsseln...",
+    "noVault": "Kein Tresor gefunden",
+    "items": "Elemente",
+    "authenticators": "Authentifikatoren",
+    "sharing": "Teilen",
+    "trash": "Papierkorb",
+    "search": "Tresor durchsuchen...",
+    "filterAll": "Alle Typen",
+    "filterLogin": "Anmeldungen",
+    "filterCard": "Karten",
+    "filterNote": "Notizen",
+    "filterIdentity": "Identitäten",
+    "filterPasskey": "Passkeys",
+    "filterTotp": "TOTP",
+    "filterFile": "Dateien",
+    "sortModified": "Zuletzt geändert",
+    "sortCreated": "Erstellungsdatum",
+    "sortName": "Name",
+    "empty": "Ihr Tresor ist leer — und nur Sie können ihn füllen.",
+    "addFirstItem": "Fügen Sie Ihr erstes Element hinzu",
+    "noResults": "Keine Elemente entsprechen Ihrer Suche oder Ihrem Filter.",
+    "loading": "Wird geladen...",
+    "loadMore": "Mehr laden",
+    "locked": "Tresor gesperrt",
+    "lockedDescription": "Geben Sie Ihr Master-Passwort ein, um auf Ihren Tresor zuzugreifen.",
+    "unlockTitle": "Tresor entsperren",
+    "unlockDescription": "Geben Sie Ihr Master-Passwort ein, um Ihren Tresor zu entschlüsseln.",
+    "recoveryDescription": "Ihre Tresorelemente konnten nicht entschlüsselt werden. Geben Sie Ihr vorheriges Master-Passwort und Ihr aktuelles Passwort ein, um Ihre Daten wiederherzustellen.",
+    "oldMasterPassword": "Vorheriges Master-Passwort",
+    "oldPasswordPlaceholder": "Geben Sie Ihr vorheriges Master-Passwort ein",
+    "currentMasterPassword": "Aktuelles Master-Passwort",
+    "masterPassword": "Master-Passwort",
+    "passwordPlaceholder": "Geben Sie Ihr Master-Passwort ein",
+    "hidePassword": "Passwort ausblenden",
+    "showPassword": "Passwort anzeigen",
+    "secretKey": "Wiederherstellungsschlüssel",
+    "secretKeyHint": "Geben Sie den Wiederherstellungsschlüssel aus Ihrem Wiederherstellungskit ein.",
+    "recovering": "Tresor wird wiederhergestellt…",
+    "deriving": "Schlüssel wird abgeleitet…",
+    "recover": "Tresor wiederherstellen",
+    "useRecoveryKey": "Geheimen Schlüssel verwenden",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "sensitiveFieldUnchanged": "Leer lassen, um den bestehenden Wert beizubehalten",
+    "url": "URL",
+    "notes": "Notizen",
+    "created": "Erstellt",
+    "modified": "Geändert",
+    "copy": "{{field}} kopieren",
+    "openUrl": "URL öffnen",
+    "favorite": "Zu Favoriten hinzufügen",
+    "unfavorite": "Aus Favoriten entfernen",
+    "back": "Zurück zum Tresor",
+    "edit": "Element bearbeiten",
+    "delete": "Element löschen",
+    "save": "Speichern",
+    "saving": "Wird gespeichert...",
+    "unlock": "Entsperren",
+    "org": {
+      "setupTitle": "Tresor dieser Organisation teilen",
+      "setupDesc": "Erstelle einen gemeinsamen Tresor, damit Mitglieder dieselben Elemente sehen. Vorhandene Elemente in dieser Organisation werden importiert, und angemeldete Mitglieder erhalten automatisch Zugriff.",
+      "setupButton": "Gemeinsamen Tresor einrichten",
+      "noneMember": "Diese Organisation hat noch keinen gemeinsamen Tresor.",
+      "pending": "Du siehst die geteilten Elemente, sobald ein Organisationsadministrator dir Zugriff gewährt. Stelle sicher, dass du auf diesem Gerät angemeldet bist.",
+      "resolveError": "Dein Zugriff auf den gemeinsamen Tresor konnte nicht überprüft werden.",
+      "retry": "Erneut versuchen"
+    },
+    "emptyImport": "Aus einem anderen Passwort-Manager importieren"
+  },
+  "share": {
+    "mode": {
+      "chooseTitle": "\"{{title}}\" teilen",
+      "chooseDescription": "Wählen Sie, wie Sie diesen Eintrag teilen möchten.",
+      "person": {
+        "title": "Mit einer Person",
+        "description": "Dauerhaft mit jemandem teilen, der ein Konto hat. Der Eintrag erscheint im Tresor dieser Person."
+      },
+      "link": {
+        "title": "Als Link",
+        "description": "Einen einmaligen Link mit Ablaufzeit erstellen. Der Entschlüsselungsschlüssel bleibt im URL-Fragment."
+      }
+    }
+  },
+  "sharing": {
+    "received": "Empfangen",
+    "sent": "Gesendet",
+    "noReceived": "Keine ausstehenden Freigaben",
+    "noReceivedHint": "Mit Ihnen geteilte Elemente werden hier angezeigt.",
+    "noSent": "Keine geteilten Elemente",
+    "noSentHint": "Von Ihnen geteilte Elemente werden hier angezeigt.",
+    "dialogTitle": "Element teilen",
+    "dialogDescription": "Teilen Sie \"{{title}}\" mit einem anderen Benutzer.",
+    "recipientEmail": "E-Mail des Empfängers",
+    "emailPlaceholder": "user@example.com",
+    "permission": "Berechtigung",
+    "permissionView": "Nur ansehen",
+    "permissionEdit": "Kann bearbeiten",
+    "permissionShare": "Kann teilen",
+    "viewOnly": "Ansehen",
+    "canEdit": "Bearbeiten",
+    "viewHint": "Der Empfänger kann dieses Element ansehen, aber nicht ändern.",
+    "editHint": "Der Empfänger kann dieses Element ansehen und ändern.",
+    "shareHint": "Der Empfänger kann dieses Element ansehen, bearbeiten und erneut teilen.",
+    "zeroKnowledgeHint": "Nur ein verschlüsselter Elementschlüssel wird für diesen Empfänger verpackt. Der Server erhält niemals Tresordaten im Klartext.",
+    "canShare": "Teilen",
+    "pendingViewHint": "Sie können dieses Element nach dem Annehmen ansehen.",
+    "pendingEditHint": "Sie können dieses Element nach dem Annehmen ansehen und bearbeiten.",
+    "pendingShareHint": "Sie können dieses Element nach dem Annehmen ansehen, bearbeiten und erneut teilen.",
+    "accessSummaryEntry": "{{name}} ({{permission}})",
+    "whoCanAccess": "Wer Zugriff hat: {{summary}}",
+    "share": "Teilen",
+    "sharing": "Wird geteilt...",
+    "errorNoEmail": "Bitte geben Sie eine Empfänger-E-Mail ein.",
+    "errorInvalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "errorFailed": "Element konnte nicht geteilt werden. Bitte versuchen Sie es erneut.",
+    "errorRecipientNoDevice": "Der Empfänger muss sich auf einem vertrauenswürdigen Gerät anmelden, bevor Sie etwas mit ihm teilen können.",
+    "errorRecipientUntrustedDevice": "Bitten Sie diese Person, vor dem Teilen eines ihrer Geräte als vertrauenswürdig zu markieren (Einstellungen → Sicherheit → Vertrauenswürdige Geräte).",
+    "status": {
+      "pending": "Ausstehend",
+      "accepted": "Akzeptiert",
+      "declined": "Abgelehnt",
+      "revoked": "Widerrufen"
+    },
+    "errorItemNotFound": "Element nicht gefunden."
+  },
+  "totp": {
+    "scanQR": "QR-Code scannen",
+    "scanQRCode": "QR-Code scannen",
+    "noAuthenticators": "Keine Authentifikatoren",
+    "noAuthenticatorsDescription": "Fügen Sie einen TOTP-Authentifikator hinzu, indem Sie einen QR-Code scannen oder einen geheimen Schlüssel eingeben."
+  },
+  "ephemeral": {
+    "errorNoKey": "Ungültiger Link: Entschlüsselungsschlüssel fehlt.",
+    "errorAccess": "Dieser Link ist nicht mehr verfügbar.",
+    "errorDecrypt": "Entschlüsselung fehlgeschlagen. Falsche Passphrase oder beschädigter Link.",
+    "errorNoPassphrase": "Geben Sie die Passphrase ein.",
+    "pageTitle": "Geteilter Eintrag",
+    "loading": "Geteilten Eintrag laden...",
+    "errorTitle": "Link nicht verfügbar",
+    "errorGeneric": "Dieser Link ist möglicherweise abgelaufen, widerrufen oder bereits verwendet worden.",
+    "passphraseRequired": "Passphrase erforderlich",
+    "passphrase": "Passphrase",
+    "enterPassphrase": "Passphrase eingeben...",
+    "decrypting": "Entschlüsseln...",
+    "decrypt": "Entschlüsseln",
+    "decryptedTitle": "Geteilter Eintrag",
+    "decryptedHint": "Diese Daten wurden lokal in Ihrem Browser entschlüsselt."
+  },
+  "family": {
+    "title": "Familie",
+    "subtitle": "Verwalten Sie Ihre Familie und gemeinsame Tresore.",
+    "create": {
+      "title": "Familie erstellen",
+      "description": "Erstellen Sie eine Familie, um Tresore zu teilen und die delegierte Wiederherstellung für bis zu 6 Mitglieder zu aktivieren.",
+      "namePlaceholder": "Familienname",
+      "action": "Familie erstellen",
+      "nameRequired": "Bitte geben Sie einen Familiennamen ein.",
+      "error": "Familie konnte nicht erstellt werden."
+    },
+    "dashboard": {
+      "subtitle": "{{count}} Mitglieder"
+    },
+    "tabs": {
+      "members": "Mitglieder",
+      "vaults": "Gemeinsame Tresore",
+      "recovery": "Wiederherstellung",
+      "settings": "Einstellungen"
+    },
+    "roles": {
+      "owner": "Organisator",
+      "admin": "Administrator",
+      "member": "Mitglied"
+    },
+    "members": {
+      "title": "Mitglieder",
+      "invite": "Mitglied einladen",
+      "you": "Sie",
+      "accessSummary": "{{count}} gemeinsame Tresore",
+      "noSharedVaultAccess": "Kein Zugriff auf gemeinsame Tresore",
+      "accessManage": "{{count}} verwalten",
+      "accessShare": "{{count}} teilen",
+      "accessEdit": "{{count}} bearbeiten",
+      "accessView": "{{count}} ansehen",
+      "lastActionJoined": "Beigetreten am {{date}}",
+      "promoteAdmin": "Zum Administrator befördern",
+      "demoteToMember": "Zum Mitglied herabstufen",
+      "remove": "Mitglied entfernen",
+      "removeTitle": "Mitglied entfernen",
+      "removeDescription": "Sind Sie sicher, dass Sie {{name}} aus der Familie entfernen möchten? Der Zugriff auf alle gemeinsamen Tresore geht verloren.",
+      "confirmRemove": "Entfernen"
+    },
+    "invite": {
+      "adminHint": "Administratoren können gemeinsame Tresore und Mitglieder verwalten.",
+      "cancelError": "Einladung konnte nicht abgebrochen werden.",
+      "cancelled": "Einladung abgebrochen.",
+      "copyError": "Einladungslink konnte nicht kopiert werden.",
+      "description": "Senden Sie eine Einladung, Ihrer Familie beizutreten.",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "member@example.com",
+      "error": "Einladung konnte nicht gesendet werden.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "linkCopied": "Einladungslink kopiert.",
+      "memberHint": "Mitglieder können auf gemeinsame Tresore und ihren privaten Tresor zugreifen.",
+      "resendError": "Einladung konnte nicht erneut gesendet werden.",
+      "resent": "Einladung erneut gesendet und Link kopiert.",
+      "resentWithoutCopy": "Einladung erneut gesendet. Kopieren Sie den Link bei Bedarf manuell.",
+      "roleLabel": "Rolle",
+      "send": "Einladung senden",
+      "sent": "Einladung gesendet.",
+      "title": "Familienmitglied einladen"
+    },
+    "invitations": {
+      "cancel": "Abbrechen",
+      "copyLink": "Link kopieren",
+      "expires": "Läuft ab",
+      "pendingCount": "{{count}} ausstehend",
+      "resend": "Erneut senden",
+      "status": {
+        "accepted": "Angenommen",
+        "cancelled": "Abgebrochen",
+        "declined": "Abgelehnt",
+        "expired": "Abgelaufen",
+        "pending": "Ausstehend"
+      },
+      "title": "Einladungen"
+    },
+    "sharedVaults": {
+      "created": "Gemeinsamer Tresor erstellt.",
+      "missingUser": "Der Benutzerkontext wird noch geladen.",
+      "loadError": "Gemeinsamer Tresor konnte nicht geladen werden.",
+      "loadingDetail": "Gemeinsamer Tresor wird geladen…",
+      "permission": "Ihre Berechtigung",
+      "members": "Mitglieder",
+      "title": "Gemeinsame Tresore",
+      "create": "Tresor erstellen",
+      "empty": "Noch keine gemeinsamen Tresore.",
+      "emptyHint": "Erstellen Sie einen Tresor, gewähren Sie nur den nötigen Mitgliedern Zugriff und rotieren Sie den Zugriff, wenn jemand geht.",
+      "createdOn": "Erstellt am {{date}}",
+      "memberCount": "{{count}} Mitglieder",
+      "createFirst": "Ersten gemeinsamen Tresor erstellen",
+      "createTitle": "Gemeinsamen Tresor erstellen",
+      "createDescription": "Erstellen Sie einen Tresor, auf den Familienmitglieder gemeinsam zugreifen können.",
+      "nameRequired": "Bitte geben Sie einen Tresornamen ein.",
+      "nameTooLong": "Der Tresorname darf höchstens 64 Zeichen lang sein.",
+      "createError": "Gemeinsamer Tresor konnte nicht erstellt werden.",
+      "nameLabel": "Tresorname",
+      "namePlaceholder": "z. B. Streaming-Dienste",
+      "createAction": "Tresor erstellen",
+      "grantableMembers": "Mitglieder ohne Zugriff",
+      "noGrantableMembers": "Alle Familienmitglieder haben bereits Zugriff.",
+      "grantAccess": "Zugriff gewähren",
+      "granted": "Zugriff auf den gemeinsamen Tresor gewährt.",
+      "grantError": "Zugriff auf den gemeinsamen Tresor konnte nicht gewährt werden.",
+      "removeAccess": "Zugriff entfernen",
+      "removeAccessTitle": "Zugriff auf gemeinsamen Tresor entfernen?",
+      "removeAccessDescription": "{{name}} verliert den Zugriff auf diesen gemeinsamen Tresor. Verbleibende Mitglieder erhalten einen rotierten verpackten Schlüssel.",
+      "confirmRemoveAccess": "Zugriff entfernen",
+      "removed": "Zugriff auf den gemeinsamen Tresor entfernt und Schlüssel rotiert.",
+      "removeError": "Zugriff auf den gemeinsamen Tresor konnte nicht entfernt werden.",
+      "permissionUpdated": "Berechtigung für gemeinsamen Tresor aktualisiert.",
+      "permissionUpdateError": "Berechtigung für gemeinsamen Tresor konnte nicht aktualisiert werden.",
+      "permissions": {
+        "view": "Ansehen",
+        "edit": "Bearbeiten",
+        "share": "Teilen",
+        "manage": "Verwalten"
+      }
+    },
+    "settings": {
+      "title": "Familieneinstellungen",
+      "description": "Verwalten Sie Ihre Familienkonfiguration.",
+      "nameRequired": "Familienname ist erforderlich.",
+      "updateError": "Einstellungen konnten nicht aktualisiert werden.",
+      "saved": "Einstellungen gespeichert.",
+      "nameLabel": "Familienname",
+      "leaveTitle": "Familie verlassen",
+      "leaveDescription": "Verlassen Sie diese Familie. Sie verlieren den Zugriff auf alle geteilten Tresore.",
+      "leaveAction": "Familie verlassen",
+      "leaveConfirmTitle": "Familie verlassen?",
+      "leaveConfirmDescription": "Sie verlieren den Zugriff auf alle geteilten Tresore und deren Inhalte. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmLeave": "Familie verlassen"
+    },
+    "recovery": {
+      "title": "Kontowiederherstellung",
+      "memberDescription": "Bitten Sie Ihren Familienorganisator, bei der Wiederherstellung Ihres Kontos zu helfen, wenn Sie den Zugriff verlieren.",
+      "organizerDescription": "Überprüfen und verwalten Sie Wiederherstellungsanfragen von Familienmitgliedern.",
+      "yourRequest": "Ihre Wiederherstellungsanfrage",
+      "requested": "Angefragt",
+      "expires": "Läuft ab",
+      "approvedHint": "Ihre Wiederherstellung wurde genehmigt. Folgen Sie den Anweisungen, um neue Schlüssel einzurichten.",
+      "expiredHint": "Diese Anfrage ist abgelaufen. Stellen Sie eine neue Wiederherstellungsanfrage, wenn Sie weiterhin Hilfe benötigen.",
+      "rejectedHint": "Diese Anfrage wurde abgelehnt. Sie können eine neue Anfrage stellen, wenn sich Ihre Situation geändert hat.",
+      "completedHint": "Die Wiederherstellung ist abgeschlossen. Ihr Zugriff auf gemeinsame Tresore nutzt die neu verpackten Schlüssel.",
+      "noActiveRequest": "Keine aktive Wiederherstellungsanfrage.",
+      "requestRecovery": "Wiederherstellung anfordern",
+      "noRequests": "Keine Wiederherstellungsanfragen.",
+      "activeRequests": "Aktive Anfragen",
+      "pastRequests": "Vergangene Anfragen",
+      "approve": "Genehmigen",
+      "reject": "Ablehnen",
+      "approveTitle": "Wiederherstellung genehmigen",
+      "rejectTitle": "Wiederherstellung ablehnen",
+      "approveDescription": "Dies ermöglicht dem Mitglied, neue Schlüssel zu generieren und den Zugriff auf gemeinsame Tresore wiederzuerlangen. Sie müssen die Tresorschlüssel für sie neu verpacken.",
+      "rejectDescription": "Dies lehnt die Wiederherstellungsanfrage ab. Das Mitglied kann später eine neue Anfrage stellen.",
+      "confirmApprove": "Genehmigen",
+      "confirmReject": "Ablehnen",
+      "timeline": {
+        "trustedContact": "Vertrauensperson angefragt",
+        "waitingPeriod": "Wartezeit und Prüfung durch den Organisator",
+        "approval": "Genehmigung erteilt",
+        "denied": "Genehmigung abgelehnt oder abgelaufen",
+        "finalAccess": "Endgültiger Zugriff nach Bestätigung neuer Schlüssel"
+      },
+      "status": {
+        "pending": "Ausstehend",
+        "approved": "Genehmigt",
+        "completing": "Wird abgeschlossen",
+        "completed": "Abgeschlossen",
+        "rejected": "Abgelehnt",
+        "expired": "Abgelaufen"
+      }
+    },
+    "unknownMember": "Unbekanntes Mitglied",
+    "loadError": "Familie konnte nicht geladen werden."
+  },
+  "emergency": {
+    "title": "Notfallzugriff",
+    "subtitle": "Verwalten Sie vertrauenswürdige Kontakte und Notfallzugriffsanfragen.",
+    "tabs": {
+      "contacts": "Kontakte",
+      "incoming": "Eingehend",
+      "outgoing": "Ausgehend"
+    }
+  },
+  "importExport": {
+    "title": "Importieren / Exportieren",
+    "subtitle": "Elemente aus anderen Passwort-Managern importieren oder Ihren Tresor exportieren.",
+    "noVault": "Kein Tresor gefunden.",
+    "tabs": {
+      "import": "Importieren",
+      "export": "Exportieren"
+    },
+    "formats": {
+      "genericCsv": "Generische CSV"
+    },
+    "export": {
+      "encrypted": {
+        "title": "Verschlüsselter Export",
+        "description": "Exportieren Sie Ihren Tresor als verschlüsselte .pssmngr-Datei. Diese Datei kann nur mit Ihrem Master-Passwort geöffnet werden.",
+        "recommended": "Empfohlen",
+        "exporting": "Exportiere...",
+        "done": "Heruntergeladen",
+        "button": ".pssmngr exportieren"
+      },
+      "plaintext": {
+        "title": "Klartext-Export",
+        "description": "Als unverschlüsselte CSV- oder JSON-Datei exportieren. Verwenden Sie diese Formate nur zum Importieren in einen anderen Passwort-Manager.",
+        "warning": "Diese Dateien enthalten Ihre Passwörter im Klartext. Jeder mit Zugriff auf die Datei kann sie lesen. Löschen Sie die Datei nach Gebrauch.",
+        "csv": "CSV exportieren",
+        "json": "JSON exportieren"
+      },
+      "warning": {
+        "title": "Als {{format}} exportieren?",
+        "description": "Alle Tresor-Einträge werden als unverschlüsselte {{format}}-Datei exportiert. Ihre Passwörter sind im Klartext sichtbar.",
+        "caution": "Jeder mit Zugriff auf diese Datei kann Ihre Passwörter lesen. Löschen Sie die Datei nach Gebrauch.",
+        "cancel": "Abbrechen",
+        "confirm": "{{format}} exportieren",
+        "exporting": "Exportiere..."
+      },
+      "error": {
+        "exportFailed": "Export fehlgeschlagen"
+      }
+    },
+    "import": {
+      "dropzone": {
+        "title": "Datei hierher ziehen oder zum Durchsuchen klicken",
+        "subtitle": "Unterstützt CSV- und JSON-Dateien",
+        "browse": "Datei auswählen"
+      },
+      "supported": "Unterstützte Formate",
+      "reading": "Datei wird gelesen...",
+      "detecting": "Format wird erkannt...",
+      "preview": {
+        "title": "Vorschau",
+        "detected": "Erkannt: {{source}}",
+        "count": "{{count}} Einträge gefunden",
+        "cancel": "Abbrechen",
+        "import": "{{count}} Einträge importieren",
+        "parseErrors": "{{count}} Zeilen konnten nicht analysiert werden",
+        "duplicates": "{{count}} mögliche Duplikate erkannt",
+        "col": {
+          "title": "Titel",
+          "type": "Typ",
+          "username": "Benutzername",
+          "url": "URL"
+        }
+      },
+      "progress": "Importiere {{current}} von {{total}}...",
+      "summary": {
+        "title": "Import abgeschlossen",
+        "duration": "Abgeschlossen in {{seconds}}s",
+        "imported": "Importiert",
+        "skipped": "Übersprungen",
+        "errors": "Fehler",
+        "errorDetails": "Fehlgeschlagene Einträge",
+        "moreErrors": "...und {{count}} weitere",
+        "importMore": "Mehr importieren"
+      },
+      "error": {
+        "title": "Import fehlgeschlagen",
+        "retry": "Erneut versuchen"
+      }
+    }
+  },
+  "hidePassword": "Passwort ausblenden",
+  "showPassword": "Passwort anzeigen",
+  "error": "Ein Fehler ist aufgetreten",
+  "sensitiveAction": {
+    "export": "Bestätigen Sie Ihr Master-Passwort, um Ihren Tresor zu exportieren",
+    "changeMasterPassword": "Bestätigen Sie Ihr Master-Passwort, um es zu ändern",
+    "emergencyAccess": "Bestätigen Sie Ihr Master-Passwort, um den Notfallzugang zu aktualisieren",
+    "error": {
+      "loadVault": "Ihr Tresor konnte gerade nicht überprüft werden. Bitte erneut versuchen."
+    },
+    "revokedNotice": "Der Zugriff des vertrauenswürdigen Geräts wurde widerrufen. Bitte erneut anmelden.",
+    "expiredNotice": "Der Zugriff des vertrauenswürdigen Geräts ist abgelaufen. Bitte erneut anmelden."
+  },
+  "pages": {
+    "vault": {
+      "title": "Tresor",
+      "description": "Alles, was Sie speichern, wird auf diesem Gerät verschlüsselt, bevor es das Gerät verlässt."
+    },
+    "security": {
+      "title": "Sicherheit",
+      "description": "Schwache, wiederverwendete und geleakte Passwörter — an einem Ort gefunden und behoben.",
+      "checkWeak": "erratbare Passwörter",
+      "checkReused": "ein Leak öffnet viele Türen",
+      "checkBreached": "in bekannten Datenlecks aufgetaucht — privat geprüft"
+    },
+    "people": {
+      "title": "Personen",
+      "description": "Teilen Sie Elemente mit Ihrer Familie oder Ihrem Arbeitsbereich, ohne Ihren Tresor preiszugeben."
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "description": "Ihr Konto, Ihre Geräte und Ihre Daten — an einem Ort."
+    }
+  },
+  "explainer": {
+    "title": "Wie pssmngr Sie schützt",
+    "encryptedOnDevice": {
+      "title": "Auf Ihrem Gerät verschlüsselt",
+      "body": "Elemente werden mit XChaCha20-Poly1305 versiegelt, bevor sie das Gerät verlassen."
+    },
+    "twoSecretsNeverSent": {
+      "title": "Zwei Geheimnisse, nie gesendet",
+      "body": "Ihr Master-Passwort und Ihr geheimer Schlüssel bleiben bei Ihnen; wir speichern beides nicht, deshalb können wir Ihren Tresor weder lesen — noch zurücksetzen."
+    },
+    "youControlThisDevice": {
+      "title": "Sie steuern dieses Gerät",
+      "body": "Bleiben Sie hier bis zu 30 Tage entsperrt; sensible Aktionen fragen immer erneut nach Ihrem Master-Passwort.",
+      "link": "Entsperr-Einstellung ändern"
+    }
+  },
+  "sharingCenter": {
+    "personDescription": "Teilen Sie ein Element mit jemandem — er erhält Zugriff, Sie behalten die Kontrolle.",
+    "linkDescription": "Erstellen Sie einen ablaufenden Link — der Schlüssel reist im Link, nie über unsere Server."
+  }
+}

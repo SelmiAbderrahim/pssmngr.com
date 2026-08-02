@@ -1,0 +1,41 @@
+{
+  "loading": "Loading...",
+  "switcher": {
+    "label": "Switch workspace",
+    "selectWorkspace": "Select workspace",
+    "workspaces": "Workspaces",
+    "noWorkspaces": "No workspaces yet",
+    "memberCount": "{{count}} members",
+    "memberCount_one": "{{count}} member",
+    "setDefault": "Set as default",
+    "default": "Default"
+  },
+  "create": {
+    "trigger": "Create workspace",
+    "title": "Create Organization",
+    "description": "Create a new workspace and invite members.",
+    "nameLabel": "Organization Name",
+    "namePlaceholder": "My Organization",
+    "nameRequired": "Organization name is required",
+    "slugLabel": "URL Slug",
+    "slugPlaceholder": "my-organization",
+    "slugHint": "Auto-generated from name. Edit to customize.",
+    "submit": "Create",
+    "cancel": "Cancel",
+    "success": "Organization created successfully",
+    "error": "Failed to create organization"
+  },
+  "switch": {
+    "title": "Switch Organization"
+  },
+  "setDefault": {
+    "success": "Default organization updated"
+  },
+  "errors": {
+    "loadFailed": {
+      "title": "Failed to load workspaces",
+      "description": "We couldn't load your workspace data. Please try again.",
+      "retry": "Retry"
+    }
+  }
+}

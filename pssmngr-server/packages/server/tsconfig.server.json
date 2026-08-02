@@ -1,0 +1,31 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"disableSizeLimit": true,
+		"module": "ESNext",
+		"outDir": "dist/",
+		"target": "ESNext",
+		"isolatedModules": false,
+		"noEmit": false,
+		"declaration": false,
+		"moduleResolution": "Node",
+		"rootDir": "./src",
+		"baseUrl": ".",
+		"jsx": "react-jsx",
+		"paths": {
+			"@pssmngr/server/*": ["./src/*"]
+		}
+	},
+	"include": ["next-env.d.ts", "./src/**/*"],
+	"exclude": [
+		"**/dist",
+		"tsup.ts",
+		"**/__tests__/**",
+		"**/*.test.ts",
+		"**/*.spec.ts"
+	],
+	"tsc-alias": {
+		"resolveFullPaths": true,
+		"verbose": false
+	}
+}

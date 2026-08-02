@@ -1,0 +1,126 @@
+{
+  "score": {
+    "critical": "Kritisch",
+    "poor": "Schlecht",
+    "fair": "Mäßig",
+    "good": "Gut"
+  },
+  "lastScan": "Letzter Scan:",
+  "rescan": "Erneut scannen",
+  "retry": "Erneut versuchen",
+  "unlock": "Tresor entsperren",
+  "unlockRequired": "Entsperren Sie Ihren Tresor, um ein Sicherheitsaudit durchzuführen",
+  "noVault": "Kein Tresor gefunden. Erstellen Sie zuerst einen Tresor.",
+  "analysisError": "Tresoranalyse fehlgeschlagen",
+  "breachError": "Überprüfung der Datenlecks fehlgeschlagen",
+  "weak": "Schwach",
+  "weakDesc": "Niedrige Entropie oder Muster",
+  "weakPasswords": "Schwache Passwörter",
+  "weakInfo": "Passwörter mit niedriger Entropie, sequenziellen Mustern oder Tastaturfolgen",
+  "weakDetail": "Passwortstärke liegt unter dem Mindestschwellenwert",
+  "noWeak": "Keine schwachen Passwörter gefunden",
+  "reused": "Wiederverwendet",
+  "reusedDesc": "Gleiches Passwort auf mehreren Seiten",
+  "reusedPasswords": "Wiederverwendete Passwörter",
+  "reusedInfo": "Gruppen von Einträgen mit demselben Passwort",
+  "reusedDetail": "Passwort wird anderweitig verwendet",
+  "noReused": "Keine wiederverwendeten Passwörter gefunden",
+  "sharedBy": "Geteilt von {{count}} Einträgen",
+  "old": "Alt",
+  "oldDesc": "Seit über 90 Tagen nicht geändert",
+  "oldPasswords": "Alte Passwörter",
+  "oldInfo": "Passwörter, die seit über 90 Tagen nicht aktualisiert wurden",
+  "oldDetail": "Zuletzt geändert vor {{days}} Tagen",
+  "noOld": "Keine alten Passwörter gefunden",
+  "breached": "Kompromittiert",
+  "breachedDesc": "In Datenlecks gefunden",
+  "breachedPasswords": "Kompromittierte Passwörter",
+  "breachedInfo": "Passwörter, die in bekannten Datenlecks über Have I Been Pwned gefunden wurden",
+  "breachNotChecked": "Datenleck-Überprüfung wurde noch nicht durchgeführt",
+  "noBreached": "Keine kompromittierten Passwörter gefunden",
+  "breachCount": "In {{count}} Datenlecks gefunden",
+  "breachCheckTitle": "Auf kompromittierte Passwörter prüfen",
+  "breachCheckDesc": "Verwendet k-Anonymität — es werden nur partielle Hashes gesendet. Kein Klartext verlässt Ihr Gerät.",
+  "checkBreaches": "Datenlecks prüfen",
+  "checking": "Wird überprüft...",
+  "critical": "Kritisch",
+  "warning": "Warnung",
+  "info": "Info",
+  "fix": "Beheben",
+  "allClear": "Alle {{total}} Passwörter sehen gut aus",
+  "findingsSummary": "{{findings}} Befunde bei {{total}} Passwörtern",
+  "breakdown": {
+    "title": "Wie diese Bewertung berechnet wird",
+    "description": "Jede Risikokategorie trägt einen deterministischen Abzug bei, der proportional zum Anteil der betroffenen Einträge ist. Nichts verlässt Ihr Gerät.",
+    "category": "Kategorie",
+    "count": "Betroffen",
+    "penalty": "Abzug",
+    "weight": "Max",
+    "noFindings": "Keine Risiken beeinflussen Ihre Bewertung.",
+    "totalPenalty": "Gesamtabzug: −{{penalty}} Punkte"
+  },
+  "category": {
+    "weak": {
+      "label": "Schwache Passwörter",
+      "whyMatters": "Schwache Passwörter können schnell erraten oder per Brute-Force geknackt werden.",
+      "whatToDo": "Ersetzen Sie jedes schwache Passwort durch ein langes, zufällig erzeugtes."
+    },
+    "reused": {
+      "label": "Wiederverwendete Passwörter",
+      "whyMatters": "Ein wiederverwendetes Passwort öffnet bei einem Leck mehrere Konten gleichzeitig.",
+      "whatToDo": "Erzeugen Sie für jedes wiederverwendete Konto ein eindeutiges Passwort."
+    },
+    "old": {
+      "label": "Alte Passwörter",
+      "whyMatters": "Ältere Passwörter sind wahrscheinlicher seit ihrer Erstellung geleakt worden.",
+      "whatToDo": "Rotieren Sie Passwörter, die seit 90+ Tagen nicht geändert wurden — besonders bei sensiblen Konten."
+    },
+    "breached": {
+      "label": "Bekannte Lecks",
+      "whyMatters": "Geleakte Passwörter sind bereits in Angreifer-Wortlisten enthalten.",
+      "whatToDo": "Ändern Sie jedes kompromittierte Passwort als Erstes."
+    },
+    "missing2fa": {
+      "label": "Fehlende 2FA",
+      "whyMatters": "Zwei-Faktor-Authentifizierung blockiert die meisten Angriffe, die geleakte Passwörter wiederverwenden.",
+      "whatToDo": "Aktivieren Sie TOTP bei jedem Login, der es unterstützt, und speichern Sie den Secret hier."
+    }
+  },
+  "missing2fa": "Fehlende 2FA",
+  "missing2faDesc": "Login-Einträge ohne gespeicherten TOTP-Secret",
+  "missing2faPasswords": "Logins ohne 2FA",
+  "missing2faInfo": "Login-Einträge, die mit einem TOTP-Authenticator geschützt werden könnten",
+  "missing2faDetail": "TOTP-Secret für diesen Login hinzufügen",
+  "noMissing2fa": "Jeder Login ist mit 2FA gesichert",
+  "privacy": {
+    "title": "Datenschutz",
+    "kAnonymity": "Nur die ersten 5 Zeichen des SHA-1-Hashes werden gesendet. Der vollständige Hash und das Klartext-Passwort verlassen niemals Ihr Gerät.",
+    "source": "Quelle: Have I Been Pwned (k-anonymity Range API)",
+    "checkedAt": "Zuletzt geprüft {{time}}"
+  },
+  "filters": {
+    "title": "Filtern",
+    "all": "Alle Schweregrade",
+    "critical": "Nur kritisch",
+    "warningPlus": "Warnung und höher",
+    "sort": "Sortieren",
+    "sortBySeverity": "Kritischste zuerst",
+    "sortByUpdated": "Kürzlich aktualisiert",
+    "sortByName": "Name (A→Z)"
+  },
+  "breachCard": {
+    "severityHigh": "Hoher Schweregrad",
+    "severityMedium": "Mittlerer Schweregrad",
+    "severityLow": "Niedriger Schweregrad",
+    "occurrences": "{{count}} Mal in Lecks gesehen",
+    "detectionSource": "Erkannt via {{source}}",
+    "markReviewed": "Als geprüft markieren",
+    "startChecklist": "Update-Checkliste starten"
+  },
+  "emptyState": {
+    "noItems": "Ihr Tresor ist leer",
+    "noItemsHint": "Fügen Sie einen Login hinzu, um die Passwortgesundheit zu verfolgen.",
+    "noFindings": "Aktuell nichts zu erledigen",
+    "noFindingsHint": "Wir überwachen weiter. Neue Befunde erscheinen hier, sobald sie erkannt werden."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Générateur de mots de passe",
+  "description": "Générez des mots de passe et phrases de passe forts et uniques",
+  "tabs": {
+    "password": "Mot de passe",
+    "passphrase": "Phrase de passe"
+  },
+  "copy": {
+    "success": "Copié dans le presse-papiers",
+    "failed": "Échec de la copie"
+  },
+  "error": "Échec de la génération",
+  "aria": {
+    "generatedPassword": "Mot de passe généré",
+    "copyPassword": "Copier le mot de passe",
+    "usePassword": "Utiliser le mot de passe",
+    "regenerate": "Régénérer le mot de passe",
+    "generatedPassphrase": "Phrase de passe générée",
+    "copyPassphrase": "Copier la phrase de passe",
+    "usePassphrase": "Utiliser la phrase de passe",
+    "regeneratePassphrase": "Régénérer la phrase de passe"
+  },
+  "preset": {
+    "label": "Modèle de politique du site",
+    "placeholder": "Aucun modèle",
+    "custom": "Aucun modèle (personnalisé)"
+  },
+  "length": "Longueur",
+  "characterSets": {
+    "title": "Jeux de caractères",
+    "uppercase": "Majuscules (A-Z)",
+    "lowercase": "Minuscules (a-z)",
+    "digits": "Chiffres (0-9)",
+    "symbols": "Symboles (!@#$%...)"
+  },
+  "options": {
+    "title": "Options",
+    "excludeAmbiguous": "Exclure les caractères ambigus (0O1lI)"
+  },
+  "strength": {
+    "weak": "Faible",
+    "fair": "Passable",
+    "good": "Bon",
+    "strong": "Fort",
+    "veryStrong": "Très fort"
+  },
+  "passphrase": {
+    "wordCount": "Nombre de mots",
+    "separator": "Séparateur",
+    "hyphen": "Tiret (-)",
+    "space": "Espace ( )",
+    "period": "Point (.)",
+    "underscore": "Tiret bas (_)",
+    "capitalize": "Mettre en majuscule",
+    "includeNumber": "Inclure un chiffre"
+  },
+  "entropy": {
+    "label": "bits d'entropie"
+  }
+}

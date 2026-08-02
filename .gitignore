@@ -1,0 +1,91 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+.envrc
+.direnv/
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+
+# Build and framework output
+dist/
+build/
+out/
+.next/
+.turbo/
+.vite/
+*.tsbuildinfo
+routeTree.gen.ts
+openapi.json
+
+# Tests and coverage
+coverage/
+.coverage/
+.vitest/
+.playwright/
+playwright-report/
+test-results/
+.nyc_output/
+
+# Local data: vault exports, databases, backups, and archives
+data-exports/
+exports/
+vault-export*
+*.kdbx
+*.1pif
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
+*.bak
+*.7z
+*.gz
+*.rar
+*.tar
+*.tgz
+*.zip
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local agent/tool state
+.mcp.json
+.codex/
+.claude/
+.agents/
+.opencode/
+prompt-executor/
+prompts_done/
+.prompt_executor.log
+
+# Secret scanner reports
+gitleaks-report.*
+trufflehog-report.*
+trufflehog-results.*

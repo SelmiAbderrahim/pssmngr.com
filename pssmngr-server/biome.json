@@ -1,0 +1,61 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"includes": [
+			"**",
+			"!**/.docker",
+			"!**/.next/**",
+			"!**/dist",
+			"!**/drizzle/**",
+			"!node_modules/**",
+			"!packages/server/package.json"
+		]
+	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"linter": {
+		"rules": {
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
+			"complexity": {
+				"noUselessCatch": "off",
+				"noBannedTypes": "off",
+				"noUselessFragments": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noUnsafeOptionalChaining": "off",
+				"noUnusedImports": "error",
+				"noUnusedFunctionParameters": "error",
+				"noUnusedVariables": "off",
+				"useHookAtTopLevel": "off"
+			},
+			"style": {
+				"noNonNullAssertion": "off",
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "off",
+				"noExplicitAny": "off",
+				"noRedeclare": "off",
+				"noTemplateCurlyInString": "off"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"useKeyWithClickEvents": "off",
+				"useAriaPropsForRole": "off",
+				"useAriaPropsSupportedByRole": "off",
+				"noStaticElementInteractions": "off"
+			}
+		}
+	}
+}

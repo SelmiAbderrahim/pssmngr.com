@@ -1,0 +1,39 @@
+{
+  "email": {
+    "required": "Email is required",
+    "tooLong": "Email is too long",
+    "invalid": "Please enter a valid email address"
+  },
+  "password": {
+    "required": "Password is required",
+    "minLength": "Password must be at least {{min}} characters",
+    "maxLength": "Password must be at most {{max}} characters",
+    "requireUppercase": "Password must contain at least one uppercase letter",
+    "requireLowercase": "Password must contain at least one lowercase letter",
+    "requireNumber": "Password must contain at least one number",
+    "requireSpecial": "Password must contain at least one special character",
+    "confirmRequired": "Please confirm your password",
+    "mismatch": "Passwords do not match"
+  },
+  "name": {
+    "required": "Name is required",
+    "tooLong": "Name is too long",
+    "invalid": "Name can only contain letters, spaces, hyphens, and apostrophes"
+  },
+  "lastName": {
+    "required": "Last name is required",
+    "tooLong": "Last name is too long",
+    "invalid": "Last name can only contain letters, spaces, hyphens, and apostrophes"
+  },
+  "code": {
+    "required": "Verification code is required",
+    "minLength": "Code must be at least 6 characters"
+  },
+  "requirements": {
+    "length": "At least {{min}} characters",
+    "uppercase": "One uppercase letter",
+    "lowercase": "One lowercase letter",
+    "number": "One number",
+    "special": "One special character (!@#$%^&*)"
+  }
+}

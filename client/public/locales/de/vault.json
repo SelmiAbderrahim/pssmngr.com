@@ -1,0 +1,79 @@
+{
+  "itemTypes": {
+    "login": "Anmeldung",
+    "card": "Karte",
+    "secureNote": "Sichere Notiz",
+    "identity": "Identität",
+    "passkey": "Passkey",
+    "totp": "TOTP",
+    "file": "Datei"
+  },
+  "untitled": "Ohne Titel",
+  "decryptionError": "[Entschlüsselungsfehler]",
+  "addItem": "Element hinzufügen",
+  "addItemDescription": "Erstelle ein neues Element. Alle Daten werden auf deinem Gerät verschlüsselt.",
+  "itemType": "Typ",
+  "title": "Tresor",
+  "titlePlaceholder": "z. B. GitHub, Bank usw.",
+  "username": "Benutzername",
+  "usernamePlaceholder": "user@example.com",
+  "password": "Passwort",
+  "sensitiveFieldUnchanged": "Leer lassen, um den bestehenden Wert beizubehalten",
+  "generate": "Generieren",
+  "hidePassword": "Passwort verbergen",
+  "showPassword": "Passwort anzeigen",
+  "url": "URL",
+  "notes": "Notizen",
+  "content": "Inhalt",
+  "empty": "Ihr Tresor ist leer — und nur Sie können ihn füllen.",
+  "emptyDescription": "Elemente werden mit Schlüsseln verschlüsselt, die Ihre Geräte nie verlassen.",
+  "addFirstItem": "Erstes Element hinzufügen",
+  "created": "Erstellt",
+  "modified": "Zuletzt geändert",
+  "saved": "Element gespeichert",
+  "saveFailed": "Änderungen konnten nicht gespeichert werden",
+  "saving": "Speichern...",
+  "save": "Speichern",
+  "encrypting": "Verschlüsseln...",
+  "placeholderCode": "--- ---",
+  "time": {
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "daysAgo": "vor {{count}}T"
+  },
+  "shareStatus": {
+    "pending": "Ausstehend",
+    "accepted": "Akzeptiert",
+    "declined": "Abgelehnt",
+    "revoked": "Widerrufen"
+  },
+  "totp": {
+    "secondsRemaining": "{{remaining}} Sekunden verbleibend",
+    "defaultIssuer": "TOTP"
+  },
+  "qrScanner": {
+    "invalidUri": "Ungültige otpauth:// URI",
+    "noBarcodeDetector": "Kamerascan wird in diesem Browser nicht unterstützt. Bitte geben Sie die URI manuell ein.",
+    "cameraPermissionDenied": "Kameraberechtigung verweigert. Bitte erlauben Sie den Kamerazugriff oder geben Sie die URI manuell ein.",
+    "cameraError": "Kamera konnte nicht zugegriffen werden. Bitte geben Sie die URI manuell ein.",
+    "noQRFound": "Kein gültiger otpauth:// QR-Code im Bild gefunden.",
+    "imageReadError": "QR-Code konnte nicht aus dem Bild gelesen werden."
+  },
+  "secretKeyPlaceholder": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-X",
+  "sharing": {
+    "loadReceivedError": "Fehler beim Laden der geteilten Elemente",
+    "loadSentError": "Fehler beim Laden der gesendeten Freigaben"
+  },
+  "ephemeral": {
+    "createError": "Fehler beim Erstellen des Links"
+  },
+  "org": {
+    "setupTitle": "Tresor dieser Organisation freigeben",
+    "setupDesc": "Erstelle einen gemeinsamen Tresor, damit Mitglieder dieselben Einträge sehen. Vorhandene Einträge in dieser Organisation werden importiert, und angemeldete Mitglieder erhalten automatisch Zugriff.",
+    "setupButton": "Gemeinsamen Tresor einrichten",
+    "noneMember": "Diese Organisation hat noch keinen gemeinsamen Tresor.",
+    "pending": "Du siehst die geteilten Einträge, sobald ein Organisationsadmin dir Zugriff gewährt. Stelle zuerst sicher, dass du auf diesem Gerät angemeldet bist."
+  },
+  "loadTrashError": "Papierkorb konnte nicht geladen werden",
+  "emptyImport": "Aus einem anderen Passwort-Manager importieren"
+}
