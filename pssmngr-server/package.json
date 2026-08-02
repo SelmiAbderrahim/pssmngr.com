@@ -30,7 +30,7 @@
 		"format-and-lint:fix": "biome check . --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.1.1",
+		"@biomejs/biome": "2.5.6",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@types/node": "^18.19.104",
@@ -39,7 +39,7 @@
 		"esbuild": "0.28.1",
 		"lefthook": "1.8.4",
 		"lint-staged": "^15.5.2",
-		"tsx": "4.16.2",
+		"tsx": "4.23.1",
 		"vitest": "3.2.6"
 	},
 	"packageManager": "pnpm@9.12.0",
