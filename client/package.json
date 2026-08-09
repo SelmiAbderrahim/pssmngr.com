@@ -159,7 +159,7 @@
     "esbuild": "^0.28.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.4.7",
     "husky": "^9.1.6",
     "jest-axe": "^10.0.0",
