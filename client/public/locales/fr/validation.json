@@ -1,0 +1,39 @@
+{
+  "email": {
+    "required": "L'e-mail est requis",
+    "tooLong": "L'e-mail est trop long",
+    "invalid": "Veuillez entrer une adresse e-mail valide"
+  },
+  "password": {
+    "required": "Le mot de passe est requis",
+    "minLength": "Le mot de passe doit contenir au moins {{min}} caractères",
+    "maxLength": "Le mot de passe doit contenir au maximum {{max}} caractères",
+    "requireUppercase": "Le mot de passe doit contenir au moins une lettre majuscule",
+    "requireLowercase": "Le mot de passe doit contenir au moins une lettre minuscule",
+    "requireNumber": "Le mot de passe doit contenir au moins un chiffre",
+    "requireSpecial": "Le mot de passe doit contenir au moins un caractère spécial",
+    "confirmRequired": "Veuillez confirmer votre mot de passe",
+    "mismatch": "Les mots de passe ne correspondent pas"
+  },
+  "name": {
+    "required": "Le nom est requis",
+    "tooLong": "Le nom est trop long",
+    "invalid": "Le nom ne peut contenir que des lettres, des espaces, des tirets et des apostrophes"
+  },
+  "lastName": {
+    "required": "Le nom de famille est requis",
+    "tooLong": "Le nom de famille est trop long",
+    "invalid": "Le nom de famille ne peut contenir que des lettres, des espaces, des tirets et des apostrophes"
+  },
+  "code": {
+    "required": "Le code de vérification est requis",
+    "minLength": "Le code doit contenir au moins 6 caractères"
+  },
+  "requirements": {
+    "length": "Au moins {{min}} caractères",
+    "uppercase": "Une lettre majuscule",
+    "lowercase": "Une lettre minuscule",
+    "number": "Un chiffre",
+    "special": "Un caractère spécial (!@#$%^&*)"
+  }
+}

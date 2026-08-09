@@ -1,0 +1,8 @@
+# Gitleaks ignore file
+# Add commit hashes or fingerprints for known false positives
+# Format: fingerprint or commit hash, one per line
+# Each entry should have a comment explaining why it's ignored
+#
+# Keep this file intentionally small. Do not add broad ignores for source,
+# configuration, or documentation paths. If a real credential is found, rotate
+# it with the provider before removing or rewriting the repository reference.

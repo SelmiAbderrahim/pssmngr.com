@@ -1,0 +1,474 @@
+{
+  "title": "Settings",
+  "subtitle": "Manage your account settings and preferences",
+  "profile": {
+    "title": "Profile Settings",
+    "subtitle": "Update your personal information and profile photo",
+    "description": "Manage your profile information",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Doe",
+    "email": "Email",
+    "emailReadonly": "Email cannot be changed",
+    "profilePicture": "Profile Picture",
+    "changePhoto": "Change Photo",
+    "uploadPhoto": "Upload Photo",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "username": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself",
+    "photo": "Profile Photo",
+    "photoChange": "Change Photo",
+    "photoRemove": "Remove Photo",
+    "photoUpload": "Upload Photo",
+    "photoUploadError": "Please select an image file",
+    "photoSizeError": "Image must be less than 5MB",
+    "photoUploadSuccess": "Photo uploaded successfully",
+    "photoUploadFailed": "Failed to upload photo",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "success": "Profile updated successfully",
+    "error": "Failed to update profile",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "nameMaxLength": "Name is too long",
+      "usernameMinLength": "Username must be at least 3 characters",
+      "usernameMaxLength": "Username is too long",
+      "usernamePattern": "Username can only contain letters, numbers, underscores, and hyphens",
+      "bioMaxLength": "Bio is too long"
+    },
+    "emailVerified": "Verified",
+    "emailUnverified": "Unverified",
+    "sendVerification": "Send Verification Email",
+    "sendingVerification": "Sending...",
+    "verificationSent": "Verification email sent",
+    "verificationFailed": "Failed to send verification email",
+    "completion": {
+      "title": "Profile Completion",
+      "complete": "Your profile is complete",
+      "incomplete": "Complete your profile",
+      "percentage": "{{percent}}% complete",
+      "addName": "Add your name",
+      "addAvatar": "Add a profile picture",
+      "verifyEmail": "Verify your email address"
+    }
+  },
+  "account": {
+    "title": "Account Settings",
+    "subtitle": "Manage your account security and preferences",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "currentPasswordPlaceholder": "Enter your current password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmPasswordPlaceholder": "Confirm your new password",
+    "currentLabel": "Current Password",
+    "currentPlaceholder": "Enter current password",
+    "newLabel": "New Password",
+    "newPlaceholder": "Create a new password",
+    "confirmNewLabel": "Confirm New Password",
+    "confirmNewPlaceholder": "Confirm your new password",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "changeTitle": "Change Password",
+    "changeButton": "Change Password",
+    "changingPassword": "Changing Password...",
+    "successMessage": "Password changed successfully!",
+    "changePassword": "Change Password",
+    "cardDescription": "Update your password to keep your account secure.",
+    "deleteAccount": "Delete Account",
+    "deleteAccountWarning": "This action cannot be undone. All your data will be permanently deleted.",
+    "confirmDelete": "Type DELETE to confirm",
+    "success": "Settings updated successfully",
+    "error": "Failed to update settings"
+  },
+  "password": {
+    "changeTitle": "Change Password",
+    "cardDescription": "Update your password to keep your account secure.",
+    "currentLabel": "Current Password",
+    "currentPlaceholder": "Enter your current password",
+    "newLabel": "New Password",
+    "newPlaceholder": "Enter your new password",
+    "confirmNewLabel": "Confirm New Password",
+    "confirmNewPlaceholder": "Confirm your new password",
+    "changeButton": "Change Password",
+    "changingPassword": "Changing Password...",
+    "successMessage": "Password changed successfully",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "currentRequired": "Current password is required",
+    "minLength": "Password must be at least 8 characters",
+    "maxLength": "Password must be less than 128 characters",
+    "requireUppercase": "Password must contain an uppercase letter",
+    "requireLowercase": "Password must contain a lowercase letter",
+    "requireNumber": "Password must contain one number",
+    "requireSpecial": "Password must contain a special character",
+    "confirmRequired": "Please confirm your password",
+    "mismatch": "Passwords do not match",
+    "sameAsCurrent": "New password cannot be the same as current password"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "bell": {
+      "withUnread": "{{count}} unread notifications",
+      "noUnread": "Notifications"
+    },
+    "empty": {
+      "title": "No notifications yet",
+      "description": "We'll notify you when something important happens"
+    },
+    "markAsRead": "Mark as read",
+    "markAllAsRead": "Mark all as read",
+    "delete": "Delete notification"
+  },
+  "privacy": {
+    "title": "Privacy Settings",
+    "subtitle": "Control your privacy and data sharing preferences",
+    "profileVisibility": "Profile Visibility",
+    "publicProfile": "Public Profile",
+    "privateProfile": "Private Profile",
+    "dataSharing": "Data Sharing",
+    "analytics": "Analytics",
+    "personalization": "Personalization",
+    "save": "Save Privacy Settings",
+    "success": "Privacy settings updated",
+    "error": "Failed to update privacy settings"
+  },
+  "language": {
+    "title": "Language Settings",
+    "subtitle": "Choose your preferred language",
+    "select": "Select Language",
+    "save": "Save Language",
+    "success": "Language updated successfully",
+    "error": "Failed to update language"
+  },
+  "theme": {
+    "title": "Theme Settings",
+    "subtitle": "Customize the appearance of the application",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "save": "Save Theme",
+    "success": "Theme updated successfully",
+    "error": "Failed to update theme"
+  },
+  "connectedAccounts": {
+    "title": "Connected Accounts",
+    "subtitle": "Manage your connected social accounts",
+    "description": "Link your social accounts for easier login and additional features.",
+    "providers": {
+      "github": "GitHub",
+      "google": "Google"
+    },
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "notConnected": "Not connected",
+    "connecting": "Connecting...",
+    "disconnecting": "Disconnecting...",
+    "primary": "Primary",
+    "warning": "You must have at least one connected account to sign in. Connect another account before disconnecting this one.",
+    "connectSuccess": "Successfully connected to {{provider}}",
+    "connectError": "Failed to connect to {{provider}}",
+    "disconnectSuccess": "Successfully disconnected from {{provider}}",
+    "disconnectError": "Failed to disconnect from {{provider}}",
+    "disconnectTitle": "Disconnect {{provider}}?",
+    "disconnectDescription": "You will no longer be able to sign in with {{provider}}. Make sure you have another way to access your account.",
+    "cancel": "Cancel",
+    "confirmDisconnect": "Are you sure you want to disconnect from {{provider}}?",
+    "success": "Account disconnected successfully",
+    "error": "Failed to disconnect account",
+    "noConnectedAccounts": "No connected accounts",
+    "connectMore": "Connect more accounts"
+  },
+  "avatar": {
+    "title": "Profile Photo",
+    "description": "Upload or change your profile photo",
+    "instructions": "Click on the photo to upload a new image (JPEG, PNG, max 5MB)",
+    "reset": "Remove Photo"
+  },
+  "username": {
+    "title": "Username",
+    "description": "Your unique username across the platform",
+    "placeholder": "Enter your username",
+    "maxLength": "Maximum 30 characters"
+  },
+  "actions": {
+    "save": "Save Changes"
+  },
+  "deleteAccount": {
+    "title": "Delete Account",
+    "description": "Permanently delete your account and all associated data",
+    "warning": "This action cannot be undone. Your account, encrypted vault items, and associated metadata will be permanently deleted.",
+    "deleteButton": "Delete Account",
+    "confirmButton": "Confirm Delete",
+    "modal": {
+      "title": "Are you absolutely sure?",
+      "description": "This action cannot be undone. It permanently removes your account, encrypted vault items, and associated metadata from this instance.",
+      "confirmLabel": "Type DELETE to confirm",
+      "confirmHint": "This verification helps prevent accidental deletion.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Delete My Account"
+    }
+  },
+  "security": {
+    "title": "Security Settings",
+    "subtitle": "Manage your account security and authentication",
+    "tabs": {
+      "password": "Password",
+      "twoFactor": "Two-Factor Auth",
+      "sessions": "Active Sessions",
+      "connections": "Connected Accounts"
+    },
+    "twoFactor": {
+      "title": "Two-Factor Authentication",
+      "description": "Add an extra layer of security to your account",
+      "status": {
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "enabled": "Two-Factor Authentication Enabled",
+      "disabled": "Two-Factor Authentication Disabled",
+      "enabledDescription": "Your account is protected with 2FA",
+      "disabledDescription": "Your account is not protected with 2FA",
+      "enable": "Enable 2FA",
+      "disable": "Disable 2FA",
+      "setupTitle": "Set Up Two-Factor Authentication",
+      "setupDescription": "Scan the QR code with your authenticator app",
+      "verifyTitle": "Verify Your Code",
+      "verifyDescription": "Enter the 6-digit code from your authenticator app",
+      "backupTitle": "Save Backup Codes",
+      "backupDescription": "Store these codes in a safe place. Use them if you lose access to your authenticator app",
+      "manualEntry": "Can't scan? Enter this code manually:",
+      "enterCode": "Enter 6-digit code",
+      "keyCopied": "Secret key copied",
+      "copySecretAriaLabel": "Copy secret key",
+      "codesCopied": "Backup codes copied",
+      "continue": "Continue",
+      "verify": "Verify",
+      "done": "Done",
+      "viewBackupCodes": "View Backup Codes",
+      "copyAllCodes": "Copy All Codes",
+      "invalidCode": "Please enter a valid 6-digit code",
+      "setupError": "Failed to set up 2FA",
+      "enabledSuccess": "2FA enabled successfully",
+      "verificationFailed": "Verification failed. Please try again",
+      "disabledSuccess": "2FA disabled successfully",
+      "disableFailed": "Failed to disable 2FA",
+      "disableTitle": "Disable Two-Factor Authentication?",
+      "disableDescription": "You will need to enter a verification code to disable 2FA",
+      "backupCodesTitle": "Backup Codes",
+      "backupCodesDescription": "Use these codes if you lose access to your authenticator app. Each code can only be used once.",
+      "noBackupCodes": "No backup codes available",
+      "info": "Two-factor authentication adds an extra layer of security to your account by requiring a code from your authenticator app in addition to your password",
+      "setup": {
+        "step1": {
+          "title": "Step 1: Install Authenticator App",
+          "description": "Download and install an authenticator app like Google Authenticator, Authy, or 1Password"
+        },
+        "step2": {
+          "title": "Step 2: Scan QR Code",
+          "description": "Open your authenticator app and scan this QR code",
+          "manualEntry": "Can't scan? Enter this code manually:"
+        },
+        "step3": {
+          "title": "Step 3: Verify Code",
+          "description": "Enter the 6-digit code from your authenticator app",
+          "codeLabel": "Verification Code",
+          "codePlaceholder": "000000"
+        },
+        "verify": "Verify and Enable",
+        "verifying": "Verifying...",
+        "success": "Two-factor authentication enabled successfully",
+        "error": "Failed to enable two-factor authentication",
+        "invalidCode": "Invalid verification code"
+      },
+      "backupCodes": {
+        "title": "Backup Codes",
+        "description": "Save these backup codes in a safe place. Each code can only be used once.",
+        "warning": "If you lose access to your authenticator app, you can use these codes to sign in.",
+        "copy": "Copy All Codes",
+        "copied": "Codes copied to clipboard",
+        "download": "Download Codes",
+        "downloaded": "Backup codes downloaded",
+        "regenerate": "Regenerate Codes",
+        "regenerated": "Backup codes regenerated",
+        "regenerateFailed": "Failed to regenerate backup codes",
+        "hidden": "Codes are hidden. Click Show to reveal them.",
+        "remaining": "{{remaining}} of {{total}} codes remaining",
+        "regenerate.warning": "Your old backup codes will no longer work. This action cannot be undone.",
+        "regenerate.confirm": "Yes, regenerate codes"
+      },
+      "infoDetail": "Two-factor authentication adds an extra layer of security by requiring a code from your authenticator app.",
+      "confirmPassword": "Confirm your password",
+      "confirmPasswordDescription": "For security, please enter your password to continue setting up 2FA.",
+      "enterPassword": "Enter your password",
+      "passwordRequired": "Password is required"
+    },
+    "sessions": {
+      "title": "Active Sessions",
+      "description": "Manage your active sessions across devices",
+      "current": "Current Session",
+      "other": "Other Sessions",
+      "noOther": "No other active sessions",
+      "device": "Device",
+      "location": "Location",
+      "lastActive": "Last Active",
+      "signedIn": "Signed In",
+      "revoke": "Revoke",
+      "revokeAll": "Revoke All Other Sessions",
+      "revoke.confirm": {
+        "title": "Revoke Session",
+        "description": "Are you sure you want to revoke this session? The device will be signed out.",
+        "button": "Yes, revoke session"
+      },
+      "revoke.success": "Session revoked successfully",
+      "revoke.error": "Failed to revoke session",
+      "revokeAll.confirm": {
+        "title": "Revoke All Sessions",
+        "description": "Are you sure you want to sign out of all other devices?"
+      },
+      "revokeAll.success": "All other sessions revoked",
+      "unknownBrowser": "Unknown Browser",
+      "unknown": "Unknown",
+      "onOs": "on {{os}}"
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "description": "Passkeys let you sign in with biometrics, a security key, or your device PIN instead of a password.",
+      "add": "Add Passkey",
+      "none": "No passkeys registered yet.",
+      "unnamed": "Unnamed passkey",
+      "backedUp": "Backed up",
+      "created": "Created",
+      "delete": "Remove passkey",
+      "registerTitle": "Add a passkey",
+      "registerDescription": "Give this passkey a recognizable name.",
+      "namePlaceholder": "e.g. Laptop Touch ID",
+      "registering": "Registering...",
+      "register": "Register Passkey",
+      "registerSuccess": "Passkey registered",
+      "registerError": "Failed to register passkey",
+      "deleteSuccess": "Passkey removed",
+      "deleteError": "Failed to remove passkey",
+      "deleteConfirm": {
+        "title": "Remove passkey?",
+        "description": "This passkey can no longer be used to sign in."
+      },
+      "deviceType": {
+        "singleDevice": "Single device",
+        "multiDevice": "Synced across devices"
+      },
+      "dateUnknown": "Unknown"
+    },
+    "devices": {
+      "title": "Trusted Devices",
+      "description": "Manage devices that can unlock and access your vault.",
+      "none": "No trusted devices found.",
+      "current": "This device",
+      "trustedBadge": "Trusted",
+      "untrustedBadge": "Untrusted",
+      "lastSeen": "Last seen",
+      "revokeTrust": "Revoke Trust",
+      "trust": "Trust",
+      "remove": "Remove",
+      "trusted": "Device trusted",
+      "untrusted": "Device untrusted",
+      "trustError": "Failed to update device trust",
+      "removeSuccess": "Device removed",
+      "removeError": "Failed to remove device",
+      "removeConfirm": {
+        "title": "Remove device?",
+        "description": "This device will need to enroll again before it can access the vault."
+      },
+      "revokeAllUnlocks": {
+        "button": "Revoke remembered unlocks on all devices",
+        "confirmTitle": "Revoke remembered unlocks?",
+        "confirmDescription": "Every device will ask for your master password again. Devices that are offline right now will ask the next time they come online.",
+        "confirm": "Revoke",
+        "success": "Remembered unlocks revoked on all devices",
+        "error": "Failed to revoke remembered unlocks"
+      }
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "back": "Back",
+    "close": "Close",
+    "show": "Show",
+    "hide": "Hide",
+    "loading": "Loading..."
+  },
+  "preferences": {
+    "language": {
+      "title": "Language",
+      "description": "Select your preferred language for the dashboard",
+      "syncNote": "Your language preference will be saved and synced across all your devices."
+    }
+  },
+  "layoutTemplate": {
+    "title": "Layout template",
+    "description": "Choose how your vault and content are laid out. Synced across your devices.",
+    "saveFailed": "Failed to save layout template. Please try again.",
+    "options": {
+      "default": {
+        "name": "Default",
+        "desc": "Spacious card grid — the classic layout"
+      },
+      "compact": {
+        "name": "Compact",
+        "desc": "Dense table rows, ideal for large vaults"
+      },
+      "list": {
+        "name": "List",
+        "desc": "Full-width rows with more detail"
+      }
+    }
+  },
+  "dataExport": {
+    "title": "Data export",
+    "subtitle": "Download a copy of all your data — encrypted exactly as we store it.",
+    "sectionTitle": "Privacy & data",
+    "explainer": "Your export contains only encrypted blobs. Password Manager is zero-knowledge — you'll need your master password to open it.",
+    "requestNew": "Request new export",
+    "format": {
+      "label": "Format",
+      "json": "JSON (developers)",
+      "csv": "CSV (spreadsheets)",
+      "both": "JSON + CSV"
+    },
+    "table": {
+      "requested": "Requested",
+      "status": "Status",
+      "size": "Size",
+      "expires": "Expires",
+      "actions": "Actions",
+      "download": "Download",
+      "revoke": "Revoke"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "RUNNING": "Building…",
+      "SUCCEEDED": "Ready",
+      "FAILED": "Failed",
+      "EXPIRED": "Expired",
+      "REVOKED": "Revoked"
+    },
+    "empty": "No exports yet. Request one to download a copy of your data.",
+    "inFlight": "An export is already in progress. We'll email you when it's ready.",
+    "toast": {
+      "created": "Export request created — we'll email you when it's ready.",
+      "revoked": "Export revoked.",
+      "createError": "Could not start a new export.",
+      "revokeError": "Could not revoke this export.",
+      "rateLimited": "You can only request 2 exports per hour."
+    },
+    "neverExpires": "—"
+  }
+}

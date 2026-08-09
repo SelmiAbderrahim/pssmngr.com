@@ -1,0 +1,41 @@
+{
+  "loading": "جارٍ التحميل...",
+  "switcher": {
+    "label": "تبديل مساحة العمل",
+    "selectWorkspace": "اختر مساحة عمل",
+    "workspaces": "مساحات العمل",
+    "noWorkspaces": "لا توجد مساحات عمل بعد",
+    "memberCount": "{{count}} أعضاء",
+    "memberCount_one": "{{count}} عضو",
+    "setDefault": "تعيين كافتراضي",
+    "default": "افتراضي"
+  },
+  "create": {
+    "trigger": "إنشاء مساحة عمل",
+    "title": "إنشاء مؤسسة",
+    "description": "أنشئ منظمة جديدة وادعُ الأعضاء.",
+    "nameLabel": "اسم المؤسسة",
+    "namePlaceholder": "مؤسستي",
+    "nameRequired": "اسم المؤسسة مطلوب",
+    "slugLabel": "معرّف الرابط",
+    "slugPlaceholder": "my-organization",
+    "slugHint": "يتم إنشاؤه تلقائيًا من الاسم. عدّله للتخصيص.",
+    "submit": "إنشاء",
+    "cancel": "إلغاء",
+    "success": "تم إنشاء المؤسسة بنجاح",
+    "error": "فشل في إنشاء المؤسسة"
+  },
+  "switch": {
+    "title": "تبديل المنظمة"
+  },
+  "setDefault": {
+    "success": "تم تحديث المؤسسة الافتراضية"
+  },
+  "errors": {
+    "loadFailed": {
+      "title": "فشل في تحميل مساحات العمل",
+      "description": "لم نتمكن من تحميل بيانات مساحة العمل الخاصة بك. يرجى المحاولة مرة أخرى.",
+      "retry": "إعادة المحاولة"
+    }
+  }
+}

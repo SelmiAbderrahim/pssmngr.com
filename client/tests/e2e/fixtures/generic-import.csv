@@ -1,0 +1,5 @@
+name,url,username,password,note
+GitHub Account,https://github.com,devuser@example.com,gh-secure-pass-1,Main dev account
+AWS Console,https://aws.amazon.com,admin@company.com,aws-admin-pass-2,Production AWS
+Netflix,https://netflix.com,user@personal.com,stream-pass-3,Family plan
+Slack Workspace,https://slack.com,team@company.com,slack-pass-4,Engineering workspace

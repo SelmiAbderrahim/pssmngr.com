@@ -1,0 +1,41 @@
+{
+  "loading": "Chargement...",
+  "switcher": {
+    "label": "Changer d'espace de travail",
+    "selectWorkspace": "Sélectionner un espace de travail",
+    "workspaces": "Espaces de travail",
+    "noWorkspaces": "Aucun espace de travail",
+    "memberCount": "{{count}} membres",
+    "memberCount_one": "{{count}} membre",
+    "setDefault": "Définir par défaut",
+    "default": "Par défaut"
+  },
+  "create": {
+    "trigger": "Créer un espace de travail",
+    "title": "Créer une organisation",
+    "description": "Créez une nouvelle organisation et invitez des membres.",
+    "nameLabel": "Nom de l'organisation",
+    "namePlaceholder": "Mon organisation",
+    "nameRequired": "Le nom de l'organisation est requis",
+    "slugLabel": "Identifiant URL",
+    "slugPlaceholder": "mon-organisation",
+    "slugHint": "Généré automatiquement à partir du nom. Modifiez pour personnaliser.",
+    "submit": "Créer",
+    "cancel": "Annuler",
+    "success": "Organisation créée avec succès",
+    "error": "Échec de la création de l'organisation"
+  },
+  "switch": {
+    "title": "Changer d'organisation"
+  },
+  "setDefault": {
+    "success": "Organisation par défaut mise à jour"
+  },
+  "errors": {
+    "loadFailed": {
+      "title": "Échec du chargement des espaces de travail",
+      "description": "Impossible de charger vos données d'espace de travail. Veuillez réessayer.",
+      "retry": "Réessayer"
+    }
+  }
+}

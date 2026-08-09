@@ -1,0 +1,151 @@
+{
+	"type": {
+		"invalid": "Expected {{expected}}, received {{received}}"
+	},
+
+	"string": {
+		"required": "This field is required",
+		"minLength": "Must be at least {{min}} characters",
+		"maxLength": "Must be no more than {{max}} characters",
+		"email": "Please enter a valid email address",
+		"url": "Please enter a valid URL",
+		"uuid": "Invalid ID format",
+		"cuid": "Invalid CUID format",
+		"cuid2": "Invalid CUID2 format",
+		"ulid": "Invalid ULID format",
+		"emoji": "Must be a valid emoji",
+		"ip": "Please enter a valid IP address",
+		"base64": "Must be valid base64 encoded",
+		"pattern": "Invalid format",
+		"alphanumeric": "Must contain only letters and numbers",
+		"slug": "Must be a valid slug (lowercase letters, numbers, and hyphens)",
+		"noWhitespace": "Cannot contain whitespace",
+		"noLeadingTrailingSpaces": "Cannot have leading or trailing spaces",
+		"includes": "Must include \"{{value}}\"",
+		"startsWith": "Must start with \"{{value}}\"",
+		"endsWith": "Must end with \"{{value}}\""
+	},
+
+	"number": {
+		"required": "This field is required",
+		"min": "Must be at least {{min}}",
+		"max": "Must be no more than {{max}}",
+		"minExclusive": "Must be greater than {{min}}",
+		"maxExclusive": "Must be less than {{max}}",
+		"positive": "Must be a positive number",
+		"negative": "Must be a negative number",
+		"integer": "Must be a whole number",
+		"finite": "Must be a finite number",
+		"multipleOf": "Must be a multiple of {{multipleOf}}",
+		"port": "Must be a valid port number (1-65535)"
+	},
+
+	"array": {
+		"required": "At least one item is required",
+		"minLength": "Must have at least {{min}} items",
+		"maxLength": "Must have no more than {{max}} items",
+		"unique": "All items must be unique"
+	},
+
+	"set": {
+		"minSize": "Must have at least {{min}} items",
+		"maxSize": "Must have no more than {{max}} items"
+	},
+
+	"object": {
+		"required": "This field is required",
+		"unrecognizedKeys": "Unrecognized keys: {{keys}}"
+	},
+
+	"boolean": {
+		"required": "This field is required"
+	},
+
+	"date": {
+		"required": "This field is required",
+		"invalid": "Invalid date",
+		"future": "Date must be in the future",
+		"past": "Date must be in the past",
+		"min": "Date must be after {{min}}",
+		"max": "Date must be before {{max}}"
+	},
+
+	"literal": {
+		"invalid": "Must be exactly {{expected}}"
+	},
+
+	"enum": {
+		"invalid": "Invalid option. Expected one of: {{options}}"
+	},
+
+	"union": {
+		"invalid": "Invalid input",
+		"invalidDiscriminator": "Invalid discriminator value. Expected one of: {{options}}"
+	},
+
+	"intersection": {
+		"invalid": "Intersection type validation failed"
+	},
+
+	"function": {
+		"invalidArguments": "Invalid function arguments",
+		"invalidReturnType": "Invalid function return type"
+	},
+
+	"password": {
+		"tooShort": "Password must be at least {{min}} characters",
+		"tooWeak": "Password is too weak",
+		"noUppercase": "Password must contain at least one uppercase letter",
+		"noLowercase": "Password must contain at least one lowercase letter",
+		"noNumber": "Password must contain at least one number",
+		"noSpecial": "Password must contain at least one special character"
+	},
+
+	"domain": {
+		"invalid": "Invalid domain format",
+		"alreadyExists": "Domain is already in use"
+	},
+
+	"docker": {
+		"invalidImage": "Invalid Docker image format",
+		"invalidContainerName": "Invalid container name format"
+	},
+
+	"custom": {
+		"sshKey": {
+			"invalidPublicKey": "Invalid public key format. Supported formats: RSA, Ed25519, ECDSA",
+			"invalidPrivateKey": "Invalid private key format"
+		},
+		"domain": {
+			"invalidFormat": "Invalid domain format",
+			"noProtocol": "Domain should not include protocol (http/https)",
+			"noPath": "Domain should not include path",
+			"noPort": "Domain should not include port",
+			"noLeadingTrailingSpaces": "Domain cannot have leading or trailing spaces"
+		},
+		"port": {
+			"min": "Port must be at least 1",
+			"max": "Port must be 65535 or below",
+			"reserved": "Port {{port}} is reserved"
+		},
+		"password": {
+			"tooWeak": "Password is too weak",
+			"minLength": "Password must be at least {{min}} characters",
+			"requireUppercase": "Password must contain at least one uppercase letter",
+			"requireLowercase": "Password must contain at least one lowercase letter",
+			"requireNumber": "Password must contain at least one number",
+			"requireSpecial": "Password must contain at least one special character"
+		},
+		"username": {
+			"invalid": "Username can only contain letters, numbers, and underscores",
+			"reserved": "This username is reserved"
+		},
+		"projectName": {
+			"invalid": "Project name can only contain letters, numbers, hyphens, and underscores"
+		},
+		"environmentVariable": {
+			"invalidKey": "Environment variable key is invalid",
+			"reservedKey": "Environment variable key {{key}} is reserved"
+		}
+	}
+}

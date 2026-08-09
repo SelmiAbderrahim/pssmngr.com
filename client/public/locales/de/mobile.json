@@ -1,0 +1,26 @@
+{
+  "bottom_nav": {
+    "label": "Primäre mobile Navigation",
+    "vault": "Tresor",
+    "generator": "Generator",
+    "security": "Sicherheit",
+    "settings": "Einstellungen",
+    "quick_add": "Schnell hinzufügen",
+    "sharing": "Freigabe"
+  },
+  "header": {
+    "back": "Zurück",
+    "menu": "Menü",
+    "close": "Schließen",
+    "lock": "Tresor sperren",
+    "signout": "Abmelden"
+  },
+  "quick_add": {
+    "title": "Zum Tresor hinzufügen",
+    "login": "Login hinzufügen",
+    "secure_note": "Sichere Notiz hinzufügen",
+    "card": "Karte hinzufügen",
+    "identity": "Identität hinzufügen",
+    "generator": "Passwort erzeugen"
+  }
+}

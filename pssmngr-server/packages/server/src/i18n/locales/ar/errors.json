@@ -1,0 +1,204 @@
+{
+	"auth": {
+		"unauthorized": "يجب عليك تسجيل الدخول لتنفيذ هذا الإجراء",
+		"forbidden": "ليس لديك صلاحية للوصول إلى هذا المورد",
+		"adminRequired": "يتطلب صلاحيات المسؤول",
+		"adminAlreadyExists": "حساب المسؤول موجود بالفعل",
+		"userNotFound": "المستخدم غير موجود",
+		"sessionExpired": "انتهت صلاحية جلستك. يرجى تسجيل الدخول مرة أخرى",
+		"invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+		"accountDisabled": "تم تعطيل حسابك",
+		"emailNotVerified": "يرجى التحقق من بريدك الإلكتروني",
+		"twoFactorRequired": "مطلوب التحقق بخطوتين",
+		"twoFactorInvalid": "رمز التحقق بخطوتين غير صحيح",
+		"noOrganization": "لم يتم تحديد مؤسسة نشطة",
+		"rateLimited": "طلبات كثيرة جداً. حاول مرة أخرى بعد {{seconds}} ثوانٍ.",
+		"vaultAlreadyExists": "الخزنة موجودة بالفعل",
+		"twoFactorFailed": "فشل تفعيل التحقق بخطوتين",
+		"invalidTotp": "رمز TOTP غير صالح",
+		"disableTwoFactorFailed": "فشل تعطيل التحقق بخطوتين",
+		"useLogout": "استخدم تسجيل الخروج لإنهاء جلستك الحالية"
+	},
+	"app": {
+		"updateRequired": "يرجى التحديث إلى الإصدار {{version}} أو أحدث للمتابعة."
+	},
+	"user": {
+		"currentPasswordIncorrect": "كلمة المرور الحالية غير صحيحة",
+		"noPasswordSet": "لم يتم تعيين كلمة مرور لهذا الحساب",
+		"passwordVerificationFailed": "فشل التحقق من كلمة المرور",
+		"newPasswordRequired": "كلمة المرور الجديدة مطلوبة",
+		"updateFailed": "فشل تحديث المستخدم"
+	},
+	"email": {
+		"invitationNotFound": "لم يتم العثور على بريد الدعوة",
+		"providerNotEmail": "مزود الإشعارات المحدد ليس من نوع البريد الإلكتروني",
+		"notConfigured": "لم يتم تحديد مزود بريد إلكتروني ولم يتم تكوين البريد الإلكتروني للنظام",
+		"sendFailed": "فشل إرسال البريد الإلكتروني"
+	},
+	"notification": {
+		"createFailed": "خطأ في إنشاء الإشعار",
+		"updateFailed": "خطأ في تحديث الإشعار",
+		"testFailed": "خطأ في اختبار الإشعار",
+		"sendFailed": "خطأ في إرسال الإشعار",
+		"tokenNotFound": "الرمز غير موجود",
+		"notFound": "الإشعار غير موجود",
+		"unauthorized": "ليس لديك صلاحية للوصول إلى هذا الإشعار"
+	},
+	"organization": {
+		"notMember": "أنت لست عضواً في هذه المنظمة",
+		"userNotMember": "المستخدم ليس عضواً في منظمتك النشطة",
+		"onlyOwnersAdmins": "فقط المالكون والمسؤولون يمكنهم تنفيذ هذا الإجراء",
+		"notFound": "المنظمة غير موجودة",
+		"notAdmin": "ليس لديك صلاحيات المسؤول",
+		"notOwner": "فقط مالك المنظمة يمكنه تنفيذ هذا الإجراء",
+		"cannotRemoveOwner": "لا يمكن إزالة مالك المنظمة",
+		"cannotChangeOwnerRole": "لا يمكن تغيير دور المالك",
+		"alreadyMember": "المستخدم عضو بالفعل في هذه المنظمة",
+		"inviteAlreadyExists": "تم إرسال دعوة بالفعل إلى هذا البريد الإلكتروني",
+		"invitationExpired": "انتهت صلاحية هذه الدعوة.",
+		"emailMismatch": "تم إرسال هذه الدعوة إلى عنوان بريد إلكتروني مختلف.",
+		"invitationNotFound": "الدعوة غير موجودة.",
+		"invitationDeclined": "تم رفض الدعوة.",
+		"noSettingsToUpdate": "لا توجد إعدادات للتحديث",
+		"cannotLeaveAsOwner": "لا يمكن لمالكي المنظمة المغادرة. قم بنقل الملكية أولاً.",
+		"transferTargetNotMember": "المستخدم المحدد ليس عضواً في هذه المنظمة.",
+		"ownershipTransferred": "تم نقل الملكية بنجاح.",
+		"deleteConfirm": "تم حذف المنظمة بنجاح.",
+		"notifications": {
+			"inviteTitle": "دعوة إلى المنظمة",
+			"inviteMessage": "تمت دعوتك للانضمام إلى {{orgName}}.",
+			"removedTitle": "تمت إزالتك من المنظمة",
+			"removedMessage": "تمت إزالتك من {{orgName}}.",
+			"ownershipTransferredTitle": "تم نقل الملكية",
+			"ownershipTransferredMessage": "أنت الآن مالك {{orgName}}."
+		}
+	},
+	"resource": {
+		"notFound": "لم يتم العثور على {{resource}}",
+		"notFoundById": "لم يتم العثور على {{resource}} برقم التعريف {{id}}",
+		"accessDenied": "غير مصرح لك بالوصول إلى هذا الـ{{resource}}",
+		"createFailed": "فشل في إنشاء {{resource}}",
+		"updateFailed": "فشل في تحديث {{resource}}",
+		"deleteFailed": "فشل في حذف {{resource}}",
+		"alreadyExists": "{{resource}} موجود بالفعل",
+		"inUse": "{{resource}} قيد الاستخدام ولا يمكن حذفه"
+	},
+	"operation": {
+		"timeout": "انتهت مهلة العملية",
+		"internalError": "حدث خطأ داخلي",
+		"databaseError": "حدث خطأ في قاعدة البيانات",
+		"networkError": "حدث خطأ في الشبكة",
+		"rateLimited": "طلبات كثيرة جداً. يرجى المحاولة لاحقاً",
+		"maintenanceMode": "النظام تحت الصيانة. يرجى المحاولة لاحقاً"
+	},
+	"vault": {
+		"deleteNotConfirmed": "يجب تأكيد الحذف بشكل صريح"
+	},
+	"sharing": {
+		"revoked": "تم إلغاء المشاركة",
+		"expired": "انتهت صلاحية المشاركة",
+		"cannotShareWithSelf": "لا يمكنك مشاركة عنصر مع نفسك",
+		"notRecipient": "لست المستلم",
+		"onlySenderCanRevoke": "المرسل فقط يمكنه الإلغاء",
+		"alreadyRevoked": "المشاركة ملغاة بالفعل",
+		"onlyCreatorCanRevoke": "المنشئ فقط يمكنه الإلغاء",
+		"linkAlreadyRevoked": "الرابط ملغى بالفعل",
+		"linkUnavailable": "هذا الرابط لم يعد متاحاً"
+	},
+	"sharedVault": {
+		"insufficientRole": "فقط المنظم أو المسؤول يمكنه إنشاء خزنات مشتركة",
+		"notFamilyMember": "المستخدم ليس عضواً في العائلة",
+		"alreadyMember": "المستخدم عضو بالفعل في هذه الخزنة",
+		"memberNotFound": "العضو غير موجود في هذه الخزنة",
+		"requiresPermission": "يتطلب صلاحية {{permission}} على هذه الخزنة",
+		"cannotRewrapRemovedMember": "يجب عدم منح العضو الذي تمت إزالته مفتاح الخزنة الجديد",
+		"cannotRemoveCreator": "لا يمكن لعضو آخر إزالة منشئ الخزنة",
+		"cannotDemoteCreator": "لا يمكن لعضو آخر خفض صلاحية منشئ الخزنة"
+	},
+	"family": {
+		"organizerOnly": "فقط منظم العائلة يمكنه تنفيذ هذا الإجراء",
+		"alreadyInFamily": "أنت تنتمي بالفعل إلى عائلة",
+		"alreadyMember": "المستخدم عضو بالفعل في العائلة",
+		"invitationPending": "هناك دعوة معلقة بالفعل لهذا البريد الإلكتروني",
+		"cannotRemoveSelf": "لا يمكنك إزالة نفسك. استخدم المغادرة بدلاً من ذلك.",
+		"cannotChangeSelfRole": "لا يمكنك تغيير دورك الخاص",
+		"cannotChangeOrganizerRole": "لا يمكنك تغيير دور منظم آخر",
+		"organizerCannotLeave": "لا يمكن للمنظم المغادرة. قم بنقل الملكية أو حذف العائلة.",
+		"organizerCannotRequestRecovery": "لا يمكن للمنظم طلب الاسترداد من نفسه",
+		"recoveryAlreadyActive": "طلب استرداد نشط بالفعل",
+		"recoveryNotFound": "طلب الاسترداد غير موجود",
+		"cannotApproveStatus": "لا يمكن الموافقة على طلب بحالة \"{{status}}\"",
+		"recoveryExpired": "انتهت صلاحية طلب الاسترداد",
+		"cannotRejectStatus": "لا يمكن رفض طلب بحالة \"{{status}}\"",
+		"recoveryMustBeApproved": "يجب الموافقة على طلب الاسترداد قبل إرسال مفاتيح جديدة",
+		"recoveryMustBeCompleting": "يجب أن يكون طلب الاسترداد في حالة الإكمال",
+		"recoveryNotFamilyMember": "المستخدم المسترد لم يعد عضوًا في هذه العائلة",
+		"recoveryDuplicateVault": "تحتوي المفاتيح المعاد تغليفها على خزنة مشتركة مكررة",
+		"recoveryNoKeys": "المفاتيح المعاد تغليفها مطلوبة لإكمال الاسترداد",
+		"recoveryVaultMismatch": "يجب أن تطابق المفاتيح المعاد تغليفها تمامًا الخزائن المشتركة لعائلة العضو",
+		"recoveryRewrapFailed": "فشل في إعادة تغليف مفتاح خزنة مشتركة للعضو المسترد",
+		"noSettingsToUpdate": "لا توجد إعدادات للتحديث",
+		"notifications": {
+			"recoveryRequestTitle": "طلب استرداد",
+			"recoveryRequestMessage": "{{name}} طلب استرداد الحساب لعائلتك.",
+			"recoveryApprovedTitle": "تمت الموافقة على الاسترداد",
+			"recoveryApprovedMessage": "تمت الموافقة على طلب الاسترداد الخاص بك. يمكنك الآن إنشاء كلمة مرور رئيسية جديدة.",
+			"recoveryRejectedTitle": "تم رفض الاسترداد",
+			"recoveryRejectedMessage": "تم رفض طلب الاسترداد الخاص بك من قبل منظم العائلة.",
+			"keysSubmittedTitle": "تم إرسال مفاتيح الاسترداد",
+			"keysSubmittedMessage": "{{name}} أرسل مفاتيح جديدة. يرجى إكمال الاسترداد بإعادة تغليف الوصول إلى الخزنة المشتركة.",
+			"recoveryCompleteTitle": "اكتمل الاسترداد",
+			"recoveryCompleteMessage": "اكتمل استرداد حسابك. تمت استعادة الوصول إلى الخزنة المشتركة."
+		},
+		"invalidRecoveryProof": "إثبات استرداد غير صالح: التوقيع لا يطابق مفتاح التوقيع المقدم"
+	},
+	"emergency": {
+		"userNotFound": "لم يتم العثور على مستخدم بهذا البريد الإلكتروني",
+		"cannotAddSelf": "لا يمكنك إضافة نفسك كجهة اتصال موثوقة",
+		"alreadyTrusted": "المستخدم جهة اتصال موثوقة بالفعل",
+		"contactNotFound": "جهة الاتصال الموثوقة غير موجودة",
+		"relationshipNotFound": "علاقة جهة الاتصال الموثوقة غير موجودة",
+		"requestPending": "طلب وصول معلق بالفعل",
+		"requestNotFound": "طلب الوصول غير موجود",
+		"cannotDenyStatus": "لا يمكن رفض طلب بحالة \"{{status}}\"",
+		"cannotGrantStatus": "لا يمكن منح طلب بحالة \"{{status}}\"",
+		"signatureVerificationFailed": "فشل التحقق من توقيع الطابع الزمني",
+		"waitingPeriodNotExpired": "لم تنتهِ فترة الانتظار بعد",
+		"accessNotGranted": "لم يتم منح الوصول بعد",
+		"escrowDataMissing": "بيانات الضمان مفقودة",
+		"cooldownBlocked": "لا يمكن إعادة المحاولة خلال 24 ساعة بعد الرفض. حاول مرة أخرى بعد {{until}}",
+		"notifications": {
+			"trustAddedTitle": "ثقة الوصول الطارئ",
+			"trustAddedMessage": "{{name}} أضافك كجهة اتصال طوارئ موثوقة.",
+			"accessRequestedTitle": "طلب وصول طارئ",
+			"accessRequestedMessage": "{{name}} طلب وصولاً طارئاً إلى خزنتك. لديك {{days}} يوم/أيام لرفض هذا الطلب.",
+			"accessDeniedTitle": "تم رفض الوصول الطارئ",
+			"accessDeniedMessage": "تم رفض طلب الوصول الطارئ الخاص بك من قبل مالك الخزنة.",
+			"accessGrantedTitle": "تم منح الوصول الطارئ",
+			"accessGrantedMessage": "تم منح طلب الوصول الطارئ الخاص بك. يمكنك الآن الوصول إلى الخزنة."
+		}
+	},
+	"passkey": {
+		"registrationOptionsFailed": "فشل إنشاء خيارات التسجيل",
+		"verificationFailed": "فشل التحقق من تسجيل مفتاح المرور",
+		"authOptionsFailed": "فشل إنشاء خيارات المصادقة",
+		"authVerificationFailed": "فشل التحقق من مصادقة مفتاح المرور",
+		"notFound": "مفتاح المرور غير موجود"
+	},
+	"device": {
+		"notFound": "الجهاز غير موجود",
+		"noDeviceForUser": "لم يتم العثور على جهاز لهذا المستخدم",
+		"noTrustedDevice": "لدى هذا المستخدم عدة أجهزة ولا يوجد جهاز موثوق؛ اطلب منه توثيق جهاز قبل المشاركة"
+	},
+	"defaults": {
+		"personalVaultName": "الخزنة الشخصية"
+	},
+	"dataExport": {
+		"inProgress": "هناك تصدير قيد التنفيذ بالفعل",
+		"notFound": "لم يتم العثور على طلب التصدير",
+		"expired": "انتهت صلاحية رابط التنزيل هذا",
+		"revoked": "تم إلغاء رابط التنزيل هذا",
+		"rateLimited": "يمكنك طلب تصديرين فقط في الساعة. يرجى المحاولة لاحقًا.",
+		"invalidRequest": "طلب التصدير غير صالح لهذا الإجراء"
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"common": {
+		"greeting": "Hola",
+		"greetingWithName": "Hola {{name}}",
+		"regards": "Saludos cordiales",
+		"team": "El equipo de Password Manager",
+		"footer": "Este correo electrónico fue enviado por Password Manager. Si no solicitaste este correo, puedes ignorarlo de forma segura.",
+		"supportEmail": "Si tienes alguna pregunta, contáctanos en {{email}}",
+		"unsubscribe": "Para cancelar la suscripción a estos correos, haz clic aquí",
+		"companyName": "Password Manager"
+	},
+	"invitation": {
+		"subject": "Has sido invitado a unirte a {{organization}}",
+		"preheader": "{{inviter}} te ha invitado a unirte a {{organization}}",
+		"title": "Invitación al equipo",
+		"body": "Has sido invitado a unirte a {{organization}} en Password Manager.",
+		"bodyWithRole": "Has sido invitado a unirte a {{organization}} como {{role}}.",
+		"invitedBy": "Invitado por: {{name}}",
+		"action": "Aceptar invitación",
+		"expires": "Esta invitación expira el {{date}}.",
+		"expiresInDays": "Esta invitación expira en {{days}} días.",
+		"ignoreNote": "Si no esperabas esta invitación, puedes ignorar este correo electrónico."
+	},
+	"emailVerification": {
+		"subject": "Verifica tu dirección de correo electrónico",
+		"preheader": "Por favor verifica tu correo para completar el registro",
+		"title": "Verificación de correo electrónico",
+		"body": "¡Gracias por registrarte! Por favor verifica tu dirección de correo electrónico haciendo clic en el botón de abajo.",
+		"action": "Verificar correo electrónico",
+		"expires": "Este enlace expirará en {{time}}.",
+		"expiresInHours": "Este enlace expira en {{hours}} horas."
+	},
+	"dataExport": {
+		"readySubject": "Tu exportación de datos está lista",
+		"readyTitle": "Tu exportación de datos está lista",
+		"readyBody": "Tu exportación de datos de Password Manager está terminada y lista para descargar.",
+		"failedSubject": "Tu exportación de datos falló",
+		"failedTitle": "Tu exportación de datos falló",
+		"failedBody": "No pudimos crear tu exportación de datos. Puedes intentarlo de nuevo desde la configuración de tu cuenta.",
+		"expiresOn": "Este enlace expira el {{expiresAt}}.",
+		"downloadAction": "Descargar tus datos",
+		"retryAction": "Intentar de nuevo",
+		"revokeAction": "Si no fuiste tú, revócalo de inmediato",
+		"revokeNotice": "Si no solicitaste esta exportación, revócala de inmediato desde la configuración de tu cuenta.",
+		"zeroKnowledgeNotice": "Este archivo contiene tus datos exactamente como los almacenamos: solo bloques cifrados. Password Manager es de conocimiento cero — no podemos descifrar tu bóveda. Para leerlo, ábrelo dentro de un cliente de Password Manager usando tu contraseña maestra.",
+		"zeroKnowledgeNoticeShort": "Este archivo contiene únicamente datos cifrados; necesitarás tu contraseña maestra para abrirlo.",
+		"readme": {
+			"heading": "Exportación de datos de Password Manager",
+			"intro": "Este archivo es la copia completa de los datos que conservamos sobre ti. Se proporciona para cumplir con los derechos de portabilidad de datos del RGPD (y equivalentes).",
+			"formatHeading": "Formato",
+			"formatBody": "Los archivos que terminan en .json son legibles por máquina; los que terminan en .csv se abren en cualquier hoja de cálculo.",
+			"zeroKnowledgeHeading": "Aviso de conocimiento cero",
+			"zeroKnowledgeBody": "Password Manager nunca ve tu contraseña maestra y no puede descifrar tu bóveda. Las entradas de bóveda a continuación se almacenan como texto cifrado (texto cifrado, nonce, etiqueta de autenticación, clave de datos envuelta). Para leerlas, abre este archivo dentro de un cliente de Password Manager usando tu contraseña maestra.",
+			"rightsHeading": "Tus derechos",
+			"rightsBody": "Puedes solicitar una exportación en cualquier momento, revocar un enlace de descarga activo desde tus ajustes y eliminar tu cuenta por completo desde la página de configuración de seguridad.",
+			"contactHeading": "Contacto",
+			"contactBody": "Para consultas sobre privacidad, contacta con el administrador de tu instancia."
+		}
+	}
+}

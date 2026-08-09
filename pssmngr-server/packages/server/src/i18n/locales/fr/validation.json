@@ -1,0 +1,151 @@
+{
+	"type": {
+		"invalid": "Attendu {{expected}}, reçu {{received}}"
+	},
+
+	"string": {
+		"required": "Ce champ est requis",
+		"minLength": "Doit contenir au moins {{min}} caractères",
+		"maxLength": "Ne doit pas dépasser {{max}} caractères",
+		"email": "Veuillez entrer une adresse e-mail valide",
+		"url": "Veuillez entrer une URL valide",
+		"uuid": "Format d'identifiant invalide",
+		"cuid": "Format CUID invalide",
+		"cuid2": "Format CUID2 invalide",
+		"ulid": "Format ULID invalide",
+		"emoji": "Doit être un emoji valide",
+		"ip": "Veuillez entrer une adresse IP valide",
+		"base64": "Doit être encodé en base64 valide",
+		"pattern": "Format invalide",
+		"alphanumeric": "Doit contenir uniquement des lettres et des chiffres",
+		"slug": "Doit être un slug valide (lettres minuscules, chiffres et tirets)",
+		"noWhitespace": "Ne peut pas contenir d'espaces",
+		"noLeadingTrailingSpaces": "Ne peut pas avoir d'espaces au début ou à la fin",
+		"includes": "Doit inclure \"{{value}}\"",
+		"startsWith": "Doit commencer par \"{{value}}\"",
+		"endsWith": "Doit se terminer par \"{{value}}\""
+	},
+
+	"number": {
+		"required": "Ce champ est requis",
+		"min": "Doit être au moins {{min}}",
+		"max": "Ne doit pas dépasser {{max}}",
+		"minExclusive": "Doit être supérieur à {{min}}",
+		"maxExclusive": "Doit être inférieur à {{max}}",
+		"positive": "Doit être un nombre positif",
+		"negative": "Doit être un nombre négatif",
+		"integer": "Doit être un nombre entier",
+		"finite": "Doit être un nombre fini",
+		"multipleOf": "Doit être un multiple de {{multipleOf}}",
+		"port": "Doit être un numéro de port valide (1-65535)"
+	},
+
+	"array": {
+		"required": "Au moins un élément est requis",
+		"minLength": "Doit contenir au moins {{min}} éléments",
+		"maxLength": "Ne doit pas contenir plus de {{max}} éléments",
+		"unique": "Tous les éléments doivent être uniques"
+	},
+
+	"set": {
+		"minSize": "Doit contenir au moins {{min}} éléments",
+		"maxSize": "Ne doit pas contenir plus de {{max}} éléments"
+	},
+
+	"object": {
+		"required": "Ce champ est requis",
+		"unrecognizedKeys": "Clés non reconnues : {{keys}}"
+	},
+
+	"boolean": {
+		"required": "Ce champ est requis"
+	},
+
+	"date": {
+		"required": "Ce champ est requis",
+		"invalid": "Date invalide",
+		"future": "La date doit être dans le futur",
+		"past": "La date doit être dans le passé",
+		"min": "La date doit être après {{min}}",
+		"max": "La date doit être avant {{max}}"
+	},
+
+	"literal": {
+		"invalid": "Doit être exactement {{expected}}"
+	},
+
+	"enum": {
+		"invalid": "Option invalide. Attendu l'une des suivantes : {{options}}"
+	},
+
+	"union": {
+		"invalid": "Entrée invalide",
+		"invalidDiscriminator": "Valeur de discriminateur invalide. Attendu l'une des suivantes : {{options}}"
+	},
+
+	"intersection": {
+		"invalid": "La validation du type d'intersection a échoué"
+	},
+
+	"function": {
+		"invalidArguments": "Arguments de fonction invalides",
+		"invalidReturnType": "Type de retour de fonction invalide"
+	},
+
+	"password": {
+		"tooShort": "Le mot de passe doit contenir au moins {{min}} caractères",
+		"tooWeak": "Le mot de passe est trop faible",
+		"noUppercase": "Le mot de passe doit contenir au moins une majuscule",
+		"noLowercase": "Le mot de passe doit contenir au moins une minuscule",
+		"noNumber": "Le mot de passe doit contenir au moins un chiffre",
+		"noSpecial": "Le mot de passe doit contenir au moins un caractère spécial"
+	},
+
+	"domain": {
+		"invalid": "Format de domaine invalide",
+		"alreadyExists": "Ce domaine est déjà utilisé"
+	},
+
+	"docker": {
+		"invalidImage": "Format d'image Docker invalide",
+		"invalidContainerName": "Format de nom de conteneur invalide"
+	},
+
+	"custom": {
+		"sshKey": {
+			"invalidPublicKey": "Format de clé publique invalide. Formats supportés : RSA, Ed25519, ECDSA",
+			"invalidPrivateKey": "Format de clé privée invalide"
+		},
+		"domain": {
+			"invalidFormat": "Format de domaine invalide",
+			"noProtocol": "Le domaine ne doit pas inclure le protocole (http/https)",
+			"noPath": "Le domaine ne doit pas inclure de chemin",
+			"noPort": "Le domaine ne doit pas inclure de port",
+			"noLeadingTrailingSpaces": "Le domaine ne peut pas avoir d'espaces au début ou à la fin"
+		},
+		"port": {
+			"min": "Le port doit être au moins 1",
+			"max": "Le port doit être 65535 ou moins",
+			"reserved": "Le port {{port}} est réservé"
+		},
+		"password": {
+			"tooWeak": "Le mot de passe est trop faible",
+			"minLength": "Le mot de passe doit contenir au moins {{min}} caractères",
+			"requireUppercase": "Le mot de passe doit contenir au moins une majuscule",
+			"requireLowercase": "Le mot de passe doit contenir au moins une minuscule",
+			"requireNumber": "Le mot de passe doit contenir au moins un chiffre",
+			"requireSpecial": "Le mot de passe doit contenir au moins un caractère spécial"
+		},
+		"username": {
+			"invalid": "Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des tirets bas",
+			"reserved": "Ce nom d'utilisateur est réservé"
+		},
+		"projectName": {
+			"invalid": "Le nom du projet ne peut contenir que des lettres, des chiffres, des tirets et des tirets bas"
+		},
+		"environmentVariable": {
+			"invalidKey": "Clé de variable d'environnement invalide",
+			"reservedKey": "La clé de variable d'environnement {{key}} est réservée"
+		}
+	}
+}

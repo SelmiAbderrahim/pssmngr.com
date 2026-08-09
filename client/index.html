@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/branding/logo-mono-black.svg" />
+    <link rel="apple-touch-icon" href="/branding/apple-touch-icon-180x180.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="application-name" content="Password Manager" />
+    <meta name="description" content="Zero-knowledge password manager with client-side encryption" />
+
+    <!-- Theme + RTL detection - external (CSP-compliant), blocking to prevent FOUC -->
+    <script src="/init-fouc.js"></script>
+
+    <title>Password Manager</title>
+  </head>
+  <body class="h-auto w-full">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

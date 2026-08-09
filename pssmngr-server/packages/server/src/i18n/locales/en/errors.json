@@ -1,0 +1,204 @@
+{
+	"auth": {
+		"unauthorized": "You must be logged in to perform this action",
+		"forbidden": "You don't have permission to access this resource",
+		"adminRequired": "Admin access required",
+		"adminAlreadyExists": "Admin account already exists",
+		"userNotFound": "User not found",
+		"sessionExpired": "Your session has expired. Please sign in again",
+		"invalidCredentials": "Invalid email or password",
+		"accountDisabled": "Your account has been disabled",
+		"emailNotVerified": "Please verify your email address",
+		"twoFactorRequired": "Two-factor authentication is required",
+		"twoFactorInvalid": "Invalid two-factor authentication code",
+		"noOrganization": "No active organization selected",
+		"rateLimited": "Too many requests. Try again in {{seconds}} seconds.",
+		"vaultAlreadyExists": "Vault already exists",
+		"twoFactorFailed": "Failed to enable 2FA",
+		"invalidTotp": "Invalid TOTP code",
+		"disableTwoFactorFailed": "Failed to disable 2FA",
+		"useLogout": "Use logout to end your current session"
+	},
+	"app": {
+		"updateRequired": "Please update to version {{version}} or later to continue."
+	},
+	"user": {
+		"currentPasswordIncorrect": "Current password is incorrect",
+		"noPasswordSet": "No password set for this account",
+		"passwordVerificationFailed": "Password verification failed",
+		"newPasswordRequired": "New password is required",
+		"updateFailed": "Failed to update user"
+	},
+	"email": {
+		"invitationNotFound": "Invitation email not found",
+		"providerNotEmail": "Selected notification provider is not an email type",
+		"notConfigured": "No email provider selected and system email not configured",
+		"sendFailed": "Failed to send email"
+	},
+	"notification": {
+		"createFailed": "Error creating the notification",
+		"updateFailed": "Error updating the notification",
+		"testFailed": "Error testing the notification",
+		"sendFailed": "Error sending the notification",
+		"tokenNotFound": "Token not found",
+		"notFound": "Notification not found",
+		"unauthorized": "You don't have permission to access this notification"
+	},
+	"organization": {
+		"notMember": "You are not a member of this organization",
+		"userNotMember": "User is not a member of your active organization",
+		"onlyOwnersAdmins": "Only owners and admins can perform this action",
+		"notFound": "Organization not found",
+		"notAdmin": "You don't have admin permissions",
+		"notOwner": "Only the organization owner can perform this action",
+		"cannotRemoveOwner": "Cannot remove the organization owner",
+		"cannotChangeOwnerRole": "Cannot change the owner's role",
+		"alreadyMember": "User is already a member of this organization",
+		"inviteAlreadyExists": "An invitation has already been sent to this email",
+		"invitationExpired": "This invitation has expired.",
+		"emailMismatch": "This invitation was sent to a different email address.",
+		"invitationNotFound": "Invitation not found.",
+		"invitationDeclined": "Invitation declined.",
+		"noSettingsToUpdate": "No settings to update",
+		"cannotLeaveAsOwner": "Organization owners cannot leave. Transfer ownership first.",
+		"transferTargetNotMember": "The selected user is not a member of this organization.",
+		"ownershipTransferred": "Ownership transferred successfully.",
+		"deleteConfirm": "Organization deleted successfully.",
+		"notifications": {
+			"inviteTitle": "Organization invitation",
+			"inviteMessage": "You have been invited to join {{orgName}}.",
+			"removedTitle": "Removed from organization",
+			"removedMessage": "You have been removed from {{orgName}}.",
+			"ownershipTransferredTitle": "Ownership transferred",
+			"ownershipTransferredMessage": "You are now the owner of {{orgName}}."
+		}
+	},
+	"resource": {
+		"notFound": "{{resource}} not found",
+		"notFoundById": "{{resource}} with ID {{id}} not found",
+		"accessDenied": "You are not authorized to access this {{resource}}",
+		"createFailed": "Failed to create {{resource}}",
+		"updateFailed": "Failed to update {{resource}}",
+		"deleteFailed": "Failed to delete {{resource}}",
+		"alreadyExists": "{{resource}} already exists",
+		"inUse": "{{resource}} is in use and cannot be deleted"
+	},
+	"operation": {
+		"timeout": "Operation timed out",
+		"internalError": "An internal error occurred",
+		"databaseError": "A database error occurred",
+		"networkError": "A network error occurred",
+		"rateLimited": "Too many requests. Please try again later",
+		"maintenanceMode": "System is under maintenance. Please try again later"
+	},
+	"vault": {
+		"deleteNotConfirmed": "Deletion must be explicitly confirmed"
+	},
+	"sharing": {
+		"revoked": "Share has been revoked",
+		"expired": "Share has expired",
+		"cannotShareWithSelf": "Cannot share an item with yourself",
+		"notRecipient": "Not the recipient",
+		"onlySenderCanRevoke": "Only the sender can revoke",
+		"alreadyRevoked": "Share already revoked",
+		"onlyCreatorCanRevoke": "Only the creator can revoke",
+		"linkAlreadyRevoked": "Link already revoked",
+		"linkUnavailable": "This link is no longer available"
+	},
+	"sharedVault": {
+		"insufficientRole": "Only organizer or admin can create shared vaults",
+		"notFamilyMember": "User is not a family member",
+		"alreadyMember": "User is already a member of this vault",
+		"memberNotFound": "Member not found in this vault",
+		"requiresPermission": "Requires {{permission}} permission on this vault",
+		"cannotRewrapRemovedMember": "The removed member must not be re-granted the new vault key",
+		"cannotRemoveCreator": "The vault creator cannot be removed by another member",
+		"cannotDemoteCreator": "The vault creator's permission cannot be lowered by another member"
+	},
+	"family": {
+		"organizerOnly": "Only the family organizer can perform this action",
+		"alreadyInFamily": "You already belong to a family",
+		"alreadyMember": "User is already a family member",
+		"invitationPending": "An invitation is already pending for this email",
+		"cannotRemoveSelf": "Cannot remove yourself. Use leave instead.",
+		"cannotChangeSelfRole": "Cannot change your own role",
+		"cannotChangeOrganizerRole": "Cannot change another organizer's role",
+		"organizerCannotLeave": "The organizer cannot leave. Transfer ownership or delete the family.",
+		"organizerCannotRequestRecovery": "The organizer cannot request recovery from themselves",
+		"recoveryAlreadyActive": "A recovery request is already active",
+		"recoveryNotFound": "Recovery request not found",
+		"cannotApproveStatus": "Cannot approve a request with status \"{{status}}\"",
+		"recoveryExpired": "Recovery request has expired",
+		"cannotRejectStatus": "Cannot reject a request with status \"{{status}}\"",
+		"recoveryMustBeApproved": "Recovery request must be approved before submitting new keys",
+		"recoveryMustBeCompleting": "Recovery request must be in completing state",
+		"recoveryNotFamilyMember": "The recovering user is no longer a member of this family",
+		"recoveryDuplicateVault": "Re-wrapped keys contain a duplicate shared vault",
+		"recoveryNoKeys": "Re-wrapped keys are required to complete recovery",
+		"recoveryVaultMismatch": "Re-wrapped keys must exactly match the member's family shared vaults",
+		"recoveryRewrapFailed": "Failed to re-wrap a shared vault key for the recovering member",
+		"noSettingsToUpdate": "No settings to update",
+		"notifications": {
+			"recoveryRequestTitle": "Recovery request",
+			"recoveryRequestMessage": "{{name}} has requested account recovery for your family.",
+			"recoveryApprovedTitle": "Recovery approved",
+			"recoveryApprovedMessage": "Your recovery request has been approved. You can now create a new master password.",
+			"recoveryRejectedTitle": "Recovery rejected",
+			"recoveryRejectedMessage": "Your recovery request has been rejected by the family organizer.",
+			"keysSubmittedTitle": "Recovery keys submitted",
+			"keysSubmittedMessage": "{{name}} has submitted new keys. Please complete the recovery by re-wrapping shared vault access.",
+			"recoveryCompleteTitle": "Recovery complete",
+			"recoveryCompleteMessage": "Your account recovery is complete. Shared vault access has been restored."
+		},
+		"invalidRecoveryProof": "Invalid recovery proof: the signature does not match the submitted signing key"
+	},
+	"emergency": {
+		"userNotFound": "User not found with that email",
+		"cannotAddSelf": "Cannot add yourself as a trusted contact",
+		"alreadyTrusted": "User is already a trusted contact",
+		"contactNotFound": "Trusted contact not found",
+		"relationshipNotFound": "Trusted contact relationship not found",
+		"requestPending": "An access request is already pending",
+		"requestNotFound": "Access request not found",
+		"cannotDenyStatus": "Cannot deny a request with status \"{{status}}\"",
+		"cannotGrantStatus": "Cannot grant a request with status \"{{status}}\"",
+		"signatureVerificationFailed": "Timestamp signature verification failed",
+		"waitingPeriodNotExpired": "Waiting period has not expired yet",
+		"accessNotGranted": "Access has not been granted yet",
+		"escrowDataMissing": "Escrow data is missing",
+		"cooldownBlocked": "Cannot retry within 24 hours after denial. Try again after {{until}}",
+		"notifications": {
+			"trustAddedTitle": "Emergency access trust",
+			"trustAddedMessage": "{{name}} has added you as a trusted emergency contact.",
+			"accessRequestedTitle": "Emergency access requested",
+			"accessRequestedMessage": "{{name}} has requested emergency access to your vault. You have {{days}} day(s) to deny this request.",
+			"accessDeniedTitle": "Emergency access denied",
+			"accessDeniedMessage": "Your emergency access request has been denied by the vault owner.",
+			"accessGrantedTitle": "Emergency access granted",
+			"accessGrantedMessage": "Your emergency access request has been granted. You can now access the vault."
+		}
+	},
+	"passkey": {
+		"registrationOptionsFailed": "Failed to generate registration options",
+		"verificationFailed": "Failed to verify passkey registration",
+		"authOptionsFailed": "Failed to generate authentication options",
+		"authVerificationFailed": "Failed to verify passkey authentication",
+		"notFound": "Passkey not found"
+	},
+	"device": {
+		"notFound": "Device not found",
+		"noDeviceForUser": "No device found for this user",
+		"noTrustedDevice": "This user has multiple devices and none is trusted; ask them to trust a device before sharing"
+	},
+	"defaults": {
+		"personalVaultName": "Personal Vault"
+	},
+	"dataExport": {
+		"inProgress": "An export is already in progress",
+		"notFound": "Export request not found",
+		"expired": "This download link has expired",
+		"revoked": "This download link was revoked",
+		"rateLimited": "You can only request 2 exports per hour. Please try again later.",
+		"invalidRequest": "The export request is not valid for this action"
+	}
+}

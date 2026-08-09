@@ -1,0 +1,39 @@
+{
+  "email": {
+    "required": "El correo electrónico es requerido",
+    "tooLong": "El correo electrónico es demasiado largo",
+    "invalid": "Por favor ingresa una dirección de correo electrónico válida"
+  },
+  "password": {
+    "required": "La contraseña es requerida",
+    "minLength": "La contraseña debe tener al menos {{min}} caracteres",
+    "maxLength": "La contraseña debe tener como máximo {{max}} caracteres",
+    "requireUppercase": "La contraseña debe contener al menos una letra mayúscula",
+    "requireLowercase": "La contraseña debe contener al menos una letra minúscula",
+    "requireNumber": "La contraseña debe contener al menos un número",
+    "requireSpecial": "La contraseña debe contener al menos un carácter especial",
+    "confirmRequired": "Por favor confirma tu contraseña",
+    "mismatch": "Las contraseñas no coinciden"
+  },
+  "name": {
+    "required": "El nombre es requerido",
+    "tooLong": "El nombre es demasiado largo",
+    "invalid": "El nombre solo puede contener letras, espacios, guiones y apóstrofes"
+  },
+  "lastName": {
+    "required": "El apellido es requerido",
+    "tooLong": "El apellido es demasiado largo",
+    "invalid": "El apellido solo puede contener letras, espacios, guiones y apóstrofes"
+  },
+  "code": {
+    "required": "El código de verificación es requerido",
+    "minLength": "El código debe tener al menos 6 caracteres"
+  },
+  "requirements": {
+    "length": "Al menos {{min}} caracteres",
+    "uppercase": "Una letra mayúscula",
+    "lowercase": "Una letra minúscula",
+    "number": "Un número",
+    "special": "Un carácter especial (!@#$%^&*)"
+  }
+}

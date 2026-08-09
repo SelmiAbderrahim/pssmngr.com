@@ -1,0 +1,204 @@
+{
+	"auth": {
+		"unauthorized": "Debe iniciar sesión para realizar esta acción",
+		"forbidden": "No tiene permiso para acceder a este recurso",
+		"adminRequired": "Se requiere acceso de administrador",
+		"adminAlreadyExists": "La cuenta de administrador ya existe",
+		"userNotFound": "Usuario no encontrado",
+		"sessionExpired": "Su sesión ha expirado. Por favor, inicie sesión de nuevo",
+		"invalidCredentials": "Correo electrónico o contraseña inválidos",
+		"accountDisabled": "Su cuenta ha sido deshabilitada",
+		"emailNotVerified": "Por favor, verifique su dirección de correo electrónico",
+		"twoFactorRequired": "Se requiere autenticación de dos factores",
+		"twoFactorInvalid": "Código de autenticación de dos factores inválido",
+		"noOrganization": "No se ha seleccionado ninguna organización activa",
+		"rateLimited": "Demasiadas solicitudes. Inténtelo de nuevo en {{seconds}} segundos.",
+		"vaultAlreadyExists": "La bóveda ya existe",
+		"twoFactorFailed": "Error al activar la autenticación de dos factores",
+		"invalidTotp": "Código TOTP inválido",
+		"disableTwoFactorFailed": "Error al desactivar la autenticación de dos factores",
+		"useLogout": "Use cerrar sesión para finalizar su sesión actual"
+	},
+	"app": {
+		"updateRequired": "Actualice a la versión {{version}} o posterior para continuar."
+	},
+	"user": {
+		"currentPasswordIncorrect": "La contraseña actual es incorrecta",
+		"noPasswordSet": "No se ha establecido una contraseña para esta cuenta",
+		"passwordVerificationFailed": "La verificación de la contraseña falló",
+		"newPasswordRequired": "Se requiere una nueva contraseña",
+		"updateFailed": "Error al actualizar el usuario"
+	},
+	"email": {
+		"invitationNotFound": "Correo de invitación no encontrado",
+		"providerNotEmail": "El proveedor de notificaciones seleccionado no es de tipo correo electrónico",
+		"notConfigured": "No se ha seleccionado un proveedor de correo y el correo del sistema no está configurado",
+		"sendFailed": "Error al enviar el correo electrónico"
+	},
+	"notification": {
+		"createFailed": "Error al crear la notificación",
+		"updateFailed": "Error al actualizar la notificación",
+		"testFailed": "Error al probar la notificación",
+		"sendFailed": "Error al enviar la notificación",
+		"tokenNotFound": "Token no encontrado",
+		"notFound": "Notificación no encontrada",
+		"unauthorized": "No tiene permiso para acceder a esta notificación"
+	},
+	"organization": {
+		"notMember": "No eres miembro de esta organización",
+		"userNotMember": "El usuario no es miembro de tu organización activa",
+		"onlyOwnersAdmins": "Solo los propietarios y administradores pueden realizar esta acción",
+		"notFound": "Organización no encontrada",
+		"notAdmin": "No tienes permisos de administrador",
+		"notOwner": "Solo el propietario de la organización puede realizar esta acción",
+		"cannotRemoveOwner": "No se puede eliminar al propietario de la organización",
+		"cannotChangeOwnerRole": "No se puede cambiar el rol del propietario",
+		"alreadyMember": "El usuario ya es miembro de esta organización",
+		"inviteAlreadyExists": "Ya se ha enviado una invitación a este correo electrónico",
+		"invitationExpired": "Esta invitación ha expirado.",
+		"emailMismatch": "Esta invitación fue enviada a una dirección de correo electrónico diferente.",
+		"invitationNotFound": "Invitación no encontrada.",
+		"invitationDeclined": "Invitación rechazada.",
+		"noSettingsToUpdate": "No hay configuraciones para actualizar",
+		"cannotLeaveAsOwner": "Los propietarios de la organización no pueden salir. Transfiera la propiedad primero.",
+		"transferTargetNotMember": "El usuario seleccionado no es miembro de esta organización.",
+		"ownershipTransferred": "Propiedad transferida exitosamente.",
+		"deleteConfirm": "Organización eliminada exitosamente.",
+		"notifications": {
+			"inviteTitle": "Invitación a la organización",
+			"inviteMessage": "Has sido invitado a unirte a {{orgName}}.",
+			"removedTitle": "Eliminado de la organización",
+			"removedMessage": "Has sido eliminado de {{orgName}}.",
+			"ownershipTransferredTitle": "Propiedad transferida",
+			"ownershipTransferredMessage": "Ahora eres el propietario de {{orgName}}."
+		}
+	},
+	"resource": {
+		"notFound": "{{resource}} no encontrado",
+		"notFoundById": "{{resource}} con ID {{id}} no encontrado",
+		"accessDenied": "No está autorizado para acceder a este {{resource}}",
+		"createFailed": "Error al crear {{resource}}",
+		"updateFailed": "Error al actualizar {{resource}}",
+		"deleteFailed": "Error al eliminar {{resource}}",
+		"alreadyExists": "{{resource}} ya existe",
+		"inUse": "{{resource}} está en uso y no se puede eliminar"
+	},
+	"operation": {
+		"timeout": "La operación expiró",
+		"internalError": "Ocurrió un error interno",
+		"databaseError": "Ocurrió un error de base de datos",
+		"networkError": "Ocurrió un error de red",
+		"rateLimited": "Demasiadas solicitudes. Por favor, intente más tarde",
+		"maintenanceMode": "El sistema está en mantenimiento. Por favor, intente más tarde"
+	},
+	"vault": {
+		"deleteNotConfirmed": "La eliminación debe ser confirmada explícitamente"
+	},
+	"sharing": {
+		"revoked": "El compartido ha sido revocado",
+		"expired": "El compartido ha expirado",
+		"cannotShareWithSelf": "No puede compartir un elemento consigo mismo",
+		"notRecipient": "No es el destinatario",
+		"onlySenderCanRevoke": "Solo el remitente puede revocar",
+		"alreadyRevoked": "El compartido ya está revocado",
+		"onlyCreatorCanRevoke": "Solo el creador puede revocar",
+		"linkAlreadyRevoked": "El enlace ya está revocado",
+		"linkUnavailable": "Este enlace ya no está disponible"
+	},
+	"sharedVault": {
+		"insufficientRole": "Solo el organizador o el administrador pueden crear bóvedas compartidas",
+		"notFamilyMember": "El usuario no es miembro de la familia",
+		"alreadyMember": "El usuario ya es miembro de esta bóveda",
+		"memberNotFound": "Miembro no encontrado en esta bóveda",
+		"requiresPermission": "Requiere el permiso {{permission}} en esta bóveda",
+		"cannotRewrapRemovedMember": "El miembro eliminado no debe recibir la nueva clave de la bóveda",
+		"cannotRemoveCreator": "El creador de la bóveda no puede ser eliminado por otro miembro",
+		"cannotDemoteCreator": "El permiso del creador de la bóveda no puede ser rebajado por otro miembro"
+	},
+	"family": {
+		"organizerOnly": "Solo el organizador de la familia puede realizar esta acción",
+		"alreadyInFamily": "Ya pertenece a una familia",
+		"alreadyMember": "El usuario ya es miembro de la familia",
+		"invitationPending": "Ya hay una invitación pendiente para este correo electrónico",
+		"cannotRemoveSelf": "No puede eliminarse a sí mismo. Use salir en su lugar.",
+		"cannotChangeSelfRole": "No puede cambiar su propio rol",
+		"cannotChangeOrganizerRole": "No puede cambiar el rol de otro organizador",
+		"organizerCannotLeave": "El organizador no puede salir. Transfiera la propiedad o elimine la familia.",
+		"organizerCannotRequestRecovery": "El organizador no puede solicitar recuperación de sí mismo",
+		"recoveryAlreadyActive": "Ya hay una solicitud de recuperación activa",
+		"recoveryNotFound": "Solicitud de recuperación no encontrada",
+		"cannotApproveStatus": "No se puede aprobar una solicitud con estado \"{{status}}\"",
+		"recoveryExpired": "La solicitud de recuperación ha expirado",
+		"cannotRejectStatus": "No se puede rechazar una solicitud con estado \"{{status}}\"",
+		"recoveryMustBeApproved": "La solicitud de recuperación debe ser aprobada antes de enviar nuevas claves",
+		"recoveryMustBeCompleting": "La solicitud de recuperación debe estar en estado de finalización",
+		"recoveryNotFamilyMember": "El usuario en recuperación ya no es miembro de esta familia",
+		"recoveryDuplicateVault": "Las claves reempaquetadas contienen una bóveda compartida duplicada",
+		"recoveryNoKeys": "Se requieren claves reempaquetadas para completar la recuperación",
+		"recoveryVaultMismatch": "Las claves reempaquetadas deben coincidir exactamente con las bóvedas compartidas de la familia del miembro",
+		"recoveryRewrapFailed": "No se pudo reempaquetar una clave de bóveda compartida para el miembro en recuperación",
+		"noSettingsToUpdate": "No hay configuraciones que actualizar",
+		"notifications": {
+			"recoveryRequestTitle": "Solicitud de recuperación",
+			"recoveryRequestMessage": "{{name}} ha solicitado la recuperación de cuenta para su familia.",
+			"recoveryApprovedTitle": "Recuperación aprobada",
+			"recoveryApprovedMessage": "Su solicitud de recuperación ha sido aprobada. Ahora puede crear una nueva contraseña maestra.",
+			"recoveryRejectedTitle": "Recuperación rechazada",
+			"recoveryRejectedMessage": "Su solicitud de recuperación ha sido rechazada por el organizador de la familia.",
+			"keysSubmittedTitle": "Claves de recuperación enviadas",
+			"keysSubmittedMessage": "{{name}} ha enviado nuevas claves. Por favor, complete la recuperación re-envolviendo el acceso a la bóveda compartida.",
+			"recoveryCompleteTitle": "Recuperación completada",
+			"recoveryCompleteMessage": "La recuperación de su cuenta está completa. Se ha restaurado el acceso a la bóveda compartida."
+		},
+		"invalidRecoveryProof": "Prueba de recuperación no válida: la firma no coincide con la clave de firma enviada"
+	},
+	"emergency": {
+		"userNotFound": "No se encontró usuario con ese correo electrónico",
+		"cannotAddSelf": "No puede agregarse a sí mismo como contacto de confianza",
+		"alreadyTrusted": "El usuario ya es un contacto de confianza",
+		"contactNotFound": "Contacto de confianza no encontrado",
+		"relationshipNotFound": "Relación de contacto de confianza no encontrada",
+		"requestPending": "Ya hay una solicitud de acceso pendiente",
+		"requestNotFound": "Solicitud de acceso no encontrada",
+		"cannotDenyStatus": "No se puede denegar una solicitud con estado \"{{status}}\"",
+		"cannotGrantStatus": "No se puede conceder una solicitud con estado \"{{status}}\"",
+		"signatureVerificationFailed": "Falló la verificación de la firma de la marca de tiempo",
+		"waitingPeriodNotExpired": "El período de espera aún no ha expirado",
+		"accessNotGranted": "El acceso aún no ha sido concedido",
+		"escrowDataMissing": "Faltan los datos de custodia",
+		"cooldownBlocked": "No se puede reintentar dentro de las 24 horas posteriores a la denegación. Inténtelo de nuevo después de {{until}}",
+		"notifications": {
+			"trustAddedTitle": "Confianza de acceso de emergencia",
+			"trustAddedMessage": "{{name}} lo ha agregado como contacto de emergencia de confianza.",
+			"accessRequestedTitle": "Acceso de emergencia solicitado",
+			"accessRequestedMessage": "{{name}} ha solicitado acceso de emergencia a su bóveda. Tiene {{days}} día(s) para denegar esta solicitud.",
+			"accessDeniedTitle": "Acceso de emergencia denegado",
+			"accessDeniedMessage": "Su solicitud de acceso de emergencia ha sido denegada por el propietario de la bóveda.",
+			"accessGrantedTitle": "Acceso de emergencia concedido",
+			"accessGrantedMessage": "Su solicitud de acceso de emergencia ha sido concedida. Ahora puede acceder a la bóveda."
+		}
+	},
+	"passkey": {
+		"registrationOptionsFailed": "Error al generar las opciones de registro",
+		"verificationFailed": "Error al verificar el registro del passkey",
+		"authOptionsFailed": "Error al generar las opciones de autenticación",
+		"authVerificationFailed": "Error al verificar la autenticación del passkey",
+		"notFound": "Passkey no encontrado"
+	},
+	"device": {
+		"notFound": "Dispositivo no encontrado",
+		"noDeviceForUser": "No se encontró dispositivo para este usuario",
+		"noTrustedDevice": "Este usuario tiene varios dispositivos y ninguno es de confianza; pídele que confíe en un dispositivo antes de compartir"
+	},
+	"defaults": {
+		"personalVaultName": "Bóveda personal"
+	},
+	"dataExport": {
+		"inProgress": "Ya hay una exportación en progreso",
+		"notFound": "No se encontró la solicitud de exportación",
+		"expired": "Este enlace de descarga ha expirado",
+		"revoked": "Este enlace de descarga fue revocado",
+		"rateLimited": "Solo puedes solicitar 2 exportaciones por hora. Por favor inténtalo más tarde.",
+		"invalidRequest": "La solicitud de exportación no es válida para esta acción"
+	}
+}

@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "WebWorker"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting - Strict TypeScript Standards */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    // Kept off while optional properties are migrated incrementally.
+    "exactOptionalPropertyTypes": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+
+    /* Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": [
+    "src",
+    "src/types",
+    "src/services",
+    "src/hooks",
+    "src/utils",
+    "src/validation",
+    "src/errors",
+    "src/transforms",
+    "src/features",
+    "types.ts",
+    "constants",
+    "site.config.ts",
+    "errors.ts"
+  ],
+  "exclude": [
+    "**/__tests__/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "src/__tests__/**"
+  ]
+}

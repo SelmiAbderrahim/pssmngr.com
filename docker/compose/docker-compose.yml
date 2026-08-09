@@ -1,0 +1,122 @@
+name: pssmngr
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-pssmngr}
+      POSTGRES_USER: ${POSTGRES_USER:-pssmngr}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    security_opt:
+      - no-new-privileges:true
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Set REDIS_PASSWORD in .env}
+    command:
+      - sh
+      - -ec
+      - exec redis-server --appendonly yes --requirepass "$${REDIS_PASSWORD}"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$${REDIS_PASSWORD}\" --no-auth-warning ping | grep -q PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    security_opt:
+      - no-new-privileges:true
+
+  server:
+    build:
+      context: ../..
+      dockerfile: docker/pssmngr-server/Dockerfile
+      args:
+        NODE_VERSION: ${NODE_VERSION:-20.19.0}
+        PNPM_VERSION: ${PNPM_VERSION:-9.12.0}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-pssmngr}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@postgres:5432/${POSTGRES_DB:-pssmngr}
+      REDIS_URL: redis://:${REDIS_PASSWORD:?Set REDIS_PASSWORD in .env}@redis:6379
+      SITE_URL: ${SITE_URL:?Set SITE_URL in .env}
+      TRUSTED_ORIGINS: ${TRUSTED_ORIGINS:-}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?Set BETTER_AUTH_SECRET in .env}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?Set ENCRYPTION_KEY in .env}
+      EXPORT_STORAGE_DIR: /app/data-exports
+      IS_CLOUD: ${IS_CLOUD:-false}
+      EMAIL_PROVIDER: ${EMAIL_PROVIDER:-smtp}
+      EMAIL_FROM: ${EMAIL_FROM:-}
+      SMTP_SERVER: ${SMTP_SERVER:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USERNAME: ${SMTP_USERNAME:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID:-}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET:-}
+      PASSKEY_RP_ID: ${PASSKEY_RP_ID:-}
+      PASSKEY_RP_NAME: ${PASSKEY_RP_NAME:-pssmngr}
+      PASSKEY_ORIGIN: ${PASSKEY_ORIGIN:-}
+    ports:
+      - "127.0.0.1:${SERVER_PORT:-39291}:3000"
+    volumes:
+      - data_exports:/app/data-exports
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://127.0.0.1:3000/readyz"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    security_opt:
+      - no-new-privileges:true
+
+  client:
+    build:
+      context: ../..
+      dockerfile: docker/client/Dockerfile
+      target: runner
+      args:
+        NODE_VERSION: ${NODE_VERSION:-20.19.0}
+        PNPM_VERSION: ${PNPM_VERSION:-9.12.0}
+        VITE_SITE_URL: ${SITE_URL:?Set SITE_URL in .env}
+        VITE_GA_MEASUREMENT_ID: ${VITE_GA_MEASUREMENT_ID:-}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${CLIENT_PORT:-42789}:80"
+    depends_on:
+      server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  postgres_data:
+  redis_data:
+  data_exports:

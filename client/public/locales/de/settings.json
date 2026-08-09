@@ -1,0 +1,474 @@
+{
+  "title": "Einstellungen",
+  "subtitle": "Verwalten Sie Ihre Kontoeinstellungen und Voreinstellungen",
+  "profile": {
+    "title": "Profileinstellungen",
+    "subtitle": "Aktualisieren Sie Ihre persoenlichen Informationen und Profilfoto",
+    "description": "Verwalten Sie Ihre Profilinformationen",
+    "firstName": "Vorname",
+    "firstNamePlaceholder": "Max",
+    "lastName": "Nachname",
+    "lastNamePlaceholder": "Mustermann",
+    "email": "E-Mail",
+    "emailReadonly": "E-Mail kann nicht geaendert werden",
+    "profilePicture": "Profilbild",
+    "changePhoto": "Foto aendern",
+    "uploadPhoto": "Foto hochladen",
+    "name": "Vollstaendiger Name",
+    "namePlaceholder": "Geben Sie Ihren vollstaendigen Namen ein",
+    "username": "Benutzername",
+    "usernamePlaceholder": "Geben Sie Ihren Benutzernamen ein",
+    "bio": "Biografie",
+    "bioPlaceholder": "Erzaehlen Sie uns von Ihnen",
+    "photo": "Profilfoto",
+    "photoChange": "Foto Aendern",
+    "photoRemove": "Foto Entfernen",
+    "photoUpload": "Foto Hochladen",
+    "photoUploadError": "Bitte waehlen Sie eine Bilddatei",
+    "photoSizeError": "Bild muss kleiner als 5MB sein",
+    "photoUploadSuccess": "Foto erfolgreich hochgeladen",
+    "photoUploadFailed": "Fehler beim Hochladen des Fotos",
+    "save": "Aenderungen Speichern",
+    "cancel": "Abbrechen",
+    "success": "Profil erfolgreich aktualisiert",
+    "error": "Fehler beim Aktualisieren des Profils",
+    "validation": {
+      "nameRequired": "Name ist erforderlich",
+      "nameMinLength": "Name muss mindestens 2 Zeichen lang sein",
+      "nameMaxLength": "Name ist zu lang",
+      "usernameMinLength": "Benutzername muss mindestens 3 Zeichen lang sein",
+      "usernameMaxLength": "Benutzername ist zu lang",
+      "usernamePattern": "Benutzername darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche enthalten",
+      "bioMaxLength": "Biografie ist zu lang"
+    },
+    "emailVerified": "Verifiziert",
+    "emailUnverified": "Nicht verifiziert",
+    "sendVerification": "Bestaetigungs-E-Mail senden",
+    "sendingVerification": "Wird gesendet...",
+    "verificationSent": "Bestaetigungs-E-Mail gesendet",
+    "verificationFailed": "Fehler beim Senden der Bestaetigungs-E-Mail",
+    "completion": {
+      "title": "Profilvervollstaendigung",
+      "complete": "Ihr Profil ist vollstaendig",
+      "incomplete": "Vervollstaendigen Sie Ihr Profil",
+      "percentage": "{{percent}}% vollstaendig",
+      "addName": "Namen hinzufuegen",
+      "addAvatar": "Profilbild hinzufuegen",
+      "verifyEmail": "E-Mail-Adresse bestaetigen"
+    }
+  },
+  "account": {
+    "title": "Kontoeinstellungen",
+    "subtitle": "Verwalten Sie Ihre Kontosicherheit und Voreinstellungen",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "password": "Passwort",
+    "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+    "currentPasswordPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+    "newPasswordPlaceholder": "Geben Sie Ihr neues Passwort ein",
+    "confirmPasswordPlaceholder": "Bestaetigen Sie Ihr neues Passwort",
+    "currentLabel": "Aktuelles Passwort",
+    "currentPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+    "newLabel": "Neues Passwort",
+    "newPlaceholder": "Erstellen Sie ein neues Passwort",
+    "confirmNewLabel": "Neues Passwort Bestaetigen",
+    "confirmNewPlaceholder": "Bestaetigen Sie Ihr neues Passwort",
+    "hidePassword": "Passwort verbergen",
+    "showPassword": "Passwort anzeigen",
+    "changeTitle": "Passwort Aendern",
+    "changeButton": "Passwort Aendern",
+    "changingPassword": "Passwort wird geaendert...",
+    "successMessage": "Passwort erfolgreich geaendert!",
+    "changePassword": "Passwort Aendern",
+    "cardDescription": "Aktualisieren Sie Ihr Passwort, um Ihr Konto sicher zu halten.",
+    "deleteAccount": "Konto Loeschen",
+    "deleteAccountWarning": "Diese Aktion kann nicht rueckgaengig gemacht werden. Alle Ihre Daten werden dauerhaft geloescht.",
+    "confirmDelete": "Geben Sie DELETE ein zum Bestaetigen",
+    "success": "Einstellungen erfolgreich aktualisiert",
+    "error": "Fehler beim Aktualisieren der Einstellungen"
+  },
+  "password": {
+    "changeTitle": "Passwort Aendern",
+    "cardDescription": "Aktualisieren Sie Ihr Passwort, um Ihr Konto sicher zu halten.",
+    "currentLabel": "Aktuelles Passwort",
+    "currentPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+    "newLabel": "Neues Passwort",
+    "newPlaceholder": "Geben Sie Ihr neues Passwort ein",
+    "confirmNewLabel": "Neues Passwort Bestaetigen",
+    "confirmNewPlaceholder": "Bestaetigen Sie Ihr neues Passwort",
+    "changeButton": "Passwort Aendern",
+    "changingPassword": "Passwort wird geaendert...",
+    "successMessage": "Passwort erfolgreich geaendert",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "currentRequired": "Aktuelles Passwort ist erforderlich",
+    "minLength": "Passwort muss mindestens 8 Zeichen lang sein",
+    "maxLength": "Passwort darf nicht laenger als 128 Zeichen sein",
+    "requireUppercase": "Passwort muss einen Grossbuchstaben enthalten",
+    "requireLowercase": "Passwort muss einen Kleinbuchstaben enthalten",
+    "requireNumber": "Passwort muss eine Zahl enthalten",
+    "requireSpecial": "Passwort muss ein Sonderzeichen enthalten",
+    "confirmRequired": "Bitte bestaetigen Sie Ihr Passwort",
+    "mismatch": "Passwoerter stimmen nicht ueberein",
+    "sameAsCurrent": "Neues Passwort muss sich vom aktuellen Passwort unterscheiden"
+  },
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "bell": {
+      "withUnread": "{{count}} ungelesene Benachrichtigungen",
+      "noUnread": "Benachrichtigungen"
+    },
+    "empty": {
+      "title": "Noch keine Benachrichtigungen",
+      "description": "Wir benachrichtigen Sie, wenn etwas Wichtiges passiert"
+    },
+    "markAsRead": "Als gelesen markieren",
+    "markAllAsRead": "Alle als gelesen markieren",
+    "delete": "Benachrichtigung loeschen"
+  },
+  "privacy": {
+    "title": "Datenschutzeinstellungen",
+    "subtitle": "Steuern Sie Ihre Datenschutz- und Datenfreigabevoreinstellungen",
+    "profileVisibility": "Profilsichtbarkeit",
+    "publicProfile": "Oeffentliches Profil",
+    "privateProfile": "Privates Profil",
+    "dataSharing": "Datenaustausch",
+    "analytics": "Analytik",
+    "personalization": "Personalisierung",
+    "save": "Datenschutzeinstellungen Speichern",
+    "success": "Datenschutzeinstellungen aktualisiert",
+    "error": "Fehler beim Aktualisieren der Datenschutzeinstellungen"
+  },
+  "language": {
+    "title": "Spracheinstellungen",
+    "subtitle": "Waehlen Sie Ihre bevorzugte Sprache",
+    "select": "Sprache Auswaehlen",
+    "save": "Sprache Speichern",
+    "success": "Sprache erfolgreich aktualisiert",
+    "error": "Fehler beim Aktualisieren der Sprache"
+  },
+  "theme": {
+    "title": "Design-Einstellungen",
+    "subtitle": "Passen Sie das Erscheinungsbild der Anwendung an",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System",
+    "save": "Design Speichern",
+    "success": "Design erfolgreich aktualisiert",
+    "error": "Fehler beim Aktualisieren des Designs"
+  },
+  "connectedAccounts": {
+    "title": "Verbundene Konten",
+    "subtitle": "Verwalten Sie Ihre verbundenen Social-Media-Konten",
+    "description": "Verknuepfen Sie Ihre sozialen Konten fuer eine einfachere Anmeldung und zusaetzliche Funktionen.",
+    "providers": {
+      "github": "GitHub",
+      "google": "Google"
+    },
+    "connect": "Verbinden",
+    "disconnect": "Trennen",
+    "connected": "Verbunden",
+    "disconnected": "Getrennt",
+    "notConnected": "Nicht verbunden",
+    "connecting": "Wird verbunden...",
+    "disconnecting": "Wird getrennt...",
+    "primary": "Primaer",
+    "warning": "Sie muessen mindestens ein verbundenes Konto haben, um sich anzumelden. Verbinden Sie ein anderes Konto, bevor Sie dieses trennen.",
+    "connectSuccess": "Erfolgreich mit {{provider}} verbunden",
+    "connectError": "Verbindung mit {{provider}} fehlgeschlagen",
+    "disconnectSuccess": "Erfolgreich von {{provider}} getrennt",
+    "disconnectError": "Trennung von {{provider}} fehlgeschlagen",
+    "disconnectTitle": "{{provider}} trennen?",
+    "disconnectDescription": "Sie koennen sich nicht mehr mit {{provider}} anmelden. Stellen Sie sicher, dass Sie eine andere Moeglichkeit haben, auf Ihr Konto zuzugreifen.",
+    "cancel": "Abbrechen",
+    "confirmDisconnect": "Sind Sie sicher, dass Sie sich von {{provider}} trennen moechten?",
+    "success": "Konto erfolgreich getrennt",
+    "error": "Fehler beim Trennen des Kontos",
+    "noConnectedAccounts": "Keine verbundenen Konten",
+    "connectMore": "Weitere Konten Verbinden"
+  },
+  "avatar": {
+    "title": "Profilbild",
+    "description": "Profilbild hochladen oder aendern",
+    "instructions": "Klicken Sie auf das Foto, um ein neues Bild hochzuladen (JPEG, PNG, max. 5MB)",
+    "reset": "Foto entfernen"
+  },
+  "username": {
+    "title": "Benutzername",
+    "description": "Ihr eindeutiger Benutzername auf der Plattform",
+    "placeholder": "Geben Sie Ihren Benutzernamen ein",
+    "maxLength": "Maximal 30 Zeichen"
+  },
+  "actions": {
+    "save": "Aenderungen speichern"
+  },
+  "deleteAccount": {
+    "title": "Konto loeschen",
+    "description": "Ihr Konto und alle zugehoerigen Daten dauerhaft loeschen",
+    "warning": "Diese Aktion kann nicht rueckgaengig gemacht werden. Ihr Konto, verschluesselte Tresordatensaetze und zugehoerige Metadaten werden dauerhaft geloescht.",
+    "deleteButton": "Konto loeschen",
+    "confirmButton": "Loeschung bestaetigen",
+    "modal": {
+      "title": "Sind Sie absolut sicher?",
+      "description": "Diese Aktion kann nicht rueckgaengig gemacht werden. Sie entfernt Ihr Konto, verschluesselte Tresordatensaetze und zugehoerige Metadaten dauerhaft von dieser Instanz.",
+      "confirmLabel": "Geben Sie DELETE ein, um zu bestaetigen",
+      "confirmHint": "Diese Ueberpruefung hilft, versehentliches Loeschen zu verhindern.",
+      "cancelButton": "Abbrechen",
+      "confirmButton": "Mein Konto loeschen"
+    }
+  },
+  "security": {
+    "title": "Sicherheitseinstellungen",
+    "subtitle": "Verwalten Sie Ihre Kontosicherheit und Authentifizierung",
+    "tabs": {
+      "password": "Passwort",
+      "twoFactor": "Zwei-Faktor-Auth",
+      "sessions": "Sitzungen",
+      "connections": "Verbundene Konten"
+    },
+    "twoFactor": {
+      "title": "Zwei-Faktor-Authentifizierung",
+      "description": "Fuegen Sie Ihrem Konto eine zusaetzliche Sicherheitsebene hinzu",
+      "status": {
+        "enabled": "Aktiviert",
+        "disabled": "Deaktiviert"
+      },
+      "enabled": "Zwei-Faktor-Authentifizierung Aktiviert",
+      "disabled": "Zwei-Faktor-Authentifizierung Deaktiviert",
+      "enabledDescription": "Ihr Konto ist durch 2FA geschuetzt",
+      "disabledDescription": "Ihr Konto ist nicht durch 2FA geschuetzt",
+      "enable": "2FA Aktivieren",
+      "disable": "2FA Deaktivieren",
+      "setupTitle": "Zwei-Faktor-Authentifizierung Einrichten",
+      "setupDescription": "Scannen Sie den QR-Code mit Ihrer Authentifizierungs-App",
+      "verifyTitle": "Verifizieren Sie Ihren Code",
+      "verifyDescription": "Geben Sie den 6-stelligen Code aus Ihrer Authentifizierungs-App ein",
+      "backupTitle": "Backup-Codes Speichern",
+      "backupDescription": "Bewahren Sie diese Codes an einem sicheren Ort auf. Verwenden Sie sie, wenn Sie den Zugriff auf Ihre Authentifizierungs-App verlieren",
+      "manualEntry": "Koennen Sie nicht scannen? Geben Sie diesen Code manuell ein:",
+      "enterCode": "6-stelligen Code eingeben",
+      "keyCopied": "Geheimer Schluessel kopiert",
+      "copySecretAriaLabel": "Geheimschlüssel kopieren",
+      "codesCopied": "Backup-Codes kopiert",
+      "continue": "Weiter",
+      "verify": "Verifizieren",
+      "done": "Fertig",
+      "viewBackupCodes": "Backup-Codes Anzeigen",
+      "copyAllCodes": "Alle Codes Kopieren",
+      "invalidCode": "Bitte geben Sie einen gueltigen 6-stelligen Code ein",
+      "setupError": "Fehler beim Einrichten von 2FA",
+      "enabledSuccess": "2FA erfolgreich aktiviert",
+      "verificationFailed": "Verifizierung fehlgeschlagen. Bitte versuchen Sie es erneut",
+      "disabledSuccess": "2FA erfolgreich deaktiviert",
+      "disableFailed": "Fehler beim Deaktivieren von 2FA",
+      "disableTitle": "Zwei-Faktor-Authentifizierung Deaktivieren?",
+      "disableDescription": "Sie muessen einen Verifizierungscode eingeben, um 2FA zu deaktivieren",
+      "backupCodesTitle": "Backup-Codes",
+      "backupCodesDescription": "Verwenden Sie diese Codes, wenn Sie den Zugriff auf Ihre Authentifizierungs-App verlieren. Jeder Code kann nur einmal verwendet werden.",
+      "noBackupCodes": "Keine Backup-Codes verfuegbar",
+      "info": "Die Zwei-Faktor-Authentifizierung fuegt Ihrem Konto eine zusaetzliche Sicherheitsebene hinzu, indem zusaetzlich zu Ihrem Passwort ein Code aus Ihrer Authentifizierungs-App erforderlich ist",
+      "setup": {
+        "step1": {
+          "title": "Schritt 1: Authentifizierungs-App installieren",
+          "description": "Laden Sie eine Authentifizierungs-App wie Google Authenticator, Authy oder 1Password herunter"
+        },
+        "step2": {
+          "title": "Schritt 2: QR-Code scannen",
+          "description": "Oeffnen Sie Ihre Authentifizierungs-App und scannen Sie diesen QR-Code",
+          "manualEntry": "Scannen nicht möglich? Geben Sie diesen Code manuell ein:"
+        },
+        "step3": {
+          "title": "Schritt 3: Code verifizieren",
+          "description": "Geben Sie den 6-stelligen Code aus Ihrer Authentifizierungs-App ein",
+          "codeLabel": "Verifizierungscode",
+          "codePlaceholder": "000000"
+        },
+        "verify": "Überprüfen und aktivieren",
+        "verifying": "Wird verifiziert...",
+        "success": "Zwei-Faktor-Authentifizierung erfolgreich aktiviert",
+        "error": "Zwei-Faktor-Authentifizierung konnte nicht aktiviert werden",
+        "invalidCode": "Ungültiger Verifizierungscode"
+      },
+      "backupCodes": {
+        "title": "Backup-Codes",
+        "description": "Bewahren Sie diese Codes sicher auf. Jeder Code kann nur einmal verwendet werden.",
+        "warning": "Falls Sie den Zugriff auf Ihre Authentifizierungs-App verlieren, koennen Sie diese Codes zur Anmeldung verwenden.",
+        "copy": "Alle Codes kopieren",
+        "copied": "Codes in Zwischenablage kopiert",
+        "download": "Codes herunterladen",
+        "downloaded": "Backup-Codes heruntergeladen",
+        "regenerate": "Codes regenerieren",
+        "regenerated": "Backup-Codes regeneriert",
+        "regenerateFailed": "Fehler beim Regenerieren der Backup-Codes",
+        "hidden": "Codes sind verborgen. Klicken Sie auf Anzeigen.",
+        "remaining": "{{remaining}} von {{total}} Codes uebrig",
+        "regenerate.warning": "Ihre alten Backup-Codes werden nicht mehr funktionieren. Diese Aktion kann nicht rueckgaengig gemacht werden.",
+        "regenerate.confirm": "Ja, Codes regenerieren"
+      },
+      "infoDetail": "Die Zwei-Faktor-Authentifizierung bietet zusaetzliche Sicherheit durch einen Code aus Ihrer Authentifizierungs-App.",
+      "confirmPassword": "Passwort bestätigen",
+      "confirmPasswordDescription": "Zur Sicherheit geben Sie bitte Ihr Passwort ein, um mit der 2FA-Einrichtung fortzufahren.",
+      "enterPassword": "Passwort eingeben",
+      "passwordRequired": "Passwort ist erforderlich"
+    },
+    "sessions": {
+      "title": "Aktive Sitzungen",
+      "description": "Verwalten Sie Ihre aktiven Sitzungen auf allen Geraeten",
+      "current": "Aktuelle Sitzung",
+      "other": "Andere Sitzungen",
+      "noOther": "Keine anderen aktiven Sitzungen",
+      "device": "Gerät",
+      "location": "Standort",
+      "lastActive": "Zuletzt aktiv",
+      "signedIn": "Angemeldet am",
+      "revoke": "Sitzung Beenden",
+      "revokeAll": "Alle Anderen Sitzungen Beenden",
+      "revoke.confirm": {
+        "title": "Sitzung widerrufen",
+        "description": "Sind Sie sicher, dass Sie diese Sitzung widerrufen möchten? Das Gerät wird abgemeldet.",
+        "button": "Ja, Sitzung widerrufen"
+      },
+      "revoke.success": "Sitzung erfolgreich widerrufen",
+      "revoke.error": "Sitzung konnte nicht widerrufen werden",
+      "revokeAll.confirm": {
+        "title": "Alle Sitzungen widerrufen",
+        "description": "Sind Sie sicher, dass Sie sich von allen anderen Geräten abmelden möchten?"
+      },
+      "revokeAll.success": "Alle anderen Sitzungen widerrufen",
+      "unknownBrowser": "Unbekannter Browser",
+      "unknown": "Unbekannt",
+      "onOs": "auf {{os}}"
+    },
+    "passkeys": {
+      "title": "Passkeys",
+      "description": "Mit Passkeys melden Sie sich per Biometrie, Sicherheitsschlüssel oder Geräte-PIN statt Passwort an.",
+      "add": "Passkey hinzufügen",
+      "none": "Noch keine Passkeys registriert.",
+      "unnamed": "Unbenannter Passkey",
+      "backedUp": "Gesichert",
+      "created": "Erstellt",
+      "delete": "Passkey entfernen",
+      "registerTitle": "Passkey hinzufügen",
+      "registerDescription": "Geben Sie diesem Passkey einen erkennbaren Namen.",
+      "namePlaceholder": "z. B. Laptop Touch ID",
+      "registering": "Wird registriert...",
+      "register": "Passkey registrieren",
+      "registerSuccess": "Passkey registriert",
+      "registerError": "Passkey konnte nicht registriert werden",
+      "deleteSuccess": "Passkey entfernt",
+      "deleteError": "Passkey konnte nicht entfernt werden",
+      "deleteConfirm": {
+        "title": "Passkey entfernen?",
+        "description": "Dieser Passkey kann nicht mehr zur Anmeldung verwendet werden."
+      },
+      "deviceType": {
+        "singleDevice": "Einzelgerät",
+        "multiDevice": "Geräteübergreifend synchronisiert"
+      },
+      "dateUnknown": "Unbekannt"
+    },
+    "devices": {
+      "title": "Vertrauenswürdige Geräte",
+      "description": "Verwalten Sie Geräte, die Ihren Tresor entsperren und darauf zugreifen können.",
+      "none": "Keine vertrauenswürdigen Geräte gefunden.",
+      "current": "Dieses Gerät",
+      "trustedBadge": "Vertrauenswürdig",
+      "untrustedBadge": "Nicht vertrauenswürdig",
+      "lastSeen": "Zuletzt gesehen",
+      "revokeTrust": "Vertrauen entziehen",
+      "trust": "Vertrauen",
+      "remove": "Entfernen",
+      "trusted": "Gerät vertrauenswürdig",
+      "untrusted": "Gerät nicht vertrauenswürdig",
+      "trustError": "Gerätevertrauen konnte nicht aktualisiert werden",
+      "removeSuccess": "Gerät entfernt",
+      "removeError": "Gerät konnte nicht entfernt werden",
+      "removeConfirm": {
+        "title": "Gerät entfernen?",
+        "description": "Dieses Gerät muss erneut registriert werden, bevor es auf den Tresor zugreifen kann."
+      },
+      "revokeAllUnlocks": {
+        "button": "Gemerkte Entsperrungen auf allen Geräten widerrufen",
+        "confirmTitle": "Gemerkte Entsperrungen widerrufen?",
+        "confirmDescription": "Jedes Gerät fragt wieder nach deinem Master-Passwort. Geräte, die gerade offline sind, fragen bei der nächsten Verbindung.",
+        "confirm": "Widerrufen",
+        "success": "Gemerkte Entsperrungen auf allen Geräten widerrufen",
+        "error": "Widerruf der gemerkten Entsperrungen fehlgeschlagen"
+      }
+    }
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "back": "Zurueck",
+    "close": "Schliessen",
+    "show": "Anzeigen",
+    "hide": "Verbergen",
+    "loading": "Wird geladen..."
+  },
+  "preferences": {
+    "language": {
+      "title": "Sprache",
+      "description": "Wählen Sie Ihre bevorzugte Sprache für das Dashboard",
+      "syncNote": "Ihre Spracheinstellung wird gespeichert und auf allen Ihren Geräten synchronisiert."
+    }
+  },
+  "layoutTemplate": {
+    "title": "Layout-Vorlage",
+    "description": "Wählen Sie, wie Ihr Tresor und Inhalt angeordnet werden. Wird auf allen Geräten synchronisiert.",
+    "saveFailed": "Layout-Vorlage konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "options": {
+      "default": {
+        "name": "Standard",
+        "desc": "Großzügiges Kartenraster — das klassische Layout"
+      },
+      "compact": {
+        "name": "Kompakt",
+        "desc": "Dichte Tabellenzeilen, ideal für große Tresore"
+      },
+      "list": {
+        "name": "Liste",
+        "desc": "Zeilen über die volle Breite mit mehr Details"
+      }
+    }
+  },
+  "dataExport": {
+    "title": "Datenexport",
+    "subtitle": "Laden Sie eine Kopie all Ihrer Daten herunter — verschlüsselt, genau wie wir sie speichern.",
+    "sectionTitle": "Datenschutz & Daten",
+    "explainer": "Ihr Export enthält nur verschlüsselte Blöcke. Password Manager ist Zero-Knowledge — Sie benötigen Ihr Master-Passwort, um ihn zu öffnen.",
+    "requestNew": "Neuen Export anfordern",
+    "format": {
+      "label": "Format",
+      "json": "JSON (Entwickler)",
+      "csv": "CSV (Tabellen)",
+      "both": "JSON + CSV"
+    },
+    "table": {
+      "requested": "Angefordert",
+      "status": "Status",
+      "size": "Größe",
+      "expires": "Läuft ab",
+      "actions": "Aktionen",
+      "download": "Herunterladen",
+      "revoke": "Widerrufen"
+    },
+    "status": {
+      "PENDING": "Ausstehend",
+      "RUNNING": "Wird erstellt…",
+      "SUCCEEDED": "Bereit",
+      "FAILED": "Fehlgeschlagen",
+      "EXPIRED": "Abgelaufen",
+      "REVOKED": "Widerrufen"
+    },
+    "empty": "Noch keine Exporte. Fordern Sie einen an, um eine Kopie Ihrer Daten herunterzuladen.",
+    "inFlight": "Es läuft bereits ein Export. Sie erhalten eine E-Mail, sobald er bereit ist.",
+    "toast": {
+      "created": "Exportanfrage erstellt — Sie erhalten eine E-Mail, sobald sie bereit ist.",
+      "revoked": "Export widerrufen.",
+      "createError": "Neuer Export konnte nicht gestartet werden.",
+      "revokeError": "Dieser Export konnte nicht widerrufen werden.",
+      "rateLimited": "Sie können nur 2 Exporte pro Stunde anfordern."
+    },
+    "neverExpires": "—"
+  }
+}

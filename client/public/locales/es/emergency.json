@@ -1,0 +1,65 @@
+{
+  "timeline": {
+    "title": "Mis solicitudes de acceso",
+    "description": "Solicitudes de acceso de emergencia que has realizado.",
+    "empty": "No has realizado ninguna solicitud de acceso de emergencia.",
+    "requestedOn": "Solicitado el {{date}}",
+    "waitingHint": "El propietario puede denegar esta solicitud durante el período de espera.",
+    "deniedHint": "Tu solicitud fue denegada. Puedes intentarlo de nuevo después del período de enfriamiento.",
+    "grantedHint": "El acceso fue aprobado y el sobre de recuperación cifrado está listo.",
+    "requestAgain": "Solicitar de nuevo",
+    "status": {
+      "pending": "Esperando",
+      "denied": "Denegado",
+      "approved": "Concedido",
+      "expired": "Expirado"
+    }
+  },
+  "addContact": {
+    "title": "Agregar contacto de confianza",
+    "description": "Esta persona podrá solicitar acceso de emergencia a tu bóveda. Puedes denegar cualquier solicitud dentro del período de espera.",
+    "invalidEmail": "Por favor, introduce una dirección de correo electrónico válida.",
+    "error": "No se pudo agregar el contacto.",
+    "emailLabel": "Dirección de correo electrónico",
+    "emailPlaceholder": "contacto@ejemplo.com",
+    "waitingLabel": "Período de espera",
+    "waitingHint": "Cuánto tiempo tienes para denegar una solicitud antes de que el acceso se conceda automáticamente.",
+    "submit": "Agregar contacto",
+    "period": {
+      "1": "1 día",
+      "3": "3 días",
+      "7": "7 días",
+      "14": "14 días",
+      "30": "30 días"
+    }
+  },
+  "requests": {
+    "title": "Solicitudes de acceso",
+    "description": "Personas que solicitan acceso de emergencia a tu bóveda.",
+    "empty": "No hay solicitudes de acceso.",
+    "requestedOn": "Solicitado el {{date}}",
+    "autoGrantWarning": "El acceso se concederá automáticamente cuando expire el temporizador.",
+    "deny": "Denegar",
+    "past": "Solicitudes anteriores",
+    "denyTitle": "Denegar solicitud de acceso",
+    "denyDescription": "¿Denegar la solicitud de {{name}}? No podrá solicitar de nuevo durante 24 horas.",
+    "confirmDeny": "Denegar acceso",
+    "status": {
+      "pending": "Pendiente",
+      "denied": "Denegado",
+      "approved": "Aprobado",
+      "expired": "Expirado"
+    }
+  },
+  "contacts": {
+    "title": "Contactos de confianza",
+    "description": "Personas que pueden solicitar acceso de emergencia a tu bóveda.",
+    "add": "Agregar contacto",
+    "empty": "Aún no hay contactos de confianza.",
+    "emptyHint": "Agrega a alguien de confianza para habilitar el acceso de emergencia a tu bóveda.",
+    "waitDays": "{{count}}d de espera",
+    "removeTitle": "Eliminar contacto de confianza",
+    "removeDescription": "¿Eliminar a {{name}} como contacto de confianza? Se cancelarán todas las solicitudes de acceso de emergencia pendientes.",
+    "confirmRemove": "Eliminar"
+  }
+}

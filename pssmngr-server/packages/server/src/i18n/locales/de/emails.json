@@ -1,0 +1,60 @@
+{
+	"common": {
+		"greeting": "Hallo",
+		"greetingWithName": "Hallo {{name}}",
+		"regards": "Mit freundlichen Grüßen",
+		"team": "Das Password Manager-Team",
+		"footer": "Diese E-Mail wurde von Password Manager gesendet. Wenn Sie diese E-Mail nicht angefordert haben, können Sie sie ignorieren.",
+		"supportEmail": "Bei Fragen kontaktieren Sie uns unter {{email}}",
+		"unsubscribe": "Um sich von diesen E-Mails abzumelden, klicken Sie hier",
+		"companyName": "Password Manager"
+	},
+	"invitation": {
+		"subject": "Sie wurden eingeladen, {{organization}} beizutreten",
+		"preheader": "{{inviter}} hat Sie eingeladen, {{organization}} beizutreten",
+		"title": "Team-Einladung",
+		"body": "Sie wurden eingeladen, {{organization}} auf Password Manager beizutreten.",
+		"bodyWithRole": "Sie wurden eingeladen, {{organization}} als {{role}} beizutreten.",
+		"invitedBy": "Eingeladen von: {{name}}",
+		"action": "Einladung annehmen",
+		"expires": "Diese Einladung läuft am {{date}} ab.",
+		"expiresInDays": "Diese Einladung läuft in {{days}} Tagen ab.",
+		"ignoreNote": "Wenn Sie diese Einladung nicht erwartet haben, können Sie diese E-Mail ignorieren."
+	},
+	"emailVerification": {
+		"subject": "Bestätigen Sie Ihre E-Mail-Adresse",
+		"preheader": "Bitte bestätigen Sie Ihre E-Mail, um die Registrierung abzuschließen",
+		"title": "E-Mail-Bestätigung",
+		"body": "Vielen Dank für Ihre Anmeldung! Bitte bestätigen Sie Ihre E-Mail-Adresse, indem Sie auf die Schaltfläche unten klicken.",
+		"action": "E-Mail bestätigen",
+		"expires": "Dieser Link läuft in {{time}} ab.",
+		"expiresInHours": "Dieser Link läuft in {{hours}} Stunden ab."
+	},
+	"dataExport": {
+		"readySubject": "Ihr Datenexport ist bereit",
+		"readyTitle": "Ihr Datenexport ist bereit",
+		"readyBody": "Ihr Password-Manager-Datenexport ist fertig und kann heruntergeladen werden.",
+		"failedSubject": "Ihr Datenexport ist fehlgeschlagen",
+		"failedTitle": "Ihr Datenexport ist fehlgeschlagen",
+		"failedBody": "Wir konnten Ihren Datenexport nicht erstellen. Sie können es in Ihren Kontoeinstellungen erneut versuchen.",
+		"expiresOn": "Dieser Link läuft am {{expiresAt}} ab.",
+		"downloadAction": "Daten herunterladen",
+		"retryAction": "Erneut versuchen",
+		"revokeAction": "Falls Sie das nicht angefordert haben, sofort widerrufen",
+		"revokeNotice": "Falls Sie diesen Export nicht angefordert haben, widerrufen Sie ihn sofort in Ihren Kontoeinstellungen.",
+		"zeroKnowledgeNotice": "Dieses Archiv enthält Ihre Daten genau so, wie wir sie speichern: ausschließlich verschlüsselte Blöcke. Password Manager ist Zero-Knowledge — wir können Ihren Tresor nicht entschlüsseln. Um ihn zu lesen, öffnen Sie ihn in einem Password-Manager-Client mit Ihrem Master-Passwort.",
+		"zeroKnowledgeNoticeShort": "Dieses Archiv enthält nur verschlüsselte Daten; Sie benötigen Ihr Master-Passwort, um es zu öffnen.",
+		"readme": {
+			"heading": "Password-Manager-Datenexport",
+			"intro": "Dieses Archiv ist die vollständige Kopie der Daten, die wir für Sie speichern. Es wird zur Erfüllung der Datenübertragbarkeit nach DSGVO (und gleichwertiger Rechte) bereitgestellt.",
+			"formatHeading": "Format",
+			"formatBody": "Dateien mit der Endung .json sind maschinenlesbar; Dateien mit der Endung .csv lassen sich in jeder Tabellenkalkulation öffnen.",
+			"zeroKnowledgeHeading": "Zero-Knowledge-Hinweis",
+			"zeroKnowledgeBody": "Password Manager sieht niemals Ihr Master-Passwort und kann Ihren Tresor nicht entschlüsseln. Tresoreinträge unten sind als Chiffretext gespeichert (Chiffretext, Nonce, Auth-Tag, gewickelter Datenschlüssel). Um sie zu lesen, öffnen Sie dieses Archiv in einem Password-Manager-Client mit Ihrem Master-Passwort.",
+			"rightsHeading": "Ihre Rechte",
+			"rightsBody": "Sie können jederzeit einen Export anfordern, einen aktiven Download-Link in Ihren Einstellungen widerrufen und Ihr Konto vollständig auf der Seite der Sicherheitseinstellungen löschen.",
+			"contactHeading": "Kontakt",
+			"contactBody": "Wenden Sie sich bei Datenschutzfragen an den Administrator Ihrer Instanz."
+		}
+	}
+}

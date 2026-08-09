@@ -1,0 +1,60 @@
+{
+	"common": {
+		"greeting": "Hello",
+		"greetingWithName": "Hello {{name}}",
+		"regards": "Best regards",
+		"team": "The Password Manager Team",
+		"footer": "This email was sent by Password Manager. If you didn't request this email, you can safely ignore it.",
+		"supportEmail": "If you have any questions, contact us at {{email}}",
+		"unsubscribe": "To unsubscribe from these emails, click here",
+		"companyName": "Password Manager"
+	},
+	"invitation": {
+		"subject": "You've been invited to join {{organization}}",
+		"preheader": "{{inviter}} has invited you to join {{organization}}",
+		"title": "Team Invitation",
+		"body": "You've been invited to join {{organization}} on Password Manager.",
+		"bodyWithRole": "You have been invited to join {{organization}} as a {{role}}.",
+		"invitedBy": "Invited by: {{name}}",
+		"action": "Accept Invitation",
+		"expires": "This invitation expires on {{date}}.",
+		"expiresInDays": "This invitation expires in {{days}} days.",
+		"ignoreNote": "If you were not expecting this invitation, you can ignore this email."
+	},
+	"emailVerification": {
+		"subject": "Verify your email address",
+		"preheader": "Please verify your email to complete registration",
+		"title": "Email Verification",
+		"body": "Thank you for signing up! Please verify your email address by clicking the button below.",
+		"action": "Verify Email",
+		"expires": "This link will expire in {{time}}.",
+		"expiresInHours": "This link expires in {{hours}} hours."
+	},
+	"dataExport": {
+		"readySubject": "Your data export is ready",
+		"readyTitle": "Your data export is ready",
+		"readyBody": "Your Password Manager data export has finished and is ready to download.",
+		"failedSubject": "Your data export failed",
+		"failedTitle": "Your data export failed",
+		"failedBody": "We weren't able to build your data export. You can try again from your account settings.",
+		"expiresOn": "This link expires on {{expiresAt}}.",
+		"downloadAction": "Download your data",
+		"retryAction": "Try again",
+		"revokeAction": "If you didn't request this, revoke immediately",
+		"revokeNotice": "If you didn't request this export, revoke it immediately from your account settings.",
+		"zeroKnowledgeNotice": "This archive contains your data exactly as we store it: encrypted blobs only. Password Manager is zero-knowledge — we cannot decrypt your vault. To read it, open it inside a Password Manager client using your master password.",
+		"zeroKnowledgeNoticeShort": "This archive contains only encrypted data; you'll need your master password to open it.",
+		"readme": {
+			"heading": "Password Manager data export",
+			"intro": "This archive is the complete copy of your data we hold for you. It is provided to satisfy GDPR (and equivalent) data-portability rights.",
+			"formatHeading": "Format",
+			"formatBody": "Files ending in .json are machine-readable; files ending in .csv open in any spreadsheet.",
+			"zeroKnowledgeHeading": "Zero-knowledge notice",
+			"zeroKnowledgeBody": "Password Manager never sees your master password and cannot decrypt your vault. Vault entries below are stored as ciphertext (ciphertext, nonce, auth tag, wrapped data key). To read them, open this archive inside a Password Manager client using your master password.",
+			"rightsHeading": "Your rights",
+			"rightsBody": "You can request an export at any time, revoke an active download link from your settings, and delete your account entirely from the security settings page.",
+			"contactHeading": "Contact",
+			"contactBody": "For privacy questions, contact your instance administrator."
+		}
+	}
+}

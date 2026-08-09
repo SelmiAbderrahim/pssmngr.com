@@ -1,0 +1,65 @@
+{
+  "timeline": {
+    "title": "Meine Zugriffsanfragen",
+    "description": "Notfallzugriffsanfragen, die Sie gestellt haben.",
+    "empty": "Sie haben keine Notfallzugriffsanfragen gestellt.",
+    "requestedOn": "Angefragt am {{date}}",
+    "waitingHint": "Der Eigentümer kann diese Anfrage während der Wartezeit ablehnen.",
+    "deniedHint": "Ihre Anfrage wurde abgelehnt. Sie können es nach der Abkühlungszeit erneut versuchen.",
+    "grantedHint": "Der Zugriff wurde genehmigt und der verschlüsselte Wiederherstellungsumschlag ist bereit.",
+    "requestAgain": "Erneut anfragen",
+    "status": {
+      "pending": "Wartend",
+      "denied": "Abgelehnt",
+      "approved": "Gewährt",
+      "expired": "Abgelaufen"
+    }
+  },
+  "addContact": {
+    "title": "Vertrauenskontakt hinzufügen",
+    "description": "Diese Person kann Notfallzugriff auf Ihren Tresor anfordern. Sie können jede Anfrage innerhalb der Wartezeit ablehnen.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "error": "Kontakt konnte nicht hinzugefügt werden.",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "kontakt@beispiel.de",
+    "waitingLabel": "Wartezeit",
+    "waitingHint": "Wie lange Sie Zeit haben, eine Anfrage abzulehnen, bevor der Zugriff automatisch gewährt wird.",
+    "submit": "Kontakt hinzufügen",
+    "period": {
+      "1": "1 Tag",
+      "3": "3 Tage",
+      "7": "7 Tage",
+      "14": "14 Tage",
+      "30": "30 Tage"
+    }
+  },
+  "requests": {
+    "title": "Zugriffsanfragen",
+    "description": "Personen, die Notfallzugriff auf Ihren Tresor anfordern.",
+    "empty": "Keine Zugriffsanfragen.",
+    "requestedOn": "Angefragt am {{date}}",
+    "autoGrantWarning": "Der Zugriff wird automatisch gewährt, wenn der Timer abläuft.",
+    "deny": "Ablehnen",
+    "past": "Vergangene Anfragen",
+    "denyTitle": "Zugriffsanfrage ablehnen",
+    "denyDescription": "{{name}}s Anfrage ablehnen? Er/Sie kann 24 Stunden lang keine neue Anfrage stellen.",
+    "confirmDeny": "Zugriff ablehnen",
+    "status": {
+      "pending": "Ausstehend",
+      "denied": "Abgelehnt",
+      "approved": "Genehmigt",
+      "expired": "Abgelaufen"
+    }
+  },
+  "contacts": {
+    "title": "Vertrauenskontakte",
+    "description": "Personen, die Notfallzugriff auf Ihren Tresor anfordern können.",
+    "add": "Kontakt hinzufügen",
+    "empty": "Noch keine Vertrauenskontakte.",
+    "emptyHint": "Fügen Sie eine Vertrauensperson hinzu, um den Notfallzugriff auf Ihren Tresor zu aktivieren.",
+    "waitDays": "{{count}}T Wartezeit",
+    "removeTitle": "Vertrauenskontakt entfernen",
+    "removeDescription": "{{name}} als Vertrauenskontakt entfernen? Alle ausstehenden Notfallzugriffsanfragen werden storniert.",
+    "confirmRemove": "Entfernen"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Password Generator",
+  "description": "Generate strong, unique passwords and passphrases",
+  "tabs": {
+    "password": "Password",
+    "passphrase": "Passphrase"
+  },
+  "copy": {
+    "success": "Copied to clipboard",
+    "failed": "Failed to copy"
+  },
+  "error": "Generation failed",
+  "aria": {
+    "generatedPassword": "Generated password",
+    "copyPassword": "Copy password",
+    "usePassword": "Use password",
+    "regenerate": "Regenerate password",
+    "generatedPassphrase": "Generated passphrase",
+    "copyPassphrase": "Copy passphrase",
+    "usePassphrase": "Use passphrase",
+    "regeneratePassphrase": "Regenerate passphrase"
+  },
+  "preset": {
+    "label": "Site Policy Preset",
+    "placeholder": "No preset",
+    "custom": "No preset (custom)"
+  },
+  "length": "Length",
+  "characterSets": {
+    "title": "Character Sets",
+    "uppercase": "Uppercase (A-Z)",
+    "lowercase": "Lowercase (a-z)",
+    "digits": "Digits (0-9)",
+    "symbols": "Symbols (!@#$%...)"
+  },
+  "options": {
+    "title": "Options",
+    "excludeAmbiguous": "Exclude ambiguous (0O1lI)"
+  },
+  "strength": {
+    "weak": "Weak",
+    "fair": "Fair",
+    "good": "Good",
+    "strong": "Strong",
+    "veryStrong": "Very Strong"
+  },
+  "passphrase": {
+    "wordCount": "Word Count",
+    "separator": "Separator",
+    "hyphen": "Hyphen (-)",
+    "space": "Space ( )",
+    "period": "Period (.)",
+    "underscore": "Underscore (_)",
+    "capitalize": "Capitalize words",
+    "includeNumber": "Include number"
+  },
+  "entropy": {
+    "label": "bits of entropy"
+  }
+}
