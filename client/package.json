@@ -163,7 +163,7 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "husky": "^9.1.6",
     "jest-axe": "^10.0.0",
-    "jsdom": "^25.0.0",
+    "jsdom": "^30.0.1",
     "lint-staged": "^15.2.10",
     "msw": "^2.3.5",
     "pg": "^8.20.0",
