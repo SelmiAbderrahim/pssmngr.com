@@ -115,7 +115,7 @@
     "react-hook-form": "^7.66.1",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^15.0.0",
-    "react-is": "^18.3.1",
+    "react-is": "^19.2.8",
     "react-markdown": "^10.1.0",
     "react-resizable-panels": "^4.2.0",
     "recharts": "^3.5.1",
