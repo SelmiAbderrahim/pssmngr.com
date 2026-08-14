@@ -2,7 +2,7 @@
 // Copyright (c) 2026 Password Manager contributors
 // Import/Export types for password manager data migration
 
-export type ImportItemType = "login" | "card" | "note" | "identity";
+export type ImportItemType = "login" | "card" | "note" | "identity" | "totp";
 
 export interface ImportedItem {
   type: ImportItemType;
@@ -86,4 +86,9 @@ export interface ImportItemError {
   index: number;
   title: string;
   message: string;
+  /**
+   * Batch the failed item belonged to. Reusing it on a retry keeps the
+   * retried batch under its original idempotency key.
+   */
+  batchIndex?: number;
 }

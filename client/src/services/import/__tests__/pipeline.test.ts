@@ -104,6 +104,11 @@ describe("executeImport", () => {
       items: expect.arrayContaining([
         expect.objectContaining({ itemType: "login", ciphertext: "ct-base64" }),
       ]),
+      // Batches carry an idempotency key derived only from the operation id,
+      // vault id, and batch index, so a retry cannot duplicate the batch.
+      idempotencyKey: expect.stringMatching(
+        /^bulk-import:import-[A-Za-z0-9_-]+:vault-123:0$/,
+      ),
     });
     expect(summary.imported).toBe(2);
     expect(summary.errors).toHaveLength(0);

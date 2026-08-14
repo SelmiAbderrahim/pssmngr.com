@@ -853,41 +853,84 @@
     "import": {
       "dropzone": {
         "title": "Drop your file here or click to browse",
-        "subtitle": "Supports CSV and JSON files",
+        "subtitle": "Supports CSV, JSON, and TXT files",
         "browse": "Choose File"
       },
       "supported": "Supported formats",
       "reading": "Reading file...",
-      "detecting": "Detecting format...",
+      "detecting": "Sorting items on this device...",
       "preview": {
-        "title": "Preview",
+        "title": "Review items",
         "detected": "Detected: {{source}}",
         "count": "{{count}} items found",
-        "cancel": "Cancel",
-        "import": "Import {{count}} items",
-        "parseErrors": "{{count}} rows could not be parsed",
-        "duplicates": "{{count}} potential duplicates detected",
+        "import": "Add {{count}} items",
+        "duplicates": "{{count}} exact duplicates detected",
         "col": {
           "title": "Title",
           "type": "Type",
           "username": "Username",
-          "url": "URL"
-        }
+          "url": "URL",
+          "actions": "Actions"
+        },
+        "back": "Back",
+        "duplicateRow": "Duplicate",
+        "selectAll": "Select all items",
+        "selectRow": "Select item {{row}}",
+        "editTitle": "Title for item {{row}}",
+        "editUsername": "Username for item {{row}}",
+        "editUrl": "URL for item {{row}}",
+        "deleteRow": "Remove item {{row}}",
+        "range": "Showing {{first}}–{{last}} of {{total}}",
+        "pagination": "Preview pages",
+        "pageOf": "Page {{page}} of {{pages}}",
+        "firstPage": "First page",
+        "prevPage": "Previous page",
+        "nextPage": "Next page",
+        "lastPage": "Last page",
+        "limit": "Up to {{max}} items can be reviewed at once."
       },
-      "progress": "Importing {{current}} of {{total}}...",
+      "progress": "Saved {{current}} of {{total}} encrypted items...",
       "summary": {
-        "title": "Import Complete",
-        "duration": "Completed in {{seconds}}s",
-        "imported": "Imported",
+        "title": "Items added",
+        "imported": "Added",
         "skipped": "Skipped",
         "errors": "Errors",
-        "errorDetails": "Failed items",
-        "moreErrors": "...and {{count}} more",
-        "importMore": "Import More"
+        "importMore": "Add more items",
+        "retainedRows": "{{count}} items were not saved and are still here.",
+        "retry": "Try these again"
       },
       "error": {
-        "title": "Import Failed",
+        "title": "Could not read those items",
         "retry": "Try Again"
+      },
+      "onDevice": "Your file is read and sorted into items on this device. Only encrypted items are sent to the server.",
+      "paste": {
+        "label": "Or paste your items",
+        "placeholder": "Title: Example\nUsername: you@example.com\nPassword: ...",
+        "analyze": "Review items"
+      },
+      "itemType": {
+        "login": "Login",
+        "card": "Card",
+        "note": "Note",
+        "identity": "Identity",
+        "totp": "Authenticator"
+      },
+      "parseError": {
+        "empty": "That input was empty.",
+        "fileTooLarge": "That file is too large. The limit is {{limit}} bytes.",
+        "contentTooLarge": "That input is too long. The limit is {{limit}} characters.",
+        "tooManyItems": "That input has {{actual}} items. The limit is {{limit}} at once.",
+        "encryptedBundle": "That is an encrypted .pssmngr backup. Restore it from the Import / Export backup step, which asks for its password.",
+        "unsupportedFormat": "That file type is not supported. Use CSV, JSON, or TXT.",
+        "noItems": "No items were found in that input."
+      },
+      "warning": {
+        "malformedRow": "{{count}} rows could not be read and were skipped.",
+        "missingTitle": "{{count}} items have no title.",
+        "unmappedFields": "{{count}} items had fields that do not map to a vault field.",
+        "duplicateSource": "{{count}} rows repeat an earlier row.",
+        "invalidTotp": "{{count}} authenticator secrets could not be read and were dropped."
       }
     }
   },

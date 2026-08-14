@@ -843,41 +843,84 @@
     "import": {
       "dropzone": {
         "title": "أسقط ملفك هنا أو انقر للتصفح",
-        "subtitle": "يدعم ملفات CSV وJSON",
+        "subtitle": "يدعم ملفات CSV وJSON وTXT",
         "browse": "اختر ملفاً"
       },
       "supported": "الصيغ المدعومة",
       "reading": "جاري قراءة الملف...",
-      "detecting": "جاري اكتشاف الصيغة...",
+      "detecting": "جارٍ ترتيب العناصر على هذا الجهاز...",
       "preview": {
-        "title": "معاينة",
+        "title": "مراجعة العناصر",
         "detected": "تم اكتشاف: {{source}}",
-        "count": "تم العثور على {{count}} عنصر",
-        "cancel": "إلغاء",
-        "import": "استيراد {{count}} عنصر",
-        "parseErrors": "تعذر تحليل {{count}} صف",
-        "duplicates": "تم اكتشاف {{count}} تكرار محتمل",
+        "count": "تم العثور على {{count}} عنصرًا",
+        "import": "إضافة {{count}} عنصرًا",
+        "duplicates": "تم اكتشاف {{count}} نسخة مكررة تمامًا",
         "col": {
           "title": "العنوان",
           "type": "النوع",
           "username": "اسم المستخدم",
-          "url": "الرابط"
-        }
+          "url": "الرابط",
+          "actions": "الإجراءات"
+        },
+        "back": "رجوع",
+        "duplicateRow": "مكرر",
+        "selectAll": "تحديد كل العناصر",
+        "selectRow": "تحديد العنصر {{row}}",
+        "editTitle": "عنوان العنصر {{row}}",
+        "editUsername": "اسم مستخدم العنصر {{row}}",
+        "editUrl": "رابط العنصر {{row}}",
+        "deleteRow": "إزالة العنصر {{row}}",
+        "range": "عرض {{first}}–{{last}} من {{total}}",
+        "pagination": "صفحات المعاينة",
+        "pageOf": "الصفحة {{page}} من {{pages}}",
+        "firstPage": "الصفحة الأولى",
+        "prevPage": "الصفحة السابقة",
+        "nextPage": "الصفحة التالية",
+        "lastPage": "الصفحة الأخيرة",
+        "limit": "يمكن مراجعة ما يصل إلى {{max}} عنصرًا دفعة واحدة."
       },
-      "progress": "جاري استيراد {{current}} من {{total}}...",
+      "progress": "تم حفظ {{current}} من {{total}} عنصرًا مُشفّرًا...",
       "summary": {
-        "title": "اكتمل الاستيراد",
-        "duration": "اكتمل في {{seconds}} ثانية",
-        "imported": "تم الاستيراد",
+        "title": "تمت إضافة العناصر",
+        "imported": "مُضافة",
         "skipped": "تم التخطي",
         "errors": "أخطاء",
-        "errorDetails": "العناصر الفاشلة",
-        "moreErrors": "...و {{count}} أخرى",
-        "importMore": "استيراد المزيد"
+        "importMore": "إضافة عناصر أخرى",
+        "retainedRows": "لم يُحفظ {{count}} عنصرًا ولا تزال هنا.",
+        "retry": "أعد المحاولة لهذه"
       },
       "error": {
-        "title": "فشل الاستيراد",
+        "title": "تعذّرت قراءة تلك العناصر",
         "retry": "حاول مرة أخرى"
+      },
+      "onDevice": "يُقرأ ملفك ويُرتّب إلى عناصر على هذا الجهاز. لا يُرسل إلى الخادم سوى عناصر مُشفّرة.",
+      "paste": {
+        "label": "أو الصق عناصرك",
+        "placeholder": "العنوان: مثال\nاسم المستخدم: you@example.com\nكلمة المرور: ...",
+        "analyze": "مراجعة العناصر"
+      },
+      "itemType": {
+        "login": "بيانات دخول",
+        "card": "بطاقة",
+        "note": "ملاحظة",
+        "identity": "هوية",
+        "totp": "موثّق"
+      },
+      "parseError": {
+        "empty": "كان ذلك الإدخال فارغًا.",
+        "fileTooLarge": "هذا الملف كبير جدًا. الحد هو {{limit}} بايت.",
+        "contentTooLarge": "هذا الإدخال طويل جدًا. الحد هو {{limit}} حرفًا.",
+        "tooManyItems": "يحتوي هذا الإدخال على {{actual}} عنصرًا. الحد هو {{limit}} دفعة واحدة.",
+        "encryptedBundle": "هذه نسخة احتياطية مُشفّرة بصيغة ‎.pssmngr. استعدها من خطوة النسخ الاحتياطي في الاستيراد / التصدير، والتي تطلب كلمة مرورها.",
+        "unsupportedFormat": "نوع الملف هذا غير مدعوم. استخدم CSV أو JSON أو TXT.",
+        "noItems": "لم يُعثر على أي عناصر في ذلك الإدخال."
+      },
+      "warning": {
+        "malformedRow": "تعذّرت قراءة {{count}} صفًّا وتم تخطيها.",
+        "missingTitle": "{{count}} عنصرًا بلا عنوان.",
+        "unmappedFields": "{{count}} عنصرًا تحتوي على حقول لا تقابل أي حقل في الخزنة.",
+        "duplicateSource": "{{count}} صفًّا تكرر صفًّا سابقًا.",
+        "invalidTotp": "تعذّرت قراءة {{count}} من أسرار الموثّق وتم إسقاطها."
       }
     }
   },

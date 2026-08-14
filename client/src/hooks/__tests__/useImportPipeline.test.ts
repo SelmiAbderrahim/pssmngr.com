@@ -1,316 +1,398 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (c) 2026 Password Manager contributors
-import { renderHook, act } from "@testing-library/react";
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import { useImportPipeline } from "../useImportPipeline";
+/**
+ * useImportPipeline tests — bounds, stale-result cancellation, pagination
+ * clamping, duplicate fingerprinting, and reset cleanup.
+ *
+ * All fixtures are synthetic.
+ */
 
-const mockReadFile = vi.fn();
-const mockParseFileContent = vi.fn();
-const mockExecuteImport = vi.fn();
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { renderHook, act, waitFor } from "@testing-library/react";
 
-vi.mock("@/services/import/pipeline", () => ({
-  readFile: (...args: unknown[]) => mockReadFile(...args),
-  parseFileContent: (...args: unknown[]) => mockParseFileContent(...args),
-  executeImport: (...args: unknown[]) => mockExecuteImport(...args),
+const { mockReadFile, mockExecuteImport } = vi.hoisted(() => ({
+  mockReadFile: vi.fn(),
+  mockExecuteImport: vi.fn(),
 }));
 
-const mockItems = [
-  { type: "login" as const, title: "Site A", fields: { username: "user1", password: "pass1" } },
-  { type: "login" as const, title: "Site B", fields: { username: "user2", password: "pass2" } },
-  { type: "note" as const, title: "Note C", fields: { content: "secret" } },
-];
+vi.mock("@/services/import/pipeline", async () => {
+  const actual = await vi.importActual<
+    typeof import("@/services/import/pipeline")
+  >("@/services/import/pipeline");
+  return {
+    ...actual,
+    readFile: mockReadFile,
+    executeImport: mockExecuteImport,
+  };
+});
 
-const mockParseResult = {
-  items: mockItems,
-  errors: [],
-  duplicates: [],
-  stats: { total: 3, parsed: 3, skipped: 0, duplicateCount: 0 },
-};
+import {
+  useImportPipeline,
+  PREVIEW_PAGE_SIZE,
+} from "../useImportPipeline";
+import { MAX_IMPORT_FILE_BYTES } from "@/services/import/smart-parse";
 
-function createMockFile(name = "export.csv") {
-  return new File(["csv,content"], name, { type: "text/csv" });
+function block(index: number) {
+  return [
+    `Title: Synthetic Site ${index}`,
+    `Username: user${index}@synthetic.invalid`,
+    `Password: Synthetic-Pw-${index}`,
+  ].join("\n");
 }
 
-describe("useImportPipeline", () => {
-  beforeEach(() => {
-    mockReadFile.mockReset();
-    mockParseFileContent.mockReset();
-    mockExecuteImport.mockReset();
+function paste(count: number) {
+  return Array.from({ length: count }, (_, i) => block(i + 1)).join("\n\n");
+}
+
+function fakeFile(name: string, size: number): File {
+  return { name, size } as File;
+}
+
+beforeEach(() => {
+  vi.clearAllMocks();
+  mockExecuteImport.mockResolvedValue({
+    imported: 0,
+    skipped: 0,
+    errors: [],
+    durationMs: 1,
+  });
+});
+
+describe("useImportPipeline — parsing", () => {
+  it("parses pasted text into paginated preview rows", () => {
+    const { result } = renderHook(() => useImportPipeline());
+
+    act(() => result.current.analyzeText(paste(120)));
+
+    expect(result.current.stage).toBe("previewing");
+    expect(result.current.rows).toHaveLength(120);
+    expect(result.current.pageRows).toHaveLength(PREVIEW_PAGE_SIZE);
+    expect(result.current.pageCount).toBe(3);
+    expect(result.current.selectedKeys.size).toBe(120);
   });
 
+  it("surfaces a typed error and no rows for oversized input", () => {
+    const { result } = renderHook(() => useImportPipeline());
+
+    act(() => result.current.analyzeText(paste(501)));
+
+    expect(result.current.stage).toBe("error");
+    expect(result.current.parseError?.code).toBe("tooManyItems");
+    expect(result.current.rows).toEqual([]);
+  });
+
+  it("rejects an oversized file by size before reading it", async () => {
+    const { result } = renderHook(() => useImportPipeline());
+
+    await act(async () => {
+      await result.current.uploadFile(
+        fakeFile("huge.csv", MAX_IMPORT_FILE_BYTES + 1),
+      );
+    });
+
+    expect(result.current.parseError?.code).toBe("fileTooLarge");
+    expect(mockReadFile).not.toHaveBeenCalled();
+  });
+
+  it("routes an encrypted bundle away from the parser", async () => {
+    const { result } = renderHook(() => useImportPipeline());
+
+    await act(async () => {
+      await result.current.uploadFile(fakeFile("vault.pssmngr", 100));
+    });
+
+    expect(result.current.parseError?.code).toBe("encryptedBundle");
+    expect(mockReadFile).not.toHaveBeenCalled();
+  });
+
+  it("ignores a stale read when a newer input supersedes it", async () => {
+    let resolveFirst: ((value: string) => void) | undefined;
+    mockReadFile
+      .mockImplementationOnce(
+        () => new Promise<string>((resolve) => (resolveFirst = resolve)),
+      )
+      .mockResolvedValueOnce(paste(2));
+
+    const { result } = renderHook(() => useImportPipeline());
+
+    let firstUpload!: Promise<void>;
+    act(() => {
+      firstUpload = result.current.uploadFile(fakeFile("first.csv", 100));
+    });
+
+    await act(async () => {
+      await result.current.uploadFile(fakeFile("second.csv", 100));
+    });
+    expect(result.current.rows).toHaveLength(2);
+
+    // The first read finishes late with different content.
+    await act(async () => {
+      resolveFirst?.(paste(9));
+      await firstUpload;
+    });
+
+    expect(result.current.rows).toHaveLength(2);
+    expect(result.current.rows[0]?.item.title).toBe("Synthetic Site 1");
+  });
+
+  it("ignores a stale read that lands after reset", async () => {
+    let resolveRead: ((value: string) => void) | undefined;
+    mockReadFile.mockImplementationOnce(
+      () => new Promise<string>((resolve) => (resolveRead = resolve)),
+    );
+
+    const { result } = renderHook(() => useImportPipeline());
+
+    let upload!: Promise<void>;
+    act(() => {
+      upload = result.current.uploadFile(fakeFile("first.csv", 100));
+    });
+    act(() => result.current.reset());
+
+    await act(async () => {
+      resolveRead?.(paste(5));
+      await upload;
+    });
+
+    expect(result.current.stage).toBe("idle");
+    expect(result.current.rows).toEqual([]);
+  });
+});
+
+describe("useImportPipeline — preview state", () => {
+  it("clamps the page after deleting rows and on reset", () => {
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(51)));
+
+    act(() => result.current.setPage(1));
+    expect(result.current.page).toBe(1);
+
+    act(() => result.current.deleteRow(result.current.pageRows[0]!.key));
+    expect(result.current.rows).toHaveLength(50);
+    expect(result.current.page).toBe(0);
+
+    act(() => result.current.setPage(99));
+    expect(result.current.page).toBe(0);
+
+    act(() => result.current.reset());
+    expect(result.current.page).toBe(0);
+    expect(result.current.rows).toEqual([]);
+    expect(result.current.stage).toBe("idle");
+  });
+
+  it("clears preview plaintext on back", () => {
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(3)));
+    expect(result.current.rows).toHaveLength(3);
+
+    act(() => result.current.back());
+
+    expect(result.current.rows).toEqual([]);
+    expect(result.current.parseResult).toBeNull();
+    expect(result.current.selectedKeys.size).toBe(0);
+    expect(result.current.stage).toBe("idle");
+  });
+
+  it("edits and toggles rows by key", () => {
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(2)));
+    const [first, second] = result.current.rows;
+
+    act(() => result.current.editRow(first!.key, { title: "Edited" }));
+    expect(result.current.rows[0]?.item.title).toBe("Edited");
+
+    act(() => result.current.toggleItem(second!.key));
+    expect(result.current.selectedKeys.has(second!.key)).toBe(false);
+
+    act(() => result.current.toggleAll(false));
+    expect(result.current.selectedKeys.size).toBe(0);
+    act(() => result.current.toggleAll(true));
+    expect(result.current.selectedKeys.size).toBe(2);
+  });
+
+  it("marks exact duplicates across every preview page in O(n)", () => {
+    const unique = Array.from({ length: 120 }, (_, i) => block(i + 1));
+    // Repeat the first block on the second and third pages.
+    unique[60] = block(1);
+    unique[119] = block(1);
+
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(unique.join("\n\n")));
+
+    expect(result.current.rows).toHaveLength(120);
+    expect([...result.current.duplicateKeys].sort()).toEqual(
+      ["row-119", "row-60"].sort(),
+    );
+
+    // The set is page-independent: paging does not change the verdict.
+    act(() => result.current.setPage(2));
+    expect(result.current.duplicateKeys.has("row-119")).toBe(true);
+  });
+
+  it("does not flag rows that differ in any field", () => {
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(50)));
+    expect(result.current.duplicateKeys.size).toBe(0);
+  });
+});
+
+describe("useImportPipeline — saving", () => {
+  it("reuses the operation id and original batch index when retrying", async () => {
+    mockExecuteImport.mockResolvedValueOnce({
+      imported: 100,
+      skipped: 50,
+      errors: Array.from({ length: 50 }, (_, i) => ({
+        index: 50 + i,
+        title: "",
+        message: "network",
+        batchIndex: 1,
+      })),
+      durationMs: 1,
+    });
+
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(150)));
+
+    await act(async () => {
+      await result.current.confirmImport("v-1");
+    });
+
+    const firstOptions = mockExecuteImport.mock.calls[0]![3];
+    expect(firstOptions.batchIndexes.slice(0, 50).every((i: number) => i === 0)).toBe(
+      true,
+    );
+    expect(result.current.rows).toHaveLength(50);
+
+    act(() => result.current.retryFailed());
+    expect(result.current.stage).toBe("previewing");
+
+    await act(async () => {
+      await result.current.confirmImport("v-1");
+    });
+
+    const retryOptions = mockExecuteImport.mock.calls[1]![3];
+    expect(retryOptions.operationId).toBe(firstOptions.operationId);
+    expect(retryOptions.batchIndexes).toEqual(Array(50).fill(1));
+  });
+
+  it("does nothing when no rows are selected", async () => {
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(3)));
+    act(() => result.current.toggleAll(false));
+
+    await act(async () => {
+      await result.current.confirmImport("v-1");
+    });
+
+    expect(mockExecuteImport).not.toHaveBeenCalled();
+  });
+
+  it("surfaces a save-stage failure without losing rows", async () => {
+    mockExecuteImport.mockRejectedValueOnce(new Error("offline"));
+
+    const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(3)));
+
+    await act(async () => {
+      await result.current.confirmImport("v-1");
+    });
+
+    await waitFor(() => expect(result.current.stage).toBe("error"));
+    expect(result.current.error).toBe("offline");
+    expect(result.current.rows).toHaveLength(3);
+  });
+});
+
+describe("useImportPipeline — stage transitions", () => {
   it("returns initial state with stage idle", () => {
     const { result } = renderHook(() => useImportPipeline());
     expect(result.current.stage).toBe("idle");
     expect(result.current.source).toBeNull();
     expect(result.current.parseResult).toBeNull();
-    expect(result.current.selectedItems).toEqual([]);
+    expect(result.current.rows).toEqual([]);
+    expect(result.current.selectedKeys.size).toBe(0);
     expect(result.current.progress).toBeNull();
     expect(result.current.summary).toBeNull();
+    expect(result.current.parseError).toBeNull();
     expect(result.current.error).toBeNull();
   });
 
-  it("uploadFile transitions through reading → detecting → previewing on success", async () => {
-    mockReadFile.mockResolvedValue("csv,content");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "Chrome CSV",
-    });
+  it("moves through reading → detecting → previewing on a successful upload", async () => {
+    const stages: string[] = [];
+    mockReadFile.mockImplementation(async () => paste(2));
 
     const { result } = renderHook(() => useImportPipeline());
+    stages.push(result.current.stage);
 
     await act(async () => {
-      await result.current.uploadFile(createMockFile());
+      const pending = result.current.uploadFile(fakeFile("export.csv", 100));
+      stages.push(result.current.stage);
+      await pending;
     });
 
+    expect(stages).toContain("idle");
     expect(result.current.stage).toBe("previewing");
-    expect(result.current.source).toBe("Chrome CSV");
-    expect(result.current.parseResult).toEqual(mockParseResult);
-    expect(result.current.selectedItems).toEqual(mockItems);
-    expect(result.current.error).toBeNull();
+    expect(result.current.source).toBeTruthy();
+    expect(result.current.parseResult).not.toBeNull();
   });
 
-  it("uploadFile sets error stage when readFile rejects", async () => {
+  it("reports a typed error when the file cannot be read", async () => {
     mockReadFile.mockRejectedValue(new Error("Failed to read file"));
 
     const { result } = renderHook(() => useImportPipeline());
-
     await act(async () => {
-      await result.current.uploadFile(createMockFile());
+      await result.current.uploadFile(fakeFile("export.csv", 100));
     });
 
     expect(result.current.stage).toBe("error");
-    expect(result.current.error).toBe("Failed to read file");
+    expect(result.current.parseError?.code).toBe("unsupportedFormat");
   });
 
-  it("uploadFile sets error stage when parseFileContent throws", async () => {
-    mockReadFile.mockResolvedValue("bad content");
-    mockParseFileContent.mockImplementation(() => {
-      throw new Error("Unsupported format");
-    });
+  it("reports a typed error when the content parses to nothing", async () => {
+    mockReadFile.mockResolvedValue("name,username,password\n");
 
     const { result } = renderHook(() => useImportPipeline());
-
     await act(async () => {
-      await result.current.uploadFile(createMockFile());
+      await result.current.uploadFile(fakeFile("export.csv", 100));
     });
 
     expect(result.current.stage).toBe("error");
-    expect(result.current.error).toBe("Unsupported format");
+    expect(result.current.parseError?.code).toBe("noItems");
   });
 
-  it("uploadFile sets fallback error message for non-Error throws", async () => {
-    mockReadFile.mockRejectedValue("string error");
-
+  it("ignores selection changes when there are no rows", () => {
     const { result } = renderHook(() => useImportPipeline());
 
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
+    act(() => result.current.toggleItem("row-0"));
+    act(() => result.current.toggleAll(true));
 
-    expect(result.current.stage).toBe("error");
-    expect(result.current.error).toBe("Failed to parse file");
+    expect(result.current.rows).toEqual([]);
+    expect(result.current.stage).toBe("idle");
   });
 
-  it("toggleItem toggles a single item selection", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
-    });
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    expect(result.current.selectedItems).toHaveLength(3);
-
-    // Deselect item at index 1
-    act(() => {
-      result.current.toggleItem(1);
-    });
-    expect(result.current.selectedItems).toHaveLength(2);
-    expect(result.current.selectedItems).not.toContain(mockItems[1]);
-
-    // Re-select item at index 1
-    act(() => {
-      result.current.toggleItem(1);
-    });
-    expect(result.current.selectedItems).toHaveLength(3);
-    expect(result.current.selectedItems).toContain(mockItems[1]);
-  });
-
-  it("toggleItem does nothing when parseResult is null", () => {
-    const { result } = renderHook(() => useImportPipeline());
-
-    act(() => {
-      result.current.toggleItem(0);
-    });
-
-    expect(result.current.selectedItems).toEqual([]);
-  });
-
-  it("toggleAll selects all items when true", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
-    });
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    // Deselect all
-    act(() => {
-      result.current.toggleAll(false);
-    });
-    expect(result.current.selectedItems).toEqual([]);
-
-    // Select all
-    act(() => {
-      result.current.toggleAll(true);
-    });
-    expect(result.current.selectedItems).toEqual(mockItems);
-  });
-
-  it("toggleAll deselects all items when false", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
-    });
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    act(() => {
-      result.current.toggleAll(false);
-    });
-    expect(result.current.selectedItems).toEqual([]);
-  });
-
-  it("toggleAll does nothing when parseResult is null", () => {
-    const { result } = renderHook(() => useImportPipeline());
-
-    act(() => {
-      result.current.toggleAll(true);
-    });
-    expect(result.current.selectedItems).toEqual([]);
-  });
-
-  it("confirmImport transitions to done on success", async () => {
-    const mockSummary = {
+  it("transitions to done and reports the summary on success", async () => {
+    mockExecuteImport.mockResolvedValueOnce({
       imported: 3,
       skipped: 0,
       errors: [],
-      durationMs: 120,
-    };
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
+      durationMs: 5,
     });
-    mockExecuteImport.mockResolvedValue(mockSummary);
 
     const { result } = renderHook(() => useImportPipeline());
+    act(() => result.current.analyzeText(paste(3)));
 
     await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    await act(async () => {
-      await result.current.confirmImport("vault-123");
+      await result.current.confirmImport("v-1");
     });
 
     expect(result.current.stage).toBe("done");
-    expect(result.current.summary).toEqual(mockSummary);
-    expect(mockExecuteImport).toHaveBeenCalledWith(
-      mockItems,
-      "vault-123",
-      expect.any(Function),
-    );
-  });
-
-  it("confirmImport sets error stage on failure", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
+    expect(result.current.summary?.imported).toBe(3);
+    expect(result.current.progress).toMatchObject({
+      stage: "done",
+      total: 3,
+      imported: 3,
     });
-    mockExecuteImport.mockRejectedValue(new Error("Network error"));
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    await act(async () => {
-      await result.current.confirmImport("vault-123");
-    });
-
-    expect(result.current.stage).toBe("error");
-    expect(result.current.error).toBe("Network error");
-  });
-
-  it("confirmImport does nothing when selectedItems is empty", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
-    });
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    // Deselect all items
-    act(() => {
-      result.current.toggleAll(false);
-    });
-
-    await act(async () => {
-      await result.current.confirmImport("vault-123");
-    });
-
-    expect(result.current.stage).toBe("previewing");
-    expect(mockExecuteImport).not.toHaveBeenCalled();
-  });
-
-  it("reset returns to initial state", async () => {
-    mockReadFile.mockResolvedValue("csv");
-    mockParseFileContent.mockReturnValue({
-      result: mockParseResult,
-      source: "CSV",
-    });
-
-    const { result } = renderHook(() => useImportPipeline());
-
-    await act(async () => {
-      await result.current.uploadFile(createMockFile());
-    });
-
-    expect(result.current.stage).toBe("previewing");
-
-    act(() => {
-      result.current.reset();
-    });
-
-    expect(result.current.stage).toBe("idle");
-    expect(result.current.source).toBeNull();
-    expect(result.current.parseResult).toBeNull();
-    expect(result.current.selectedItems).toEqual([]);
-    expect(result.current.progress).toBeNull();
-    expect(result.current.summary).toBeNull();
-    expect(result.current.error).toBeNull();
+    // Nothing failed, so no rows are retained.
+    expect(result.current.rows).toEqual([]);
   });
 });

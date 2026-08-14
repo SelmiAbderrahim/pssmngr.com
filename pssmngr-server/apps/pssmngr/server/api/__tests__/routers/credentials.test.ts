@@ -27,6 +27,8 @@ function mockInsert(returning: any[] = [{}]) {
 				? vals.map((_, i) => returning[i] || { id: `item-${i}` })
 				: returning;
 			(p as any).returning = vi.fn().mockResolvedValue(ret);
+			// `runWithIdempotency` persists its response with this builder.
+			(p as any).onConflictDoNothing = vi.fn().mockResolvedValue(undefined);
 			return p;
 		}),
 	});
@@ -102,6 +104,7 @@ function createMockDb() {
 			itemVersion: {
 				findMany: vi.fn().mockResolvedValue([]),
 			},
+			idempotencyKey: { findFirst: vi.fn().mockResolvedValue(null) },
 		},
 		insert: mockInsert([makeItem()]),
 		update: mockUpdate([makeItem()]),
@@ -356,6 +359,138 @@ describe("Credentials Router", () => {
 			const whereSession = db.query.vault.findFirst.mock.calls.at(-1)![0].where;
 
 			expect(whereExplicit).not.toEqual(whereSession);
+		});
+
+		// Synthetic ciphertext envelopes. No plaintext, no real credential.
+		function batchItems(count: number) {
+			return Array.from({ length: count }, (_, i) => ({
+				itemType: "login" as const,
+				ciphertext: `ct-${i}`,
+				nonce: `n-${i}`,
+				authTag: `a-${i}`,
+				wrappedDataKey: `k-${i}`,
+				wrappedDataKeyNonce: `kn-${i}`,
+				wrappedDataKeyAuthTag: `kt-${i}`,
+			}));
+		}
+
+		it("accepts exactly 1 and exactly 50 items", async () => {
+			for (const count of [1, 50]) {
+				db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+				db.insert = mockInsert();
+				const caller = createCaller(createCtx("user-1", db));
+
+				const result = await caller.batchCreate({
+					vaultId: "vault-1",
+					items: batchItems(count),
+				});
+
+				expect(result.created).toBe(count);
+			}
+		});
+
+		it("rejects 51 items and an empty batch", async () => {
+			db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+			const caller = createCaller(createCtx("user-1", db));
+
+			await expect(
+				caller.batchCreate({ vaultId: "vault-1", items: batchItems(51) }),
+			).rejects.toThrow();
+			await expect(
+				caller.batchCreate({ vaultId: "vault-1", items: [] }),
+			).rejects.toThrow();
+		});
+
+		it("rejects plaintext fields on the batch input", async () => {
+			db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+			db.insert = mockInsert();
+			const caller = createCaller(createCtx("user-1", db));
+
+			const plaintextKeys = [
+				"title",
+				"username",
+				"password",
+				"url",
+				"notes",
+				"totp",
+				"data",
+			];
+
+			for (const key of plaintextKeys) {
+				await expect(
+					caller.batchCreate({
+						vaultId: "vault-1",
+						items: [{ ...batchItems(1)[0]!, [key]: "leak" }],
+					} as any),
+				).rejects.toThrow();
+
+				await expect(
+					caller.batchCreate({
+						vaultId: "vault-1",
+						items: batchItems(1),
+						[key]: "leak",
+					} as any),
+				).rejects.toThrow();
+			}
+
+			expect(db.insert).not.toHaveBeenCalled();
+		});
+
+		it("inserts every item in a single multi-row statement", async () => {
+			db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+			const insert = mockInsert();
+			db.insert = insert;
+			const caller = createCaller(createCtx("user-1", db));
+
+			await caller.batchCreate({ vaultId: "vault-1", items: batchItems(50) });
+
+			expect(insert).toHaveBeenCalledTimes(1);
+			const values = insert.mock.results[0]!.value.values.mock.calls[0]![0];
+			expect(values).toHaveLength(50);
+			expect(values.every((v: any) => v.vaultId === "vault-1")).toBe(true);
+		});
+
+		it("replays a same-key retry without inserting again", async () => {
+			db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+			db.insert = mockInsert();
+			const caller = createCaller(createCtx("user-1", db));
+
+			const first = await caller.batchCreate({
+				vaultId: "vault-1",
+				items: batchItems(50),
+				idempotencyKey: "import:op-1:vault-1:0",
+			});
+			expect(first).toEqual({ created: 50 });
+			// One insert for the rows, one for the persisted idempotency response.
+			expect(db.insert).toHaveBeenCalledTimes(2);
+
+			db.query.idempotencyKey.findFirst.mockResolvedValue({
+				responseBody: { created: 50 },
+			});
+			db.insert = mockInsert();
+
+			const replay = await caller.batchCreate({
+				vaultId: "vault-1",
+				items: batchItems(50),
+				idempotencyKey: "import:op-1:vault-1:0",
+			});
+
+			expect(replay).toEqual({ created: 50 });
+			expect(db.insert).not.toHaveBeenCalled();
+		});
+
+		it("rejects a malformed idempotency key", async () => {
+			db.query.vault.findFirst.mockResolvedValue({ id: "vault-1" });
+			db.insert = mockInsert();
+			const caller = createCaller(createCtx("user-1", db));
+
+			await expect(
+				caller.batchCreate({
+					vaultId: "vault-1",
+					items: batchItems(1),
+					idempotencyKey: "has spaces and/slashes",
+				}),
+			).rejects.toThrow();
 		});
 	});
 

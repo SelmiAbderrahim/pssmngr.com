@@ -19,6 +19,13 @@ import { trpcQuery, trpcMutation } from "@/lib/api/trpc";
 import { enqueue as enqueueOffline } from "@/sync/offlineQueue";
 import { buildVaultItemIdempotencyKey } from "@/sync/useOfflineMutation";
 import type { OrgVaultAccess } from "@/services/org-shared-vault";
+import {
+  BULK_BATCH_SIZE,
+  assertValidOperationId,
+  saveEncryptedBatches,
+  type BulkSaveProgress,
+  type BulkSaveResult,
+} from "@/services/import/bulk-save";
 import type { VaultRecord, ListResponse } from "./utils";
 
 interface UseVaultItemsArgs {
@@ -50,6 +57,33 @@ interface UseVaultItemsArgs {
   resetSignal?: unknown;
 }
 
+/**
+ * Server-side ceiling on one `batchCreate` / `batchAddItems` call. Bulk work is
+ * split into sequential groups of this size by {@link saveEncryptedBatches}.
+ */
+export const BULK_CREATE_BATCH_SIZE = BULK_BATCH_SIZE;
+
+export interface BulkCreateItem {
+  /** Stable, non-secret key the caller uses to identify this row. */
+  key: string;
+  itemType: ItemType;
+  /** Plaintext item data. Encrypted here; never sent or stored as-is. */
+  data: Record<string, unknown>;
+}
+
+export type BulkCreateProgress = BulkSaveProgress;
+export type BulkCreateResult = BulkSaveResult;
+
+export interface BulkCreateOptions {
+  /**
+   * Non-secret id for this logical operation, retained by the caller across
+   * retries. Batch idempotency keys are derived from it, so reusing it means a
+   * retry cannot duplicate a batch the server already committed.
+   */
+  operationId: string;
+  onProgress?: (progress: BulkCreateProgress) => void;
+}
+
 export interface UseVaultItemsResult {
   vault: VaultRecord | null;
   vaultLoading: boolean;
@@ -72,6 +106,10 @@ export interface UseVaultItemsResult {
     itemType: ItemType,
     data: Record<string, unknown>,
   ) => Promise<void>;
+  handleBulkCreateItems: (
+    items: BulkCreateItem[],
+    options: BulkCreateOptions,
+  ) => Promise<BulkCreateResult>;
   handleSaveItem: (
     itemId: string,
     data: Record<string, unknown>,
@@ -562,6 +600,97 @@ export function useVaultItems({
     ],
   );
 
+  /**
+   * Encrypt and save many items with a bounded number of round trips.
+   *
+   * Items are processed in sequential groups of {@link BULK_CREATE_BATCH_SIZE}.
+   * Within a group every item is encrypted in parallel through the same
+   * `encryptItem` / `encryptItemWithKey` path a single create uses, then the
+   * ciphertext envelopes — and nothing else — are submitted in one mutation to
+   * the per-user or shared procedure. Plaintext never leaves this function.
+   *
+   * Each batch carries an idempotency key derived only from the caller's
+   * operation id, the vault id, and the batch index, so retrying with the same
+   * operation id cannot duplicate a batch the server already committed.
+   *
+   * The vault is refreshed once, after the whole run, and only if something
+   * was saved.
+   */
+  const handleBulkCreateItems = useCallback(
+    async (
+      items: BulkCreateItem[],
+      { operationId, onProgress }: BulkCreateOptions,
+    ): Promise<BulkCreateResult> => {
+      if (items.length === 0) return { saved: [], failed: [], failures: [] };
+
+      // Every row failed before any encryption was attempted.
+      const allFailed = (message: string): BulkCreateResult => ({
+        saved: [],
+        failed: items.map((entry) => entry.key),
+        failures: items.map((entry, index) => ({
+          key: entry.key,
+          batchIndex: Math.floor(index / BULK_BATCH_SIZE),
+          stage: "save" as const,
+          message,
+        })),
+      });
+
+      assertValidOperationId(operationId);
+
+      const target = sharedAccess
+        ? { kind: "shared" as const, vaultId: sharedAccess.vaultId }
+        : vault
+          ? { kind: "personal" as const, vaultId: vault.id }
+          : null;
+
+      if (!target) return allFailed("No vault available");
+      if (sharedAccess && !canMutateItems) return allFailed("Read-only vault");
+      // Bulk import is an online-only operation: queuing it would mean holding
+      // plaintext outside the vault.
+      if (!sharedAccess && !vaultIsOnline) return allFailed("Vault is offline");
+
+      const { saved, failed, failures } = await saveEncryptedBatches(items, {
+        operationId,
+        vaultId: target.vaultId,
+        onProgress,
+        encrypt: (data) =>
+          sharedAccess
+            ? vaultCrypto.encryptItemWithKey(data, sharedAccess.key)
+            : encryptItem(data),
+        submit: ({ items: encryptedItems, idempotencyKey }) =>
+          sharedAccess
+            ? trpcMutation<{ created: number }>(
+                "sharedVault",
+                "batchAddItems",
+                {
+                  vaultId: target.vaultId,
+                  items: encryptedItems,
+                  idempotencyKey,
+                },
+              )
+            : trpcMutation<{ created: number }>("credentials", "batchCreate", {
+                vaultId: target.vaultId,
+                organizationId: activeWorkspaceId ?? undefined,
+                items: encryptedItems,
+                idempotencyKey,
+              }),
+      });
+
+      if (saved.length > 0) await fetchItems(target.vaultId);
+
+      return { saved, failed, failures };
+    },
+    [
+      activeWorkspaceId,
+      canMutateItems,
+      encryptItem,
+      fetchItems,
+      sharedAccess,
+      vault,
+      vaultIsOnline,
+    ],
+  );
+
   const handleToggleFavorite = useCallback(
     async (itemId: string) => {
       if (sharedAccess) return;
@@ -724,6 +853,7 @@ export function useVaultItems({
     fetchItems,
     getAllDecryptedItems,
     handleCreateItem,
+    handleBulkCreateItems,
     handleSaveItem,
     handleDeleteItem,
     handleToggleFavorite,

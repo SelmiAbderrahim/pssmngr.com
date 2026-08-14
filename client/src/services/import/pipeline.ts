@@ -21,8 +21,18 @@ import type {
 import { detectParser } from "./index";
 import { vaultCrypto } from "@/services/vault-crypto";
 import { trpcMutation } from "@/lib/api/trpc";
+import { saveEncryptedBatches, type BulkSaveEntry } from "./bulk-save";
 
-const BATCH_SIZE = 50;
+/**
+ * Mint a non-secret operation id for one import run. Reusing it on a retry
+ * makes the retry idempotent per batch; it carries no item content.
+ */
+export function newImportOperationId(): string {
+  const uuid =
+    globalThis.crypto?.randomUUID?.() ??
+    `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+  return `import-${uuid}`.replace(/[^A-Za-z0-9_-]/g, "-").slice(0, 64);
+}
 
 export type ProgressCallback = (progress: ImportProgress) => void;
 
@@ -66,6 +76,8 @@ function mapItemType(type: ImportItemType): string {
       return "note";
     case "identity":
       return "identity";
+    case "totp":
+      return "totp";
     default:
       return "login";
   }
@@ -96,99 +108,62 @@ export async function executeImport(
   items: ImportedItem[],
   vaultId: string,
   onProgress?: ProgressCallback,
+  options: { operationId?: string; batchIndexes?: number[] } = {},
 ): Promise<ImportSummary> {
   const startTime = Date.now();
-  const errors: ImportItemError[] = [];
-  let imported = 0;
-  let skipped = 0;
+  const operationId = options.operationId ?? newImportOperationId();
 
-  const progress: ImportProgress = {
-    stage: "importing",
-    total: items.length,
-    imported: 0,
-    skipped: 0,
-    errors: 0,
+  // Stable, non-secret row keys. The index is the caller's identity for a row;
+  // no title, value, or fingerprint is used.
+  const entries: BulkSaveEntry[] = items.map((item, index) => ({
+    key: String(index),
+    itemType: mapItemType(item.type),
+    data: buildPlaintext(item),
+    ...(options.batchIndexes?.[index] !== undefined
+      ? { batchIndex: options.batchIndexes[index] }
+      : {}),
+  }));
+
+  const emit = (saved: number, failedCount: number) => {
+    onProgress?.({
+      stage: "importing",
+      total: items.length,
+      imported: saved,
+      skipped: failedCount,
+      errors: failedCount,
+    });
   };
 
-  const emitProgress = () => {
-    progress.imported = imported;
-    progress.skipped = skipped;
-    progress.errors = errors.length;
-    onProgress?.({ ...progress });
-  };
+  emit(0, 0);
 
-  emitProgress();
-
-  // Process in batches of BATCH_SIZE
-  for (let i = 0; i < items.length; i += BATCH_SIZE) {
-    const batch = items.slice(i, i + BATCH_SIZE);
-
-    // Encrypt each item in the batch in parallel
-    const encryptedBatch: Array<{
-      itemType: string;
-      ciphertext: string;
-      nonce: string;
-      authTag: string;
-      wrappedDataKey: string;
-      wrappedDataKeyNonce: string;
-      wrappedDataKeyAuthTag: string;
-    } | null> = await Promise.all(
-      batch.map(async (item, batchIndex) => {
-        const globalIndex = i + batchIndex;
-        try {
-          const plaintext = buildPlaintext(item);
-          const encrypted = await vaultCrypto.encryptItem(plaintext);
-          return {
-            itemType: mapItemType(item.type),
-            ...encrypted,
-          };
-        } catch (err) {
-          errors.push({
-            index: globalIndex,
-            title: item.title,
-            message:
-              err instanceof Error ? err.message : "Encryption failed",
-          });
-          return null;
-        }
+  const { saved, failed, failures } = await saveEncryptedBatches(entries, {
+    operationId,
+    vaultId,
+    encrypt: (data) => vaultCrypto.encryptItem(data),
+    submit: ({ items: encryptedItems, idempotencyKey }) =>
+      trpcMutation<{ created: number }>("credentials", "batchCreate", {
+        vaultId,
+        items: encryptedItems,
+        idempotencyKey,
       }),
-    );
+    onProgress: (progress) => emit(progress.saved, 0),
+  });
 
-    // Filter out failed encryptions
-    const validItems = encryptedBatch.filter(
-      (item): item is NonNullable<typeof item> => item !== null,
-    );
-    const failedCount = encryptedBatch.length - validItems.length;
-    skipped += failedCount;
+  const errors: ImportItemError[] = failures.map((failure) => {
+    const index = Number(failure.key);
+    return {
+      index,
+      title: items[index]?.title ?? `Item ${index + 1}`,
+      message: failure.message,
+      batchIndex: failure.batchIndex,
+    };
+  });
 
-    // Send batch to server
-    if (validItems.length > 0) {
-      try {
-        const result = await trpcMutation<{ created: number }>(
-          "credentials",
-          "batchCreate",
-          { vaultId, items: validItems },
-        );
-        imported += result.created;
-      } catch (err) {
-        // If the whole batch fails, record errors for each item
-        for (let j = 0; j < validItems.length; j++) {
-          const globalIndex = i + j;
-          errors.push({
-            index: globalIndex,
-            title: batch[j]?.title ?? `Item ${globalIndex + 1}`,
-            message: err instanceof Error ? err.message : "Save failed",
-          });
-        }
-      }
-    }
-
-    emitProgress();
-  }
+  emit(saved.length, failed.length);
 
   return {
-    imported,
-    skipped,
+    imported: saved.length,
+    skipped: failed.length,
     errors,
     durationMs: Date.now() - startTime,
   };

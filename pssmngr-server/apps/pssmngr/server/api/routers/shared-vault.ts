@@ -13,6 +13,10 @@ import {
 	notFoundError,
 } from "@pssmngr/server/i18n/errors";
 import {
+	idempotencyKeyZodSchema,
+	runWithIdempotency,
+} from "@pssmngr/server/idempotency";
+import {
 	encryptedField,
 	encryptedItemFields,
 } from "@pssmngr/server/lib/encrypted-payload";
@@ -1131,6 +1135,90 @@ export const sharedVaultRouter = createTRPCRouter({
 				.returning();
 
 			return { id: created!.id };
+		}),
+
+	/**
+	 * Add multiple encrypted items to a shared vault in one call.
+	 *
+	 * Mirrors `credentials.batchCreate` for shared vaults so a bulk import
+	 * costs one round trip per 50 items instead of one per item.
+	 *
+	 * - `vaultId` is the caller's shared vault; edit permission on it is
+	 *   checked once, before the insert.
+	 * - The input is `.strict()` and every item carries only the non-secret
+	 *   item type plus `encryptedItemFields`. No plaintext item data, title,
+	 *   username, password, URL, note, TOTP secret, or secret-derived
+	 *   metadata is accepted.
+	 * - All rows are inserted in one statement scoped to `sharedVaultId` and
+	 *   `createdBy`, so a caller cannot write into another vault or attribute
+	 *   rows to another user.
+	 * - The optional idempotency key collapses a retry of a batch that was
+	 *   already committed.
+	 */
+	batchAddItems: protectedProcedure
+		.input(
+			z
+				.object({
+					vaultId: z.string().min(1),
+					items: z
+						.array(
+							z
+								.object({
+									itemType: z.enum([
+										"login",
+										"passkey",
+										"identity",
+										"card",
+										"note",
+										"totp",
+										"file",
+									]),
+									...encryptedItemFields,
+								})
+								.strict(),
+						)
+						.min(1)
+						.max(50),
+					idempotencyKey: idempotencyKeyZodSchema,
+				})
+				.strict(),
+		)
+		.mutation(async ({ input, ctx }) => {
+			await requireVaultPermission(
+				ctx.db,
+				ctx.user.id,
+				input.vaultId,
+				"edit",
+				ctx.t,
+			);
+
+			return runWithIdempotency({
+				db: ctx.db,
+				userId: ctx.user.id,
+				router: "sharedVault",
+				procedure: "batchAddItems",
+				key: input.idempotencyKey,
+				executor: async () => {
+					const created = await ctx.db
+						.insert(sharedVaultItem)
+						.values(
+							input.items.map((i) => ({
+								sharedVaultId: input.vaultId,
+								itemType: i.itemType,
+								ciphertext: i.ciphertext,
+								nonce: i.nonce,
+								authTag: i.authTag,
+								wrappedDataKey: i.wrappedDataKey,
+								wrappedDataKeyNonce: i.wrappedDataKeyNonce,
+								wrappedDataKeyAuthTag: i.wrappedDataKeyAuthTag,
+								createdBy: ctx.user.id,
+							})),
+						)
+						.returning({ id: sharedVaultItem.id });
+
+					return { created: created.length };
+				},
+			});
 		}),
 
 	/**

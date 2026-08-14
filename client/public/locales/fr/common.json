@@ -843,41 +843,84 @@
     "import": {
       "dropzone": {
         "title": "Déposez votre fichier ici ou cliquez pour parcourir",
-        "subtitle": "Prend en charge les fichiers CSV et JSON",
+        "subtitle": "Prend en charge les fichiers CSV, JSON et TXT",
         "browse": "Choisir un fichier"
       },
       "supported": "Formats pris en charge",
       "reading": "Lecture du fichier...",
-      "detecting": "Détection du format...",
+      "detecting": "Tri des éléments sur cet appareil...",
       "preview": {
-        "title": "Aperçu",
+        "title": "Vérifier les éléments",
         "detected": "Détecté : {{source}}",
         "count": "{{count}} éléments trouvés",
-        "cancel": "Annuler",
-        "import": "Importer {{count}} éléments",
-        "parseErrors": "{{count}} lignes n'ont pas pu être analysées",
-        "duplicates": "{{count}} doublons potentiels détectés",
+        "import": "Ajouter {{count}} éléments",
+        "duplicates": "{{count}} doublons exacts détectés",
         "col": {
           "title": "Titre",
           "type": "Type",
           "username": "Nom d'utilisateur",
-          "url": "URL"
-        }
+          "url": "URL",
+          "actions": "Actions"
+        },
+        "back": "Retour",
+        "duplicateRow": "Doublon",
+        "selectAll": "Sélectionner tous les éléments",
+        "selectRow": "Sélectionner l'élément {{row}}",
+        "editTitle": "Titre de l'élément {{row}}",
+        "editUsername": "Nom d'utilisateur de l'élément {{row}}",
+        "editUrl": "URL de l'élément {{row}}",
+        "deleteRow": "Retirer l'élément {{row}}",
+        "range": "Affichage de {{first}}–{{last}} sur {{total}}",
+        "pagination": "Pages d'aperçu",
+        "pageOf": "Page {{page}} sur {{pages}}",
+        "firstPage": "Première page",
+        "prevPage": "Page précédente",
+        "nextPage": "Page suivante",
+        "lastPage": "Dernière page",
+        "limit": "Jusqu'à {{max}} éléments peuvent être vérifiés à la fois."
       },
-      "progress": "Importation de {{current}} sur {{total}}...",
+      "progress": "{{current}} éléments chiffrés enregistrés sur {{total}}...",
       "summary": {
-        "title": "Importation terminée",
-        "duration": "Terminé en {{seconds}}s",
-        "imported": "Importés",
+        "title": "Éléments ajoutés",
+        "imported": "Ajoutés",
         "skipped": "Ignorés",
         "errors": "Erreurs",
-        "errorDetails": "Éléments échoués",
-        "moreErrors": "...et {{count}} de plus",
-        "importMore": "Importer plus"
+        "importMore": "Ajouter d'autres éléments",
+        "retainedRows": "{{count}} éléments n'ont pas été enregistrés et sont toujours ici.",
+        "retry": "Réessayer ceux-ci"
       },
       "error": {
-        "title": "Échec de l'importation",
+        "title": "Impossible de lire ces éléments",
         "retry": "Réessayer"
+      },
+      "onDevice": "Votre fichier est lu et trié en éléments sur cet appareil. Seuls des éléments chiffrés sont envoyés au serveur.",
+      "paste": {
+        "label": "Ou collez vos éléments",
+        "placeholder": "Titre : Exemple\nNom d'utilisateur : vous@exemple.com\nMot de passe : ...",
+        "analyze": "Vérifier les éléments"
+      },
+      "itemType": {
+        "login": "Identifiant",
+        "card": "Carte",
+        "note": "Note",
+        "identity": "Identité",
+        "totp": "Authentificateur"
+      },
+      "parseError": {
+        "empty": "Cette saisie était vide.",
+        "fileTooLarge": "Ce fichier est trop volumineux. La limite est de {{limit}} octets.",
+        "contentTooLarge": "Cette saisie est trop longue. La limite est de {{limit}} caractères.",
+        "tooManyItems": "Cette saisie contient {{actual}} éléments. La limite est de {{limit}} à la fois.",
+        "encryptedBundle": "Il s'agit d'une sauvegarde .pssmngr chiffrée. Restaurez-la depuis l'étape de sauvegarde Importer / Exporter, qui demande son mot de passe.",
+        "unsupportedFormat": "Ce type de fichier n'est pas pris en charge. Utilisez CSV, JSON ou TXT.",
+        "noItems": "Aucun élément n'a été trouvé dans cette saisie."
+      },
+      "warning": {
+        "malformedRow": "{{count}} lignes n'ont pas pu être lues et ont été ignorées.",
+        "missingTitle": "{{count}} éléments n'ont pas de titre.",
+        "unmappedFields": "{{count}} éléments avaient des champs qui ne correspondent à aucun champ du coffre.",
+        "duplicateSource": "{{count}} lignes répètent une ligne précédente.",
+        "invalidTotp": "{{count}} secrets d'authentificateur n'ont pas pu être lus et ont été abandonnés."
       }
     }
   },

@@ -843,41 +843,84 @@
     "import": {
       "dropzone": {
         "title": "Datei hierher ziehen oder zum Durchsuchen klicken",
-        "subtitle": "Unterstützt CSV- und JSON-Dateien",
+        "subtitle": "Unterstützt CSV-, JSON- und TXT-Dateien",
         "browse": "Datei auswählen"
       },
       "supported": "Unterstützte Formate",
       "reading": "Datei wird gelesen...",
-      "detecting": "Format wird erkannt...",
+      "detecting": "Einträge werden auf diesem Gerät sortiert ...",
       "preview": {
-        "title": "Vorschau",
+        "title": "Einträge prüfen",
         "detected": "Erkannt: {{source}}",
         "count": "{{count}} Einträge gefunden",
-        "cancel": "Abbrechen",
-        "import": "{{count}} Einträge importieren",
-        "parseErrors": "{{count}} Zeilen konnten nicht analysiert werden",
-        "duplicates": "{{count}} mögliche Duplikate erkannt",
+        "import": "{{count}} Einträge hinzufügen",
+        "duplicates": "{{count}} exakte Duplikate erkannt",
         "col": {
           "title": "Titel",
           "type": "Typ",
           "username": "Benutzername",
-          "url": "URL"
-        }
+          "url": "URL",
+          "actions": "Aktionen"
+        },
+        "back": "Zurück",
+        "duplicateRow": "Duplikat",
+        "selectAll": "Alle Einträge auswählen",
+        "selectRow": "Eintrag {{row}} auswählen",
+        "editTitle": "Titel von Eintrag {{row}}",
+        "editUsername": "Benutzername von Eintrag {{row}}",
+        "editUrl": "URL von Eintrag {{row}}",
+        "deleteRow": "Eintrag {{row}} entfernen",
+        "range": "{{first}}–{{last}} von {{total}} werden angezeigt",
+        "pagination": "Vorschauseiten",
+        "pageOf": "Seite {{page}} von {{pages}}",
+        "firstPage": "Erste Seite",
+        "prevPage": "Vorherige Seite",
+        "nextPage": "Nächste Seite",
+        "lastPage": "Letzte Seite",
+        "limit": "Es können bis zu {{max}} Einträge auf einmal geprüft werden."
       },
-      "progress": "Importiere {{current}} von {{total}}...",
+      "progress": "{{current}} von {{total}} verschlüsselten Einträgen gespeichert ...",
       "summary": {
-        "title": "Import abgeschlossen",
-        "duration": "Abgeschlossen in {{seconds}}s",
-        "imported": "Importiert",
+        "title": "Einträge hinzugefügt",
+        "imported": "Hinzugefügt",
         "skipped": "Übersprungen",
         "errors": "Fehler",
-        "errorDetails": "Fehlgeschlagene Einträge",
-        "moreErrors": "...und {{count}} weitere",
-        "importMore": "Mehr importieren"
+        "importMore": "Weitere Einträge hinzufügen",
+        "retainedRows": "{{count}} Einträge wurden nicht gespeichert und sind noch hier.",
+        "retry": "Diese erneut versuchen"
       },
       "error": {
-        "title": "Import fehlgeschlagen",
+        "title": "Diese Einträge konnten nicht gelesen werden",
         "retry": "Erneut versuchen"
+      },
+      "onDevice": "Deine Datei wird auf diesem Gerät gelesen und in Einträge sortiert. An den Server gehen nur verschlüsselte Einträge.",
+      "paste": {
+        "label": "Oder füge deine Einträge ein",
+        "placeholder": "Titel: Beispiel\nBenutzername: du@beispiel.com\nPasswort: ...",
+        "analyze": "Einträge prüfen"
+      },
+      "itemType": {
+        "login": "Zugangsdaten",
+        "card": "Karte",
+        "note": "Notiz",
+        "identity": "Identität",
+        "totp": "Authentifikator"
+      },
+      "parseError": {
+        "empty": "Diese Eingabe war leer.",
+        "fileTooLarge": "Diese Datei ist zu groß. Das Limit beträgt {{limit}} Bytes.",
+        "contentTooLarge": "Diese Eingabe ist zu lang. Das Limit beträgt {{limit}} Zeichen.",
+        "tooManyItems": "Diese Eingabe hat {{actual}} Einträge. Das Limit beträgt {{limit}} auf einmal.",
+        "encryptedBundle": "Das ist eine verschlüsselte .pssmngr-Sicherung. Stelle sie über den Sicherungsschritt in Import / Export wieder her, der nach ihrem Passwort fragt.",
+        "unsupportedFormat": "Dieser Dateityp wird nicht unterstützt. Verwende CSV, JSON oder TXT.",
+        "noItems": "In dieser Eingabe wurden keine Einträge gefunden."
+      },
+      "warning": {
+        "malformedRow": "{{count}} Zeilen konnten nicht gelesen werden und wurden übersprungen.",
+        "missingTitle": "{{count}} Einträge haben keinen Titel.",
+        "unmappedFields": "{{count}} Einträge hatten Felder, die keinem Tresorfeld entsprechen.",
+        "duplicateSource": "{{count}} Zeilen wiederholen eine frühere Zeile.",
+        "invalidTotp": "{{count}} Authentifikator-Geheimnisse konnten nicht gelesen werden und wurden verworfen."
       }
     }
   },

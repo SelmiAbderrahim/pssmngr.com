@@ -1,275 +1,479 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (c) 2026 Password Manager contributors
+/**
+ * ImportWizard (Smart add) tests.
+ *
+ * The pipeline hook is mocked so each rendered stage can be asserted in
+ * isolation. All item data is synthetic; no real credential appears here.
+ * The global react-i18next mock returns the raw key for unmapped keys, so
+ * assertions target translation keys rather than English strings.
+ */
+
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, within } from "@testing-library/react";
+import type { ImportedItem } from "@/types/import";
 
 // ── Mocks ──────────────────────────────────────────────────────────
 
+const PREVIEW_PAGE_SIZE = 50;
+
+function makeRow(index: number) {
+  return {
+    key: `row-${index}`,
+    item: {
+      type: "login",
+      title: `Synthetic Item ${index}`,
+      fields: {
+        username: `user${index}@synthetic.invalid`,
+        url: `https://site-${index}.synthetic.invalid`,
+      },
+    } as ImportedItem,
+  };
+}
+
+function makeRows(count: number) {
+  return Array.from({ length: count }, (_, i) => makeRow(i));
+}
+
 const defaultPipeline = {
-  stage: "idle" as const,
-  source: null,
+  stage: "idle" as string,
+  source: null as string | null,
   parseResult: null,
-  selectedItems: [],
-  progress: null,
-  summary: null,
-  error: null,
+  rows: [] as ReturnType<typeof makeRows>,
+  pageRows: [] as ReturnType<typeof makeRows>,
+  page: 0,
+  pageCount: 1,
+  selectedKeys: new Set<string>(),
+  duplicateKeys: new Set<string>(),
+  warnings: [] as Array<{ code: string; line: number }>,
+  progress: null as Record<string, number | string> | null,
+  summary: null as Record<string, unknown> | null,
+  parseError: null as { code: string; limit?: number; actual?: number } | null,
+  error: null as string | null,
+  maxItems: 500,
   fileInputRef: { current: null },
+  uploadFile: vi.fn(),
+  analyzeText: vi.fn(),
   handleFileSelect: vi.fn(),
   handleFileDrop: vi.fn(),
   toggleItem: vi.fn(),
   toggleAll: vi.fn(),
+  editRow: vi.fn(),
+  deleteRow: vi.fn(),
+  setPage: vi.fn(),
+  back: vi.fn(),
   confirmImport: vi.fn(),
+  retryFailed: vi.fn(),
   reset: vi.fn(),
 };
 
 let mockPipeline = { ...defaultPipeline };
 
-vi.mock("@/hooks/useImportPipeline", () => ({
-  useImportPipeline: () => mockPipeline,
-}));
+vi.mock("@/hooks/useImportPipeline", async () => {
+  const actual = await vi.importActual<
+    typeof import("@/hooks/useImportPipeline")
+  >("@/hooks/useImportPipeline");
+  return {
+    ...actual,
+    useImportPipeline: () => mockPipeline,
+  };
+});
 
 import { ImportWizard } from "../ImportWizard";
 
-// ── Tests ──────────────────────────────────────────────────────────
+/** Put the mocked pipeline into a preview state showing one page of `total`. */
+function previewing(total: number, page = 0, overrides: object = {}) {
+  const rows = makeRows(total);
+  const pageCount = Math.max(1, Math.ceil(total / PREVIEW_PAGE_SIZE));
+  mockPipeline = {
+    ...defaultPipeline,
+    ...{
+      stage: "previewing",
+      source: "Generic CSV",
+      rows,
+      page,
+      pageCount,
+      pageRows: rows.slice(
+        page * PREVIEW_PAGE_SIZE,
+        page * PREVIEW_PAGE_SIZE + PREVIEW_PAGE_SIZE,
+      ),
+      selectedKeys: new Set(rows.map((row) => row.key)),
+    },
+    ...overrides,
+  };
+}
 
-describe("ImportWizard", () => {
+describe("ImportWizard — idle", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockPipeline = { ...defaultPipeline };
   });
 
-  // ── Idle state ─────────────────────────────────────────────────
-
-  it("renders dropzone in idle state", () => {
+  it("renders the dropzone and the on-device explanation", () => {
     render(<ImportWizard vaultId="v1" />);
-    // Translation mock returns raw keys
-    expect(screen.getByText("importExport.import.dropzone.title")).toBeInTheDocument();
-    expect(screen.getByText("importExport.import.dropzone.browse")).toBeInTheDocument();
+    expect(
+      screen.getByText("importExport.import.dropzone.title"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("importExport.import.onDevice"),
+    ).toBeInTheDocument();
   });
 
   it("shows supported formats", () => {
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("1Password")).toBeInTheDocument();
-    expect(screen.getByText("Bitwarden")).toBeInTheDocument();
-    expect(screen.getByText("Chrome")).toBeInTheDocument();
-    expect(screen.getByText("LastPass")).toBeInTheDocument();
+    for (const name of ["1Password", "Bitwarden", "Chrome", "LastPass"]) {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    }
   });
 
-  it("renders hidden file input with correct accept types", () => {
+  it("accepts csv, json, and txt files", () => {
     render(<ImportWizard vaultId="v1" />);
-    const input = document.querySelector('input[type="file"]') as HTMLInputElement;
-    expect(input).toBeTruthy();
-    expect(input.accept).toBe(".csv,.json");
-    expect(input.className).toContain("hidden");
+    const input = document.querySelector(
+      'input[type="file"]',
+    ) as HTMLInputElement;
+    expect(input.accept).toBe(".csv,.json,.txt");
   });
 
-  it("calls handleFileDrop on drop event", () => {
+  it("parses pasted text through the local parser", () => {
     render(<ImportWizard vaultId="v1" />);
-    const dropzone = screen.getByText("importExport.import.dropzone.title").closest("div")!;
+    const textarea = screen.getByLabelText("importExport.import.paste.label");
+    const analyze = screen.getByRole("button", {
+      name: "importExport.import.paste.analyze",
+    });
+
+    expect(analyze).toBeDisabled();
+    fireEvent.change(textarea, {
+      target: { value: "Title: Synthetic\nPassword: Synthetic-Pw" },
+    });
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: "importExport.import.paste.analyze",
+      }),
+    );
+
+    expect(mockPipeline.analyzeText).toHaveBeenCalledWith(
+      "Title: Synthetic\nPassword: Synthetic-Pw",
+    );
+    // The pasted plaintext is dropped once the parser has it.
+    expect((textarea as HTMLTextAreaElement).value).toBe("");
+  });
+
+  it("calls handleFileDrop on drop", () => {
+    render(<ImportWizard vaultId="v1" />);
+    const dropzone = screen
+      .getByText("importExport.import.dropzone.title")
+      .closest("div")!;
     fireEvent.drop(dropzone);
     expect(mockPipeline.handleFileDrop).toHaveBeenCalled();
   });
+});
 
-  // ── Reading / Detecting state ──────────────────────────────────
+describe("ImportWizard — preview scale", () => {
+  beforeEach(() => vi.clearAllMocks());
 
-  it("shows reading spinner when stage is 'reading'", () => {
-    mockPipeline = { ...defaultPipeline, stage: "reading" };
+  it("mounts at most 50 editable rows for a 300-item parse", () => {
+    previewing(300);
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.reading")).toBeInTheDocument();
+
+    const rows = screen.getAllByRole("row");
+    // 50 body rows plus the header row.
+    expect(rows).toHaveLength(PREVIEW_PAGE_SIZE + 1);
+    expect(
+      screen.getAllByLabelText("importExport.import.preview.editTitle"),
+    ).toHaveLength(PREVIEW_PAGE_SIZE);
+    expect(
+      screen.getByText("importExport.import.preview.pageOf"),
+    ).toBeInTheDocument();
   });
 
-  it("shows detecting spinner when stage is 'detecting'", () => {
-    mockPipeline = { ...defaultPipeline, stage: "detecting" };
+  it("reaches the first and last page through accessible controls", () => {
+    previewing(300, 3);
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.detecting")).toBeInTheDocument();
+
+    const nav = screen.getByRole("navigation", {
+      name: "importExport.import.preview.pagination",
+    });
+    fireEvent.click(
+      within(nav).getByRole("button", {
+        name: "importExport.import.preview.lastPage",
+      }),
+    );
+    expect(mockPipeline.setPage).toHaveBeenCalledWith(5);
+
+    fireEvent.click(
+      within(nav).getByRole("button", {
+        name: "importExport.import.preview.firstPage",
+      }),
+    );
+    expect(mockPipeline.setPage).toHaveBeenCalledWith(0);
+
+    fireEvent.click(
+      within(nav).getByRole("button", {
+        name: "importExport.import.preview.nextPage",
+      }),
+    );
+    expect(mockPipeline.setPage).toHaveBeenCalledWith(4);
+
+    fireEvent.click(
+      within(nav).getByRole("button", {
+        name: "importExport.import.preview.prevPage",
+      }),
+    );
+    expect(mockPipeline.setPage).toHaveBeenCalledWith(2);
   });
 
-  // ── Preview state ──────────────────────────────────────────────
+  it("disables paging past the bounds", () => {
+    previewing(300, 0);
+    const { unmount } = render(<ImportWizard vaultId="v1" />);
+    expect(
+      screen.getByRole("button", {
+        name: "importExport.import.preview.firstPage",
+      }),
+    ).toBeDisabled();
+    unmount();
 
-  it("renders preview table with items", () => {
-    const items = [
-      { type: "login" as const, title: "Gmail", fields: { username: "user@gmail.com", url: "https://gmail.com" } },
-      { type: "note" as const, title: "Secret Note", fields: {} },
-    ];
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "previewing",
-      source: "Chrome",
-      parseResult: { items, errors: [], duplicates: [], stats: { total: 2, parsed: 2, skipped: 0, duplicateCount: 0 } },
-      selectedItems: items,
-    };
-
+    previewing(300, 5);
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("Gmail")).toBeInTheDocument();
-    expect(screen.getByText("Secret Note")).toBeInTheDocument();
-    expect(screen.getByText("user@gmail.com")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", {
+        name: "importExport.import.preview.lastPage",
+      }),
+    ).toBeDisabled();
   });
 
-  it("shows parse errors warning", () => {
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "previewing",
-      parseResult: {
-        items: [{ type: "login" as const, title: "Item", fields: {} }],
-        errors: [{ line: 1, message: "bad row" }],
-        duplicates: [],
-        stats: { total: 1, parsed: 1, skipped: 0, duplicateCount: 0 },
-      },
-      selectedItems: [{ type: "login" as const, title: "Item", fields: {} }],
-    };
-
+  it("hides pagination when everything fits on one page", () => {
+    previewing(10);
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.preview.parseErrors")).toBeInTheDocument();
+    expect(
+      screen.queryByRole("navigation", {
+        name: "importExport.import.preview.pagination",
+      }),
+    ).not.toBeInTheDocument();
   });
 
-  it("shows duplicates warning", () => {
-    const items = [{ type: "login" as const, title: "Item", fields: {} }];
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "previewing",
-      parseResult: {
-        items,
-        errors: [],
-        duplicates: [{ key: "dup", items: [{ index: 0, item: items[0] }] }],
-        stats: { total: 1, parsed: 1, skipped: 0, duplicateCount: 1 },
-      },
-      selectedItems: items,
-    };
-
+  it("announces the visible range politely", () => {
+    previewing(300, 2);
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.preview.duplicates")).toBeInTheDocument();
+    const range = screen.getByText("importExport.import.preview.range");
+    expect(range).toHaveAttribute("aria-live", "polite");
+  });
+});
+
+describe("ImportWizard — preview interaction", () => {
+  beforeEach(() => vi.clearAllMocks());
+
+  it("edits a row's title, username, and url in memory", () => {
+    previewing(2);
+    render(<ImportWizard vaultId="v1" />);
+
+    const titles = screen.getAllByLabelText(
+      "importExport.import.preview.editTitle",
+    );
+    fireEvent.change(titles[0]!, { target: { value: "Edited Title" } });
+    expect(mockPipeline.editRow).toHaveBeenCalledWith("row-0", {
+      title: "Edited Title",
+    });
+
+    const usernames = screen.getAllByLabelText(
+      "importExport.import.preview.editUsername",
+    );
+    fireEvent.change(usernames[1]!, { target: { value: "new@synthetic.invalid" } });
+    expect(mockPipeline.editRow).toHaveBeenCalledWith("row-1", {
+      fields: { username: "new@synthetic.invalid" },
+    });
+
+    const urls = screen.getAllByLabelText("importExport.import.preview.editUrl");
+    fireEvent.change(urls[0]!, {
+      target: { value: "https://edited.synthetic.invalid" },
+    });
+    expect(mockPipeline.editRow).toHaveBeenCalledWith("row-0", {
+      fields: { url: "https://edited.synthetic.invalid" },
+    });
   });
 
-  it("calls confirmImport with vaultId on import click", () => {
-    const items = [{ type: "login" as const, title: "Item", fields: {} }];
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "previewing",
-      parseResult: {
-        items,
-        errors: [],
-        duplicates: [],
-        stats: { total: 1, parsed: 1, skipped: 0, duplicateCount: 0 },
-      },
-      selectedItems: items,
-    };
-
+  it("removes a row and toggles selection", () => {
+    previewing(2);
     render(<ImportWizard vaultId="v1" />);
-    // The import button text is a translation key with interpolation
-    const buttons = screen.getAllByRole("button");
-    const importBtn = buttons.find((b) => b.textContent?.includes("importExport.import.preview.import"));
-    expect(importBtn).toBeTruthy();
-    fireEvent.click(importBtn!);
+
+    fireEvent.click(
+      screen.getAllByLabelText("importExport.import.preview.deleteRow")[1]!,
+    );
+    expect(mockPipeline.deleteRow).toHaveBeenCalledWith("row-1");
+
+    fireEvent.click(
+      screen.getAllByLabelText("importExport.import.preview.selectRow")[0]!,
+    );
+    expect(mockPipeline.toggleItem).toHaveBeenCalledWith("row-0");
+  });
+
+  it("confirms with the vault id and goes back without saving", () => {
+    previewing(2);
+    render(<ImportWizard vaultId="v1" />);
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "importExport.import.preview.import" }),
+    );
     expect(mockPipeline.confirmImport).toHaveBeenCalledWith("v1");
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "importExport.import.preview.back" }),
+    );
+    expect(mockPipeline.back).toHaveBeenCalled();
   });
 
-  it("calls reset on cancel click", () => {
-    const items = [{ type: "login" as const, title: "Item", fields: {} }];
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "previewing",
-      parseResult: {
-        items,
-        errors: [],
-        duplicates: [],
-        stats: { total: 1, parsed: 1, skipped: 0, duplicateCount: 0 },
-      },
-      selectedItems: items,
-    };
-
+  it("disables the confirm button when nothing is selected", () => {
+    previewing(2, 0, { selectedKeys: new Set<string>() });
     render(<ImportWizard vaultId="v1" />);
-    const cancelBtn = screen.getByText("importExport.import.preview.cancel");
-    fireEvent.click(cancelBtn);
-    expect(mockPipeline.reset).toHaveBeenCalled();
+    expect(
+      screen.getByRole("button", { name: "importExport.import.preview.import" }),
+    ).toBeDisabled();
   });
 
-  // ── Importing state ────────────────────────────────────────────
+  it("flags duplicate rows and counts them once", () => {
+    previewing(3, 0, { duplicateKeys: new Set(["row-1", "row-2"]) });
+    render(<ImportWizard vaultId="v1" />);
 
-  it("shows progress bar during import", () => {
+    expect(
+      screen.getByText("importExport.import.preview.duplicates"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByText("importExport.import.preview.duplicateRow"),
+    ).toHaveLength(2);
+  });
+
+  it("summarizes warnings by code without echoing row content", () => {
+    previewing(3, 0, {
+      warnings: [
+        { code: "missingTitle", line: 1 },
+        { code: "missingTitle", line: 2 },
+        { code: "invalidTotp", line: 3 },
+      ],
+    });
+    render(<ImportWizard vaultId="v1" />);
+
+    expect(
+      screen.getByText("importExport.import.warning.missingTitle"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("importExport.import.warning.invalidTotp"),
+    ).toBeInTheDocument();
+  });
+
+  it("keeps every control at least 44px and free of item content", () => {
+    previewing(2);
+    const { container } = render(<ImportWizard vaultId="v1" />);
+
+    for (const button of container.querySelectorAll("button")) {
+      // Action buttons size themselves; checkboxes use a 44x44 hit area.
+      expect(button.className).toMatch(/min-h-\[44px\]|before:h-11/);
+    }
+    // Accessible names identify rows by number, never by item content.
+    for (const el of container.querySelectorAll("[aria-label]")) {
+      expect(el.getAttribute("aria-label")).not.toContain("Synthetic");
+      expect(el.getAttribute("aria-label")).not.toContain("synthetic.invalid");
+    }
+    // No test id carries item content either.
+    for (const el of container.querySelectorAll("[data-testid]")) {
+      expect(el.getAttribute("data-testid")).not.toContain("Synthetic");
+    }
+  });
+
+  it("uses logical inline properties so RTL mirrors correctly", () => {
+    previewing(2);
+    const { container } = render(<ImportWizard vaultId="v1" />);
+    const html = container.innerHTML;
+    expect(html).toContain("text-start");
+    expect(html).not.toContain("text-left");
+    expect(html).not.toContain("ml-3");
+    expect(html).not.toContain("mr-3");
+  });
+});
+
+describe("ImportWizard — save, summary, and errors", () => {
+  beforeEach(() => vi.clearAllMocks());
+
+  it("announces encrypted-save progress politely", () => {
     mockPipeline = {
       ...defaultPipeline,
       stage: "importing",
-      progress: { stage: "importing", total: 10, imported: 5, skipped: 0, errors: 0 },
+      progress: { stage: "importing", total: 300, imported: 100, skipped: 0, errors: 0 },
     };
-
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.progress")).toBeInTheDocument();
-    expect(screen.getByRole("progressbar")).toBeInTheDocument();
+
+    const status = screen.getByText("importExport.import.progress");
+    expect(status).toHaveAttribute("aria-live", "polite");
+    expect(status).toHaveAttribute("role", "status");
   });
 
-  // ── Done state ─────────────────────────────────────────────────
-
-  it("shows summary when import is done", () => {
+  it("offers a retry for retained failed rows", () => {
     mockPipeline = {
       ...defaultPipeline,
       stage: "done",
-      summary: { imported: 8, skipped: 1, errors: [], durationMs: 2500 },
+      rows: makeRows(50),
+      summary: { imported: 250, skipped: 50, errors: [], durationMs: 1 },
     };
-
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.summary.title")).toBeInTheDocument();
-    expect(screen.getByText("8")).toBeInTheDocument();
-    expect(screen.getByText("1")).toBeInTheDocument();
-    expect(screen.getByText("0")).toBeInTheDocument();
+
+    expect(
+      screen.getByText("importExport.import.summary.retainedRows"),
+    ).toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", { name: "importExport.import.summary.retry" }),
+    );
+    expect(mockPipeline.retryFailed).toHaveBeenCalled();
   });
 
-  it("shows error details in summary", () => {
+  it("omits the retry block when nothing failed", () => {
     mockPipeline = {
       ...defaultPipeline,
       stage: "done",
-      summary: {
-        imported: 5,
-        skipped: 0,
-        errors: [{ index: 0, title: "Bad Item", message: "Encryption failed" }],
-        durationMs: 1000,
-      },
+      rows: [],
+      summary: { imported: 300, skipped: 0, errors: [], durationMs: 1 },
     };
-
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("Bad Item: Encryption failed")).toBeInTheDocument();
+
+    expect(
+      screen.queryByText("importExport.import.summary.retainedRows"),
+    ).not.toBeInTheDocument();
   });
 
-  it("shows Import More button in done state", () => {
-    mockPipeline = {
-      ...defaultPipeline,
-      stage: "done",
-      summary: { imported: 5, skipped: 0, errors: [], durationMs: 1000 },
-    };
-
-    render(<ImportWizard vaultId="v1" />);
-    const importMoreBtn = screen.getByText("importExport.import.summary.importMore");
-    fireEvent.click(importMoreBtn);
-    expect(mockPipeline.reset).toHaveBeenCalled();
-  });
-
-  // ── Error state ────────────────────────────────────────────────
-
-  it("shows error message with retry button", () => {
+  it("renders a typed parse error without the source text", () => {
     mockPipeline = {
       ...defaultPipeline,
       stage: "error",
-      error: "File format not recognized",
+      parseError: { code: "tooManyItems", limit: 500, actual: 900 },
     };
-
     render(<ImportWizard vaultId="v1" />);
-    expect(screen.getByText("importExport.import.error.title")).toBeInTheDocument();
-    expect(screen.getByText("File format not recognized")).toBeInTheDocument();
 
-    const retryBtn = screen.getByText("importExport.import.error.retry");
-    fireEvent.click(retryBtn);
-    expect(mockPipeline.reset).toHaveBeenCalled();
+    expect(
+      screen.getByText("importExport.import.parseError.tooManyItems"),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("alert")).toBeInTheDocument();
   });
 
-  // ── returns null for unknown stage ─────────────────────────────
-
-  it("returns null for unrecognized state", () => {
+  it("routes an encrypted bundle to the Import/Export backup flow", () => {
     mockPipeline = {
       ...defaultPipeline,
-      stage: "previewing",
-      parseResult: null, // previewing but no parseResult
+      stage: "error",
+      parseError: { code: "encryptedBundle" },
     };
+    render(<ImportWizard vaultId="v1" />);
 
+    expect(
+      screen.getByText("importExport.import.parseError.encryptedBundle"),
+    ).toBeInTheDocument();
+  });
+
+  it("returns null for an unrecognized state", () => {
+    mockPipeline = { ...defaultPipeline, stage: "bogus" };
     const { container } = render(<ImportWizard vaultId="v1" />);
-    expect(container.innerHTML).toBe("");
+    expect(container.firstChild).toBeNull();
+  });
+
+  it("discards in-flight parse state when the step unmounts", () => {
+    previewing(2);
+    const { unmount } = render(<ImportWizard vaultId="v1" />);
+    unmount();
+    expect(mockPipeline.reset).toHaveBeenCalled();
   });
 });

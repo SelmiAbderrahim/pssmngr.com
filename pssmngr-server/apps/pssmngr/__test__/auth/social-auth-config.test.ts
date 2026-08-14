@@ -38,9 +38,13 @@ process.env.GITHUB_CLIENT_SECRET = "test-only-github-client-secret";
 process.env.GOOGLE_CLIENT_ID = "test-google-client-id";
 process.env.GOOGLE_CLIENT_SECRET = "test-only-google-client-secret";
 
+// Importing the auth module pulls in better-auth and its plugin graph, which
+// takes several seconds on a cold module cache and exceeds the 10s default
+// hook timeout when the whole suite runs in parallel. Only the budget changes;
+// every assertion below is unchanged.
 beforeAll(async () => {
 	await import("@pssmngr/server/lib/auth");
-});
+}, 60_000);
 
 describe("betterAuth social provider configuration", () => {
 	test("captures the betterAuth options", () => {

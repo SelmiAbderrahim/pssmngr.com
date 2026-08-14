@@ -24,25 +24,36 @@ function canonicalize(value: unknown): unknown {
   );
 }
 
+/**
+ * Ephemeral exact-duplicate fingerprint.
+ *
+ * The returned string contains the item's plaintext in canonical form, so it
+ * is exactly as sensitive as the item itself. It exists only to make
+ * duplicate checks O(n) via a `Set` inside one render pass, and must never be
+ * logged, persisted, transmitted, sent to analytics, placed in a test id or
+ * ARIA label, or used to derive an idempotency key.
+ */
+export function exactItemFingerprint(content: VaultItemContent): string {
+  return `${content.itemType}\u0000${JSON.stringify(canonicalize(content.data))}`;
+}
+
 export function areExactDuplicateItems(
   left: VaultItemContent,
   right: VaultItemContent,
 ): boolean {
-  return (
-    left.itemType === right.itemType &&
-    JSON.stringify(canonicalize(left.data)) ===
-      JSON.stringify(canonicalize(right.data))
-  );
+  return exactItemFingerprint(left) === exactItemFingerprint(right);
 }
 
 export function findExactVaultDuplicates(
   candidate: VaultItemContent,
   existingItems: DecryptedVaultItem[],
 ): DecryptedVaultItem[] {
-  return existingItems.filter((item) =>
-    areExactDuplicateItems(candidate, {
-      itemType: item.itemType,
-      data: item.decrypted,
-    }),
+  const target = exactItemFingerprint(candidate);
+  return existingItems.filter(
+    (item) =>
+      exactItemFingerprint({
+        itemType: item.itemType,
+        data: item.decrypted,
+      }) === target,
   );
 }

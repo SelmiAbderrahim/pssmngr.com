@@ -176,7 +176,16 @@ export const credentialsRouter = createTRPCRouter({
 
 	/**
 	 * Create multiple encrypted items in a vault (for import).
-	 * Accepts up to 50 items per call. Returns created count and any per-item errors.
+	 *
+	 * Accepts up to 50 ciphertext envelopes per call and inserts them in one
+	 * multi-row statement. The input is `.strict()` and carries only
+	 * `encryptedItemFields` plus the non-secret item type, so no plaintext
+	 * title, username, password, URL, note, or TOTP secret can be submitted.
+	 *
+	 * `idempotencyKey` is optional and backward compatible: existing callers
+	 * that omit it keep the previous behaviour, while a client retrying a
+	 * batch it already committed replays the stored `{ created }` response
+	 * instead of inserting the batch a second time.
 	 */
 	batchCreate: protectedProcedure
 		.input(
@@ -186,13 +195,19 @@ export const credentialsRouter = createTRPCRouter({
 					organizationId: z.string().optional(),
 					items: z
 						.array(
-							z.object({
-								itemType: z.enum(itemTypeValues),
-								...encryptedItemFields,
-							}),
+							// `.strict()` on the item too: without it a caller could
+							// attach a plaintext `title`/`password` to an envelope and
+							// have it silently accepted rather than rejected.
+							z
+								.object({
+									itemType: z.enum(itemTypeValues),
+									...encryptedItemFields,
+								})
+								.strict(),
 						)
 						.min(1)
 						.max(50),
+					idempotencyKey: idempotencyKeyZodSchema,
 				})
 				.strict(),
 		)
@@ -205,23 +220,32 @@ export const credentialsRouter = createTRPCRouter({
 				ctx.t,
 			);
 
-			const created = await ctx.db
-				.insert(item)
-				.values(
-					input.items.map((i) => ({
-						vaultId: input.vaultId,
-						itemType: i.itemType,
-						ciphertext: i.ciphertext,
-						nonce: i.nonce,
-						authTag: i.authTag,
-						wrappedDataKey: i.wrappedDataKey,
-						wrappedDataKeyNonce: i.wrappedDataKeyNonce,
-						wrappedDataKeyAuthTag: i.wrappedDataKeyAuthTag,
-					})),
-				)
-				.returning({ id: item.id });
+			return runWithIdempotency({
+				db: ctx.db,
+				userId: ctx.user.id,
+				router: "credentials",
+				procedure: "batchCreate",
+				key: input.idempotencyKey,
+				executor: async () => {
+					const created = await ctx.db
+						.insert(item)
+						.values(
+							input.items.map((i) => ({
+								vaultId: input.vaultId,
+								itemType: i.itemType,
+								ciphertext: i.ciphertext,
+								nonce: i.nonce,
+								authTag: i.authTag,
+								wrappedDataKey: i.wrappedDataKey,
+								wrappedDataKeyNonce: i.wrappedDataKeyNonce,
+								wrappedDataKeyAuthTag: i.wrappedDataKeyAuthTag,
+							})),
+						)
+						.returning({ id: item.id });
 
-			return { created: created.length };
+					return { created: created.length };
+				},
+			});
 		}),
 
 	/**

@@ -149,9 +149,15 @@ const MEMBER_KEY_INPUT = {
 
 function mockInsert(returning: any[] = [{}]) {
 	return vi.fn().mockReturnValue({
-		values: vi.fn().mockImplementation(() => {
+		values: vi.fn().mockImplementation((vals: any) => {
 			const p = Promise.resolve(undefined);
-			(p as any).returning = vi.fn().mockResolvedValue(returning);
+			// Multi-row inserts return one row per supplied value.
+			const ret = Array.isArray(vals)
+				? vals.map((_, i) => returning[i] ?? { id: `item-${i}` })
+				: returning;
+			(p as any).returning = vi.fn().mockResolvedValue(ret);
+			// `runWithIdempotency` persists its response with this builder.
+			(p as any).onConflictDoNothing = vi.fn().mockResolvedValue(undefined);
 			return p;
 		}),
 	});
@@ -192,6 +198,7 @@ function createMockDb() {
 				findFirst: vi.fn().mockResolvedValue(null),
 				findMany: vi.fn().mockResolvedValue([]),
 			},
+			idempotencyKey: { findFirst: vi.fn().mockResolvedValue(null) },
 		},
 		insert: mockInsert(),
 		update: mockUpdate(),
@@ -1802,6 +1809,198 @@ describe("Shared Vault Router", () => {
 				permission: "view",
 				publicKey: "pk-new",
 			});
+		});
+	});
+	// -----------------------------------------------------------------------
+	// batchAddItems
+	// -----------------------------------------------------------------------
+
+	describe("batchAddItems", () => {
+		// Synthetic ciphertext envelopes. No plaintext, no real credential.
+		function batchItems(count: number) {
+			return Array.from({ length: count }, (_, i) => ({
+				itemType: "login" as const,
+				ciphertext: `ct-${i}`,
+				nonce: `n-${i}`,
+				authTag: `at-${i}`,
+				wrappedDataKey: `wdk-${i}`,
+				wrappedDataKeyNonce: `wdkn-${i}`,
+				wrappedDataKeyAuthTag: `wdkat-${i}`,
+			}));
+		}
+
+		function grantEdit(userId = "user-1") {
+			db.query.sharedVaultMember.findFirst.mockResolvedValue(
+				makeVaultMember({ userId, permission: "edit" }),
+			);
+		}
+
+		it("accepts exactly 1 and exactly 50 items", async () => {
+			for (const count of [1, 50]) {
+				grantEdit();
+				db.insert = mockInsert();
+				const result = await createCaller(
+					createCtx("user-1", db),
+				).batchAddItems({ vaultId: "vault-1", items: batchItems(count) });
+
+				expect(result).toEqual({ created: count });
+			}
+		});
+
+		it("rejects 51 items and an empty batch", async () => {
+			grantEdit();
+			const caller = createCaller(createCtx("user-1", db));
+
+			await expect(
+				caller.batchAddItems({ vaultId: "vault-1", items: batchItems(51) }),
+			).rejects.toThrow();
+			await expect(
+				caller.batchAddItems({ vaultId: "vault-1", items: [] }),
+			).rejects.toThrow();
+		});
+
+		it("rejects plaintext fields on the item and on the batch", async () => {
+			grantEdit();
+			db.insert = mockInsert();
+			const caller = createCaller(createCtx("user-1", db));
+
+			for (const key of [
+				"title",
+				"username",
+				"password",
+				"url",
+				"notes",
+				"totp",
+				"data",
+			]) {
+				await expect(
+					caller.batchAddItems({
+						vaultId: "vault-1",
+						items: [{ ...batchItems(1)[0]!, [key]: "leak" }],
+					} as any),
+				).rejects.toThrow();
+
+				await expect(
+					caller.batchAddItems({
+						vaultId: "vault-1",
+						items: batchItems(1),
+						[key]: "leak",
+					} as any),
+				).rejects.toThrow();
+			}
+
+			expect(db.insert).not.toHaveBeenCalled();
+		});
+
+		it("denies a non-member and a view-only member", async () => {
+			db.query.sharedVaultMember.findFirst.mockResolvedValue(null);
+			db.insert = mockInsert();
+			await expect(
+				createCaller(createCtx("outsider", db)).batchAddItems({
+					vaultId: "vault-1",
+					items: batchItems(1),
+				}),
+			).rejects.toThrow(expect.objectContaining({ code: "FORBIDDEN" }));
+
+			db.query.sharedVaultMember.findFirst.mockResolvedValue(
+				makeVaultMember({ userId: "viewer", permission: "view" }),
+			);
+			await expect(
+				createCaller(createCtx("viewer", db)).batchAddItems({
+					vaultId: "vault-1",
+					items: batchItems(1),
+				}),
+			).rejects.toThrow(expect.objectContaining({ code: "FORBIDDEN" }));
+
+			expect(db.insert).not.toHaveBeenCalled();
+		});
+
+		it("checks edit permission once, before a single multi-row insert", async () => {
+			grantEdit();
+			const insert = mockInsert();
+			db.insert = insert;
+
+			await createCaller(createCtx("user-1", db)).batchAddItems({
+				vaultId: "vault-1",
+				items: batchItems(50),
+			});
+
+			expect(db.query.sharedVaultMember.findFirst).toHaveBeenCalledTimes(1);
+			expect(insert).toHaveBeenCalledTimes(1);
+			const values = insert.mock.results[0]!.value.values.mock.calls[0]![0];
+			expect(values).toHaveLength(50);
+			expect(
+				values.every(
+					(v: any) => v.sharedVaultId === "vault-1" && v.createdBy === "user-1",
+				),
+			).toBe(true);
+		});
+
+		it("scopes rows to the caller even when another user id is supplied", async () => {
+			grantEdit("user-2");
+			const insert = mockInsert();
+			db.insert = insert;
+
+			await createCaller(createCtx("user-2", db)).batchAddItems({
+				vaultId: "vault-1",
+				items: batchItems(2),
+			});
+
+			const values = insert.mock.results[0]!.value.values.mock.calls[0]![0];
+			expect(values.every((v: any) => v.createdBy === "user-2")).toBe(true);
+			// Only ciphertext envelope columns are written.
+			expect(Object.keys(values[0]).sort()).toEqual([
+				"authTag",
+				"ciphertext",
+				"createdBy",
+				"itemType",
+				"nonce",
+				"sharedVaultId",
+				"wrappedDataKey",
+				"wrappedDataKeyAuthTag",
+				"wrappedDataKeyNonce",
+			]);
+		});
+
+		it("replays a same-key retry without inserting again", async () => {
+			grantEdit();
+			db.insert = mockInsert();
+
+			const first = await createCaller(createCtx("user-1", db)).batchAddItems({
+				vaultId: "vault-1",
+				items: batchItems(50),
+				idempotencyKey: "import:op-2:vault-1:1",
+			});
+			expect(first).toEqual({ created: 50 });
+			// One insert for the rows, one for the persisted idempotency response.
+			expect(db.insert).toHaveBeenCalledTimes(2);
+
+			db.query.idempotencyKey.findFirst.mockResolvedValue({
+				responseBody: { created: 50 },
+			});
+			db.insert = mockInsert();
+
+			const replay = await createCaller(createCtx("user-1", db)).batchAddItems({
+				vaultId: "vault-1",
+				items: batchItems(50),
+				idempotencyKey: "import:op-2:vault-1:1",
+			});
+
+			expect(replay).toEqual({ created: 50 });
+			expect(db.insert).not.toHaveBeenCalled();
+		});
+
+		it("rejects a malformed idempotency key", async () => {
+			grantEdit();
+			db.insert = mockInsert();
+
+			await expect(
+				createCaller(createCtx("user-1", db)).batchAddItems({
+					vaultId: "vault-1",
+					items: batchItems(1),
+					idempotencyKey: "has spaces and/slashes",
+				}),
+			).rejects.toThrow();
 		});
 	});
 });

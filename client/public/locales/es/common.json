@@ -843,41 +843,84 @@
     "import": {
       "dropzone": {
         "title": "Arrastra tu archivo aquí o haz clic para explorar",
-        "subtitle": "Compatible con archivos CSV y JSON",
+        "subtitle": "Admite archivos CSV, JSON y TXT",
         "browse": "Elegir archivo"
       },
       "supported": "Formatos compatibles",
       "reading": "Leyendo archivo...",
-      "detecting": "Detectando formato...",
+      "detecting": "Ordenando elementos en este dispositivo...",
       "preview": {
-        "title": "Vista previa",
+        "title": "Revisar elementos",
         "detected": "Detectado: {{source}}",
         "count": "{{count}} elementos encontrados",
-        "cancel": "Cancelar",
-        "import": "Importar {{count}} elementos",
-        "parseErrors": "No se pudieron analizar {{count}} filas",
-        "duplicates": "Se detectaron {{count}} posibles duplicados",
+        "import": "Añadir {{count}} elementos",
+        "duplicates": "{{count}} duplicados exactos detectados",
         "col": {
           "title": "Título",
           "type": "Tipo",
           "username": "Usuario",
-          "url": "URL"
-        }
+          "url": "URL",
+          "actions": "Acciones"
+        },
+        "back": "Atrás",
+        "duplicateRow": "Duplicado",
+        "selectAll": "Seleccionar todos los elementos",
+        "selectRow": "Seleccionar el elemento {{row}}",
+        "editTitle": "Título del elemento {{row}}",
+        "editUsername": "Usuario del elemento {{row}}",
+        "editUrl": "URL del elemento {{row}}",
+        "deleteRow": "Quitar el elemento {{row}}",
+        "range": "Mostrando {{first}}–{{last}} de {{total}}",
+        "pagination": "Páginas de vista previa",
+        "pageOf": "Página {{page}} de {{pages}}",
+        "firstPage": "Primera página",
+        "prevPage": "Página anterior",
+        "nextPage": "Página siguiente",
+        "lastPage": "Última página",
+        "limit": "Se pueden revisar hasta {{max}} elementos a la vez."
       },
-      "progress": "Importando {{current}} de {{total}}...",
+      "progress": "Se han guardado {{current}} de {{total}} elementos cifrados...",
       "summary": {
-        "title": "Importación completada",
-        "duration": "Completado en {{seconds}}s",
-        "imported": "Importados",
+        "title": "Elementos añadidos",
+        "imported": "Añadidos",
         "skipped": "Omitidos",
         "errors": "Errores",
-        "errorDetails": "Elementos fallidos",
-        "moreErrors": "...y {{count}} más",
-        "importMore": "Importar más"
+        "importMore": "Añadir más elementos",
+        "retainedRows": "{{count}} elementos no se guardaron y siguen aquí.",
+        "retry": "Reintentar estos"
       },
       "error": {
-        "title": "Error en la importación",
+        "title": "No se pudieron leer esos elementos",
         "retry": "Reintentar"
+      },
+      "onDevice": "El archivo se lee y se ordena en elementos en este dispositivo. Al servidor solo se envían elementos cifrados.",
+      "paste": {
+        "label": "O pega tus elementos",
+        "placeholder": "Título: Ejemplo\nUsuario: tu@ejemplo.com\nContraseña: ...",
+        "analyze": "Revisar elementos"
+      },
+      "itemType": {
+        "login": "Inicio de sesión",
+        "card": "Tarjeta",
+        "note": "Nota",
+        "identity": "Identidad",
+        "totp": "Autenticador"
+      },
+      "parseError": {
+        "empty": "Esa entrada estaba vacía.",
+        "fileTooLarge": "Ese archivo es demasiado grande. El límite es de {{limit}} bytes.",
+        "contentTooLarge": "Esa entrada es demasiado larga. El límite es de {{limit}} caracteres.",
+        "tooManyItems": "Esa entrada tiene {{actual}} elementos. El límite es de {{limit}} a la vez.",
+        "encryptedBundle": "Es una copia de seguridad .pssmngr cifrada. Restaurála desde el paso de copia de seguridad de Importar / Exportar, que pide su contraseña.",
+        "unsupportedFormat": "Ese tipo de archivo no es compatible. Usa CSV, JSON o TXT.",
+        "noItems": "No se encontraron elementos en esa entrada."
+      },
+      "warning": {
+        "malformedRow": "No se pudieron leer {{count}} filas y se omitieron.",
+        "missingTitle": "{{count}} elementos no tienen título.",
+        "unmappedFields": "{{count}} elementos tenían campos que no corresponden a ningún campo de la bóveda.",
+        "duplicateSource": "{{count}} filas repiten una fila anterior.",
+        "invalidTotp": "No se pudieron leer {{count}} secretos de autenticador y se descartaron."
       }
     }
   },
