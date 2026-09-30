@@ -38,7 +38,7 @@
 		"dotenv": "16.4.5",
 		"esbuild": "0.28.1",
 		"lefthook": "1.8.4",
-		"lint-staged": "^15.5.2",
+		"lint-staged": "^17.3.0",
 		"tsx": "4.16.2",
 		"vitest": "3.2.6"
 	},
